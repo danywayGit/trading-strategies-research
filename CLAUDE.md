@@ -35,6 +35,7 @@ ideas/                  # Raw hypotheses, notes, early-stage strategy ideas
 | `BacktestingMCP/` | Python backtesting engine (GPU/CuPy, MCP server, CLI) |
 | `DownloadBinanceHistorycalData/` | Historical OHLCV data warehouse |
 | `Trading-WebHook-Bot/` | Flask webhook bot — receives alerts, executes on Binance |
+| `altfinsMCP/` | Trading ideas, signals, chart patern |
 
 ## Strategy Naming Convention
 
