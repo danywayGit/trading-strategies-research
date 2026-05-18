@@ -1,42 +1,43 @@
 # QWEN.md — Trading Strategies Research
 
-> Ce fichier sert de contexte instructionnel pour les sessions Qwen Code dans ce dépôt.
+> This file serves as instructional context for Qwen Code sessions in this repository.
 
-## Aperçu du projet
+## Project Overview
 
-Ceci est un **dépôt de recherche et documentation** (pas de code exécutable) servant de base de connaissances centrale pour le développement, la validation et le backtesting de **stratégies de trading sur futures crypto Binance (USDT-M perpetuals)**.
+This is a **research and documentation repository** (no executable code) acting as a central knowledge base for the development, validation, and backtesting of **trading strategies on Binance crypto futures (USDT-M perpetuals)**.
 
-Le dépôt relie trois systèmes externes :
+The repository connects three external systems:
 
-| Étape | Outil | Rôle |
+| Step | Tool | Role |
 |---|---|---|
-| 1 | **TradingView** (répo frère) | Conception des signaux en Pine Script |
-| 2 | **BacktestingMCP** (répo frère) | Validation GPU, optimisation de paramètres |
-| 3 | **Trading-WebHook-Bot** (répo frère) | Exécution live sur Binance |
+| 1 | **TradingView** (sibling repo) | Signal design in Pine Script |
+| 2 | **BacktestingMCP** (sibling repo) | GPU validation, parameter optimization |
+| 3 | **Trading-WebHook-Bot** (sibling repo) | Live execution on Binance |
+| 4 | **altfinsMCP** (sibling repo) | Trading ideas, signals, chart patterns |
 
 ## Structure
 
 ```
 trading-strategies-research/
-├── pinescript-fixes/       # Fichiers Pine Script corrigés (prêts pour TradingView)
-│   └── BUGS.md             # Rapport détaillé des bugs critiques identifiés
-├── backtest-descriptions/  # Spécifications de stratégies en texte clair (pour BacktestingMCP)
-├── results/                # Sorties de backtest : CSV, métriques, grilles de paramètres (à remplir)
-└── ideas/                  # Idées brutes, notes, hypothèses (vide actuellement)
+├── pinescript-fixes/       # Corrected Pine Script files (ready for TradingView)
+│   └── BUGS.md             # Detailed report of critical bugs identified
+├── backtest-descriptions/  # Strategy specifications in plain text (for BacktestingMCP)
+├── results/                # Backtest outputs: CSV, metrics, parameter grids (to be filled)
+└── ideas/                  # Raw ideas, notes, hypotheses
 ```
 
 ## Workflow
 
-1. **Design** — Développer la logique en Pine Script sur TradingView (sources dans `TradingView/`)
-2. **Review & fix** — Corriger les bugs de syntaxe/logique → versions correctes dans `pinescript-fixes/`
-3. **Spécification** — Traduire la stratégie en spec texte dans `backtest-descriptions/*.md`
-4. **Backtest** — Lancé via `BacktestingMCP` (Python, GPU/CuPy, données Binance historiques)
-5. **Résultats** — Stocker les meilleurs paramètres, courbes d'équité, Sharpe, max drawdown dans `results/`
-6. **Déploiement** — Alerts TradingView → `Trading-WebHook-Bot` (Flask) exécute sur Binance Futures
+1. **Design** — Develop logic in Pine Script on TradingView (sources in `TradingView/`)
+2. **Review & fix** — Correct syntax/logical bugs → corrected versions in `pinescript-fixes/`
+3. **Specification** — Translate the strategy into a text spec in `backtest-descriptions/*.md`
+4. **Backtest** — Launched via `BacktestingMCP` (Python, GPU/CuPy, Binance historical data)
+5. **Results** — Store best parameters, equity curves, Sharpe, max drawdown in `results/`
+6. **Deployment** — TradingView alerts → `Trading-WebHook-Bot` (Flask) executes on Binance Futures
 
-## Stratégies (9 au total)
+## Strategies (9 total)
 
-| ID | Nom | Timeframe | Type |
+| ID | Name | Timeframe | Type |
 |---|---|---|---|
 | SWING1 | EMA Wave + Volume | 1H | Trend |
 | SWING2 | BB Squeeze Breakout | 4H | Breakout |
@@ -45,66 +46,66 @@ trading-strategies-research/
 | SWING5 | Keltner Breakout | 1H | Breakout |
 | SWING6 | MTF EMA Stack | 30m entry / 4H bias | Trend |
 | EMA_REJ_V1 | EMA200 Rejection v1 | 1H–4H | Counter-trend |
-| EMA_REJ_V2 | EMA200 Rejection v2 | 1H–4H | Counter-trend (correction nécessitée) |
+| EMA_REJ_V2 | EMA200 Rejection v2 | 1H–4H | Counter-trend (correction needed) |
 | AGGR_PB | Aggressive Pullback | 1H–4H | Pullback (engulfing + EMA) |
 
-Chaque stratégie possède :
-- Un fichier spec dans `backtest-descriptions/`
-- Une version corrigée (si applicable) dans `pinescript-fixes/`
+Each strategy has:
+- A spec file in `backtest-descriptions/`
+- A corrected version (if applicable) in `pinescript-fixes/`
 
-Toutes ciblent **Binance Futures USDT-M perpetuals**, dans les deux sens (long ET short).
+All target **Binance Futures USDT-M perpetuals**, in both directions (long AND short).
 
-## Conventions Pine Script
+## Pine Script Conventions
 
-- Les fichiers doivent commencer par `//@version=5` ou `//@version=6` — aucun artifact markdown ou chat avant cette ligne
-- Sizing toujours **risk-based** : `qty = (equity × risk_pct) / stop_distance`
-- Utiliser `strategy.exit(stop=..., limit=...)` avec **des prix absolus** — jamais `loss=` / `profit=` (ceux-ci prennent des distances en points, pas des prix)
-- Les fichiers v6 (`ema_rejection_strategy*.pinescript`, `aggressive_pullback_strategy.pinescript`) sont plus propres et servent de référence de style
+- Files must start with `//@version=5` or `//@version=6` — no markdown or chat artifacts before this line
+- Sizing always **risk-based** : `qty = (equity × risk_pct) / stop_distance`
+- Use `strategy.exit(stop=..., limit=...)` with **absolute prices** — never `loss=` / `profit=` (those take point distances, not prices)
+- v6 files (`ema_rejection_strategy*.pinescript`, `aggressive_pullback_strategy.pinescript`) are cleaner and serve as a style reference
 
-## Spécs BacktestingMCP
+## BacktestingMCP Specs
 
-Les fichiers dans `backtest-descriptions/` sont conçus pour être passés à BacktestingMCP (génération IA ou implémentation manuelle en Python). Chaque spec contient :
+Files in `backtest-descriptions/` are designed to be passed to BacktestingMCP (AI generation or manual Python implementation). Each spec contains:
 
-- Logique d'entrée/sortie en anglais clair avec paramètres exacts des indicateurs
-- Formule de position sizing
-- Grille de paramètres pour les runs d'optimisation
-- Symboles suggérés et notes sur le comportement attendu
+- Entry/exit logic in clear English with exact indicator parameters
+- Position sizing formula
+- Parameter grid for optimization runs
+- Suggested symbols and notes on expected behavior
 
-### Implémentation Python pour BacktestingMCP
+### Python Implementation for BacktestingMCP
 
-- Sous-classer `BaseStrategy` depuis `src/core/backtesting_engine.py`
-- Définir les paramètres comme attributs de classe (int/float/str/bool/list)
-- Implémenter `init(self)` pour les indicateurs, `next(self)` pour la logique bar-à-bar
-- S'enregistrer dans `src/strategies/templates.py` → `STRATEGY_REGISTRY`
+- Subclass `BaseStrategy` from `src/core/backtesting_engine.py`
+- Define parameters as class attributes (int/float/str/bool/list)
+- Implement `init(self)` for indicators, `next(self)` for bar-by-bar logic
+- Register in `src/strategies/templates.py` → `STRATEGY_REGISTRY`
 
-## Bugs historiques connus
+## Known Historical Bugs
 
-Voir `pinescript-fixes/BUGS.md` pour le rapport complet. Résumé :
+See `pinescript-fixes/BUGS.md` for the full report. Summary:
 
-| Bug | Sévérité | Impact |
+| Bug | Severity | Impact |
 |---|---|---|
-| BUG-001 | 🔴 Critique | `loss=`/`profit=` au lieu de `stop=`/`limit=` → SL/TP ne se déclenchent jamais |
-| BUG-002 | 🔴 Critique | Artifacts de chat bloquant la compilation |
-| BUG-003 | 🔴 Critique | Conditions `shortStayedBelow`/`longStayedAbove` toujours fausses (EMA Rejection v2) |
-| BUG-004 | 🟡 Visuel | Lignes TP statiques incorrectes sur SWING3 (sans impact backtest) |
+| BUG-001 | 🔴 Critical | `loss=`/`profit=` instead of `stop=`/`limit=` → SL/TP never trigger |
+| BUG-002 | 🔴 Critical | Chat artifacts blocking compilation |
+| BUG-003 | 🔴 Critical | `shortStayedBelow`/`longStayedAbove` conditions always false (EMA Rejection v2) |
+| BUG-004 | 🟡 Visual | Incorrect static TP lines on SWING3 (no backtest impact) |
 
-Les versions corrigées se trouvent dans `pinescript-fixes/*_fixed.pinescript`.
+Corrected versions are located in `pinescript-fixes/*_fixed.pinescript`.
 
-## Répos frères
+## Sibling Repos
 
-| Repo | Rôle |
+| Repo | Role |
 |---|---|
-| `TradingView/` | Sources Pine Script — indicateurs + stratégies |
-| `BacktestingMCP/` | Moteur de backtesting Python (GPU/CuPy, serveur MCP, CLI) |
-| `DownloadBinanceHistorycalData/` | Entrepôt de données OHLCV historiques |
-| `Trading-WebHook-Bot/` | Bot Flask webhook — reçoit les alerts, exécute sur Binance |
+| `TradingView/` | Pine Script sources — indicators + strategies |
+| `BacktestingMCP/` | Python backtesting engine (GPU/CuPy, MCP server, CLI) |
+| `DownloadBinanceHistorycalData/` | OHLCV historical data warehouse |
+| `Trading-WebHook-Bot/` | Flask webhook bot — receives alerts, executes on Binance |
 
-> Ne pas modifier ces répos sans permission explicite de l'utilisateur.
+> Do not modify these repos without explicit permission from the user.
 
-## Conventions de nomination
+## Naming Conventions
 
-| Préfixe | Type |
+| Prefix | Type |
 |---|---|
-| `SWING1–SWING6` | Stratégies swing (1H–4H) |
-| `EMA_REJ_V1/V2` | Rejet EMA200 (counter-trend) |
-| `AGGR_PB` | Pullback agressif |
+| `SWING1–SWING6` | Swing strategies (1H–4H) |
+| `EMA_REJ_V1/V2` | EMA200 Rejection (counter-trend) |
+| `AGGR_PB` | Aggressive Pullback |
