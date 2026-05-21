@@ -35,7 +35,7 @@ trading-strategies-research/
 5. **Results** — Store best parameters, equity curves, Sharpe, max drawdown in `results/`
 6. **Deployment** — TradingView alerts → `Trading-WebHook-Bot` (Flask) executes on Binance Futures
 
-## Strategies (9 total)
+## Strategies (19 total)
 
 | ID | Name | Timeframe | Type |
 |---|---|---|---|
@@ -48,6 +48,16 @@ trading-strategies-research/
 | EMA_REJ_V1 | EMA200 Rejection v1 | 1H–4H | Counter-trend |
 | EMA_REJ_V2 | EMA200 Rejection v2 | 1H–4H | Counter-trend (correction needed) |
 | AGGR_PB | Aggressive Pullback | 1H–4H | Pullback (engulfing + EMA) |
+| RR1 | Range Mean Reversion | 4H | Mean Reversion (RSI + BB + Stoch) |
+| VP1 | Volume Profile Breakout | 1H | Breakout (POC + VAH/VAL) |
+| VR1 | VWAP Mean Reversion | 1H | Counter-trend (VWAP Z-score) |
+| A01 | Screener Signal Composite | 4H | Data-driven (altFINS SHORT_TERM_TREND) |
+| MO1 | Cross-Asset Momentum Rotation | 4H | Rotation / Relative Momentum |
+| DC1 | Donchian Channel + ATR | 4H | Breakout (Mini Turtle) |
+| PT1 | BTC/ETH Pair Trading | 1H | Pair / Market-Neutral |
+| AR1 | Adaptive Regime Switcher | 4H | Meta-Strategy (Regime-based) |
+| EC1 | Event Catalyst Alpha | 1H–4H | Event-Driven (altFINS) |
+| SFP1 | ICT Swing Failure Pattern | 1H HTF / 5m LTF | Reversal / Liquidity Sweep (SFP + FVG) |
 
 Each strategy has:
 - A spec file in `backtest-descriptions/`
@@ -109,3 +119,12 @@ Corrected versions are located in `pinescript-fixes/*_fixed.pinescript`.
 | `SWING1–SWING6` | Swing strategies (1H–4H) |
 | `EMA_REJ_V1/V2` | EMA200 Rejection (counter-trend) |
 | `AGGR_PB` | Aggressive Pullback |
+| `RR1` | Range Mean Reversion |
+| `VP1` | Volume Profile Breakout |
+| `VR1` | VWAP Mean Reversion |
+| `A01` | Screener Signal Composite (altFINS) |
+| `MO1` | Cross-Asset Momentum Rotation |
+| `DC1` | Donchian Channel Breakout |
+| `PT1` | Pair Trading (Market-Neutral) |
+| `AR1` | Adaptive Regime Switcher (Meta) |
+| `EC1` | Event Catalyst Alpha (altFINS) |
