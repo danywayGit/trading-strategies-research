@@ -26,7 +26,7 @@
 | 5 | **SWING5** — Keltner Breakout | ✅ | ✅ Done | Single-TF, KC bands | — |
 | 6 | **SWING6** — MTF EMA Stack | ✅ | ✅ Done | Dual-TF (30m entry, 4H bias, scaled EMA) | — |
 | 7 | **EMA_REJ_V1** — EMA200 Rejection | ✅ | ✅ Done | Single-TF, bounce detection | — |
-| 8 | **EMA_REJ_V2** — EMA200 Rejection v2 | 🔲 | 🔲 | Needs corrected Pine Script first | — |
+| 8 | **EMA_REJ_V2** — EMA200 Rejection v2 | ✅ | ✅ Done | Single-TF, 3-phase rejection + RSI threshold | — |
 | 9 | **AGGR_PB** — Aggressive Pullback | ✅ | ✅ Done | Single-TF, engulfing + EMA | — |
 | 10 | **RR1** — Range Mean Reversion | ✅ | ✅ Done | Single-TF, RSI+BB+Stoch | — |
 | 11 | **DC1** — Donchian Channel + ATR | ✅ | ✅ Done | Single-TF, trailing stop logic | — |
@@ -39,7 +39,7 @@
 | 18 | **EC1** — Event Catalyst Alpha | ✅ | ✅ Done | Event calendar mock CSV, pre/post-event logic | — |
 | 19 | **SFP1** — Swing Failure Pattern | ✅ | ✅ Done | Dual-TF via 5m feed + synthesized 1H resampling | — |
 
-**Summary:** 18 of 19 implemented · 18 have specs · 1 needs spec correction first (EMA_REJ_V2)
+**Summary:** 19 of 19 implemented · 19 have specs · 🎉 ALL STRATEGIES COMPLETE
 
 ---
 
@@ -105,7 +105,7 @@
 | Order | Strategy | Status | Notes |
 |---|---|---|---|
 | 16 | **AR1** — Adaptive Regime Switcher | ✅ Done | SWING3 + RR1 inlined. Regime classifier (ADX thresholds) activates one sub-strategy. |
-| 17 | **EMA_REJ_V2** — EMA200 Rejection v2 | 🔲 Blocked | Current spec says "correction needed". Fix bugs in `pinescript-fixes/EMA_REJ_V2_fixed.pinescript` first, then translate to Python |
+| 17 | **EMA_REJ_V2** — EMA200 Rejection v2 | ✅ Done | Pine Script BUG-003 fixed. Persistent bar counters for 3-phase rejection + RSI threshold filter |
 
 ---
 
