@@ -30,16 +30,16 @@
 | 9 | **AGGR_PB** — Aggressive Pullback | ✅ | ✅ Done | Single-TF, engulfing + EMA | — |
 | 10 | **RR1** — Range Mean Reversion | ✅ | ✅ Done | Single-TF, RSI+BB+Stoch | — |
 | 11 | **DC1** — Donchian Channel + ATR | ✅ | ✅ Done | Single-TF, trailing stop logic | — |
-| 12 | **VR1** — VWAP Mean Reversion | ✅ | ⬜ Todo | Single-TF, daily-reset VWAP + bands | Medium |
-| 13 | **VP1** — Volume Profile Breakout | ✅ | ⬜ Todo | Single-TF, price-bin volume profile | **High** |
+| 12 | **VR1** — VWAP Mean Reversion | ✅ | ✅ Done | Single-TF, daily-reset VWAP + bands | — |
+| 13 | **VP1** — Volume Profile Breakout | ✅ | ✅ Done | Single-TF, price-bin volume profile | — |
 | 14 | **A01** — Screener Signal Composite | ✅ | ⬜ Todo | Single-TF, **external API** (altFINS) | **High** |
 | 15 | **MO1** — Cross-Asset Momentum Rotation | ✅ | ⬜ Todo | Multi-asset ranking, trailing stop | **High** |
 | 16 | **PT1** — BTC/ETH Pair Trading | ✅ | ⬜ Todo | **Dual-asset**, Z-score, 2-leg position | **High** |
-| 17 | **AR1** — Adaptive Regime Switcher | ✅ | ⬜ Todo | **Meta-strategy**, needs SWING3+RR1 first | **High** |
+| 17 | **AR1** — Adaptive Regime Switcher | ✅ | ✅ Done | **Meta-strategy**, routes to SWING3+RR1 | — |
 | 18 | **EC1** — Event Catalyst Alpha | ✅ | ⬜ Todo | **External API** (altFINS calendar+news) | **High** |
 | 19 | **SFP1** — Swing Failure Pattern | ✅ | ⬜ Todo | **Dual-TF** (1H swing + 5m FVG entry) | **High** |
 
-**Summary:** 11 of 19 implemented · 18 have specs · 1 needs spec correction first (EMA_REJ_V2)
+**Summary:** 15 of 19 implemented · 18 have specs · 1 needs spec correction first (EMA_REJ_V2)
 
 ---
 
@@ -62,15 +62,15 @@
 
 ---
 
-### Phase 2 — Medium Complexity 🟡 IN PROGRESS
+### Phase 2 — Medium Complexity ✅ COMPLETE
 
-> **Target:** 3 strategies · SWING4 + SWING6 already done · VR1 remaining
+> **Target:** 3 strategies · SWING4 + SWING6 + VR1 all done
 
 | Order | Strategy | Status | Complexity Driver | Key Implementation Notes |
 |---|---|---|---|---|
 | 7 | **SWING4** — MACD Divergence | ✅ Done | Divergence detection | Swing high/low detection, MACD histogram comparison |
 | 8 | **SWING6** — MTF EMA Stack | ✅ Done | Dual-TF bias | HTF bias via scaled EMA period (no resampling needed) |
-| 9 | **VR1** — VWAP Mean Reversion | ⬜ Todo | Daily-reset VWAP + bands | `_calculate_vwap_daily_reset()`, vol exhaustion filter, reversal trigger |
+| 9 | **VR1** — VWAP Mean Reversion | ✅ Done | Daily-reset VWAP + bands | `_vwap_all()` returns (5,N) array, vol exhaustion filter, reversal trigger |
 
 ---
 
@@ -80,12 +80,13 @@
 
 | Order | Strategy | Engine Change Required | Key Implementation Notes |
 |---|---|---|---|
-| 10 | **VP1** — Volume Profile | Price-bin volume histogram (not a standard indicator) | Implement `_build_volume_profile(highs, lows, closes, volumes, bin_size)` → returns POC, VAH, VAL. Bin size = ATR/4 |
+| 10 | **VP1** — Volume Profile | ✅ Done | `_build_volume_profile()` called per-bar in `next()`, NumPy slice binning, POC/VAH/VAL |
 | 11 | **MO1** — Cross-Asset Rotation | Multi-asset data loading + ranking | **Requires:** Engine must load OHLCV for 5 assets simultaneously. Track per-asset position + trailing stop. Relative RSI vs BTC benchmark |
 | 12 | **PT1** — BTC/ETH Pair Trading | **Two independent positions** (market-neutral) | **Major change:** `enter_long_position()` manages one asset. PT1 needs a `PairTradeManager` or override `PositionTracker` to track 2 legs. Z-score on price ratio. Equal notional sizing |
 | 13 | **A01** — Screener Composite | **External API integration** (altFINS) | Mock the screener data for backtesting. Add `screener_data` attribute to engine or cache it as a CSV. Signal asset selection logic (scan top 20) |
 | 14 | **EC1** — Event Catalyst | **External API** (altFINS calendar) + event timestamp alignment | Similar to A01: mock calendar events as timestamped CSV. Pre-event shrink, post-event directional entry. Needs event → bar alignment |
 | 15 | **SFP1** — Swing Failure Pattern | **Dual-TF** (1H swing + 5m FVG) | Most complex dual-TF. 1H swing point detection → SFP flagged → switch to 5m for FVG entry. Session filter (4 modes). May need event-driven TF switching in engine |
+| 16 | **AR1** — Adaptive Regime Switcher | ✅ Done | Meta-strategy inlining SWING3+RR1 signal logic, ADX+EMA regime classifier, churn protection |
 
 **Engine changes summary for Phase 3:**
 
