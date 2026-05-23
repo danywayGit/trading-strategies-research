@@ -297,3 +297,176 @@ python -m backtesting.main optimize -s BTCUSDT -t 4H -d 730 --strategy SWING2 --
 # List registered strategies
 python -m backtesting.main list-strategies
 ```
+
+---
+
+## Wave 1 — Expanded Multi-Symbol Optimization
+
+> Started: 2026-05-23 · Scope: 7 strategies × 44 symbols × 4 TFs × 3 directions × 3 SL types · Funnel approach (4 stages)
+
+### Progress Legend
+
+| Badge | Meaning |
+|---|---|
+| ⬜ | Not started |
+| 🔄 | In progress |
+| ✅ | Complete — at least 1 passing symbol |
+| ❌ | Complete — 0 symbols passed filter |
+
+---
+
+### Stage Tracker
+
+| Strategy | Home TF | Stage 1 | S1 Pass | Stage 2 | S2 Pass | Stage 3 | Stage 4 | Best Combos |
+|---|---|---|---|---|---|---|---|---|
+| SWING2 | 4H | ⬜ | — | ⬜ | — | ⬜ | ⬜ | — |
+| SWING3 | 1H | ⬜ | — | ⬜ | — | ⬜ | ⬜ | — |
+| SWING4 | 4H | ⬜ | — | ⬜ | — | ⬜ | ⬜ | — |
+| SWING5 | 1H | ⬜ | — | ⬜ | — | ⬜ | ⬜ | — |
+| EMA_REJ_V1 | 1H | ⬜ | — | ⬜ | — | ⬜ | ⬜ | — |
+| DC1 | 4H | ⬜ | — | ⬜ | — | ⬜ | ⬜ | — |
+| RR1 | 4H | ⬜ | — | ⬜ | — | ⬜ | ⬜ | — |
+
+---
+
+### Symbol Universe (44 coins)
+
+Binance USDT-M perpetuals · ranked by 24h futures volume as of 2026-05-23 · stables/wrapped/synthetics excluded
+
+**TOP 27**
+`BTCUSDT` `ETHUSDT` `SOLUSDT` `HYPEUSDT` `SHIBUSDT` `NEARUSDT` `DOGEUSDT` `ONDOUSDT` `BNBUSDT` `SUIUSDT` `ADAUSDT` `TAOUSDT` `LINKUSDT` `TONUSDT` `BCHUSDT` `FILUSDT` `INJUSDT` `AVAXUSDT` `ENAUSDT` `UNIUSDT` `AAVEUSDT` `DOTUSDT` `ATOMUSDT` `LTCUSDT` `POLUSDT` `DASHUSDT` `TRXUSDT`
+
+**MID 8**
+`FETUSDT` `ICPUSDT` `RENDERUSDT` `CHZUSDT` `ARBUSDT` `APTUSDT` `ETCUSDT` `OPUSDT`
+
+**SMALL 9**
+`ALGOUSDT` `SANDUSDT` `MANAUSDT` `FLOWUSDT` `AXSUSDT` `GMXUSDT` `DYDXUSDT` `RUNEUSDT` `SEIUSDT`
+
+---
+
+### Optimization Parameters
+
+| Dimension | Values |
+|---|---|
+| Timeframes | 15m · 1H · 4H · 12H |
+| Directions | Long only · Short only · Both |
+| Stop-loss | Fixed % · ATR + multiplier · Embedded dynamic SL |
+| Test window | 2022-01-01 → 2024-12-31 (3 years) |
+| Walk-forward | 70% train / 30% OOS |
+| Pass filter (S1/S2) | ≥30 trades AND OOS Sharpe > 0 |
+| DOW masks (S3) | ALL · MON-FRI · SAT-SUN · MON · TUE · WED · THU · FRI |
+| DOW pass rule | Best mask must beat ALL by >5% Sharpe with ≥20 trades |
+
+---
+
+### Stage 1 Detail — SWING2 (4H)
+
+> Status: ⬜ Not started
+
+| Symbol | Long/Fixed% | Long/ATR | Long/Embedded | Short/Fixed% | Short/ATR | Short/Embedded | Both/Fixed% | Both/ATR | Both/Embedded |
+|---|---|---|---|---|---|---|---|---|---|
+| BTCUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ETHUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| SOLUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| HYPEUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| SHIBUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| NEARUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| DOGEUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ONDOUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| BNBUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| SUIUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ADAUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| TAOUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| LINKUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| TONUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| BCHUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| FILUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| INJUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| AVAXUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ENAUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| UNIUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| AAVEUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| DOTUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ATOMUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| LTCUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| POLUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| DASHUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| TRXUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| FETUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ICPUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| RENDERUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| CHZUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ARBUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| APTUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ETCUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| OPUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ALGOUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| SANDUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| MANAUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| FLOWUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| AXSUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| GMXUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| DYDXUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| RUNEUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| SEIUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+
+---
+
+### Stage 1 Detail — SWING3 (1H)
+
+> Status: ⬜ Not started · (same 44-symbol table — populate when running)
+
+---
+
+### Stage 1 Detail — SWING4 (4H)
+
+> Status: ⬜ Not started
+
+---
+
+### Stage 1 Detail — SWING5 (1H)
+
+> Status: ⬜ Not started
+
+---
+
+### Stage 1 Detail — EMA_REJ_V1 (1H)
+
+> Status: ⬜ Not started
+
+---
+
+### Stage 1 Detail — DC1 (4H)
+
+> Status: ⬜ Not started
+
+---
+
+### Stage 1 Detail — RR1 (4H)
+
+> Status: ⬜ Not started
+
+---
+
+## Wave 2 — Placeholder
+
+> To be started after Wave 1 Stage 4 is complete for all 7 strategies.
+
+Strategies queued for Wave 2 (12 total):
+
+| # | Strategy | Notes |
+|---|---|---|
+| 1 | SWING1 | Re-optimize with constrained RR — overfit at rr=4.0 |
+| 2 | SWING6 | Dual-TF 30m/4H — not yet backtested |
+| 3 | EMA_REJ_V2 | BUG-003 fixed — ready to run |
+| 4 | AGGR_PB | Only 21 trades on ETH — needs multi-symbol to find fit |
+| 5 | VP1 | Volume profile breakout — uncorrelated alpha |
+| 6 | VR1 | VWAP mean reversion — 1H, daily reset |
+| 7 | A01 | Screener composite — mock altFINS CSV |
+| 8 | MO1 | Cross-asset momentum rotation |
+| 9 | PT1 | BTC/ETH pair trading |
+| 10 | AR1 | Adaptive regime switcher (meta-strategy) |
+| 11 | EC1 | Event catalyst alpha |
+| 12 | SFP1 | Swing failure pattern — dual-TF 1H+5m, most complex |
+
+Wave 2 symbol universe and shortlisting will be revisited based on Wave 1 findings.
