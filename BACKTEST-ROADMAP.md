@@ -15,79 +15,62 @@
 
 ---
 
-## Current State (as of 2025-07-17)
+## Current State (as of 2026-05-23)
 
 | # | Strategy | Spec | Python Impl. | Engine Complexity | Est. Effort |
 |---|---|-|-|-|-|
 | 1 | **SWING1** — EMA Wave + Volume | ✅ | ✅ Done | Single-TF, standard indicators | — |
-| 2 | **SWING2** — BB Squeeze Breakout | ✅ | ⬜ Todo | Single-TF, BB + KC bands | Low |
-| 3 | **SWING3** — Supertrend + ADX | ✅ | ⬜ Todo | Single-TF, needs Supertrend indicator | Low |
-| 4 | **SWING4** — MACD Divergence | ✅ | ⬜ Todo | Single-TF, divergence detection logic | Medium |
-| 5 | **SWING5** — Keltner Breakout | ✅ | ⬜ Todo | Single-TF, KC bands | Low |
-| 6 | **SWING6** — MTF EMA Stack | ✅ | ⬜ Todo | **Dual-TF** (30m entry, 4H bias) | Medium |
-| 7 | **EMA_REJ_V1** — EMA200 Rejection | ✅ | ⬜ Todo | Single-TF, bounce detection | Low |
+| 2 | **SWING2** — BB Squeeze Breakout | ✅ | ✅ Done | Single-TF, BB + KC bands | — |
+| 3 | **SWING3** — Supertrend + ADX | ✅ | ✅ Done | Single-TF, Supertrend indicator | — |
+| 4 | **SWING4** — MACD Divergence | ✅ | ✅ Done | Single-TF, divergence detection logic | — |
+| 5 | **SWING5** — Keltner Breakout | ✅ | ✅ Done | Single-TF, KC bands | — |
+| 6 | **SWING6** — MTF EMA Stack | ✅ | ✅ Done | Dual-TF (30m entry, 4H bias, scaled EMA) | — |
+| 7 | **EMA_REJ_V1** — EMA200 Rejection | ✅ | ✅ Done | Single-TF, bounce detection | — |
 | 8 | **EMA_REJ_V2** — EMA200 Rejection v2 | 🔲 | 🔲 | Needs corrected Pine Script first | — |
-| 9 | **AGGR_PB** — Aggressive Pullback | ✅ | ⬜ Todo | Single-TF, engulfing + EMA | Low |
-| 10 | **RR1** — Range Mean Reversion | ✅ | ⬜ Todo | Single-TF, RSI+BB+Stoch | Low |
-| 11 | **VP1** — Volume Profile Breakout | ✅ | ⬜ Todo | Single-TF, needs price-bin volume profile | **High** |
+| 9 | **AGGR_PB** — Aggressive Pullback | ✅ | ✅ Done | Single-TF, engulfing + EMA | — |
+| 10 | **RR1** — Range Mean Reversion | ✅ | ✅ Done | Single-TF, RSI+BB+Stoch | — |
+| 11 | **DC1** — Donchian Channel + ATR | ✅ | ✅ Done | Single-TF, trailing stop logic | — |
 | 12 | **VR1** — VWAP Mean Reversion | ✅ | ⬜ Todo | Single-TF, daily-reset VWAP + bands | Medium |
-| 13 | **A01** — Screener Signal Composite | ✅ | ⬜ Todo | Single-TF, **external API** (altFINS) | **High** |
-| 14 | **MO1** — Cross-Asset Momentum Rotation | ✅ | ⬜ Todo | Multi-asset ranking, trailing stop | **High** |
-| 15 | **DC1** — Donchian Channel + ATR | ✅ | ⬜ Todo | Single-TF, trailing stop logic | Low |
+| 13 | **VP1** — Volume Profile Breakout | ✅ | ⬜ Todo | Single-TF, price-bin volume profile | **High** |
+| 14 | **A01** — Screener Signal Composite | ✅ | ⬜ Todo | Single-TF, **external API** (altFINS) | **High** |
+| 15 | **MO1** — Cross-Asset Momentum Rotation | ✅ | ⬜ Todo | Multi-asset ranking, trailing stop | **High** |
 | 16 | **PT1** — BTC/ETH Pair Trading | ✅ | ⬜ Todo | **Dual-asset**, Z-score, 2-leg position | **High** |
 | 17 | **AR1** — Adaptive Regime Switcher | ✅ | ⬜ Todo | **Meta-strategy**, needs SWING3+RR1 first | **High** |
 | 18 | **EC1** — Event Catalyst Alpha | ✅ | ⬜ Todo | **External API** (altFINS calendar+news) | **High** |
 | 19 | **SFP1** — Swing Failure Pattern | ✅ | ⬜ Todo | **Dual-TF** (1H swing + 5m FVG entry) | **High** |
 
-**Summary:** 1 of 19 implemented · 17 have specs · 1 needs spec correction first
+**Summary:** 11 of 19 implemented · 18 have specs · 1 needs spec correction first (EMA_REJ_V2)
 
 ---
 
 ## Phased Implementation Plan
 
-### Phase 1 — Quick Wins (Low complexity, single-TF, no external deps)
+### Phase 1 — Quick Wins ✅ COMPLETE
 
-> **Target:** 6 strategies · ~4–6 hours total · Validates pipeline, no new engine features needed
+> All 8 single-TF strategies implemented and registered.
 
-| Order | Strategy | Why First | Key Implementation Notes |
-|---|---|---|---|
-| 1 | **SWING2** — BB Squeeze | BB + KC = simple indicators, straightforward breakout | BB squeeze = BB width < threshold; entries on close outside KC |
-| 2 | **RR1** — Range Mean Reversion | RSI + BB + Stoch all in `ta`/`talib`, mean reversion is complementary alpha | Entry at lower BB + oversold RSI + Stoch cross; exit at VWAP/mid |
-| 3 | **AGGR_PB** — Aggressive Pullback | Engulfing detection is candlestick pattern (simple) + EMA alignment | Need helper `is_engulfing()` or use `ta.trend.engulfing` |
-| 4 | **EMA_REJ_V1** — EMA200 Rejection | Single-TF, bounces off EMA200 with reversal candle | Close bounces EMA200 + RSI divergence confirmation |
-| 5 | **DC1** — Donchian Channel | Highest/lowest over N bars — trivial to compute | Trailing stop logic needs careful testing (`trail_atr_mult`) |
-| 6 | **SWING3** — Supertrend + ADX | Supertrend only indicator not in `ta` yet, easy to code | Implement `_calculate_supertrend()` helper: ATR-based bands |
-
-**Engine changes needed:** None — all fit current `BaseStrategy` + `BacktestingEngine`.
-
-**Claude/Cursor prompt template** (copy-paste ready):
-```
-Implement strategy {ID} in BacktestingMCP.
-Spec file: C:\Users\danyw\Documents\Git\DanywayGit\trading-strategies-research\backtest-descriptions\{spec_filename}.md
-Existing example to mirror: C:\Users\danyw\Documents\Git\DanywayGit\BacktestingMCP\src\strategies\swing1_ema_wave_volume.py
-Register in: C:\Users\danyw\Documents\Git\DanywayGit\BacktestingMCP\src\strategies\templates.py → STRATEGY_REGISTRY
-Rules: inherit BaseStrategy, use self.I() in init(), bar-by-bar in next(), risk-based sizing, absolute SL/TP prices.
-```
+| Strategy | Registry Key | Notes |
+|---|---|---|
+| SWING1 | `swing1_ema_wave_volume` | Reference implementation |
+| SWING2 | `swing2_bb_squeeze` | BB squeeze + MACD |
+| SWING3 | `swing3_supertrend_adx` | Custom Supertrend helper |
+| SWING5 | `swing5_keltner_breakout` | KC breakout + CCI |
+| EMA_REJ_V1 | `ema_rejection_v1` | EMA200 rejection with HTF bias |
+| AGGR_PB | `aggr_pullback` | 5-condition engulfing |
+| RR1 | `rr1_range_mean_reversion` | Partial TP, ADX exit, Stoch |
+| DC1 | `dc1_donchian_channel` | Turtle trailing stop, 10-bar exit channel |
 
 ---
 
-### Phase 2 — Medium Complexity (Single-TF but non-trivial logic)
+### Phase 2 — Medium Complexity 🟡 IN PROGRESS
 
-> **Target:** 3 strategies · ~4–8 hours · May need 1–2 engine helper additions
+> **Target:** 3 strategies · SWING4 + SWING6 already done · VR1 remaining
 
-| Order | Strategy | Complexity Driver | Key Implementation Notes |
-|---|---|---|---|
-| 7 | **SWING4** — MACD Divergence | Divergence detection (price ↔ indicator mismatch) | Track recent swing highs/lows, compare price extremum vs MACD extremum sign mismatch |
-| 8 | **VR1** — VWAP Mean Reversion | Daily-reset VWAP + band calculation | Need `_calculate_vwap()` with session reset (UTC midnight), `band_mult × stddev` for bands |
-| 9 | **SWING6** — MTF EMA Stack | **Dual-TF**: load both 30m and 4H data | **Requires engine update:** `BacktestingEngine` must support loading a second timeframe. Bias filter on 4H, entries on 30m |
-
-**Engine changes for SWING6 (Dual-TF):**
-```python
-# Current BacktestingEngine load_data() accepts one TimeFrame.
-# Need: load_data_pair(primary_tf, secondary_tf) → returns (df_primary, df_secondary)
-# or: add self.data_4h alongside self.data_30m in BaseStrategy
-# Implementation approach: resample 1m→30m and 1m→4H from same base data
-```
+| Order | Strategy | Status | Complexity Driver | Key Implementation Notes |
+|---|---|---|---|---|
+| 7 | **SWING4** — MACD Divergence | ✅ Done | Divergence detection | Swing high/low detection, MACD histogram comparison |
+| 8 | **SWING6** — MTF EMA Stack | ✅ Done | Dual-TF bias | HTF bias via scaled EMA period (no resampling needed) |
+| 9 | **VR1** — VWAP Mean Reversion | ⬜ Todo | Daily-reset VWAP + bands | `_calculate_vwap_daily_reset()`, vol exhaustion filter, reversal trigger |
 
 ---
 
