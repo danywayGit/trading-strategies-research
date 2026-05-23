@@ -302,7 +302,8 @@ python -m backtesting.main list-strategies
 
 ## Wave 1 — Expanded Multi-Symbol Optimization
 
-> Started: 2026-05-23 · Scope: 7 strategies × 44 symbols × 4 TFs × 3 directions × 3 SL types · Funnel approach (4 stages)
+> Started: 2026-05-23 · Scope: 7 strategies × 39 symbols × 4 TFs × 3 directions × 3 SL types · Funnel approach (4 stages)
+> Data audit completed 2026-05-23 — 5 of 44 symbols excluded (no data in 2022-2024 test window): HYPEUSDT, ONDOUSDT, TONUSDT, POLUSDT, RENDERUSDT · ENA + TAO limited (~9 months) — included with caution, 15m excluded · See `results/data_audit.md`
 
 ### Progress Legend
 
@@ -319,7 +320,7 @@ python -m backtesting.main list-strategies
 
 | Strategy | Home TF | Stage 1 | S1 Pass | Stage 2 | S2 Pass | Stage 3 | Stage 4 | Best Combos |
 |---|---|---|---|---|---|---|---|---|
-| SWING2 | 4H | ⬜ | — | ⬜ | — | ⬜ | ⬜ | — |
+| SWING2 | 4H | 🔄 | — | ⬜ | — | ⬜ | ⬜ | — |
 | SWING3 | 1H | ⬜ | — | ⬜ | — | ⬜ | ⬜ | — |
 | SWING4 | 4H | ⬜ | — | ⬜ | — | ⬜ | ⬜ | — |
 | SWING5 | 1H | ⬜ | — | ⬜ | — | ⬜ | ⬜ | — |
@@ -329,18 +330,18 @@ python -m backtesting.main list-strategies
 
 ---
 
-### Symbol Universe (44 coins)
+### Symbol Universe — Confirmed 39 active (data audit 2026-05-23)
 
 Binance USDT-M perpetuals · ranked by 24h futures volume as of 2026-05-23 · stables/wrapped/synthetics excluded
 
-**TOP 27**
-`BTCUSDT` `ETHUSDT` `SOLUSDT` `HYPEUSDT` `SHIBUSDT` `NEARUSDT` `DOGEUSDT` `ONDOUSDT` `BNBUSDT` `SUIUSDT` `ADAUSDT` `TAOUSDT` `LINKUSDT` `TONUSDT` `BCHUSDT` `FILUSDT` `INJUSDT` `AVAXUSDT` `ENAUSDT` `UNIUSDT` `AAVEUSDT` `DOTUSDT` `ATOMUSDT` `LTCUSDT` `POLUSDT` `DASHUSDT` `TRXUSDT`
+**Active for all 4 TFs (37 symbols)**
+`BTCUSDT` `ETHUSDT` `SOLUSDT` `SHIBUSDT` `NEARUSDT` `DOGEUSDT` `BNBUSDT` `SUIUSDT` `ADAUSDT` `LINKUSDT` `BCHUSDT` `FILUSDT` `INJUSDT` `AVAXUSDT` `UNIUSDT` `AAVEUSDT` `DOTUSDT` `ATOMUSDT` `LTCUSDT` `DASHUSDT` `TRXUSDT` `FETUSDT` `ICPUSDT` `CHZUSDT` `ARBUSDT` `APTUSDT` `ETCUSDT` `OPUSDT` `ALGOUSDT` `SANDUSDT` `MANAUSDT` `FLOWUSDT` `AXSUSDT` `GMXUSDT` `DYDXUSDT` `RUNEUSDT` `SEIUSDT`
 
-**MID 8**
-`FETUSDT` `ICPUSDT` `RENDERUSDT` `CHZUSDT` `ARBUSDT` `APTUSDT` `ETCUSDT` `OPUSDT`
+**Active for 1H/4H/12H only — 15m excluded (2 symbols)**
+`ENAUSDT` *(~9 months in window, Apr–Dec 2024)* · `TAOUSDT` *(~8.5 months in window, Apr–Dec 2024)*
 
-**SMALL 9**
-`ALGOUSDT` `SANDUSDT` `MANAUSDT` `FLOWUSDT` `AXSUSDT` `GMXUSDT` `DYDXUSDT` `RUNEUSDT` `SEIUSDT`
+**Excluded — no data in 2022-2024 test window (5 symbols)**
+~~`HYPEUSDT`~~ *(starts 2025-05-30)* · ~~`ONDOUSDT`~~ *(starts 2025-04-11)* · ~~`TONUSDT`~~ *(only ~5 months)* · ~~`POLUSDT`~~ *(only ~3.5 months)* · ~~`RENDERUSDT`~~ *(only ~5 months)*
 
 ---
 
@@ -361,40 +362,40 @@ Binance USDT-M perpetuals · ranked by 24h futures volume as of 2026-05-23 · st
 
 ### Stage 1 Detail — SWING2 (4H)
 
-> Status: ⬜ Not started
+> Status: 🔄 In progress · 39 active symbols (5 excluded — see symbol universe above)
 
 | Symbol | Long/Fixed% | Long/ATR | Long/Embedded | Short/Fixed% | Short/ATR | Short/Embedded | Both/Fixed% | Both/ATR | Both/Embedded |
 |---|---|---|---|---|---|---|---|---|---|
 | BTCUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | ETHUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | SOLUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| HYPEUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| HYPEUSDT | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | SHIBUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | NEARUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | DOGEUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| ONDOUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ONDOUSDT | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | BNBUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | SUIUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | ADAUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | TAOUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | LINKUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| TONUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| TONUSDT | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | BCHUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | FILUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | INJUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | AVAXUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| ENAUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| ENAUSDT | ⬜⚠️ | ⬜⚠️ | ⬜⚠️ | ⬜⚠️ | ⬜⚠️ | ⬜⚠️ | ⬜⚠️ | ⬜⚠️ | ⬜⚠️ |
 | UNIUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | AAVEUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | DOTUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | ATOMUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | LTCUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| POLUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| POLUSDT | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | DASHUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | TRXUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | FETUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | ICPUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
-| RENDERUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
+| RENDERUSDT | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A | N/A |
 | CHZUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | ARBUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
 | APTUSDT | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ | ⬜ |
@@ -414,37 +415,37 @@ Binance USDT-M perpetuals · ranked by 24h futures volume as of 2026-05-23 · st
 
 ### Stage 1 Detail — SWING3 (1H)
 
-> Status: ⬜ Not started · (same 44-symbol table — populate when running)
+> Status: ⬜ Not started · 39 active symbols (5 excluded — see symbol universe above)
 
 ---
 
 ### Stage 1 Detail — SWING4 (4H)
 
-> Status: ⬜ Not started
+> Status: ⬜ Not started · 39 active symbols (5 excluded — see symbol universe above)
 
 ---
 
 ### Stage 1 Detail — SWING5 (1H)
 
-> Status: ⬜ Not started
+> Status: ⬜ Not started · 39 active symbols (5 excluded — see symbol universe above)
 
 ---
 
 ### Stage 1 Detail — EMA_REJ_V1 (1H)
 
-> Status: ⬜ Not started
+> Status: ⬜ Not started · 39 active symbols (5 excluded — see symbol universe above)
 
 ---
 
 ### Stage 1 Detail — DC1 (4H)
 
-> Status: ⬜ Not started
+> Status: ⬜ Not started · 39 active symbols (5 excluded — see symbol universe above)
 
 ---
 
 ### Stage 1 Detail — RR1 (4H)
 
-> Status: ⬜ Not started
+> Status: ⬜ Not started · 39 active symbols (5 excluded — see symbol universe above)
 
 ---
 
