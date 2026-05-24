@@ -1,0 +1,38 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "AXSUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "bb_length": 25,
+    "bb_mult": 2.2,
+    "squeeze_bars": 3,
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "stop_loss_pct": 2.0,
+    "rr_ratio": 2.5,
+    "direction": "both",
+    "take_profit_pct": 4.0,
+    "risk_pct": 1.0,
+    "trading_days": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "trading_hours": null
+  },
+  "train_sharpe": 0.4235,
+  "oos_sharpe": 1.3443,
+  "num_trades": 60,
+  "win_rate_pct": 41.67,
+  "max_drawdown_pct": -9.68,
+  "verdict": "PASS",
+  "note": ""
+}
