@@ -1,0 +1,38 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "BNBUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 2.0,
+    "adx_threshold": 30,
+    "ema_filter": 50,
+    "adx_period": 14,
+    "atr_stop_mult": 2.0,
+    "direction": "both",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 4.0,
+    "risk_pct": 1.0,
+    "trading_days": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "trading_hours": null
+  },
+  "train_sharpe": 1.1239,
+  "oos_sharpe": 0.6116,
+  "num_trades": 85,
+  "win_rate_pct": 43.53,
+  "max_drawdown_pct": -4.35,
+  "verdict": "PASS",
+  "note": ""
+}

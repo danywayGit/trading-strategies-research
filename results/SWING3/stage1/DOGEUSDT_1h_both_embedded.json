@@ -1,0 +1,38 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "DOGEUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 3.0,
+    "adx_threshold": 30,
+    "ema_filter": 200,
+    "adx_period": 10,
+    "atr_stop_mult": 3.0,
+    "direction": "both",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 4.0,
+    "risk_pct": 1.0,
+    "trading_days": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "trading_hours": null
+  },
+  "train_sharpe": 0.6495,
+  "oos_sharpe": 1.9416,
+  "num_trades": 84,
+  "win_rate_pct": 53.57,
+  "max_drawdown_pct": -7.0,
+  "verdict": "PASS",
+  "note": ""
+}

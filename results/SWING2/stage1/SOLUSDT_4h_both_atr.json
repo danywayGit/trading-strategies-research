@@ -1,0 +1,40 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "SOLUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "bb_length": 25,
+    "bb_mult": 2.0,
+    "squeeze_bars": 3,
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "sl_mode": "atr",
+    "atr_stop_mult": 3.0,
+    "rr_ratio": 2.0,
+    "direction": "both",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 4.0,
+    "risk_pct": 1.0,
+    "trading_days": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "trading_hours": null
+  },
+  "train_sharpe": 2.4204,
+  "oos_sharpe": 0.4943,
+  "num_trades": 91,
+  "win_rate_pct": 50.55,
+  "max_drawdown_pct": -4.81,
+  "verdict": "PASS",
+  "note": ""
+}
