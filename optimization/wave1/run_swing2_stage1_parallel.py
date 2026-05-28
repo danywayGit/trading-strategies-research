@@ -223,8 +223,8 @@ def main():
     parser = argparse.ArgumentParser(description="SWING2 Stage 1 parallel optimization")
     parser.add_argument(
         "--workers", type=int,
-        default=max(1, (os.cpu_count() or 4) // 2),
-        help="Number of parallel worker processes (default: half of CPU count)"
+        default=max(1, (os.cpu_count() or 4) - 2),
+        help="Number of parallel worker processes (default: cpu_count - 2, leaving 2 cores free)"
     )
     args = parser.parse_args()
 
