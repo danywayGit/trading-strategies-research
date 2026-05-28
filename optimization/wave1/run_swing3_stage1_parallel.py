@@ -22,9 +22,11 @@ import numpy as np
 import argparse
 from pathlib import Path
 from datetime import datetime
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor, as_completed, BrokenExecutor
 
 BACKTESTING_MCP = Path(r"C:\Users\danyw\Documents\Git\DanywayGit\BacktestingMCP")
+sys.path.insert(0, str(BACKTESTING_MCP / "venv" / "Lib" / "site-packages"))
+sys.path.insert(0, str(BACKTESTING_MCP))
 
 RESULTS_DIR = Path(r"C:\Users\danyw\Documents\Git\DanywayGit\trading-strategies-research\results\SWING3\stage1")
 
@@ -211,6 +213,31 @@ def _worker(task):
     )
 
 
+def _predownload_all(symbols, timeframe):
+    """
+    Pre-download all symbol data in the main process before spawning workers.
+    Workers crashing during downloads causes BrokenProcessPool on Windows —
+    doing all downloads here first means workers only ever read from the DB.
+    """
+    from src.core.backtesting_engine import engine
+    from config.settings import TimeFrame
+
+    tf = TimeFrame.H1 if timeframe == "1h" else TimeFrame.H4
+    start = datetime(2022, 1, 1)
+    end = datetime(2024, 12, 31)
+
+    print(f"Pre-downloading data for {len(symbols)} symbols ({timeframe})...")
+    for sym in symbols:
+        symbol_usdt = sym + "USDT"
+        try:
+            data = engine.get_data(symbol_usdt, tf, start, end)
+            status = f"{len(data)} bars" if not data.empty else "EMPTY"
+            print(f"  {symbol_usdt}: {status}", flush=True)
+        except Exception as e:
+            print(f"  {symbol_usdt}: ERROR — {e}", flush=True)
+    print()
+
+
 def main():
     parser = argparse.ArgumentParser(description="SWING3 Stage 1 parallel optimization")
     parser.add_argument(
@@ -218,9 +245,17 @@ def main():
         default=max(1, (os.cpu_count() or 4) // 2),
         help="Number of parallel worker processes (default: half of CPU count)"
     )
+    parser.add_argument(
+        "--skip-download", action="store_true",
+        help="Skip pre-download step (use if all data is already in DB)"
+    )
     args = parser.parse_args()
 
     RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+
+    # Pre-download all data in main process so workers never need to download
+    if not args.skip_download:
+        _predownload_all(SYMBOLS, "1h")
 
     # Build task list — skip already-done combos, but re-run crash results
     all_tasks = []
@@ -235,7 +270,6 @@ def main():
                     try:
                         data = json.loads(fpath.read_text())
                         if "WORKER CRASH" in str(data.get("note", "")):
-                            # Re-run crashed results
                             all_tasks.append((sym, direction, sl_type))
                             continue
                     except Exception:
@@ -272,29 +306,43 @@ def main():
                     except Exception:
                         pass
 
-    with ProcessPoolExecutor(max_workers=args.workers) as pool:
-        futures = {pool.submit(_worker, task): task for task in all_tasks}
+    # Process in batches — if the pool breaks, restart it for remaining tasks
+    remaining = list(all_tasks)
+    while remaining:
+        batch = remaining[:]
+        remaining = []
+        try:
+            with ProcessPoolExecutor(max_workers=args.workers) as pool:
+                futures = {pool.submit(_worker, task): task for task in batch}
+                for future in as_completed(futures):
+                    task = futures[future]
+                    sym, direction, sl_type = task
+                    symbol_usdt = sym + "USDT"
+                    fname = f"{symbol_usdt}_1h_{direction}_{sl_type}.json"
+                    fpath = RESULTS_DIR / fname
+                    try:
+                        result = future.result()
+                    except BrokenExecutor:
+                        # Pool is dead — collect unfinished tasks and restart
+                        print("  Pool broken, will restart for remaining tasks...", flush=True)
+                        for t, fut in futures.items():
+                            if not fut.done():
+                                remaining.append(futures[fut])
+                        break
+                    except Exception as e:
+                        print(f"WORKER CRASH [{symbol_usdt} {direction} {sl_type}]: {e}", flush=True)
+                        result = _make_result(symbol_usdt, direction, sl_type, note=f"WORKER CRASH: {e}")
 
-        for future in as_completed(futures):
-            task = futures[future]
-            sym, direction, sl_type = task
-            symbol_usdt = sym + "USDT"
-            fname = f"{symbol_usdt}_1h_{direction}_{sl_type}.json"
-            fpath = RESULTS_DIR / fname
+                    with open(fpath, "w") as f:
+                        json.dump(result, f, indent=2, cls=NumpyEncoder)
 
-            try:
-                result = future.result()
-            except Exception as e:
-                print(f"WORKER CRASH [{symbol_usdt} {direction} {sl_type}]: {e}", flush=True)
-                result = _make_result(symbol_usdt, direction, sl_type, note=f"WORKER CRASH: {e}")
+                    done += 1
+                    if result.get("verdict") == "PASS":
+                        passed += 1
+                    print(f"[{done}/{total}] {result['verdict']} | {fname}", flush=True)
 
-            with open(fpath, "w") as f:
-                json.dump(result, f, indent=2, cls=NumpyEncoder)
-
-            done += 1
-            if result.get("verdict") == "PASS":
-                passed += 1
-            print(f"[{done}/{total}] {result['verdict']} | {fname}", flush=True)
+        except BrokenExecutor:
+            print("Pool broken at top level, restarting...", flush=True)
 
     print(f"\n{'='*60}")
     print(f"DONE: {done}/{total} combos. Passed: {passed}")
