@@ -15,13 +15,20 @@ Usage:
     python run_swing3_stage1_parallel_v2.py --workers 8
     python run_swing3_stage1_parallel_v2.py --skip-download
 """
-import json
 import sys
 import os
+from pathlib import Path
+
+# Must happen before any third-party imports so the venv is on sys.path
+# regardless of which Python interpreter the user invokes the script with.
+BACKTESTING_MCP = Path(r"C:\Users\danyw\Documents\Git\DanywayGit\BacktestingMCP")
+sys.path.insert(0, str(BACKTESTING_MCP / "venv" / "Lib" / "site-packages"))
+sys.path.insert(0, str(BACKTESTING_MCP))
+
+import json
+import argparse
 import numpy as np
 import pandas as pd
-import argparse
-from pathlib import Path
 from datetime import datetime
 from itertools import product
 from concurrent.futures import ProcessPoolExecutor, as_completed, BrokenExecutor
@@ -29,12 +36,8 @@ from concurrent.futures import ProcessPoolExecutor, as_completed, BrokenExecutor
 import numba
 import vectorbt as vbt
 
-BACKTESTING_MCP = Path(r"C:\Users\danyw\Documents\Git\DanywayGit\BacktestingMCP")
-sys.path.insert(0, str(BACKTESTING_MCP / "venv" / "Lib" / "site-packages"))
-sys.path.insert(0, str(BACKTESTING_MCP))
-
-RESULTS_DIR = Path(r"C:\Users\danyw\Documents\Git\DanywayGit\trading-strategies-research\results\SWING3\stage1")
-V2_NOTE     = "v2/vectorbt"
+RESULTS_DIR            = Path(r"C:\Users\danyw\Documents\Git\DanywayGit\trading-strategies-research\results\SWING3\stage1")
+V2_NOTE                = "v2/vectorbt"
 
 SYMBOLS = [
     "BTC", "ETH", "SOL", "BNB", "ADA", "DOGE", "DOT", "LINK", "LTC", "BCH",
