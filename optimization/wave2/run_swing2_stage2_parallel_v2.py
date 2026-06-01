@@ -28,7 +28,6 @@ import pandas as pd
 from datetime import datetime
 from itertools import product
 
-import numba
 import vectorbt as vbt
 
 STRATEGY_ID  = "SWING2"
@@ -309,21 +308,7 @@ def _run_vbt_portfolio(close_series, le, lx, se, sx, sl_type, sl_params_list, at
             tp_stop=tp_2d,
         )
 
-    elif sl_type == "fixed_pct":
-        # Fixed % SL/TP — no signal exits
-        sl_arr = np.array([p["stop_loss_pct"]   / 100.0 for p in sl_params_list])
-        tp_arr = np.array([p["take_profit_pct"] / 100.0 for p in sl_params_list])
-        pf = vbt.Portfolio.from_signals(
-            **common,
-            entries=le_2d,
-            exits=np.zeros_like(le_2d, dtype=bool),
-            short_entries=se_2d,
-            short_exits=np.zeros_like(se_2d, dtype=bool),
-            sl_stop=sl_arr,
-            tp_stop=tp_arr,
-        )
-
-    elif sl_type == "fixed_signal":
+    elif sl_type in ("fixed_pct", "fixed_signal"):
         # Fixed % SL/TP — SWING2 has no signal-based exits (SL/TP only)
         sl_arr = np.array([p["stop_loss_pct"]   / 100.0 for p in sl_params_list])
         tp_arr = np.array([p["take_profit_pct"] / 100.0 for p in sl_params_list])
@@ -548,13 +533,7 @@ def _worker_v2(task):
     print(f"{log_prefix} best train: sharpe={train_sharpe:.4f} trades={num_trades}",
           flush=True)
 
-    if num_trades < 30:
-        return _make_result(symbol_usdt, direction, sl_type, tf,
-                            best_params=best_params, train_sharpe=train_sharpe,
-                            num_trades=num_trades, win_rate=win_rate, max_dd=max_dd,
-                            note=note + f" | num_trades={num_trades} < 30")
-
-    oos_sharpe, _ = _eval_single(test_data, direction, sl_type, best_params, freq=TF_FREQ_MAP[tf])
+    oos_sharpe, oos_trades = _eval_single(test_data, direction, sl_type, best_params, freq=TF_FREQ_MAP[tf])
     verdict = "PASS" if (oos_sharpe is not None and oos_sharpe > 0) else "FAIL"
     oos_str = f"{oos_sharpe:.4f}" if oos_sharpe is not None else "None"
     print(f"{log_prefix} OOS sharpe={oos_str} => {verdict}", flush=True)
@@ -562,7 +541,7 @@ def _worker_v2(task):
     return _make_result(
         symbol_usdt, direction, sl_type, tf,
         best_params=best_params, train_sharpe=train_sharpe,
-        oos_sharpe=oos_sharpe, num_trades=num_trades,
+        oos_sharpe=oos_sharpe, num_trades=oos_trades,
         win_rate=win_rate, max_dd=max_dd,
         verdict=verdict, note=note,
     )
