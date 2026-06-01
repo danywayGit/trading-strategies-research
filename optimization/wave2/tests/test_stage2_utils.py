@@ -1,3 +1,5 @@
+# Run with: python -m pytest tests/test_stage2_utils.py -v
+# Requires: pip install pytest  (or use BacktestingMCP venv which has pytest)
 import json
 import sys
 import tempfile
@@ -70,3 +72,11 @@ def test_off_tf_map_4h_home():
 
 def test_sharpe_filter_default_is_half():
     assert SHARPE_FILTER == 0.5
+
+
+def test_load_stage1_passing_includes_exact_threshold():
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        _write_stage1_json(tmp, "SWING3", "BTCUSDT", "1h", "both", "atr", oos_sharpe=0.5)
+        result = load_stage1_passing("SWING3", tmp, sharpe_threshold=0.5)
+        assert ("BTCUSDT", "both", "atr") in result

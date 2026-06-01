@@ -12,7 +12,7 @@ Exports:
 """
 import json
 import os
-from concurrent.futures import ProcessPoolExecutor, as_completed
+from concurrent.futures import ProcessPoolExecutor, as_completed, BrokenExecutor
 from datetime import datetime
 from pathlib import Path
 from typing import Callable, Optional
@@ -110,7 +110,9 @@ def run_stage2_parallel(
     if workers is None:
         workers = max(1, (os.cpu_count() or 4) - 2)
 
-    off_tfs    = OFF_TF_MAP[home_tf]
+    off_tfs = OFF_TF_MAP.get(home_tf)
+    if off_tfs is None:
+        raise ValueError(f"home_tf {home_tf!r} not in OFF_TF_MAP; valid: {list(OFF_TF_MAP)}")
     stage2_dir = results_base / strategy_id / "stage2"
     stage2_dir.mkdir(parents=True, exist_ok=True)
 
@@ -121,7 +123,9 @@ def run_stage2_parallel(
     print(f"\n{strategy_id} Stage 2 — {len(passing)} Stage 1 combos pass "
           f"Sharpe >= {sharpe_threshold} filter")
 
-    all_tasks, skipped = [], 0
+    all_tasks = []
+    done = 0
+    passed = 0
     for symbol_usdt, direction, sl_type in passing:
         sym = symbol_usdt.replace("USDT", "")
         for tf in off_tfs:
@@ -129,66 +133,71 @@ def run_stage2_parallel(
             fpath = stage2_dir / fname
             if fpath.exists():
                 try:
-                    note = str(json.loads(fpath.read_text()).get("note", ""))
+                    data = json.loads(fpath.read_text(encoding="utf-8"))
+                    note = str(data.get("note", ""))
                     if not any(e in note for e in
                                ("WORKER CRASH", "OPT ERROR", "DATA ERROR")):
-                        skipped += 1
+                        done += 1
+                        if data.get("verdict") == "PASS":
+                            passed += 1
                         continue
                 except Exception:
                     pass
             all_tasks.append((sym, tf, direction, sl_type))
 
     total = len(passing) * len(off_tfs)
-    print(f"Tasks: {len(all_tasks)} to run, {skipped} already done, {total} total\n")
+    print(f"Tasks: {len(all_tasks)} to run, {done} already done, {total} total\n")
 
     if not all_tasks:
         print("Nothing to do — all results already on disk.")
         return
 
-    done = skipped
-    passed = 0
-    for fpath in stage2_dir.glob("*.json"):
+    remaining = list(all_tasks)
+    while remaining:
         try:
-            if json.loads(fpath.read_text()).get("verdict") == "PASS":
-                passed += 1
-        except Exception:
-            pass
+            with ProcessPoolExecutor(max_workers=workers) as executor:
+                futures = {executor.submit(worker_fn, task): task for task in remaining}
+                completed_tasks = []
+                for future in as_completed(futures):
+                    task = futures[future]
+                    completed_tasks.append(task)
+                    try:
+                        result = future.result()
+                    except Exception as e:
+                        sym, tf, direction, sl_type = task
+                        result = {
+                            "symbol": sym + "USDT", "timeframe": tf,
+                            "direction": direction, "sl_type": sl_type,
+                            "verdict": "FAIL", "note": f"WORKER CRASH: {e}",
+                        }
 
-    with ProcessPoolExecutor(max_workers=workers) as executor:
-        futures = {executor.submit(worker_fn, task): task for task in all_tasks}
-        for future in as_completed(futures):
-            task = futures[future]
-            try:
-                result = future.result()
-            except Exception as e:
-                sym, tf, direction, sl_type = task
-                result = {
-                    "symbol": sym + "USDT", "timeframe": tf,
-                    "direction": direction, "sl_type": sl_type,
-                    "verdict": "FAIL", "note": f"WORKER CRASH: {e}",
-                }
+                    sym_usdt  = result.get("symbol", "?")
+                    tf        = result.get("timeframe", "?")
+                    direction = result.get("direction", "?")
+                    sl_type   = result.get("sl_type", "?")
+                    verdict   = result.get("verdict", "FAIL")
 
-            sym_usdt  = result.get("symbol", "?")
-            tf        = result.get("timeframe", "?")
-            direction = result.get("direction", "?")
-            sl_type   = result.get("sl_type", "?")
-            verdict   = result.get("verdict", "FAIL")
+                    fname = f"{sym_usdt}_{tf}_{direction}_{sl_type}.json"
+                    (stage2_dir / fname).write_text(
+                        json.dumps(result, indent=2, cls=_NumpyEncoder),
+                        encoding="utf-8",
+                    )
 
-            fname = f"{sym_usdt}_{tf}_{direction}_{sl_type}.json"
-            (stage2_dir / fname).write_text(
-                json.dumps(result, indent=2, cls=_NumpyEncoder),
-                encoding="utf-8",
-            )
-
-            done += 1
-            if verdict == "PASS":
-                passed += 1
-            oos     = result.get("oos_sharpe")
-            oos_str = f"{oos:.4f}" if oos is not None else "None"
-            print(
-                f"[{done}/{total}] {sym_usdt} {tf} {direction} {sl_type}"
-                f" → {verdict} (OOS={oos_str})",
-                flush=True,
-            )
+                    done += 1
+                    if verdict == "PASS":
+                        passed += 1
+                    oos     = result.get("oos_sharpe")
+                    oos_str = f"{oos:.4f}" if oos is not None else "None"
+                    print(
+                        f"[{done}/{total}] {sym_usdt} {tf} {direction} {sl_type}"
+                        f" → {verdict} (OOS={oos_str})",
+                        flush=True,
+                    )
+                remaining = []  # all completed successfully
+        except BrokenExecutor:
+            completed_set = set(map(tuple, completed_tasks))
+            remaining = [t for t in remaining if tuple(t) not in completed_set]
+            print(f"Pool broken — restarting with {len(remaining)} remaining tasks",
+                  flush=True)
 
     print(f"\n{strategy_id} Stage 2 complete — {passed}/{done} passed")
