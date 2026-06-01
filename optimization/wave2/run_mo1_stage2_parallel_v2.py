@@ -59,12 +59,13 @@ SYMBOLS = [
 ]
 LIMITED_DATA = {"ENA", "TAO"}
 
+COOLDOWN_BARS = 5  # not swept — _make_signals does not enforce cooldown
+
 INDICATOR_PARAMS = {
     "rsi_period":         [10, 14],
     "momentum_threshold": [3.0, 5.0, 8.0, 10.0],
     "adx_trend_confirm":  [15, 20, 25],
     "adx_exit_fade":      [10, 15, 20],
-    "cooldown_bars":      [5, 10, 20],
 }
 
 SL_PARAM_GRID = {
@@ -318,9 +319,9 @@ def _optimize_vbt(data, direction, sl_type, freq="1h"):
     best_result = None
     ip = INDICATOR_PARAMS
 
-    for (rsi_period, mom_thresh, adx_confirm, adx_fade, cooldown) in product(
+    for (rsi_period, mom_thresh, adx_confirm, adx_fade) in product(
         ip["rsi_period"], ip["momentum_threshold"],
-        ip["adx_trend_confirm"], ip["adx_exit_fade"], ip["cooldown_bars"]
+        ip["adx_trend_confirm"], ip["adx_exit_fade"]
     ):
         if rsi_period not in rsi_cache:
             rsi_cache[rsi_period] = _compute_rsi(c, rsi_period)
@@ -357,7 +358,7 @@ def _optimize_vbt(data, direction, sl_type, freq="1h"):
                         "momentum_threshold": mom_thresh,
                         "adx_trend_confirm":  adx_confirm,
                         "adx_exit_fade":      adx_fade,
-                        "cooldown_bars":      cooldown,
+                        "cooldown_bars":      COOLDOWN_BARS,
                         "direction":          direction,
                         **sl_p,
                     },
@@ -434,7 +435,7 @@ def _worker_v2(task):
         return _make_result(symbol_usdt, direction, sl_type, tf,
                             note=f"DATA ERROR: {e}")
 
-    if data.empty or len(data) < 200:
+    if data.empty or len(data) < 500:
         return _make_result(symbol_usdt, direction, sl_type, tf,
                             note="insufficient data")
 

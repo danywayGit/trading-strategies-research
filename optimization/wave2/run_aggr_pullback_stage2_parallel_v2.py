@@ -451,7 +451,7 @@ def _worker_v2(task):
         return _make_result(symbol_usdt, direction, sl_type, tf,
                             note=f"DATA ERROR: {e}")
 
-    if data.empty or len(data) < 200:
+    if data.empty or len(data) < 500:
         return _make_result(symbol_usdt, direction, sl_type, tf,
                             note="insufficient data")
 
