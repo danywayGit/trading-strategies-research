@@ -598,13 +598,7 @@ def _worker_v2(task):
     print(f"{log_prefix} best train: sharpe={train_sharpe:.4f} trades={num_trades}",
           flush=True)
 
-    if num_trades < 30:
-        return _make_result(symbol_usdt, direction, sl_type, tf,
-                            best_params=best_params, train_sharpe=train_sharpe,
-                            num_trades=num_trades, win_rate=win_rate, max_dd=max_dd,
-                            note=note + f" | num_trades={num_trades} < 30")
-
-    oos_sharpe, _ = _eval_single(test_data, direction, sl_type, best_params, freq=TF_FREQ_MAP[tf])
+    oos_sharpe, oos_trades = _eval_single(test_data, direction, sl_type, best_params, freq=TF_FREQ_MAP[tf])
     verdict = "PASS" if (oos_sharpe is not None and oos_sharpe > 0) else "FAIL"
     oos_str = f"{oos_sharpe:.4f}" if oos_sharpe is not None else "None"
     print(f"{log_prefix} OOS sharpe={oos_str} => {verdict}", flush=True)
@@ -612,7 +606,7 @@ def _worker_v2(task):
     return _make_result(
         symbol_usdt, direction, sl_type, tf,
         best_params=best_params, train_sharpe=train_sharpe,
-        oos_sharpe=oos_sharpe, num_trades=num_trades,
+        oos_sharpe=oos_sharpe, num_trades=oos_trades,
         win_rate=win_rate, max_dd=max_dd,
         verdict=verdict, note=note,
     )
