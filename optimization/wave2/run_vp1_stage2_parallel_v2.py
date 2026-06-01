@@ -25,8 +25,6 @@ import numpy as np
 import pandas as pd
 from datetime import datetime
 from itertools import product
-from scipy.stats import norm as scipy_norm
-
 import vectorbt as vbt
 
 STRATEGY_ID  = "VP1"

@@ -26,7 +26,6 @@ import pandas as pd
 from datetime import datetime
 from itertools import product
 
-import numba
 import vectorbt as vbt
 
 STRATEGY_ID  = "SWING5"
