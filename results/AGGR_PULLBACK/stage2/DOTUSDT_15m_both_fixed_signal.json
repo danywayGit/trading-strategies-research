@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "DOTUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 1,
+    "swing_lookback": 10,
+    "massive_candle_mult": 1.5,
+    "direction": "both",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 2.2129,
+  "oos_sharpe": 1.5551,
+  "num_trades": 36,
+  "win_rate_pct": 48.98,
+  "max_drawdown_pct": -25.04,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

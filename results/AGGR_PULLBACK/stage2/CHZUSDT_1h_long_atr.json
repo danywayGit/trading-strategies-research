@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "CHZUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 25,
+    "pullback_tolerance": 1,
+    "swing_lookback": 10,
+    "massive_candle_mult": 3.0,
+    "direction": "long",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 1.2614,
+  "oos_sharpe": -0.501,
+  "num_trades": 13,
+  "win_rate_pct": 54.55,
+  "max_drawdown_pct": -30.88,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

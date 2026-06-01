@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "DYDXUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 1,
+    "swing_lookback": 7,
+    "massive_candle_mult": 2.0,
+    "direction": "short",
+    "stop_mult": 2.5,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 1.5095,
+  "oos_sharpe": -0.0716,
+  "num_trades": 59,
+  "win_rate_pct": 50.6,
+  "max_drawdown_pct": -28.41,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

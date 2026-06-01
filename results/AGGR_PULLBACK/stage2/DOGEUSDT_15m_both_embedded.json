@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "DOGEUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 25,
+    "pullback_tolerance": 1,
+    "swing_lookback": 10,
+    "massive_candle_mult": 2.0,
+    "direction": "both",
+    "stop_mult": 2.5,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 1.0521,
+  "oos_sharpe": 1.7225,
+  "num_trades": 98,
+  "win_rate_pct": 34.65,
+  "max_drawdown_pct": -52.57,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

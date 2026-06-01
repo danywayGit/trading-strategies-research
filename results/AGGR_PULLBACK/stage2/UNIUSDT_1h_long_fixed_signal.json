@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "UNIUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 2,
+    "swing_lookback": 7,
+    "massive_candle_mult": 2.0,
+    "direction": "long",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 8.0
+  },
+  "train_sharpe": 0.7491,
+  "oos_sharpe": -0.0822,
+  "num_trades": 34,
+  "win_rate_pct": 33.9,
+  "max_drawdown_pct": -28.56,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

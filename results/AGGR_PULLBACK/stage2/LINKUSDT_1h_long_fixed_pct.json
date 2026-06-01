@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "LINKUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 25,
+    "pullback_tolerance": 1,
+    "swing_lookback": 10,
+    "massive_candle_mult": 1.5,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 4.0
+  },
+  "train_sharpe": 0.5368,
+  "oos_sharpe": 0.385,
+  "num_trades": 11,
+  "win_rate_pct": 39.39,
+  "max_drawdown_pct": -17.78,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}
