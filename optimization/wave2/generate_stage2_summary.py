@@ -22,34 +22,34 @@ RESULTS_BASE = Path(r"C:\Users\danyw\Documents\Git\DanywayGit\trading-strategies
 # sl_types must match the filenames written by the corresponding v2 script.
 # RR1 and SFP1 are not included in Stage 2.
 STRATEGY_META = {
-    "SWING2":        {"key": "swing2_bb_squeeze",           "home_tf": "4h",
+    "SWING2":        {"home_tf": "4h",
                       "off_tfs": ["15m", "1h", "12h"],
                       "sl_types": ["embedded", "fixed_pct", "fixed_signal", "atr"]},
-    "SWING3":        {"key": "swing3_supertrend_adx",       "home_tf": "1h",
+    "SWING3":        {"home_tf": "1h",
                       "off_tfs": ["15m", "4h", "12h"],
                       "sl_types": ["embedded", "fixed_pct", "fixed_signal", "atr"]},
-    "SWING4":        {"key": "swing4_macd_divergence",      "home_tf": "4h",
+    "SWING4":        {"home_tf": "4h",
                       "off_tfs": ["15m", "1h", "12h"],
                       "sl_types": ["embedded", "fixed_pct", "fixed_signal", "atr"]},
-    "SWING5":        {"key": "swing5_keltner_breakout",     "home_tf": "1h",
+    "SWING5":        {"home_tf": "1h",
                       "off_tfs": ["15m", "4h", "12h"],
                       "sl_types": ["embedded", "fixed_pct", "fixed_signal", "atr"]},
-    "EMA_REJ_V1":    {"key": "ema_rejection_v1",            "home_tf": "1h",
+    "EMA_REJ_V1":    {"home_tf": "1h",
                       "off_tfs": ["15m", "4h", "12h"],
                       "sl_types": ["embedded", "fixed_pct", "fixed_signal", "atr"]},
-    "DC1":           {"key": "dc1_donchian_channel",        "home_tf": "4h",
+    "DC1":           {"home_tf": "4h",
                       "off_tfs": ["15m", "1h", "12h"],
                       "sl_types": ["embedded", "fixed_pct", "fixed_signal", "atr"]},
-    "VR1":           {"key": "vr1_vwap_mean_reversion",     "home_tf": "1h",
+    "VR1":           {"home_tf": "1h",
                       "off_tfs": ["15m", "4h", "12h"],
                       "sl_types": ["embedded", "fixed_pct", "fixed_signal", "atr"]},
-    "AGGR_PULLBACK": {"key": "aggr_pullback",               "home_tf": "4h",
+    "AGGR_PULLBACK": {"home_tf": "4h",
                       "off_tfs": ["15m", "1h", "12h"],
                       "sl_types": ["embedded", "fixed_pct", "fixed_signal", "atr"]},
-    "MO1":           {"key": "mo1_momentum_rotation",       "home_tf": "4h",
+    "MO1":           {"home_tf": "4h",
                       "off_tfs": ["15m", "1h", "12h"],
                       "sl_types": ["embedded", "fixed_pct", "fixed_signal", "atr"]},
-    "VP1":           {"key": "vp1_volume_profile_breakout", "home_tf": "1h",
+    "VP1":           {"home_tf": "1h",
                       "off_tfs": ["15m", "4h", "12h"],
                       "sl_types": ["embedded", "fixed_pct", "fixed_signal", "atr"]},
 }
@@ -89,8 +89,8 @@ def load_results(strategy_id, off_tfs, sl_types):
                         try:
                             with open(fpath, encoding="utf-8") as f:
                                 results[(symbol_usdt, tf, direction, sl_type)] = json.load(f)
-                        except Exception:
-                            pass
+                        except Exception as e:
+                            print(f"Warning: could not parse {fpath}: {e}", file=sys.stderr)
     return results
 
 
@@ -125,9 +125,10 @@ def generate_summary(strategy_id):
     lines.append("")
     lines.append(f"**Date:** {datetime.now().strftime('%Y-%m-%d')}")
     lines.append(f"**Off-TFs tested:** {', '.join(off_tfs)}")
-    lines.append(f"**Pass filter:** num_trades ≥ 30 AND OOS Sharpe > 0")
-    lines.append(f"**Total combos:** {done} / {total}  "
-                 f"({n_sym} symbols × {n_dir} dir × {n_sl} SL × {n_tf} TFs)")
+    lines.append(f"**Pass filter:** train_trades ≥ 30 AND OOS Sharpe > 0")
+    lines.append(f"**Note:** `Trades` column shows OOS trade count (train count guaranteed ≥ 30)")
+    lines.append(f"**Combos completed:** {done} / {total}  "
+                 f"({n_sym} symbols × {n_dir} dir × {n_sl} SL × {n_tf} TFs max)")
     lines.append(f"**Pass rate:** {passed} / {done}")
     lines.append("")
     lines.append("---")
@@ -162,8 +163,8 @@ def generate_summary(strategy_id):
     lines.append("## Passing Combos (proceed to Stage 3)")
     lines.append("")
     if pass_list:
-        lines.append("| Symbol | TF | Direction | SL Type | OOS Sharpe | "
-                     "Train Sharpe | Trades | Max DD% | Best Params |")
+        lines.append("| Symbol | Off-TF | Direction | SL Type | OOS Sharpe | "
+                     "Train Sharpe | OOS Trades | Max DD% | Best Params |")
         lines.append("|---|---|---|---|---|---|---|---|---|")
         for r in pass_list:
             params_str = json.dumps(r.get("best_params") or {})
