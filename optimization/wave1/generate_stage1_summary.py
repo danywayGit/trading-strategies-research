@@ -178,9 +178,9 @@ def generate_summary(strategy_id):
     lines.append(f"**Stage 1 pass rate: {passed} / {done}**")
     lines.append("")
 
-    stage1_dir = RESULTS_BASE / strategy_id / "stage1"
-    stage1_dir.mkdir(parents=True, exist_ok=True)
-    out_path = stage1_dir / f"{strategy_id}_stage1_summary.md"
+    out_dir = RESULTS_BASE / "stage1_summarized"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{strategy_id}_stage1_summary.md"
     out_path.write_text("\n".join(lines), encoding="utf-8")
     print(f"Written: {out_path}")
     print(f"  Pass rate: {passed}/{done}  (total expected: {total})")
