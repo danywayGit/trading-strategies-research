@@ -41,6 +41,12 @@ TF_MAP = {
     "12h": "H12",
 }
 
+TF_FREQ_MAP = {
+    "15m": "15min",
+    "4h":  "4h",
+    "12h": "12h",
+}
+
 VENV_SITE_PACKAGES = BACKTESTING_MCP / "venv" / "Lib" / "site-packages"
 
 SYMBOLS = [
@@ -318,7 +324,7 @@ def _extract_pf_stats(pf, n_combos):
     })
 
 
-def _run_vbt_portfolio(close_series, le, lx, se, sx, sl_type, sl_params_list, atr):
+def _run_vbt_portfolio(close_series, le, lx, se, sx, sl_type, sl_params_list, atr, freq="1h"):
     """
     Single vbt.Portfolio.from_signals() call evaluating all SL combos as columns.
 
@@ -343,7 +349,7 @@ def _run_vbt_portfolio(close_series, le, lx, se, sx, sl_type, sl_params_list, at
         close=close_series,
         init_cash=1_000_000,
         fees=0.0005,
-        freq="1h",
+        freq=freq,
     )
 
     if sl_type == "embedded":
@@ -423,7 +429,7 @@ def _run_vbt_portfolio(close_series, le, lx, se, sx, sl_type, sl_params_list, at
 
 # ── Optimization loop ─────────────────────────────────────────────────────────
 
-def _optimize_vbt(data, direction, sl_type):
+def _optimize_vbt(data, direction, sl_type, freq="1h"):
     """
     Loop over 81 unique indicator-param combos. For each:
       1. Compute indicators ONCE (Supertrend, ADX, EMA, ATR)
@@ -471,7 +477,7 @@ def _optimize_vbt(data, direction, sl_type):
             continue
 
         try:
-            stats_df = _run_vbt_portfolio(close_s, le, lx, se, sx, sl_type, sl_list, atr)
+            stats_df = _run_vbt_portfolio(close_s, le, lx, se, sx, sl_type, sl_list, atr, freq=freq)
         except Exception as e:
             print(f"    vbt error ({st_period},{st_factor},{adx_threshold},{ema_filter}): {e}",
                   flush=True)
@@ -505,7 +511,7 @@ def _optimize_vbt(data, direction, sl_type):
     return best_result
 
 
-def _eval_single(data, direction, sl_type, best_params):
+def _eval_single(data, direction, sl_type, best_params, freq="1h"):
     """
     Evaluate one parameter set on a data slice (the OOS test window).
     Returns (oos_sharpe, oos_trades) or (None, 0) on error.
@@ -533,7 +539,7 @@ def _eval_single(data, direction, sl_type, best_params):
         else:
             raise ValueError(f"Unknown sl_type: {sl_type}")
 
-        stats_df = _run_vbt_portfolio(close_s, le, lx, se, sx, sl_type, sl_list, atr)
+        stats_df = _run_vbt_portfolio(close_s, le, lx, se, sx, sl_type, sl_list, atr, freq=freq)
         row = stats_df.iloc[0]
         sharpe   = float(row["sharpe"]) if np.isfinite(row.get("sharpe", np.nan)) else None
         n_trades = int(row["trades"])
@@ -582,7 +588,7 @@ def _worker_v2(task):
 
     print(f"{log_prefix} optimizing ({len(train_data)} train bars)...", flush=True)
     try:
-        opt = _optimize_vbt(train_data, direction, sl_type)
+        opt = _optimize_vbt(train_data, direction, sl_type, freq=TF_FREQ_MAP[tf])
     except Exception as e:
         print(f"{log_prefix} OPT ERROR: {e}", flush=True)
         return _make_result(symbol_usdt, direction, sl_type, tf,
@@ -602,7 +608,7 @@ def _worker_v2(task):
                             num_trades=num_trades, win_rate=win_rate, max_dd=max_dd,
                             note=note + f" | num_trades={num_trades} < 30")
 
-    oos_sharpe, _ = _eval_single(test_data, direction, sl_type, best_params)
+    oos_sharpe, _ = _eval_single(test_data, direction, sl_type, best_params, freq=TF_FREQ_MAP[tf])
     verdict = "PASS" if (oos_sharpe is not None and oos_sharpe > 0) else "FAIL"
     oos_str = f"{oos_sharpe:.4f}" if oos_sharpe is not None else "None"
     print(f"{log_prefix} OOS sharpe={oos_str} => {verdict}", flush=True)
