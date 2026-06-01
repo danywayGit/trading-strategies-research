@@ -1,0 +1,28 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "SANDUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "macd_fast": 12,
+    "macd_slow": 24,
+    "macd_signal_period": 7,
+    "rsi_period": 10,
+    "divergence_lookback": 3,
+    "rsi_long_max": 50,
+    "rsi_short_min": 50,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 0.0249,
+  "oos_sharpe": -1.3477,
+  "num_trades": 170,
+  "win_rate_pct": 27.65,
+  "max_drawdown_pct": -60.25,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

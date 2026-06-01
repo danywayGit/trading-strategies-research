@@ -7,31 +7,19 @@
   "stage": 1,
   "test_window": "2022-01-01/2024-12-31",
   "best_params": {
-    "st_period": 10,
-    "st_factor": 4.0,
+    "st_period": 14,
+    "st_factor": 2.0,
     "adx_threshold": 20,
-    "ema_filter": 200,
-    "sl_mode": "fixed_signal",
-    "stop_loss_pct": 2.0,
-    "take_profit_pct": 4.0,
-    "direction": "both",
-    "risk_pct": 1.0,
-    "trading_days": [
-      0,
-      1,
-      2,
-      3,
-      4,
-      5,
-      6
-    ],
-    "trading_hours": null
+    "ema_filter": 100,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
   },
-  "train_sharpe": -0.1695,
-  "oos_sharpe": 1.828,
-  "num_trades": 67,
-  "win_rate_pct": 50.75,
-  "max_drawdown_pct": -4.94,
-  "verdict": "PASS",
-  "note": ""
+  "train_sharpe": 1.8511,
+  "oos_sharpe": -1.7643,
+  "num_trades": 117,
+  "win_rate_pct": 38.46,
+  "max_drawdown_pct": -29.67,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
 }

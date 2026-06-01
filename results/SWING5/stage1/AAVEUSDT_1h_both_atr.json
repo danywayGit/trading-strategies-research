@@ -1,0 +1,26 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "AAVEUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 20,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "both",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 0.9492,
+  "oos_sharpe": -0.7595,
+  "num_trades": 345,
+  "win_rate_pct": 40.0,
+  "max_drawdown_pct": -59.94,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

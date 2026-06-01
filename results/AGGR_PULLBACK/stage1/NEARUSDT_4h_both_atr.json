@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "NEARUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 2,
+    "swing_lookback": 5,
+    "massive_candle_mult": 3.0,
+    "direction": "both",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 1.4692,
+  "oos_sharpe": -0.3272,
+  "num_trades": 30,
+  "win_rate_pct": 46.67,
+  "max_drawdown_pct": -50.85,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

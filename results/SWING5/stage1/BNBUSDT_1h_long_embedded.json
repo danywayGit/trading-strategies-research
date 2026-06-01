@@ -1,0 +1,25 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "BNBUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 2.0,
+    "cci_period": 28,
+    "cci_long_min": 0,
+    "cci_short_max": 0,
+    "direction": "long",
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 0.1074,
+  "oos_sharpe": 1.5441,
+  "num_trades": 111,
+  "win_rate_pct": 30.63,
+  "max_drawdown_pct": -55.83,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

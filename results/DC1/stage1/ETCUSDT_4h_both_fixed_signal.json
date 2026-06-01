@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "ETCUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 15,
+    "adx_threshold": 25,
+    "adx_exit": 20,
+    "atr_period": 21,
+    "vol_avg_period": 30,
+    "vol_mult": 1.2,
+    "direction": "both",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.8524,
+  "oos_sharpe": 0.2571,
+  "num_trades": 81,
+  "win_rate_pct": 40.74,
+  "max_drawdown_pct": -22.66,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "BCHUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 3.0,
+    "adx_threshold": 25,
+    "ema_filter": 100,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.0601,
+  "oos_sharpe": 0.6632,
+  "num_trades": 33,
+  "win_rate_pct": 33.33,
+  "max_drawdown_pct": -21.98,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

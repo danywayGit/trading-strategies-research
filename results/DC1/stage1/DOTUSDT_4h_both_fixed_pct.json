@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "DOTUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 15,
+    "adx_threshold": 30,
+    "adx_exit": 15,
+    "atr_period": 14,
+    "vol_avg_period": 14,
+    "vol_mult": 0.8,
+    "direction": "both",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 4.0
+  },
+  "train_sharpe": 1.8405,
+  "oos_sharpe": -1.4114,
+  "num_trades": 79,
+  "win_rate_pct": 59.49,
+  "max_drawdown_pct": -22.83,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

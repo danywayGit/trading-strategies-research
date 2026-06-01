@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "FILUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 150,
+    "rejection_lookback": 10,
+    "rsi_period": 10,
+    "rsi_ema_period": 14,
+    "rsi_confirm_window": 5,
+    "htf_bars": 9,
+    "direction": "long",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 0.9719,
+  "oos_sharpe": 0.025,
+  "num_trades": 35,
+  "win_rate_pct": 51.43,
+  "max_drawdown_pct": -24.11,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "SEIUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 2.0,
+    "adx_threshold": 20,
+    "ema_filter": 50,
+    "direction": "short",
+    "stop_loss_pct": 3.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 2.267,
+  "oos_sharpe": -0.1727,
+  "num_trades": 57,
+  "win_rate_pct": 47.37,
+  "max_drawdown_pct": -19.2,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

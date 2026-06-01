@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "DASHUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 200,
+    "rejection_lookback": 10,
+    "rsi_period": 10,
+    "rsi_ema_period": 7,
+    "rsi_confirm_window": 3,
+    "htf_bars": 9,
+    "direction": "both",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 3.0
+  },
+  "train_sharpe": 0.9039,
+  "oos_sharpe": 0.5266,
+  "num_trades": 97,
+  "win_rate_pct": 53.61,
+  "max_drawdown_pct": -18.21,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

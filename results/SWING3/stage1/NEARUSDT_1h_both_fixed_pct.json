@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "NEARUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 2.0,
+    "adx_threshold": 25,
+    "ema_filter": 100,
+    "direction": "both",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.9297,
+  "oos_sharpe": 1.8069,
+  "num_trades": 81,
+  "win_rate_pct": 49.38,
+  "max_drawdown_pct": -19.73,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

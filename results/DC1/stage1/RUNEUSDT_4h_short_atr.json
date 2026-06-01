@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "RUNEUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 55,
+    "adx_threshold": 30,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 30,
+    "vol_mult": 1.2,
+    "direction": "short",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 1.5099,
+  "oos_sharpe": 0.0792,
+  "num_trades": 31,
+  "win_rate_pct": 48.39,
+  "max_drawdown_pct": -19.64,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

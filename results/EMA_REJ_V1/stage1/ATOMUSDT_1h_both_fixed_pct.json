@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "ATOMUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 150,
+    "rejection_lookback": 15,
+    "rsi_period": 14,
+    "rsi_ema_period": 9,
+    "rsi_confirm_window": 2,
+    "htf_bars": 9,
+    "direction": "both",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 5.0
+  },
+  "train_sharpe": 1.7809,
+  "oos_sharpe": 0.65,
+  "num_trades": 87,
+  "win_rate_pct": 50.57,
+  "max_drawdown_pct": -25.77,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

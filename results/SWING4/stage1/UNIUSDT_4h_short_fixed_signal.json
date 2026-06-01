@@ -1,0 +1,28 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "UNIUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "macd_signal_period": 9,
+    "rsi_period": 10,
+    "divergence_lookback": 10,
+    "rsi_long_max": 40,
+    "rsi_short_min": 60,
+    "direction": "short",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 3.0
+  },
+  "train_sharpe": 1.1286,
+  "oos_sharpe": -0.4693,
+  "num_trades": 110,
+  "win_rate_pct": 55.45,
+  "max_drawdown_pct": -29.16,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

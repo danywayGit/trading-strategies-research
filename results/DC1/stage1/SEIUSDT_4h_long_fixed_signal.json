@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "SEIUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 15,
+    "adx_threshold": 20,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 14,
+    "vol_mult": 1.0,
+    "direction": "long",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 3.0
+  },
+  "train_sharpe": 1.4521,
+  "oos_sharpe": 2.0344,
+  "num_trades": 57,
+  "win_rate_pct": 57.89,
+  "max_drawdown_pct": -20.91,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,26 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "ENAUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 1.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "long",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 4.0
+  },
+  "train_sharpe": 1.6158,
+  "oos_sharpe": 1.612,
+  "num_trades": 53,
+  "win_rate_pct": 28.3,
+  "max_drawdown_pct": -44.19,
+  "verdict": "PASS",
+  "note": "v2/vectorbt ~9 months data"
+}

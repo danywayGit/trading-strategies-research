@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "SOLUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 55,
+    "adx_threshold": 20,
+    "adx_exit": 25,
+    "atr_period": 21,
+    "vol_avg_period": 14,
+    "vol_mult": 1.2,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.3903,
+  "oos_sharpe": 1.0592,
+  "num_trades": 35,
+  "win_rate_pct": 45.71,
+  "max_drawdown_pct": -18.8,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

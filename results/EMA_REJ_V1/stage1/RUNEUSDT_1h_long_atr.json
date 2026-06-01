@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "RUNEUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 250,
+    "rejection_lookback": 15,
+    "rsi_period": 14,
+    "rsi_ema_period": 14,
+    "rsi_confirm_window": 5,
+    "htf_bars": 9,
+    "direction": "long",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 1.1301,
+  "oos_sharpe": -2.4149,
+  "num_trades": 33,
+  "win_rate_pct": 45.45,
+  "max_drawdown_pct": -11.53,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

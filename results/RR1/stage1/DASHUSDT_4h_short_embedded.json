@@ -1,0 +1,30 @@
+{
+  "strategy": "rr1_range_mean_reversion",
+  "symbol": "DASHUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "adx_period": 14,
+    "adx_threshold": 25,
+    "rsi_period": 10,
+    "rsi_oversold": 25,
+    "rsi_overbought": 65,
+    "bb_length": 20,
+    "bb_mult": 1.5,
+    "stoch_k": 14,
+    "stoch_d": 3,
+    "direction": "short",
+    "sl_mode": "embedded",
+    "sl_buffer_atr": 0.2
+  },
+  "train_sharpe": 1.39,
+  "oos_sharpe": -1.0474,
+  "num_trades": 30,
+  "win_rate_pct": 66.67,
+  "max_drawdown_pct": -26.38,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

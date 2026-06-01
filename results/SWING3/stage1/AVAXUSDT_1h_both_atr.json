@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "AVAXUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 2.0,
+    "adx_threshold": 25,
+    "ema_filter": 100,
+    "direction": "both",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 1.8282,
+  "oos_sharpe": 1.7114,
+  "num_trades": 98,
+  "win_rate_pct": 44.9,
+  "max_drawdown_pct": -38.88,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

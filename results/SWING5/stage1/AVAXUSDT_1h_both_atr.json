@@ -1,0 +1,26 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "AVAXUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 20,
+    "kc_mult": 1.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "both",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 0.838,
+  "oos_sharpe": -0.2162,
+  "num_trades": 435,
+  "win_rate_pct": 34.48,
+  "max_drawdown_pct": -53.1,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

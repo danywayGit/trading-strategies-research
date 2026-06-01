@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "SHIBUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 55,
+    "adx_threshold": 25,
+    "adx_exit": 15,
+    "atr_period": 14,
+    "vol_avg_period": 30,
+    "vol_mult": 1.2,
+    "direction": "both",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.413,
+  "oos_sharpe": 1.779,
+  "num_trades": 47,
+  "win_rate_pct": 51.06,
+  "max_drawdown_pct": -21.96,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

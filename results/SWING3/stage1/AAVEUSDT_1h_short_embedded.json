@@ -1,0 +1,24 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "AAVEUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 2.0,
+    "adx_threshold": 25,
+    "ema_filter": 100,
+    "direction": "short",
+    "atr_stop_mult": 2.5
+  },
+  "train_sharpe": 1.3145,
+  "oos_sharpe": 0.0284,
+  "num_trades": 57,
+  "win_rate_pct": 43.86,
+  "max_drawdown_pct": -20.37,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

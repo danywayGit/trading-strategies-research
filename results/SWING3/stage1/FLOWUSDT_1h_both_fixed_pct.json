@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "FLOWUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 4.0,
+    "adx_threshold": 25,
+    "ema_filter": 200,
+    "direction": "both",
+    "stop_loss_pct": 3.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.0084,
+  "oos_sharpe": 0.5269,
+  "num_trades": 46,
+  "win_rate_pct": 45.65,
+  "max_drawdown_pct": -25.0,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,28 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "NEARUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "macd_signal_period": 7,
+    "rsi_period": 10,
+    "divergence_lookback": 5,
+    "rsi_long_max": 40,
+    "rsi_short_min": 50,
+    "direction": "short",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 3.0
+  },
+  "train_sharpe": 0.8092,
+  "oos_sharpe": -1.0766,
+  "num_trades": 151,
+  "win_rate_pct": 60.26,
+  "max_drawdown_pct": -46.17,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,28 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "ETHUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "macd_fast": 12,
+    "macd_slow": 24,
+    "macd_signal_period": 7,
+    "rsi_period": 14,
+    "divergence_lookback": 3,
+    "rsi_long_max": 40,
+    "rsi_short_min": 55,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 3.0
+  },
+  "train_sharpe": 1.9462,
+  "oos_sharpe": -0.6691,
+  "num_trades": 121,
+  "win_rate_pct": 54.55,
+  "max_drawdown_pct": -22.48,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "FLOWUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 150,
+    "rejection_lookback": 15,
+    "rsi_period": 10,
+    "rsi_ema_period": 7,
+    "rsi_confirm_window": 2,
+    "htf_bars": 9,
+    "direction": "long",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 0.9071,
+  "oos_sharpe": -1.3031,
+  "num_trades": 30,
+  "win_rate_pct": 40.0,
+  "max_drawdown_pct": -13.15,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

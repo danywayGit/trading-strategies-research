@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "TAOUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 2.0,
+    "adx_threshold": 20,
+    "ema_filter": 50,
+    "direction": "long",
+    "stop_loss_pct": 3.5,
+    "take_profit_pct": 3.0
+  },
+  "train_sharpe": 1.7747,
+  "oos_sharpe": -4.9866,
+  "num_trades": 30,
+  "win_rate_pct": 66.67,
+  "max_drawdown_pct": -20.82,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt ~9 months data"
+}

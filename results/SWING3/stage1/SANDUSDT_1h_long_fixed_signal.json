@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "SANDUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 3.0,
+    "adx_threshold": 20,
+    "ema_filter": 200,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.1547,
+  "oos_sharpe": -0.726,
+  "num_trades": 43,
+  "win_rate_pct": 32.56,
+  "max_drawdown_pct": -13.74,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

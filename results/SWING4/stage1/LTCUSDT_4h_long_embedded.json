@@ -1,0 +1,28 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "LTCUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "macd_signal_period": 7,
+    "rsi_period": 14,
+    "divergence_lookback": 10,
+    "rsi_long_max": 40,
+    "rsi_short_min": 50,
+    "direction": "long",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 1.2905,
+  "oos_sharpe": 0.4617,
+  "num_trades": 50,
+  "win_rate_pct": 50.0,
+  "max_drawdown_pct": -42.58,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

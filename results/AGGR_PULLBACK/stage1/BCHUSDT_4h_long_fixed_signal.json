@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "BCHUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 25,
+    "pullback_tolerance": 2,
+    "swing_lookback": 5,
+    "massive_candle_mult": 3.0,
+    "direction": "long",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 4.0
+  },
+  "train_sharpe": 0.2371,
+  "oos_sharpe": 0.4845,
+  "num_trades": 30,
+  "win_rate_pct": 43.33,
+  "max_drawdown_pct": -20.77,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

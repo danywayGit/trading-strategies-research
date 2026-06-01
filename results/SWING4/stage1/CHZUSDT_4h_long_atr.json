@@ -1,0 +1,28 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "CHZUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "macd_fast": 10,
+    "macd_slow": 26,
+    "macd_signal_period": 7,
+    "rsi_period": 10,
+    "divergence_lookback": 10,
+    "rsi_long_max": 45,
+    "rsi_short_min": 50,
+    "direction": "long",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 0.7929,
+  "oos_sharpe": -1.8771,
+  "num_trades": 57,
+  "win_rate_pct": 42.11,
+  "max_drawdown_pct": -62.95,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

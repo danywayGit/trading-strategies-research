@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "ICPUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 2.0,
+    "adx_threshold": 20,
+    "ema_filter": 200,
+    "direction": "both",
+    "stop_loss_pct": 3.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 0.9724,
+  "oos_sharpe": 0.7681,
+  "num_trades": 166,
+  "win_rate_pct": 40.36,
+  "max_drawdown_pct": -44.98,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

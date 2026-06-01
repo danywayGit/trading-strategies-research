@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "DOTUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 250,
+    "rejection_lookback": 10,
+    "rsi_period": 10,
+    "rsi_ema_period": 14,
+    "rsi_confirm_window": 2,
+    "htf_bars": 9,
+    "direction": "short",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 2.0392,
+  "oos_sharpe": 1.3782,
+  "num_trades": 54,
+  "win_rate_pct": 51.85,
+  "max_drawdown_pct": -9.18,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

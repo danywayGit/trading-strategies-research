@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "DASHUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 55,
+    "adx_threshold": 20,
+    "adx_exit": 20,
+    "atr_period": 10,
+    "vol_avg_period": 30,
+    "vol_mult": 1.2,
+    "direction": "both",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 1.361,
+  "oos_sharpe": 0.335,
+  "num_trades": 64,
+  "win_rate_pct": 48.44,
+  "max_drawdown_pct": -54.19,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

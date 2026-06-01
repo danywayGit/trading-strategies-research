@@ -6,12 +6,20 @@
   "sl_type": "embedded",
   "stage": 1,
   "test_window": "2022-01-01/2024-12-31",
-  "best_params": null,
-  "train_sharpe": null,
-  "oos_sharpe": null,
-  "num_trades": 0,
-  "win_rate_pct": null,
-  "max_drawdown_pct": null,
-  "verdict": "FAIL",
-  "note": "OPT ERROR: Strategy 'Swing5KeltnerBreakoutStrategy' is missing parameter 'atr_stop_mult'.Strategy class should define parameters as class variables before they can be optimized or run with."
+  "best_params": {
+    "kc_length": 20,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "both",
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 1.0851,
+  "oos_sharpe": 0.8186,
+  "num_trades": 227,
+  "win_rate_pct": 38.33,
+  "max_drawdown_pct": -40.32,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
 }

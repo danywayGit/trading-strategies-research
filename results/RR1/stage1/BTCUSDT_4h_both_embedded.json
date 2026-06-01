@@ -6,12 +6,25 @@
   "sl_type": "embedded",
   "stage": 1,
   "test_window": "2022-01-01/2024-12-31",
-  "best_params": null,
-  "train_sharpe": null,
-  "oos_sharpe": null,
-  "num_trades": 0,
-  "win_rate_pct": null,
-  "max_drawdown_pct": null,
-  "verdict": "FAIL",
-  "note": "OPT ERROR: size must be a positive fraction of equity, or a positive whole number of units"
+  "best_params": {
+    "adx_period": 14,
+    "adx_threshold": 25,
+    "rsi_period": 10,
+    "rsi_oversold": 30,
+    "rsi_overbought": 65,
+    "bb_length": 30,
+    "bb_mult": 1.5,
+    "stoch_k": 14,
+    "stoch_d": 3,
+    "direction": "both",
+    "sl_mode": "embedded",
+    "sl_buffer_atr": 0.2
+  },
+  "train_sharpe": 1.3632,
+  "oos_sharpe": 0.5652,
+  "num_trades": 31,
+  "win_rate_pct": 61.29,
+  "max_drawdown_pct": -21.72,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
 }

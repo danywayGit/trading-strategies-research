@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "MANAUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 15,
+    "adx_threshold": 20,
+    "adx_exit": 15,
+    "atr_period": 21,
+    "vol_avg_period": 14,
+    "vol_mult": 1.0,
+    "direction": "long",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 0.9771,
+  "oos_sharpe": 0.3219,
+  "num_trades": 40,
+  "win_rate_pct": 40.0,
+  "max_drawdown_pct": -51.56,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "FETUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 25,
+    "adx_threshold": 25,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 20,
+    "vol_mult": 0.8,
+    "direction": "short",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 4.0
+  },
+  "train_sharpe": 1.1027,
+  "oos_sharpe": -1.5352,
+  "num_trades": 56,
+  "win_rate_pct": 48.21,
+  "max_drawdown_pct": -16.96,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

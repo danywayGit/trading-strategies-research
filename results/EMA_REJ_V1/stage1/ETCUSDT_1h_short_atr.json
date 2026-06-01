@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "ETCUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 200,
+    "rejection_lookback": 5,
+    "rsi_period": 10,
+    "rsi_ema_period": 9,
+    "rsi_confirm_window": 5,
+    "htf_bars": 9,
+    "direction": "short",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 1.1089,
+  "oos_sharpe": 0.2303,
+  "num_trades": 39,
+  "win_rate_pct": 41.03,
+  "max_drawdown_pct": -15.46,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

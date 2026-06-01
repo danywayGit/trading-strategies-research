@@ -43,40 +43,49 @@ DIRECTIONS = ["both", "long", "short"]
 SL_TYPES = ["embedded", "fixed_pct", "fixed_signal", "atr"]
 
 GRIDS = {
+    # embedded: Supertrend params + ATR stop multiplier.
+    # adx_period dropped (fixed at 14) — saves 2× combos for negligible signal impact.
+    # 3×3×3×3×3 = 243 combos per direction (was 648)
     "embedded": {
         "st_period":     [7, 10, 14],
         "st_factor":     [2.0, 3.0, 4.0],
         "adx_threshold": [20, 25, 30],
         "ema_filter":    [50, 100, 200],
-        "adx_period":    [10, 14],
-        "atr_stop_mult": [1.5, 2.0, 2.5, 3.0],
+        "atr_stop_mult": [1.5, 2.5, 3.5],
     },
+    # fixed_pct: coarse SL/TP sweep — 3 values each instead of 4×4.
+    # Stage 1 just needs to know if fixed-% stops work here; stage 2 refines.
+    # 3×3×3×3×1×3×3 = 729 combos per direction (was 1296)
     "fixed_pct": {
         "st_period":       [7, 10, 14],
         "st_factor":       [2.0, 3.0, 4.0],
         "adx_threshold":   [20, 25, 30],
         "ema_filter":      [50, 100, 200],
         "sl_mode":         ["fixed_pct"],
-        "stop_loss_pct":   [1.5, 2.0, 2.5, 3.0],
-        "take_profit_pct": [3.0, 4.5, 6.0, 9.0],
+        "stop_loss_pct":   [1.5, 2.5, 3.5],
+        "take_profit_pct": [3.0, 6.0, 9.0],
     },
+    # fixed_signal: same coarse sweep as fixed_pct.
+    # 3×3×3×3×1×3×3 = 729 combos per direction (was 1296)
     "fixed_signal": {
         "st_period":       [7, 10, 14],
         "st_factor":       [2.0, 3.0, 4.0],
         "adx_threshold":   [20, 25, 30],
         "ema_filter":      [50, 100, 200],
         "sl_mode":         ["fixed_signal"],
-        "stop_loss_pct":   [1.5, 2.0, 2.5, 3.0],
-        "take_profit_pct": [3.0, 4.5, 6.0, 9.0],
+        "stop_loss_pct":   [1.5, 2.5, 3.5],
+        "take_profit_pct": [3.0, 6.0, 9.0],
     },
+    # atr: coarse ATR mult + RR sweep.
+    # 3×3×3×3×1×3×3 = 729 combos per direction (was 1296)
     "atr": {
         "st_period":     [7, 10, 14],
         "st_factor":     [2.0, 3.0, 4.0],
         "adx_threshold": [20, 25, 30],
         "ema_filter":    [50, 100, 200],
         "sl_mode":       ["atr"],
-        "atr_stop_mult": [1.5, 2.0, 2.5, 3.0],
-        "rr_ratio":      [1.5, 2.0, 2.5, 3.0],
+        "atr_stop_mult": [1.5, 2.5, 3.5],
+        "rr_ratio":      [1.5, 2.5, 3.5],
     },
 }
 
@@ -257,7 +266,7 @@ def main():
     if not args.skip_download:
         _predownload_all(SYMBOLS, "1h")
 
-    # Build task list — skip already-done combos, but re-run crash results
+    # Build task list — skip already-done combos, but re-run errors
     all_tasks = []
     skipped = 0
     for sym in SYMBOLS:
@@ -269,7 +278,9 @@ def main():
                 if fpath.exists():
                     try:
                         data = json.loads(fpath.read_text())
-                        if "WORKER CRASH" in str(data.get("note", "")):
+                        note = str(data.get("note", ""))
+                        # Re-run any result that errored (crash, OPT ERROR, etc.)
+                        if "WORKER CRASH" in note or "OPT ERROR" in note:
                             all_tasks.append((sym, direction, sl_type))
                             continue
                     except Exception:

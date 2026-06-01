@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "ALGOUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 25,
+    "adx_threshold": 20,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 14,
+    "vol_mult": 1.2,
+    "direction": "both",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.6508,
+  "oos_sharpe": 0.2354,
+  "num_trades": 132,
+  "win_rate_pct": 46.21,
+  "max_drawdown_pct": -24.27,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

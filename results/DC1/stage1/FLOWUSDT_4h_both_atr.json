@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "FLOWUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 25,
+    "adx_threshold": 25,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 30,
+    "vol_mult": 0.8,
+    "direction": "both",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 1.9114,
+  "oos_sharpe": 0.478,
+  "num_trades": 73,
+  "win_rate_pct": 47.95,
+  "max_drawdown_pct": -31.17,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

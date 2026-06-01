@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "BTCUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 15,
+    "adx_threshold": 30,
+    "adx_exit": 25,
+    "atr_period": 14,
+    "vol_avg_period": 14,
+    "vol_mult": 1.0,
+    "direction": "long",
+    "atr_stop_mult": 3.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 1.5576,
+  "oos_sharpe": 0.6342,
+  "num_trades": 31,
+  "win_rate_pct": 54.84,
+  "max_drawdown_pct": -19.39,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

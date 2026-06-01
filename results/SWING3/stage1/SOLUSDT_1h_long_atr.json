@@ -9,18 +9,17 @@
   "best_params": {
     "st_period": 10,
     "st_factor": 4.0,
-    "adx_threshold": 25,
-    "ema_filter": 200,
-    "sl_mode": "atr",
-    "atr_stop_mult": 3.0,
-    "rr_ratio": 3.0,
-    "direction": "long"
+    "adx_threshold": 20,
+    "ema_filter": 100,
+    "direction": "long",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 1.5
   },
-  "train_sharpe": 1.0957,
-  "oos_sharpe": null,
-  "num_trades": 24,
-  "win_rate_pct": 45.83,
-  "max_drawdown_pct": -4.86,
-  "verdict": "FAIL",
-  "note": "num_trades=24 < 30"
+  "train_sharpe": 1.4216,
+  "oos_sharpe": 0.065,
+  "num_trades": 58,
+  "win_rate_pct": 53.45,
+  "max_drawdown_pct": -28.26,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
 }

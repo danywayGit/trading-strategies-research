@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "BNBUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 20,
+    "adx_threshold": 30,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 14,
+    "vol_mult": 1.2,
+    "direction": "long",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 0.9884,
+  "oos_sharpe": 0.09,
+  "num_trades": 37,
+  "win_rate_pct": 40.54,
+  "max_drawdown_pct": -13.03,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

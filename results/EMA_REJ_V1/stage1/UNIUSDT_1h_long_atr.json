@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "UNIUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 150,
+    "rejection_lookback": 10,
+    "rsi_period": 10,
+    "rsi_ema_period": 9,
+    "rsi_confirm_window": 2,
+    "htf_bars": 9,
+    "direction": "long",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 1.6149,
+  "oos_sharpe": -0.3818,
+  "num_trades": 30,
+  "win_rate_pct": 53.33,
+  "max_drawdown_pct": -15.67,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

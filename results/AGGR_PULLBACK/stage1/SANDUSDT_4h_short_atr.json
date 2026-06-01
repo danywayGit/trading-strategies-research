@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "SANDUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 20,
+    "pullback_tolerance": 2,
+    "swing_lookback": 5,
+    "massive_candle_mult": 1.5,
+    "direction": "short",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 1.2217,
+  "oos_sharpe": 0.2991,
+  "num_trades": 33,
+  "win_rate_pct": 57.58,
+  "max_drawdown_pct": -34.84,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

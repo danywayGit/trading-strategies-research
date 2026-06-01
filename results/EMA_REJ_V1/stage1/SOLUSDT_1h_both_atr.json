@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "SOLUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 250,
+    "rejection_lookback": 15,
+    "rsi_period": 14,
+    "rsi_ema_period": 14,
+    "rsi_confirm_window": 5,
+    "htf_bars": 9,
+    "direction": "both",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 1.6748,
+  "oos_sharpe": -0.9842,
+  "num_trades": 84,
+  "win_rate_pct": 57.14,
+  "max_drawdown_pct": -11.59,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

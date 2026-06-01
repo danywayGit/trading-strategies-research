@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "ARBUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 200,
+    "rejection_lookback": 15,
+    "rsi_period": 14,
+    "rsi_ema_period": 14,
+    "rsi_confirm_window": 5,
+    "htf_bars": 9,
+    "direction": "short",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 2.3632,
+  "oos_sharpe": 0.7791,
+  "num_trades": 30,
+  "win_rate_pct": 56.67,
+  "max_drawdown_pct": -11.75,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

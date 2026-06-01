@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "AAVEUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 1,
+    "swing_lookback": 5,
+    "massive_candle_mult": 2.0,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 8.0
+  },
+  "train_sharpe": 0.6548,
+  "oos_sharpe": 0.4626,
+  "num_trades": 34,
+  "win_rate_pct": 35.29,
+  "max_drawdown_pct": -19.82,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

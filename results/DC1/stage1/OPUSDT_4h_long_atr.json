@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "OPUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 15,
+    "adx_threshold": 30,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 14,
+    "vol_mult": 0.8,
+    "direction": "long",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 1.8708,
+  "oos_sharpe": -1.6333,
+  "num_trades": 32,
+  "win_rate_pct": 46.88,
+  "max_drawdown_pct": -43.35,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "ADAUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 250,
+    "rejection_lookback": 5,
+    "rsi_period": 10,
+    "rsi_ema_period": 9,
+    "rsi_confirm_window": 3,
+    "htf_bars": 9,
+    "direction": "both",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 1.0149,
+  "oos_sharpe": -0.1037,
+  "num_trades": 31,
+  "win_rate_pct": 35.48,
+  "max_drawdown_pct": -32.0,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

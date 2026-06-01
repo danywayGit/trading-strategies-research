@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "ALGOUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 1,
+    "swing_lookback": 5,
+    "massive_candle_mult": 3.0,
+    "direction": "both",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 1.1831,
+  "oos_sharpe": 0.5713,
+  "num_trades": 30,
+  "win_rate_pct": 53.33,
+  "max_drawdown_pct": -53.88,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "TRXUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 3.0,
+    "adx_threshold": 25,
+    "ema_filter": 50,
+    "direction": "long",
+    "atr_stop_mult": 3.5,
+    "rr_ratio": 3.5
+  },
+  "train_sharpe": 1.6734,
+  "oos_sharpe": 1.8966,
+  "num_trades": 40,
+  "win_rate_pct": 40.0,
+  "max_drawdown_pct": -26.51,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

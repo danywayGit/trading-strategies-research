@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "UNIUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 55,
+    "adx_threshold": 20,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 20,
+    "vol_mult": 1.0,
+    "direction": "both",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.2592,
+  "oos_sharpe": 2.2265,
+  "num_trades": 94,
+  "win_rate_pct": 37.23,
+  "max_drawdown_pct": -27.06,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

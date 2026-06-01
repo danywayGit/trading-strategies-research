@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "SUIUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 150,
+    "rejection_lookback": 5,
+    "rsi_period": 10,
+    "rsi_ema_period": 14,
+    "rsi_confirm_window": 5,
+    "htf_bars": 9,
+    "direction": "short",
+    "atr_stop_mult": 3.0,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 2.5406,
+  "oos_sharpe": -0.1496,
+  "num_trades": 30,
+  "win_rate_pct": 60.0,
+  "max_drawdown_pct": -13.21,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

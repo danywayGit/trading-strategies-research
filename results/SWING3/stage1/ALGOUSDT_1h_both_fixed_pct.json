@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "ALGOUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 2.0,
+    "adx_threshold": 30,
+    "ema_filter": 200,
+    "direction": "both",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.9133,
+  "oos_sharpe": 0.5267,
+  "num_trades": 48,
+  "win_rate_pct": 41.67,
+  "max_drawdown_pct": -18.6,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

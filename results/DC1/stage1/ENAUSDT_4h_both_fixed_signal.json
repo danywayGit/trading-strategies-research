@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "ENAUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 15,
+    "adx_threshold": 30,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 30,
+    "vol_mult": 0.8,
+    "direction": "both",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.8106,
+  "oos_sharpe": 0.4754,
+  "num_trades": 31,
+  "win_rate_pct": 48.39,
+  "max_drawdown_pct": -46.97,
+  "verdict": "PASS",
+  "note": "v2/vectorbt ~9 months data"
+}

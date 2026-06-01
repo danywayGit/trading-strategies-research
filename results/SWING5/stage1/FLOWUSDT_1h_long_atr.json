@@ -1,0 +1,26 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "FLOWUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 15,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "long",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 4.0
+  },
+  "train_sharpe": 0.9528,
+  "oos_sharpe": -0.0596,
+  "num_trades": 94,
+  "win_rate_pct": 27.66,
+  "max_drawdown_pct": -23.01,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

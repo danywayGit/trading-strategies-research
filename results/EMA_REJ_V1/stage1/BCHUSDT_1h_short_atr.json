@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "BCHUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 150,
+    "rejection_lookback": 10,
+    "rsi_period": 14,
+    "rsi_ema_period": 9,
+    "rsi_confirm_window": 2,
+    "htf_bars": 9,
+    "direction": "short",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 1.0815,
+  "oos_sharpe": -0.6742,
+  "num_trades": 97,
+  "win_rate_pct": 50.52,
+  "max_drawdown_pct": -18.05,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

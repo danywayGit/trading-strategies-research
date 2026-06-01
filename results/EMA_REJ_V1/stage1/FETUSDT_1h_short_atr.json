@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "FETUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 250,
+    "rejection_lookback": 10,
+    "rsi_period": 10,
+    "rsi_ema_period": 9,
+    "rsi_confirm_window": 3,
+    "htf_bars": 9,
+    "direction": "short",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 1.4292,
+  "oos_sharpe": -0.5195,
+  "num_trades": 41,
+  "win_rate_pct": 46.34,
+  "max_drawdown_pct": -24.3,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,28 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "ETCUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "macd_signal_period": 7,
+    "rsi_period": 14,
+    "divergence_lookback": 3,
+    "rsi_long_max": 45,
+    "rsi_short_min": 50,
+    "direction": "long",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 0.7445,
+  "oos_sharpe": -0.0789,
+  "num_trades": 54,
+  "win_rate_pct": 38.89,
+  "max_drawdown_pct": -62.82,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

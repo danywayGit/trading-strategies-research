@@ -1,0 +1,26 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "LINKUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 2.5,
+    "cci_period": 28,
+    "cci_long_min": 0,
+    "cci_short_max": 0,
+    "direction": "long",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 4.0
+  },
+  "train_sharpe": 1.4035,
+  "oos_sharpe": 1.1422,
+  "num_trades": 154,
+  "win_rate_pct": 33.77,
+  "max_drawdown_pct": -28.32,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "NEARUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 250,
+    "rejection_lookback": 15,
+    "rsi_period": 10,
+    "rsi_ema_period": 9,
+    "rsi_confirm_window": 3,
+    "htf_bars": 9,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.721,
+  "oos_sharpe": 0.4926,
+  "num_trades": 39,
+  "win_rate_pct": 41.03,
+  "max_drawdown_pct": -11.69,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}
