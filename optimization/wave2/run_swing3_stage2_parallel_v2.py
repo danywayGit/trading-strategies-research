@@ -20,12 +20,10 @@ sys.path.insert(0, str(BACKTESTING_MCP))
 
 from stage2_utils import run_stage2_parallel
 
-import json
 import numpy as np
 import pandas as pd
 from datetime import datetime
 from itertools import product
-from concurrent.futures import ProcessPoolExecutor, as_completed, BrokenExecutor
 
 import numba
 import vectorbt as vbt
@@ -41,6 +39,7 @@ TF_MAP = {
     "12h": "H12",
 }
 
+# Vectorbt freq strings for Sharpe annualization — must match the actual off-TF data
 TF_FREQ_MAP = {
     "15m": "15min",
     "4h":  "4h",
@@ -57,9 +56,6 @@ SYMBOLS = [
     "ENA", "TAO",
 ]
 LIMITED_DATA = {"ENA", "TAO"}
-
-DIRECTIONS = ["both", "long", "short"]
-SL_TYPES   = ["embedded", "fixed_pct", "fixed_signal", "atr"]
 
 # Indicator params that drive the 81-combo outer loop (same values as v1)
 INDICATOR_PARAMS = {
