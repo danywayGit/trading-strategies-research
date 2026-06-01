@@ -1,0 +1,26 @@
+{
+  "strategy": "sfp1_swing_failure_pattern",
+  "symbol": "APTUSDT",
+  "timeframe": "5m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "lookback_bars": 72,
+    "swing_lookback": 3,
+    "max_ltf_wait_bars": 12,
+    "use_bias_filter": true,
+    "session_mode": "NY",
+    "direction": "long",
+    "rr_ratio": 3.0,
+    "sl_buffer_atr": 0.8
+  },
+  "train_sharpe": 1.2509,
+  "oos_sharpe": 0.6343,
+  "num_trades": 135,
+  "win_rate_pct": 38.52,
+  "max_drawdown_pct": -17.28,
+  "verdict": "PASS",
+  "note": "v2/vectorbt approx: direct SFP bar entry, no FVG execution"
+}

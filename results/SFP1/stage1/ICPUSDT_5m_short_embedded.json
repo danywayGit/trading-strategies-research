@@ -1,0 +1,26 @@
+{
+  "strategy": "sfp1_swing_failure_pattern",
+  "symbol": "ICPUSDT",
+  "timeframe": "5m",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "lookback_bars": 48,
+    "swing_lookback": 3,
+    "max_ltf_wait_bars": 12,
+    "use_bias_filter": false,
+    "session_mode": "NY",
+    "direction": "short",
+    "rr_ratio": 3.0,
+    "sl_buffer_atr": 0.8
+  },
+  "train_sharpe": 0.0011,
+  "oos_sharpe": -1.6156,
+  "num_trades": 655,
+  "win_rate_pct": 30.84,
+  "max_drawdown_pct": -41.93,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt approx: direct SFP bar entry, no FVG execution"
+}

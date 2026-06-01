@@ -1,0 +1,26 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "FETUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 8.0,
+    "adx_trend_confirm": 20,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "short",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 0.7199,
+  "oos_sharpe": -0.7057,
+  "num_trades": 71,
+  "win_rate_pct": 38.03,
+  "max_drawdown_pct": -51.33,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

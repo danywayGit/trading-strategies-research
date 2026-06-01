@@ -1,0 +1,24 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "BTCUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "band_mult": 1.5,
+    "volume_exhaustion_threshold": 0.5,
+    "rsi_oversold_floor": 25,
+    "rsi_overbought_ceil": 75,
+    "min_band_width_pct": 0.3,
+    "direction": "short"
+  },
+  "train_sharpe": -0.1593,
+  "oos_sharpe": -0.5257,
+  "num_trades": 34,
+  "win_rate_pct": 52.94,
+  "max_drawdown_pct": -4.95,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

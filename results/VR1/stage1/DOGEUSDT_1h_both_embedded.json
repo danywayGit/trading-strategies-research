@@ -1,0 +1,24 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "DOGEUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "band_mult": 2.0,
+    "volume_exhaustion_threshold": 0.5,
+    "rsi_oversold_floor": 25,
+    "rsi_overbought_ceil": 65,
+    "min_band_width_pct": 0.8,
+    "direction": "both"
+  },
+  "train_sharpe": -0.5963,
+  "oos_sharpe": -0.8187,
+  "num_trades": 34,
+  "win_rate_pct": 50.0,
+  "max_drawdown_pct": -12.24,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,26 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "INJUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "band_mult": 1.5,
+    "volume_exhaustion_threshold": 0.5,
+    "rsi_oversold_floor": 25,
+    "rsi_overbought_ceil": 65,
+    "min_band_width_pct": 0.5,
+    "direction": "short",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 1.1733,
+  "oos_sharpe": -0.597,
+  "num_trades": 40,
+  "win_rate_pct": 37.5,
+  "max_drawdown_pct": -16.53,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

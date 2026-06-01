@@ -1,0 +1,26 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "CHZUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 10.0,
+    "adx_trend_confirm": 15,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 1.7047,
+  "oos_sharpe": 2.3198,
+  "num_trades": 73,
+  "win_rate_pct": 54.79,
+  "max_drawdown_pct": -27.49,
+  "verdict": "PASS",
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "ETCUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 2,
+    "swing_lookback": 5,
+    "massive_candle_mult": 1.5,
+    "direction": "both",
+    "stop_mult": 1.5,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 0.1114,
+  "oos_sharpe": -0.1651,
+  "num_trades": 30,
+  "win_rate_pct": 36.67,
+  "max_drawdown_pct": -43.17,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

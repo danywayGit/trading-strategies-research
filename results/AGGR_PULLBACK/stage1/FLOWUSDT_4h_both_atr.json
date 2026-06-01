@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "FLOWUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 0,
+    "swing_lookback": 5,
+    "massive_candle_mult": 3.0,
+    "direction": "both",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 0.9782,
+  "oos_sharpe": -1.5098,
+  "num_trades": 31,
+  "win_rate_pct": 51.61,
+  "max_drawdown_pct": -28.98,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

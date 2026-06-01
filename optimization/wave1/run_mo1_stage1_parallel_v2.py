@@ -17,6 +17,7 @@ import json
 import argparse
 import numpy as np
 import pandas as pd
+import time
 from datetime import datetime
 from itertools import product
 from concurrent.futures import ProcessPoolExecutor, as_completed, BrokenExecutor
@@ -463,6 +464,7 @@ def _predownload_all(symbols):
             print(f"  {symbol_usdt}: {len(d)} bars", flush=True)
         except Exception as e:
             print(f"  {symbol_usdt}: ERROR — {e}", flush=True)
+        time.sleep(1.5)
     print()
 
 

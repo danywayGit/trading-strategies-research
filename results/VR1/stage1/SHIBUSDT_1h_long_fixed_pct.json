@@ -1,0 +1,26 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "SHIBUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "band_mult": 2.0,
+    "volume_exhaustion_threshold": 0.5,
+    "rsi_oversold_floor": 30,
+    "rsi_overbought_ceil": 65,
+    "min_band_width_pct": 0.3,
+    "direction": "long",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 8.0
+  },
+  "train_sharpe": 1.4377,
+  "oos_sharpe": -0.3387,
+  "num_trades": 30,
+  "win_rate_pct": 43.33,
+  "max_drawdown_pct": -17.15,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

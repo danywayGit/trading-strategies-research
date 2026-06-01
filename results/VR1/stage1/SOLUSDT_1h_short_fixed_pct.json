@@ -1,0 +1,26 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "SOLUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "band_mult": 1.5,
+    "volume_exhaustion_threshold": 0.5,
+    "rsi_oversold_floor": 25,
+    "rsi_overbought_ceil": 75,
+    "min_band_width_pct": 0.8,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": -0.8635,
+  "oos_sharpe": -2.8322,
+  "num_trades": 40,
+  "win_rate_pct": 20.0,
+  "max_drawdown_pct": -26.57,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

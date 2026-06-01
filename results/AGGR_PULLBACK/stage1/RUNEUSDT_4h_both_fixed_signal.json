@@ -1,0 +1,25 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "RUNEUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 2,
+    "swing_lookback": 10,
+    "massive_candle_mult": 3.0,
+    "direction": "both",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 3.0
+  },
+  "train_sharpe": 1.8205,
+  "oos_sharpe": 0.3949,
+  "num_trades": 34,
+  "win_rate_pct": 70.59,
+  "max_drawdown_pct": -12.93,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

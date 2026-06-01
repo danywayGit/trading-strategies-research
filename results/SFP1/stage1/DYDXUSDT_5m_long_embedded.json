@@ -1,0 +1,26 @@
+{
+  "strategy": "sfp1_swing_failure_pattern",
+  "symbol": "DYDXUSDT",
+  "timeframe": "5m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 1,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "lookback_bars": 72,
+    "swing_lookback": 3,
+    "max_ltf_wait_bars": 12,
+    "use_bias_filter": true,
+    "session_mode": "Any",
+    "direction": "long",
+    "rr_ratio": 2.0,
+    "sl_buffer_atr": 0.5
+  },
+  "train_sharpe": 0.6648,
+  "oos_sharpe": -0.7115,
+  "num_trades": 760,
+  "win_rate_pct": 44.08,
+  "max_drawdown_pct": -31.22,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt approx: direct SFP bar entry, no FVG execution"
+}
