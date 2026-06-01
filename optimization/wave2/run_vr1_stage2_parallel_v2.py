@@ -111,7 +111,7 @@ def _compute_vwap_daily(high, low, close, volume, index):
     cum_tpv  = (tp_s * vol_s).groupby(dates).cumsum()
     cum_vol  = vol_s.groupby(dates).cumsum()
     safe_vol = cum_vol.replace(0, np.nan)
-    return (cum_tpv / safe_vol).fillna(method="ffill").values.astype(np.float64)
+    return (cum_tpv / safe_vol).ffill().values.astype(np.float64)
 
 
 def _compute_vwap_std(close, vwap, period=50):
@@ -505,7 +505,6 @@ def _worker_v2(task):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    import argparse
     parser = argparse.ArgumentParser(
         description="VR1 Stage 2 — off-TF expansion (15m, 4h, 12h)")
     parser.add_argument("--workers", type=int,

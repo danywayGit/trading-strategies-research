@@ -459,7 +459,6 @@ def _worker_v2(task):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    import argparse
     parser = argparse.ArgumentParser(
         description="SWING5 Stage 2 — off-TF expansion (15m, 4h, 12h)")
     parser.add_argument("--workers", type=int,

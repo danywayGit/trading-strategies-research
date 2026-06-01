@@ -47,7 +47,13 @@ TF_FREQ_MAP = {
 }
 
 VENV_SITE_PACKAGES = BACKTESTING_MCP / "venv" / "Lib" / "site-packages"
-HTF_BARS = 9   # fixed: 9 × 1H ≈ 9H HTF approximation (not swept)
+
+# HTF approximation: maintain ~9h lookback across timeframes
+HTF_BARS_MAP = {
+    "15m": 36,   # 36 × 15min = 9h
+    "4h":  2,    # 2 × 4h = 8h (closest integer)
+    "12h": 1,    # 1 × 12h = 12h (closest integer; no sub-bar option)
+}
 
 SYMBOLS = [
     "BTC", "ETH", "SOL", "BNB", "ADA", "DOGE", "DOT", "LINK", "LTC", "BCH",
@@ -289,7 +295,7 @@ def _run_vbt_portfolio(close_series, le, lx, se, sx,
 
 # ── Optimization loop ─────────────────────────────────────────────────────────
 
-def _optimize_vbt(data, direction, sl_type, atr_precomp, freq="1h"):
+def _optimize_vbt(data, direction, sl_type, atr_precomp, htf_bars, freq="1h"):
     h, l, c = data.High.values, data.Low.values, data.Close.values
     close_s  = pd.Series(c, index=data.index)
     sl_list  = _build_sl_params_list(sl_type)
@@ -310,7 +316,7 @@ def _optimize_vbt(data, direction, sl_type, atr_precomp, freq="1h"):
         if ema200_length not in ema200_cache:
             ema200_cache[ema200_length] = (
                 _compute_ema(c, ema200_length),
-                _compute_ema(c, max(2, int(ema200_length * HTF_BARS))),
+                _compute_ema(c, max(2, int(ema200_length * htf_bars))),
             )
         ema200_arr, htf_ema_arr = ema200_cache[ema200_length]
 
@@ -352,7 +358,7 @@ def _optimize_vbt(data, direction, sl_type, atr_precomp, freq="1h"):
                     "rsi_period":         rsi_period,
                     "rsi_ema_period":     rsi_ema_period,
                     "rsi_confirm_window": rsi_confirm_window,
-                    "htf_bars":           HTF_BARS,
+                    "htf_bars":           htf_bars,
                     "direction":          direction,
                     **sl_p,
                 },
@@ -362,12 +368,12 @@ def _optimize_vbt(data, direction, sl_type, atr_precomp, freq="1h"):
     return best_result
 
 
-def _eval_single(data, direction, sl_type, best_params, atr, freq="1h"):
+def _eval_single(data, direction, sl_type, best_params, atr, htf_bars, freq="1h"):
     h, l, c = data.High.values, data.Low.values, data.Close.values
     close_s  = pd.Series(c, index=data.index)
     try:
         ema200_arr  = _compute_ema(c, best_params["ema200_length"])
-        htf_ema_arr = _compute_ema(c, max(2, int(best_params["ema200_length"] * HTF_BARS)))
+        htf_ema_arr = _compute_ema(c, max(2, int(best_params["ema200_length"] * htf_bars)))
         rsi_arr     = _compute_rsi(c, best_params["rsi_period"])
         rsi_ema_arr = _compute_ema(rsi_arr, best_params["rsi_ema_period"])
         le, lx, se, sx = _make_signals(
@@ -432,9 +438,12 @@ def _worker_v2(task):
     atr_train = _compute_atr(train_data.High.values, train_data.Low.values, train_data.Close.values)
     atr_test  = _compute_atr(test_data.High.values,  test_data.Low.values,  test_data.Close.values)
 
+    # Per-TF HTF bars: maintain ~9h lookback regardless of timeframe
+    htf_bars = HTF_BARS_MAP[tf]
+
     print(f"{log_prefix} optimizing ({len(train_data)} train bars)...", flush=True)
     try:
-        opt = _optimize_vbt(train_data, direction, sl_type, atr_train, freq=TF_FREQ_MAP[tf])
+        opt = _optimize_vbt(train_data, direction, sl_type, atr_train, htf_bars=htf_bars, freq=TF_FREQ_MAP[tf])
     except Exception as e:
         print(f"{log_prefix} OPT ERROR: {e}", flush=True)
         return _make_result(symbol_usdt, direction, sl_type, tf,
@@ -454,7 +463,7 @@ def _worker_v2(task):
                             num_trades=num_trades, win_rate=win_rate, max_dd=max_dd,
                             note=note + f" | num_trades={num_trades} < 30")
 
-    oos_sharpe, _ = _eval_single(test_data, direction, sl_type, best_params, atr_test, freq=TF_FREQ_MAP[tf])
+    oos_sharpe, _ = _eval_single(test_data, direction, sl_type, best_params, atr_test, htf_bars=htf_bars, freq=TF_FREQ_MAP[tf])
     verdict = "PASS" if (oos_sharpe is not None and oos_sharpe > 0) else "FAIL"
     oos_str = f"{oos_sharpe:.4f}" if oos_sharpe is not None else "None"
     print(f"{log_prefix} OOS sharpe={oos_str} => {verdict}", flush=True)
@@ -471,7 +480,6 @@ def _worker_v2(task):
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    import argparse
     parser = argparse.ArgumentParser(
         description="EMA_REJ_V1 Stage 2 — off-TF expansion (15m, 4h, 12h)")
     parser.add_argument("--workers", type=int,
