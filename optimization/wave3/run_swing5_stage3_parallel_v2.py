@@ -221,13 +221,10 @@ def _eval_single_dow(close_s, le_base, lx, se_base, sx, atr,
                      sl_type, best_params, dow_days, freq="1h"):
     """
     Evaluate pre-computed signals with DOW entry masking.
-    le_base/se_base: unmasked entry signals from _make_signals.
-    dow_days: set of weekday ints, or None for no filter (ALL mask).
+    NOTE: Does NOT handle sl_type='embedded' — the worker handles embedded inline
+    since it requires ema_t which is not in this function's signature.
+    dow_days: set of weekday ints (0=Mon..6=Sun), or None for ALL mask.
     Returns (oos_sharpe, num_trades) or (None, 0) on error.
-
-    Note: for embedded sl_type, ema is passed via best_params and recomputed
-    from the close series (no high/low available here). For non-embedded sl types
-    this function is sufficient; the worker handles embedded inline.
     """
     try:
         # Apply DOW masking to entry signals only
@@ -248,7 +245,7 @@ def _eval_single_dow(close_s, le_base, lx, se_base, sx, atr,
         else:
             raise ValueError(f"Unknown sl_type: {sl_type}")
 
-        # ema param not used for non-embedded SL types; pass atr as placeholder
+        # atr used as position arg — embedded case never reaches here (handled inline in worker)
         stats_df = _run_vbt_portfolio(close_s, le, lx, se, sx, sl_type, sl_list, atr, atr, freq=freq)
         row      = stats_df.iloc[0]
         sharpe   = float(row["sharpe"]) if np.isfinite(row.get("sharpe", np.nan)) else None

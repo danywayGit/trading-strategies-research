@@ -208,6 +208,7 @@ def _run_vbt_portfolio(close_series, le, lx, se, sx, sl_type, sl_params_list, at
         sl_col = np.clip(1.5 * bw / safe_c, 1e-6, 1.0)
         tp_col = np.clip(np.abs(close_arr - vwap) / safe_c, 1e-6, 1.0)
         tp_col = np.maximum(tp_col, sl_col * 1.1)
+        tp_col = np.clip(tp_col, 1e-6, 5.0)   # cap after minimum guarantee
         pf = vbt.Portfolio.from_signals(
             **common,
             entries=le_2d, exits=lx_2d,
