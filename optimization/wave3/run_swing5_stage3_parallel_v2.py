@@ -229,7 +229,7 @@ def _eval_single_dow(close_s, le_base, lx, se_base, sx, atr,
     try:
         # Apply DOW masking to entry signals only
         if dow_days is not None:
-            dow_bool = close_s.index.dayofweek.isin(dow_days).values
+            dow_bool = np.isin(close_s.index.dayofweek, list(dow_days))
             le = le_base & dow_bool
             se = se_base & dow_bool
         else:
@@ -364,7 +364,7 @@ def _worker_v2(task):
             # embedded SL needs ema_t — handle inline
             try:
                 if dow_days is not None:
-                    dow_bool = close_s_t.index.dayofweek.isin(dow_days).values
+                    dow_bool = np.isin(close_s_t.index.dayofweek, list(dow_days))
                     le = le_t & dow_bool
                     se = se_t & dow_bool
                 else:
