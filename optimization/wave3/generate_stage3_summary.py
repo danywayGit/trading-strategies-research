@@ -37,7 +37,7 @@ STRATEGY_META = {
                       "sl_types": ["embedded", "fixed_pct", "fixed_signal", "atr"]},
 }
 
-DOW_MASK_ORDER = ["ALL", "MON-FRI", "SAT-SUN", "MON", "TUE", "WED", "THU", "FRI"]
+DOW_MASK_ORDER = None  # dynamic — all combinations; use winner_counts instead
 
 
 def load_results(strategy_id):
@@ -90,8 +90,7 @@ def generate_summary(strategy_id):
     lines.append("")
     lines.append("| Mask | Times Won | % of Combos |")
     lines.append("|---|---|---|")
-    for mask in DOW_MASK_ORDER:
-        count = winner_counts.get(mask, 0)
+    for mask, count in sorted(winner_counts.items(), key=lambda x: -x[1]):
         pct   = f"{100*count/done:.1f}%" if done > 0 else "0%"
         lines.append(f"| {mask} | {count} | {pct} |")
     if n_errors > 0:

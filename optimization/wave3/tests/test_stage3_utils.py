@@ -24,21 +24,21 @@ def _write_stage2_json(base, strategy_id, symbol, tf, direction, sl_type,
 
 def _make_dow_results(all_s=0.8, monf_s=1.1, monf_t=25, all_t=38):
     return {
-        "ALL":     {"oos_sharpe": all_s,  "num_trades": all_t},
-        "MON-FRI": {"oos_sharpe": monf_s, "num_trades": monf_t},
-        "SAT-SUN": {"oos_sharpe": 0.3,   "num_trades": 12},
-        "MON":     {"oos_sharpe": 0.9,   "num_trades": 8},
-        "TUE":     {"oos_sharpe": 0.95,  "num_trades": 9},
-        "WED":     {"oos_sharpe": 0.7,   "num_trades": 7},
-        "THU":     {"oos_sharpe": 1.0,   "num_trades": 6},
-        "FRI":     {"oos_sharpe": 0.85,  "num_trades": 8},
+        "ALL":                    {"oos_sharpe": all_s,  "num_trades": all_t},
+        "MON+TUE+WED+THU+FRI":   {"oos_sharpe": monf_s, "num_trades": monf_t},
+        "SAT+SUN":                {"oos_sharpe": 0.3,   "num_trades": 12},
+        "MON":                    {"oos_sharpe": 0.9,   "num_trades": 8},
+        "TUE":                    {"oos_sharpe": 0.95,  "num_trades": 9},
+        "WED":                    {"oos_sharpe": 0.7,   "num_trades": 7},
+        "THU":                    {"oos_sharpe": 1.0,   "num_trades": 6},
+        "FRI":                    {"oos_sharpe": 0.85,  "num_trades": 8},
     }
 
 
 def test_select_winner_picks_best_with_improvement():
     results = _make_dow_results(all_s=0.8, monf_s=1.1, monf_t=25)
     mask, sharpe, trades, improved = select_winner(results)
-    assert mask == "MON-FRI"
+    assert mask == "MON+TUE+WED+THU+FRI"
     assert sharpe == 1.1
     assert trades == 25
     assert improved is True
@@ -70,7 +70,7 @@ def test_select_winner_boundary_above_lift():
     # 0.101 above ALL — should be accepted
     results = _make_dow_results(all_s=0.8, monf_s=0.901, monf_t=25)
     mask, _, _, improved = select_winner(results)
-    assert mask == "MON-FRI"
+    assert mask == "MON+TUE+WED+THU+FRI"
     assert improved is True
 
 
@@ -81,8 +81,8 @@ def test_select_winner_all_no_trades_defaults_gracefully():
     assert improved is False
 
 
-def test_dow_masks_has_8_entries():
-    assert len(DOW_MASKS) == 8
+def test_dow_masks_has_128_entries():
+    assert len(DOW_MASKS) == 128
 
 
 def test_dow_masks_all_is_none():
@@ -90,7 +90,8 @@ def test_dow_masks_all_is_none():
 
 
 def test_dow_masks_weekdays():
-    assert DOW_MASKS["MON-FRI"] == {0, 1, 2, 3, 4}
+    assert DOW_MASKS["MON+TUE+WED+THU+FRI"] == {0, 1, 2, 3, 4}
+    assert DOW_MASKS["SAT+SUN"] == {5, 6}
 
 
 def test_load_stage2_passing_reads_pass_only():

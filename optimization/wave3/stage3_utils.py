@@ -16,21 +16,24 @@ import os
 import sys
 from concurrent.futures import ProcessPoolExecutor, as_completed, BrokenExecutor
 from datetime import datetime
+from itertools import combinations
 from pathlib import Path
 from typing import Callable, Optional
 
 import numpy as np
 
-DOW_MASKS = {
-    "ALL":     None,
-    "MON-FRI": {0, 1, 2, 3, 4},
-    "SAT-SUN": {5, 6},
-    "MON":     {0},
-    "TUE":     {1},
-    "WED":     {2},
-    "THU":     {3},
-    "FRI":     {4},
-}
+_DOW_NAMES = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]  # index == weekday int
+
+def _build_dow_masks() -> dict:
+    """Return all 128 masks: 'ALL' (no filter) + every non-empty subset of Mon–Sun."""
+    masks: dict = {"ALL": None}
+    for size in range(1, 8):
+        for combo in combinations(range(7), size):
+            name = "+".join(_DOW_NAMES[d] for d in combo)
+            masks[name] = set(combo)
+    return masks
+
+DOW_MASKS = _build_dow_masks()
 
 MIN_TRADES = 20
 MIN_LIFT   = 0.10
