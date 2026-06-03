@@ -62,7 +62,12 @@ def generate_summary(strategy_id):
     n_improved = len(improved)
     pct_improved = f"{100*n_improved/done:.1f}%" if done > 0 else "0%"
 
-    winner_counts = Counter(r.get("winner_mask", "ALL") for r in results)
+    # Only count records with a real winner_mask (exclude crash/error records where mask=None)
+    winner_counts = Counter(
+        r.get("winner_mask") for r in results
+        if r.get("winner_mask") is not None
+    )
+    n_errors = sum(1 for r in results if r.get("winner_mask") is None)
 
     ranked = sorted(
         [r for r in results if r.get("winner_sharpe") is not None],
@@ -89,6 +94,9 @@ def generate_summary(strategy_id):
         count = winner_counts.get(mask, 0)
         pct   = f"{100*count/done:.1f}%" if done > 0 else "0%"
         lines.append(f"| {mask} | {count} | {pct} |")
+    if n_errors > 0:
+        pct_err = f"{100*n_errors/done:.1f}%" if done > 0 else "0%"
+        lines.append(f"| ⚠ error/crash | {n_errors} | {pct_err} |")
     lines.append("")
     lines.append("---")
     lines.append("")
