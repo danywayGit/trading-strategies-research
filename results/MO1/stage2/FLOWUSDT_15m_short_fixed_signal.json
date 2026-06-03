@@ -1,0 +1,26 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "FLOWUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 10.0,
+    "adx_trend_confirm": 25,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "short",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 8.0
+  },
+  "train_sharpe": 0.8246,
+  "oos_sharpe": -0.3565,
+  "num_trades": 165,
+  "win_rate_pct": 36.75,
+  "max_drawdown_pct": -66.11,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

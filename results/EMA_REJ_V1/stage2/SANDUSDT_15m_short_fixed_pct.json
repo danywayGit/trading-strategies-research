@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "SANDUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 200,
+    "rejection_lookback": 10,
+    "rsi_period": 14,
+    "rsi_ema_period": 14,
+    "rsi_confirm_window": 3,
+    "htf_bars": 36,
+    "direction": "short",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.6658,
+  "oos_sharpe": 0.6317,
+  "num_trades": 59,
+  "win_rate_pct": 36.97,
+  "max_drawdown_pct": -28.52,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

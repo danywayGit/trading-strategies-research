@@ -1,0 +1,26 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "SEIUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 15,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "both",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 4.0
+  },
+  "train_sharpe": -0.3029,
+  "oos_sharpe": 0.1069,
+  "num_trades": 159,
+  "win_rate_pct": 40.83,
+  "max_drawdown_pct": -67.54,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

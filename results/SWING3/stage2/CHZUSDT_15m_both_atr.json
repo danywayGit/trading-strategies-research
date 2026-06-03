@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "CHZUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 4.0,
+    "adx_threshold": 25,
+    "ema_filter": 200,
+    "direction": "both",
+    "atr_stop_mult": 3.5,
+    "rr_ratio": 3.5
+  },
+  "train_sharpe": 1.0392,
+  "oos_sharpe": 0.3128,
+  "num_trades": 61,
+  "win_rate_pct": 32.37,
+  "max_drawdown_pct": -42.41,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

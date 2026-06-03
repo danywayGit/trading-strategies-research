@@ -1,0 +1,26 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "RUNEUSDT",
+  "timeframe": "12h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 15,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "both",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 1.6613,
+  "oos_sharpe": -1.04,
+  "num_trades": 11,
+  "win_rate_pct": 61.29,
+  "max_drawdown_pct": -41.81,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

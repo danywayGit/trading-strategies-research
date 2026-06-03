@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "SEIUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 150,
+    "rejection_lookback": 10,
+    "rsi_period": 10,
+    "rsi_ema_period": 7,
+    "rsi_confirm_window": 2,
+    "htf_bars": 36,
+    "direction": "both",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 5.0
+  },
+  "train_sharpe": 1.773,
+  "oos_sharpe": 0.2725,
+  "num_trades": 80,
+  "win_rate_pct": 34.04,
+  "max_drawdown_pct": -21.17,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

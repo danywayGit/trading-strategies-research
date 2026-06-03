@@ -1,0 +1,26 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "DOTUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "bb_length": 15,
+    "bb_mult": 2.0,
+    "macd_fast": 10,
+    "macd_slow": 26,
+    "squeeze_bars": 5,
+    "direction": "both",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 0.3538,
+  "oos_sharpe": -1.8673,
+  "num_trades": 235,
+  "win_rate_pct": 36.31,
+  "max_drawdown_pct": -82.83,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

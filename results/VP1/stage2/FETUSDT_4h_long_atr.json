@@ -1,0 +1,26 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "FETUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 60,
+    "volume_spike_mult": 2.0,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "long",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 1.6512,
+  "oos_sharpe": 1.6669,
+  "num_trades": 19,
+  "win_rate_pct": 63.64,
+  "max_drawdown_pct": -41.37,
+  "verdict": "PASS",
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

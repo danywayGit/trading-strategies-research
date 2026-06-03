@@ -1,0 +1,26 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "ICPUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 80,
+    "volume_spike_mult": 1.5,
+    "adx_threshold": 20,
+    "cooldown_bars": 10,
+    "direction": "short",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 1.6387,
+  "oos_sharpe": -0.2417,
+  "num_trades": 19,
+  "win_rate_pct": 48.48,
+  "max_drawdown_pct": -32.1,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

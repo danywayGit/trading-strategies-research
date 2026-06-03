@@ -1,0 +1,28 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "BNBUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "macd_signal_period": 9,
+    "rsi_period": 14,
+    "divergence_lookback": 8,
+    "rsi_long_max": 40,
+    "rsi_short_min": 55,
+    "direction": "both",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 1.4849,
+  "oos_sharpe": -2.1567,
+  "num_trades": 236,
+  "win_rate_pct": 54.15,
+  "max_drawdown_pct": -28.53,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

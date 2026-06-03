@@ -1,0 +1,26 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "NEARUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "bb_length": 25,
+    "bb_mult": 2.2,
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "squeeze_bars": 5,
+    "direction": "both",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": -0.843,
+  "oos_sharpe": -1.6892,
+  "num_trades": 565,
+  "win_rate_pct": 34.15,
+  "max_drawdown_pct": -97.79,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

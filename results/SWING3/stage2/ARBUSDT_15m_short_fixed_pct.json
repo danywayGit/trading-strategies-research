@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "ARBUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 4.0,
+    "adx_threshold": 30,
+    "ema_filter": 50,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 9.0
+  },
+  "train_sharpe": 3.2995,
+  "oos_sharpe": 1.2423,
+  "num_trades": 10,
+  "win_rate_pct": 50.0,
+  "max_drawdown_pct": -11.02,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

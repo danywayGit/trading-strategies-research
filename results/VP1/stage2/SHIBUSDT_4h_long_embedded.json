@@ -1,0 +1,25 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "SHIBUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 60,
+    "volume_spike_mult": 1.5,
+    "adx_threshold": 20,
+    "cooldown_bars": 10,
+    "direction": "long",
+    "tp2_mult": 1.5
+  },
+  "train_sharpe": 1.3994,
+  "oos_sharpe": -0.3043,
+  "num_trades": 32,
+  "win_rate_pct": 36.36,
+  "max_drawdown_pct": -23.64,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

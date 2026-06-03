@@ -1,0 +1,26 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "FILUSDT",
+  "timeframe": "1h",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 3.0,
+    "adx_trend_confirm": 25,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "short",
+    "atr_stop_mult": 3.0,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 1.7146,
+  "oos_sharpe": -1.3328,
+  "num_trades": 79,
+  "win_rate_pct": 48.57,
+  "max_drawdown_pct": -49.15,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

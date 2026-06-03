@@ -1,0 +1,26 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "TAOUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 80,
+    "volume_spike_mult": 1.2,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "short",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 3.7287,
+  "oos_sharpe": -0.8286,
+  "num_trades": 65,
+  "win_rate_pct": 52.89,
+  "max_drawdown_pct": -37.6,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands ~9 months data"
+}

@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "DOTUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 2.0,
+    "adx_threshold": 20,
+    "ema_filter": 50,
+    "direction": "long",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 9.0
+  },
+  "train_sharpe": 0.7169,
+  "oos_sharpe": -0.1043,
+  "num_trades": 12,
+  "win_rate_pct": 33.33,
+  "max_drawdown_pct": -29.37,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

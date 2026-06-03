@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "TAOUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 150,
+    "rejection_lookback": 10,
+    "rsi_period": 10,
+    "rsi_ema_period": 7,
+    "rsi_confirm_window": 2,
+    "htf_bars": 36,
+    "direction": "both",
+    "atr_stop_mult": 3.0,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 4.145,
+  "oos_sharpe": -0.3592,
+  "num_trades": 37,
+  "win_rate_pct": 48.05,
+  "max_drawdown_pct": -19.81,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt ~9 months data"
+}

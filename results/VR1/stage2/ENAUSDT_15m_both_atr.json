@@ -1,0 +1,26 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "ENAUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "band_mult": 2.5,
+    "volume_exhaustion_threshold": 0.5,
+    "rsi_oversold_floor": 30,
+    "rsi_overbought_ceil": 75,
+    "min_band_width_pct": 0.3,
+    "direction": "both",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 2.2438,
+  "oos_sharpe": -2.3595,
+  "num_trades": 17,
+  "win_rate_pct": 51.72,
+  "max_drawdown_pct": -7.09,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt ~9 months data"
+}

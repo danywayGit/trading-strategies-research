@@ -1,0 +1,26 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "FILUSDT",
+  "timeframe": "12h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "bb_length": 15,
+    "bb_mult": 2.0,
+    "macd_fast": 10,
+    "macd_slow": 26,
+    "squeeze_bars": 5,
+    "direction": "both",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 1.6218,
+  "oos_sharpe": 2.174,
+  "num_trades": 26,
+  "win_rate_pct": 45.61,
+  "max_drawdown_pct": -25.51,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

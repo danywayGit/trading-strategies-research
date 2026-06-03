@@ -1,0 +1,26 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "ATOMUSDT",
+  "timeframe": "12h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 20,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "both",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 3.0
+  },
+  "train_sharpe": 0.0573,
+  "oos_sharpe": 0.0753,
+  "num_trades": 26,
+  "win_rate_pct": 45.71,
+  "max_drawdown_pct": -38.47,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

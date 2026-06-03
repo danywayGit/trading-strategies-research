@@ -1,0 +1,26 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "MANAUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 80,
+    "volume_spike_mult": 2.0,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "short",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 1.588,
+  "oos_sharpe": -0.6296,
+  "num_trades": 107,
+  "win_rate_pct": 35.2,
+  "max_drawdown_pct": -37.99,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

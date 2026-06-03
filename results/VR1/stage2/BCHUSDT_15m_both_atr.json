@@ -1,0 +1,26 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "BCHUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "band_mult": 2.5,
+    "volume_exhaustion_threshold": 0.2,
+    "rsi_oversold_floor": 30,
+    "rsi_overbought_ceil": 75,
+    "min_band_width_pct": 0.3,
+    "direction": "both",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 1.5094,
+  "oos_sharpe": -1.1278,
+  "num_trades": 14,
+  "win_rate_pct": 53.33,
+  "max_drawdown_pct": -13.62,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

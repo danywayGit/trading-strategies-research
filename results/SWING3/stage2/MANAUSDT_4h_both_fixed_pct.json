@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "MANAUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 3.0,
+    "adx_threshold": 25,
+    "ema_filter": 50,
+    "direction": "both",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 3.0
+  },
+  "train_sharpe": 1.5756,
+  "oos_sharpe": -1.3827,
+  "num_trades": 14,
+  "win_rate_pct": 57.58,
+  "max_drawdown_pct": -7.31,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

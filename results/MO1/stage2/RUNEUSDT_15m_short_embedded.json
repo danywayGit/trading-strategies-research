@@ -1,0 +1,25 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "RUNEUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 8.0,
+    "adx_trend_confirm": 15,
+    "adx_exit_fade": 20,
+    "cooldown_bars": 5,
+    "direction": "short",
+    "atr_stop_mult": 2.0
+  },
+  "train_sharpe": 1.1497,
+  "oos_sharpe": -0.2167,
+  "num_trades": 344,
+  "win_rate_pct": 31.08,
+  "max_drawdown_pct": -58.92,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

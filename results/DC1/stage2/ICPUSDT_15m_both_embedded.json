@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "ICPUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 55,
+    "adx_threshold": 20,
+    "adx_exit": 15,
+    "atr_period": 14,
+    "vol_avg_period": 30,
+    "vol_mult": 1.0,
+    "direction": "both",
+    "atr_stop_mult": 3.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": -0.5521,
+  "oos_sharpe": -1.6758,
+  "num_trades": 370,
+  "win_rate_pct": 34.28,
+  "max_drawdown_pct": -90.05,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

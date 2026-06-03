@@ -1,0 +1,26 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "INJUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 60,
+    "volume_spike_mult": 1.2,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "long",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 1.421,
+  "oos_sharpe": -0.3016,
+  "num_trades": 128,
+  "win_rate_pct": 31.37,
+  "max_drawdown_pct": -54.55,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

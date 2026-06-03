@@ -1,0 +1,26 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "AXSUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 80,
+    "volume_spike_mult": 1.5,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "short",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 8.0
+  },
+  "train_sharpe": 1.6257,
+  "oos_sharpe": 0.2911,
+  "num_trades": 28,
+  "win_rate_pct": 39.19,
+  "max_drawdown_pct": -26.44,
+  "verdict": "PASS",
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

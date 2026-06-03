@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "DASHUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 3.0,
+    "adx_threshold": 25,
+    "ema_filter": 50,
+    "direction": "both",
+    "atr_stop_mult": 3.5,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 0.5697,
+  "oos_sharpe": -1.2664,
+  "num_trades": 131,
+  "win_rate_pct": 44.0,
+  "max_drawdown_pct": -39.23,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

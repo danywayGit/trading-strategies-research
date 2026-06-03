@@ -1,0 +1,26 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "SEIUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "bb_length": 20,
+    "bb_mult": 2.2,
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "squeeze_bars": 5,
+    "direction": "both",
+    "atr_stop_mult": 3.0,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 0.9707,
+  "oos_sharpe": 0.5125,
+  "num_trades": 69,
+  "win_rate_pct": 38.12,
+  "max_drawdown_pct": -70.3,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

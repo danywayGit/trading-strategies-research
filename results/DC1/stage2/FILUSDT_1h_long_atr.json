@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "FILUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 55,
+    "adx_threshold": 25,
+    "adx_exit": 15,
+    "atr_period": 21,
+    "vol_avg_period": 14,
+    "vol_mult": 1.0,
+    "direction": "long",
+    "atr_stop_mult": 3.0,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 1.4435,
+  "oos_sharpe": -0.6786,
+  "num_trades": 25,
+  "win_rate_pct": 42.86,
+  "max_drawdown_pct": -26.32,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

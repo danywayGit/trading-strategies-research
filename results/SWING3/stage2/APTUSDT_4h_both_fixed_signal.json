@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "APTUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 3.0,
+    "adx_threshold": 20,
+    "ema_filter": 50,
+    "direction": "both",
+    "stop_loss_pct": 3.5,
+    "take_profit_pct": 9.0
+  },
+  "train_sharpe": 0.6376,
+  "oos_sharpe": 0.5,
+  "num_trades": 15,
+  "win_rate_pct": 38.24,
+  "max_drawdown_pct": -30.47,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

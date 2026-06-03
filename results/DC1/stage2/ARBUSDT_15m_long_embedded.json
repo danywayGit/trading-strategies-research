@@ -1,0 +1,27 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "ARBUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "donchian_length": 20,
+    "adx_threshold": 25,
+    "adx_exit": 20,
+    "atr_period": 14,
+    "vol_avg_period": 30,
+    "vol_mult": 1.2,
+    "direction": "long",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": 0.4348,
+  "oos_sharpe": -2.7729,
+  "num_trades": 152,
+  "win_rate_pct": 33.04,
+  "max_drawdown_pct": -23.64,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

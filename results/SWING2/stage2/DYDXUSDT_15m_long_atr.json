@@ -1,0 +1,26 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "DYDXUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "bb_length": 25,
+    "bb_mult": 2.0,
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "squeeze_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 3.0
+  },
+  "train_sharpe": -0.0129,
+  "oos_sharpe": -0.2718,
+  "num_trades": 134,
+  "win_rate_pct": 27.12,
+  "max_drawdown_pct": -82.67,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

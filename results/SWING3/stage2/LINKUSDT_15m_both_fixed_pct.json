@@ -1,0 +1,25 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "LINKUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 4.0,
+    "adx_threshold": 30,
+    "ema_filter": 100,
+    "direction": "both",
+    "stop_loss_pct": 3.5,
+    "take_profit_pct": 9.0
+  },
+  "train_sharpe": 1.2783,
+  "oos_sharpe": -1.2569,
+  "num_trades": 26,
+  "win_rate_pct": 40.79,
+  "max_drawdown_pct": -22.27,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

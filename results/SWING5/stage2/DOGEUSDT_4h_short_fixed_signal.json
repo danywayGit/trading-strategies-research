@@ -1,0 +1,26 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "DOGEUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 15,
+    "kc_mult": 1.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "short",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 6.0
+  },
+  "train_sharpe": 1.2973,
+  "oos_sharpe": 1.0088,
+  "num_trades": 47,
+  "win_rate_pct": 37.5,
+  "max_drawdown_pct": -25.81,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

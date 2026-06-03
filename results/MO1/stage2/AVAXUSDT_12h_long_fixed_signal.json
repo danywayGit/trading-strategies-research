@@ -1,0 +1,26 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "AVAXUSDT",
+  "timeframe": "12h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "rsi_period": 10,
+    "momentum_threshold": 10.0,
+    "adx_trend_confirm": 15,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 4.0
+  },
+  "train_sharpe": 1.6612,
+  "oos_sharpe": 2.161,
+  "num_trades": 26,
+  "win_rate_pct": 53.7,
+  "max_drawdown_pct": -19.45,
+  "verdict": "PASS",
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

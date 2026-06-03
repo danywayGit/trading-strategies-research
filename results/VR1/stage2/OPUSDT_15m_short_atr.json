@@ -1,0 +1,26 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "OPUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "band_mult": 1.5,
+    "volume_exhaustion_threshold": 0.5,
+    "rsi_oversold_floor": 25,
+    "rsi_overbought_ceil": 65,
+    "min_band_width_pct": 0.8,
+    "direction": "short",
+    "atr_stop_mult": 3.0,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 1.4532,
+  "oos_sharpe": -0.4255,
+  "num_trades": 68,
+  "win_rate_pct": 46.62,
+  "max_drawdown_pct": -32.43,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

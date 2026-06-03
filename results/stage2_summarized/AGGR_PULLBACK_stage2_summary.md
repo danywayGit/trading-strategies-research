@@ -2,8 +2,9 @@
 
 **Date:** 2026-06-02
 **Off-TFs tested:** 15m, 1h, 12h
-**Pass filter:** num_trades ≥ 30 AND OOS Sharpe > 0
-**Total combos:** 297 / 1404  (39 symbols × 3 dir × 4 SL × 3 TFs)
+**Pass filter:** train_trades ≥ 30 AND OOS Sharpe > 0
+**Note:** `Trades` column shows OOS trade count (train count guaranteed ≥ 30)
+**Combos completed:** 297 / 1404  (39 symbols × 3 dir × 4 SL × 3 TFs max)
 **Pass rate:** 143 / 297
 
 ---
@@ -144,7 +145,7 @@
 
 ## Passing Combos (proceed to Stage 3)
 
-| Symbol | TF | Direction | SL Type | OOS Sharpe | Train Sharpe | Trades | Max DD% | Best Params |
+| Symbol | Off-TF | Direction | SL Type | OOS Sharpe | Train Sharpe | OOS Trades | Max DD% | Best Params |
 |---|---|---|---|---|---|---|---|---|
 | CHZUSDT | 1h | both | atr | 2.8854 | 1.6445 | 46 | -48.88 | `{"ema_length": 15, "pullback_tolerance": 1, "swing_lookback": 5, "massive_can...` |
 | TRXUSDT | 1h | long | fixed_pct | 2.6798 | 1.8128 | 22 | -19.96 | `{"ema_length": 20, "pullback_tolerance": 0, "swing_lookback": 5, "massive_can...` |

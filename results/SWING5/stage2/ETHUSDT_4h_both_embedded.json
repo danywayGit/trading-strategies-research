@@ -1,0 +1,25 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "ETHUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "both",
+    "rr_ratio": 4.0
+  },
+  "train_sharpe": 1.2253,
+  "oos_sharpe": 0.6557,
+  "num_trades": 25,
+  "win_rate_pct": 34.55,
+  "max_drawdown_pct": -43.42,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,26 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "ETHUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 80,
+    "volume_spike_mult": 2.0,
+    "adx_threshold": 20,
+    "cooldown_bars": 10,
+    "direction": "both",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 1.5
+  },
+  "train_sharpe": 1.5911,
+  "oos_sharpe": 0.5233,
+  "num_trades": 33,
+  "win_rate_pct": 56.92,
+  "max_drawdown_pct": -30.58,
+  "verdict": "PASS",
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

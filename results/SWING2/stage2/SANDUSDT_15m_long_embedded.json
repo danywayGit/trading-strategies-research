@@ -1,0 +1,26 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "SANDUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "bb_length": 25,
+    "bb_mult": 2.2,
+    "macd_fast": 12,
+    "macd_slow": 24,
+    "squeeze_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": -0.9264,
+  "oos_sharpe": -0.6147,
+  "num_trades": 360,
+  "win_rate_pct": 29.82,
+  "max_drawdown_pct": -84.11,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

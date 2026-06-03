@@ -1,0 +1,26 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "FILUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 80,
+    "volume_spike_mult": 1.5,
+    "adx_threshold": 20,
+    "cooldown_bars": 10,
+    "direction": "both",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 8.0
+  },
+  "train_sharpe": 2.0364,
+  "oos_sharpe": 0.2957,
+  "num_trades": 39,
+  "win_rate_pct": 37.11,
+  "max_drawdown_pct": -18.97,
+  "verdict": "PASS",
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

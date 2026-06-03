@@ -1,0 +1,28 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "LINKUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "macd_signal_period": 9,
+    "rsi_period": 10,
+    "divergence_lookback": 5,
+    "rsi_long_max": 40,
+    "rsi_short_min": 60,
+    "direction": "short",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 0.0615,
+  "oos_sharpe": -0.1195,
+  "num_trades": 389,
+  "win_rate_pct": 32.34,
+  "max_drawdown_pct": -72.13,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

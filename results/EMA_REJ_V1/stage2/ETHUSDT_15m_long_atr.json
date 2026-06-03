@@ -1,0 +1,27 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "ETHUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "ema200_length": 150,
+    "rejection_lookback": 5,
+    "rsi_period": 14,
+    "rsi_ema_period": 14,
+    "rsi_confirm_window": 3,
+    "htf_bars": 36,
+    "direction": "long",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 0.7588,
+  "oos_sharpe": -0.3497,
+  "num_trades": 53,
+  "win_rate_pct": 38.39,
+  "max_drawdown_pct": -14.59,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

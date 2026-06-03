@@ -1,0 +1,25 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "MANAUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 10.0,
+    "adx_trend_confirm": 15,
+    "adx_exit_fade": 15,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 2.0
+  },
+  "train_sharpe": 0.3858,
+  "oos_sharpe": 0.8448,
+  "num_trades": 100,
+  "win_rate_pct": 28.16,
+  "max_drawdown_pct": -55.68,
+  "verdict": "PASS",
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

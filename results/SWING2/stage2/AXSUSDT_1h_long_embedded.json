@@ -1,0 +1,26 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "AXSUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "bb_length": 20,
+    "bb_mult": 2.0,
+    "macd_fast": 12,
+    "macd_slow": 24,
+    "squeeze_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 2.5
+  },
+  "train_sharpe": 0.29,
+  "oos_sharpe": -0.0824,
+  "num_trades": 103,
+  "win_rate_pct": 32.41,
+  "max_drawdown_pct": -67.45,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

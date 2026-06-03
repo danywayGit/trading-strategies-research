@@ -1,0 +1,26 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "TAOUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "bb_length": 20,
+    "bb_mult": 1.8,
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "squeeze_bars": 5,
+    "direction": "both",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 3.0
+  },
+  "train_sharpe": 2.4406,
+  "oos_sharpe": -4.1918,
+  "num_trades": 296,
+  "win_rate_pct": 41.64,
+  "max_drawdown_pct": -40.02,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt ~9 months data"
+}

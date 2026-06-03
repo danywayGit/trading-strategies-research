@@ -1,0 +1,25 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "APTUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 20,
+    "kc_mult": 2.0,
+    "cci_period": 28,
+    "cci_long_min": 0,
+    "cci_short_max": 0,
+    "direction": "long",
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 1.0488,
+  "oos_sharpe": 0.8547,
+  "num_trades": 15,
+  "win_rate_pct": 37.5,
+  "max_drawdown_pct": -59.11,
+  "verdict": "PASS",
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,28 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "ATOMUSDT",
+  "timeframe": "12h",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "macd_signal_period": 7,
+    "rsi_period": 10,
+    "divergence_lookback": 5,
+    "rsi_long_max": 40,
+    "rsi_short_min": 55,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 4.0
+  },
+  "train_sharpe": 1.3472,
+  "oos_sharpe": -1.4336,
+  "num_trades": 20,
+  "win_rate_pct": 52.08,
+  "max_drawdown_pct": -18.8,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}

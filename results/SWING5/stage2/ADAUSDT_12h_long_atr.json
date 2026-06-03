@@ -1,0 +1,26 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "ADAUSDT",
+  "timeframe": "12h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 2,
+  "test_window": "2022-01-01/2024-12-31",
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 2.0,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "long",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 2.0
+  },
+  "train_sharpe": 0.5892,
+  "oos_sharpe": -0.1528,
+  "num_trades": 18,
+  "win_rate_pct": 42.42,
+  "max_drawdown_pct": -44.52,
+  "verdict": "FAIL",
+  "note": "v2/vectorbt"
+}
