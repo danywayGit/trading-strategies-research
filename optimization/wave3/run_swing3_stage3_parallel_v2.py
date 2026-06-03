@@ -30,7 +30,6 @@ import vectorbt as vbt
 
 STRATEGY_ID  = "SWING3"
 STRATEGY_KEY = "swing3_supertrend_adx"
-HOME_TF      = "1h"
 RESULTS_BASE = Path(r"C:\Users\danyw\Documents\Git\DanywayGit\trading-strategies-research\results")
 V2_NOTE      = "v2/vectorbt"
 
@@ -49,13 +48,6 @@ TF_FREQ_MAP = {
 
 VENV_SITE_PACKAGES = BACKTESTING_MCP / "venv" / "Lib" / "site-packages"
 
-SYMBOLS = [
-    "BTC", "ETH", "SOL", "BNB", "ADA", "DOGE", "DOT", "LINK", "LTC", "BCH",
-    "UNI", "AAVE", "ATOM", "FIL", "INJ", "AVAX", "NEAR", "TRX",
-    "ALGO", "SAND", "MANA", "RUNE", "AXS", "DASH", "ETC", "CHZ", "SHIB",
-    "ICP", "FLOW", "FET", "DYDX", "OP", "GMX", "APT", "ARB", "SUI", "SEI",
-    "ENA", "TAO",
-]
 LIMITED_DATA = {"ENA", "TAO"}
 
 
@@ -365,29 +357,23 @@ def _run_vbt_portfolio(close_series, le, lx, se, sx, sl_type, sl_params_list, at
 
 # ── DOW evaluation ────────────────────────────────────────────────────────────
 
-def _eval_single_dow(data, direction, sl_type, best_params, dow_days, freq="1h"):
+def _eval_single_dow(close_s, le_base, lx, se_base, sx, atr,
+                     sl_type, best_params, dow_days, freq="1h"):
     """
-    Evaluate best_params on a data slice with DOW entry masking.
-    dow_days: set of weekday ints (0=Mon..6=Sun), or None for no filter.
+    Evaluate pre-computed signals with DOW entry masking.
+    le_base/se_base: unmasked entry signals from _make_signals.
+    dow_days: set of weekday ints, or None for no filter (ALL mask).
     Returns (oos_sharpe, num_trades) or (None, 0) on error.
     """
-    h, l, c = data.High.values, data.Low.values, data.Close.values
-    close_s  = pd.Series(c, index=data.index)
-
     try:
-        st_dir, _, atr = _compute_supertrend(h, l, c,
-                                              best_params["st_period"],
-                                              best_params["st_factor"])
-        adx = _compute_adx(h, l, c)
-        ema = _compute_ema(c, best_params["ema_filter"])
-        le, lx, se, sx = _make_signals(st_dir, adx, ema, c,
-                                        best_params["adx_threshold"], direction)
-
-        # DOW masking — zero out entries on non-matching days
+        # Apply DOW masking to entry signals only
         if dow_days is not None:
-            dow_bool = pd.Series(data.index).dt.dayofweek.isin(dow_days).values
-            le = le & dow_bool
-            se = se & dow_bool
+            dow_bool = close_s.index.dayofweek.isin(dow_days).values
+            le = le_base & dow_bool
+            se = se_base & dow_bool
+        else:
+            le = le_base
+            se = se_base
 
         if sl_type == "embedded":
             sl_list = [{"atr_stop_mult": best_params["atr_stop_mult"]}]
@@ -443,29 +429,79 @@ def _worker_v2(task):
     except Exception as e:
         print(f"{log_prefix} DATA ERROR: {e}", flush=True)
         return {
-            "symbol": symbol_usdt, "timeframe": tf,
-            "direction": direction, "sl_type": sl_type,
-            "winner_mask": None, "winner_sharpe": None,
-            "winner_trades": None, "dow_improved": False,
-            "note": f"DATA ERROR: {e}",
+            "strategy":          STRATEGY_KEY,
+            "symbol":            symbol_usdt,
+            "timeframe":         tf,
+            "direction":         direction,
+            "sl_type":           sl_type,
+            "stage":             3,
+            "best_params":       best_params,
+            "stage2_oos_sharpe": stage2_oos_sharpe,
+            "dow_results":       {},
+            "winner_mask":       None,
+            "winner_sharpe":     None,
+            "winner_trades":     None,
+            "dow_improved":      False,
+            "note":              f"DATA ERROR: {e}",
         }
 
     if data.empty or len(data) < 500:
         return {
-            "symbol": symbol_usdt, "timeframe": tf,
-            "direction": direction, "sl_type": sl_type,
-            "winner_mask": None, "winner_sharpe": None,
-            "winner_trades": None, "dow_improved": False,
-            "note": "insufficient data",
+            "strategy":          STRATEGY_KEY,
+            "symbol":            symbol_usdt,
+            "timeframe":         tf,
+            "direction":         direction,
+            "sl_type":           sl_type,
+            "stage":             3,
+            "best_params":       best_params,
+            "stage2_oos_sharpe": stage2_oos_sharpe,
+            "dow_results":       {},
+            "winner_mask":       None,
+            "winner_sharpe":     None,
+            "winner_trades":     None,
+            "dow_improved":      False,
+            "note":              "insufficient data",
         }
 
     test_data = data.iloc[int(len(data) * 0.7):]
 
     print(f"{log_prefix} running 8 DOW masks ({len(test_data)} OOS bars)...", flush=True)
+
+    # Compute indicators once — DOW masking only affects entry signals
+    h_t, l_t, c_t = test_data.High.values, test_data.Low.values, test_data.Close.values
+    close_s_t = pd.Series(c_t, index=test_data.index)
+    try:
+        st_dir_t, _, atr_t = _compute_supertrend(h_t, l_t, c_t,
+                                                  best_params["st_period"],
+                                                  best_params["st_factor"])
+        adx_t = _compute_adx(h_t, l_t, c_t)
+        ema_t = _compute_ema(c_t, best_params["ema_filter"])
+        le_t, lx_t, se_t, sx_t = _make_signals(st_dir_t, adx_t, ema_t, c_t,
+                                                 best_params["adx_threshold"], direction)
+    except Exception as e:
+        print(f"{log_prefix} INDICATOR ERROR: {e}", flush=True)
+        return {
+            "strategy":          STRATEGY_KEY,
+            "symbol":            symbol_usdt,
+            "timeframe":         tf,
+            "direction":         direction,
+            "sl_type":           sl_type,
+            "stage":             3,
+            "best_params":       best_params,
+            "stage2_oos_sharpe": stage2_oos_sharpe,
+            "dow_results":       {},
+            "winner_mask":       None,
+            "winner_sharpe":     None,
+            "winner_trades":     None,
+            "dow_improved":      False,
+            "note":              f"INDICATOR ERROR: {e}",
+        }
+
     dow_results = {}
     for mask_name, dow_days in DOW_MASKS.items():
         sharpe, trades = _eval_single_dow(
-            test_data, direction, sl_type, best_params,
+            close_s_t, le_t, lx_t, se_t, sx_t, atr_t,
+            sl_type, best_params,
             dow_days=dow_days, freq=TF_FREQ_MAP[tf],
         )
         dow_results[mask_name] = {"oos_sharpe": sharpe, "num_trades": trades}
