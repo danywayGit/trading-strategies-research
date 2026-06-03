@@ -8,7 +8,7 @@ Exports:
     MIN_LIFT     — minimum absolute Sharpe improvement over ALL (0.10)
     load_stage2_passing(strategy_id, results_base) -> list[dict]
     select_winner(dow_results) -> (mask, sharpe, trades, improved)
-    run_stage3_parallel(strategy_id, results_base, symbols, worker_fn,
+    run_stage3_parallel(strategy_id, results_base, worker_fn,
                         backtesting_mcp, workers, skip_download)
 """
 import json
@@ -93,7 +93,8 @@ def select_winner(dow_results: dict) -> tuple:
     Otherwise ALL is returned with dow_improved=False.
     """
     all_data   = dow_results.get("ALL", {})
-    all_sharpe = all_data.get("oos_sharpe") or 0.0
+    all_sharpe_raw = all_data.get("oos_sharpe")
+    all_sharpe = all_sharpe_raw if all_sharpe_raw is not None else 0.0
     all_trades = all_data.get("num_trades", 0)
 
     candidates = {
@@ -142,7 +143,6 @@ def _predownload(strategy_id: str, results_base: Path, backtesting_mcp: Path) ->
 def run_stage3_parallel(
     strategy_id: str,
     results_base: Path,
-    symbols: list,
     worker_fn: Callable,
     backtesting_mcp: Path,
     workers: Optional[int] = None,
@@ -205,11 +205,15 @@ def run_stage3_parallel(
                         result = future.result()
                     except Exception as e:
                         result = {
-                            "symbol":    task["sym"] + "USDT",
-                            "timeframe": task["tf"],
-                            "direction": task["direction"],
-                            "sl_type":   task["sl_type"],
-                            "note":      f"WORKER CRASH: {e}",
+                            "symbol":        task["sym"] + "USDT",
+                            "timeframe":     task["tf"],
+                            "direction":     task["direction"],
+                            "sl_type":       task["sl_type"],
+                            "winner_mask":   None,
+                            "winner_sharpe": None,
+                            "winner_trades": None,
+                            "dow_improved":  False,
+                            "note":          f"WORKER CRASH: {e}",
                         }
 
                     sym_usdt  = result.get("symbol", "?")

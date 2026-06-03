@@ -109,3 +109,19 @@ def test_load_stage2_passing_empty_for_missing_dir():
     with tempfile.TemporaryDirectory() as tmp:
         result = load_stage2_passing("NONEXISTENT", Path(tmp))
         assert result == []
+
+
+def test_load_stage2_passing_rejects_non_usdt_symbol():
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        # Write a PASS result with a non-USDT symbol (malformed)
+        d = tmp / "SWING3" / "stage2"
+        d.mkdir(parents=True, exist_ok=True)
+        payload = {
+            "symbol": "BTC",  # missing USDT suffix
+            "timeframe": "4h", "direction": "both", "sl_type": "atr",
+            "oos_sharpe": 0.9, "verdict": "PASS", "best_params": {},
+        }
+        (d / "BTC_4h_both_atr.json").write_text(json.dumps(payload))
+        result = load_stage2_passing("SWING3", tmp)
+        assert result == []
