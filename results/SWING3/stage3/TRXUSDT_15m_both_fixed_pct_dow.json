@@ -1,0 +1,57 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "TRXUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 4.0,
+    "adx_threshold": 25,
+    "ema_filter": 50,
+    "direction": "both",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0
+  },
+  "stage2_oos_sharpe": 0.5983,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.5983325862254684,
+      "num_trades": 119
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.2157557728909866,
+      "num_trades": 94
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.3315941739933233,
+      "num_trades": 35
+    },
+    "MON": {
+      "oos_sharpe": 0.3187692988580282,
+      "num_trades": 25
+    },
+    "TUE": {
+      "oos_sharpe": 0.11801272710187587,
+      "num_trades": 26
+    },
+    "WED": {
+      "oos_sharpe": -0.9186208284809088,
+      "num_trades": 23
+    },
+    "THU": {
+      "oos_sharpe": 1.5076767327756564,
+      "num_trades": 21
+    },
+    "FRI": {
+      "oos_sharpe": -2.0356779478516454,
+      "num_trades": 23
+    }
+  },
+  "winner_mask": "THU",
+  "winner_sharpe": 1.5076767327756564,
+  "winner_trades": 21,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

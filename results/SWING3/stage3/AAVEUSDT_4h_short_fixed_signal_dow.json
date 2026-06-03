@@ -1,0 +1,57 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "AAVEUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 2.0,
+    "adx_threshold": 20,
+    "ema_filter": 200,
+    "direction": "short",
+    "stop_loss_pct": 3.5,
+    "take_profit_pct": 9.0
+  },
+  "stage2_oos_sharpe": 0.452,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.45201154160453105,
+      "num_trades": 6
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.8573922335840429,
+      "num_trades": 5
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -1.3891560155816318,
+      "num_trades": 1
+    },
+    "MON": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    },
+    "TUE": {
+      "oos_sharpe": 0.8028604683001705,
+      "num_trades": 2
+    },
+    "WED": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    },
+    "THU": {
+      "oos_sharpe": 0.7530651842215367,
+      "num_trades": 2
+    },
+    "FRI": {
+      "oos_sharpe": -0.30815815320025114,
+      "num_trades": 1
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.45201154160453105,
+  "winner_trades": 6,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

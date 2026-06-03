@@ -1,0 +1,58 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "DOTUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 80,
+    "volume_spike_mult": 2.0,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 3.0
+  },
+  "stage2_oos_sharpe": 0.3854,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.3853781877963137,
+      "num_trades": 194
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.14139391817938576,
+      "num_trades": 167
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.6996546973832121,
+      "num_trades": 41
+    },
+    "MON": {
+      "oos_sharpe": -0.41153852674646985,
+      "num_trades": 39
+    },
+    "TUE": {
+      "oos_sharpe": 1.5081540814011694,
+      "num_trades": 38
+    },
+    "WED": {
+      "oos_sharpe": -1.1706685385285118,
+      "num_trades": 41
+    },
+    "THU": {
+      "oos_sharpe": -0.05539211653934375,
+      "num_trades": 37
+    },
+    "FRI": {
+      "oos_sharpe": -0.09299167705582939,
+      "num_trades": 39
+    }
+  },
+  "winner_mask": "TUE",
+  "winner_sharpe": 1.5081540814011694,
+  "winner_trades": 38,
+  "dow_improved": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

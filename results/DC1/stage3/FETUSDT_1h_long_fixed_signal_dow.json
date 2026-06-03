@@ -1,0 +1,59 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "FETUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "donchian_length": 20,
+    "adx_threshold": 30,
+    "adx_exit": 15,
+    "atr_period": 21,
+    "vol_avg_period": 14,
+    "vol_mult": 1.0,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "stage2_oos_sharpe": 1.1762,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.1762187648752673,
+      "num_trades": 41
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.8281691160864022,
+      "num_trades": 31
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.6100961233171379,
+      "num_trades": 12
+    },
+    "MON": {
+      "oos_sharpe": -1.6359893767751086,
+      "num_trades": 6
+    },
+    "TUE": {
+      "oos_sharpe": -0.9316208459150143,
+      "num_trades": 5
+    },
+    "WED": {
+      "oos_sharpe": 2.3293658843611267,
+      "num_trades": 6
+    },
+    "THU": {
+      "oos_sharpe": 0.29200449726418554,
+      "num_trades": 7
+    },
+    "FRI": {
+      "oos_sharpe": 0.8448495512773333,
+      "num_trades": 7
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.1762187648752673,
+  "winner_trades": 41,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

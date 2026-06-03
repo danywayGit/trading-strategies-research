@@ -1,0 +1,58 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "FLOWUSDT",
+  "timeframe": "12h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 1.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "long",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 4.0
+  },
+  "stage2_oos_sharpe": 0.3067,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.30671570699374057,
+      "num_trades": 37
+    },
+    "MON-FRI": {
+      "oos_sharpe": -0.45704711756449407,
+      "num_trades": 27
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.7249892522614844,
+      "num_trades": 19
+    },
+    "MON": {
+      "oos_sharpe": -1.092163404391003,
+      "num_trades": 10
+    },
+    "TUE": {
+      "oos_sharpe": 0.058967414619156146,
+      "num_trades": 9
+    },
+    "WED": {
+      "oos_sharpe": -1.2791473910622568,
+      "num_trades": 6
+    },
+    "THU": {
+      "oos_sharpe": -0.4222592383912753,
+      "num_trades": 4
+    },
+    "FRI": {
+      "oos_sharpe": 0.9620794909705037,
+      "num_trades": 12
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.30671570699374057,
+  "winner_trades": 37,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

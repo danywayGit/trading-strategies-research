@@ -1,0 +1,57 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "ICPUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 2.0,
+    "adx_threshold": 20,
+    "ema_filter": 200,
+    "direction": "short",
+    "stop_loss_pct": 3.5,
+    "take_profit_pct": 9.0
+  },
+  "stage2_oos_sharpe": 1.0333,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.0332934455278744,
+      "num_trades": 10
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.287001647543572,
+      "num_trades": 9
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -1.318498521414826,
+      "num_trades": 1
+    },
+    "MON": {
+      "oos_sharpe": 1.0218063195866378,
+      "num_trades": 1
+    },
+    "TUE": {
+      "oos_sharpe": -0.056739431090963445,
+      "num_trades": 3
+    },
+    "WED": {
+      "oos_sharpe": 0.8105923672642136,
+      "num_trades": 1
+    },
+    "THU": {
+      "oos_sharpe": 0.4886841862051368,
+      "num_trades": 4
+    },
+    "FRI": {
+      "oos_sharpe": 1.4502992318914631,
+      "num_trades": 3
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.0332934455278744,
+  "winner_trades": 10,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

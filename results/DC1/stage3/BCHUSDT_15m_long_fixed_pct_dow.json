@@ -1,0 +1,59 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "BCHUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "donchian_length": 25,
+    "adx_threshold": 30,
+    "adx_exit": 15,
+    "atr_period": 21,
+    "vol_avg_period": 20,
+    "vol_mult": 1.2,
+    "direction": "long",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 3.0
+  },
+  "stage2_oos_sharpe": 0.4994,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.4994154927692937,
+      "num_trades": 80
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.0096592599242566,
+      "num_trades": 54
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.7540205490301067,
+      "num_trades": 27
+    },
+    "MON": {
+      "oos_sharpe": 1.6827900174722514,
+      "num_trades": 15
+    },
+    "TUE": {
+      "oos_sharpe": 0.617306858272452,
+      "num_trades": 12
+    },
+    "WED": {
+      "oos_sharpe": 0.32428200281255476,
+      "num_trades": 12
+    },
+    "THU": {
+      "oos_sharpe": -1.2205848255000011,
+      "num_trades": 11
+    },
+    "FRI": {
+      "oos_sharpe": 1.6260069144102396,
+      "num_trades": 9
+    }
+  },
+  "winner_mask": "MON-FRI",
+  "winner_sharpe": 1.0096592599242566,
+  "winner_trades": 54,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,60 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "GMXUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "macd_fast": 10,
+    "macd_slow": 26,
+    "macd_signal_period": 7,
+    "rsi_period": 14,
+    "divergence_lookback": 3,
+    "rsi_long_max": 50,
+    "rsi_short_min": 50,
+    "direction": "long",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 2.5
+  },
+  "stage2_oos_sharpe": 0.9773,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.9772994552053571,
+      "num_trades": 63
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.1056095227846352,
+      "num_trades": 53
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 1.460926395203349,
+      "num_trades": 34
+    },
+    "MON": {
+      "oos_sharpe": 1.4474686622198352,
+      "num_trades": 23
+    },
+    "TUE": {
+      "oos_sharpe": 1.296898484874451,
+      "num_trades": 22
+    },
+    "WED": {
+      "oos_sharpe": 2.3589106784755876,
+      "num_trades": 28
+    },
+    "THU": {
+      "oos_sharpe": 0.75936962043037,
+      "num_trades": 24
+    },
+    "FRI": {
+      "oos_sharpe": 1.7694622160164681,
+      "num_trades": 20
+    }
+  },
+  "winner_mask": "WED",
+  "winner_sharpe": 2.3589106784755876,
+  "winner_trades": 28,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

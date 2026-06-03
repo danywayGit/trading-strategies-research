@@ -1,0 +1,56 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "ATOMUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 2.0,
+    "adx_threshold": 20,
+    "ema_filter": 100,
+    "direction": "both",
+    "atr_stop_mult": 1.5
+  },
+  "stage2_oos_sharpe": 1.3617,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.3616692666451455,
+      "num_trades": 21
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.3271145989208672,
+      "num_trades": 18
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.13088298050877065,
+      "num_trades": 3
+    },
+    "MON": {
+      "oos_sharpe": 0.7691606396270487,
+      "num_trades": 5
+    },
+    "TUE": {
+      "oos_sharpe": 1.579277827986701,
+      "num_trades": 5
+    },
+    "WED": {
+      "oos_sharpe": 0.08280227814597359,
+      "num_trades": 3
+    },
+    "THU": {
+      "oos_sharpe": -0.21405643003813557,
+      "num_trades": 4
+    },
+    "FRI": {
+      "oos_sharpe": -0.37260845946404575,
+      "num_trades": 3
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.3616692666451455,
+  "winner_trades": 21,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

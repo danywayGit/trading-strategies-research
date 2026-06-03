@@ -1,0 +1,57 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "AXSUSDT",
+  "timeframe": "12h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 3.0,
+    "adx_trend_confirm": 20,
+    "adx_exit_fade": 20,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 1.5
+  },
+  "stage2_oos_sharpe": 0.4567,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.4567352858285138,
+      "num_trades": 14
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.4215239687818662,
+      "num_trades": 12
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 1.0504587077689722,
+      "num_trades": 5
+    },
+    "MON": {
+      "oos_sharpe": 1.1964798907227145,
+      "num_trades": 2
+    },
+    "TUE": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    },
+    "WED": {
+      "oos_sharpe": 0.49493865921611613,
+      "num_trades": 7
+    },
+    "THU": {
+      "oos_sharpe": 0.26175714300685027,
+      "num_trades": 3
+    },
+    "FRI": {
+      "oos_sharpe": 0.6347678898461395,
+      "num_trades": 3
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.4567352858285138,
+  "winner_trades": 14,
+  "dow_improved": false,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

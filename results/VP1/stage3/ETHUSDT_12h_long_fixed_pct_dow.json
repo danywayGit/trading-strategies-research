@@ -1,0 +1,58 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "ETHUSDT",
+  "timeframe": "12h",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 60,
+    "volume_spike_mult": 1.5,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "long",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 4.0
+  },
+  "stage2_oos_sharpe": 1.9106,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.9105969666858802,
+      "num_trades": 15
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.6026750864959725,
+      "num_trades": 15
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.28625333286303406,
+      "num_trades": 2
+    },
+    "MON": {
+      "oos_sharpe": 1.3143737307586811,
+      "num_trades": 8
+    },
+    "TUE": {
+      "oos_sharpe": 0.9170702673087602,
+      "num_trades": 5
+    },
+    "WED": {
+      "oos_sharpe": 0.9962190075335362,
+      "num_trades": 6
+    },
+    "THU": {
+      "oos_sharpe": 0.5879288283210466,
+      "num_trades": 2
+    },
+    "FRI": {
+      "oos_sharpe": -0.9964148205143054,
+      "num_trades": 1
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.9105969666858802,
+  "winner_trades": 15,
+  "dow_improved": false,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

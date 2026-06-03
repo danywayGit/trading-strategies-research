@@ -1,0 +1,60 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "ADAUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 3,
+  "best_params": {
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "macd_signal_period": 9,
+    "rsi_period": 14,
+    "divergence_lookback": 8,
+    "rsi_long_max": 40,
+    "rsi_short_min": 50,
+    "direction": "long",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 1.5
+  },
+  "stage2_oos_sharpe": 0.1402,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.14016133185378463,
+      "num_trades": 111
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.6357934659674456,
+      "num_trades": 86
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.3047716788233725,
+      "num_trades": 28
+    },
+    "MON": {
+      "oos_sharpe": 0.6776630415936772,
+      "num_trades": 25
+    },
+    "TUE": {
+      "oos_sharpe": -0.385342943735913,
+      "num_trades": 17
+    },
+    "WED": {
+      "oos_sharpe": -0.15479506808136326,
+      "num_trades": 21
+    },
+    "THU": {
+      "oos_sharpe": 0.2033995231086301,
+      "num_trades": 16
+    },
+    "FRI": {
+      "oos_sharpe": 0.6753527627027671,
+      "num_trades": 18
+    }
+  },
+  "winner_mask": "MON",
+  "winner_sharpe": 0.6776630415936772,
+  "winner_trades": 25,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

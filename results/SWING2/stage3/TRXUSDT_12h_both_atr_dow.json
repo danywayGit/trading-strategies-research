@@ -1,0 +1,58 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "TRXUSDT",
+  "timeframe": "12h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 3,
+  "best_params": {
+    "bb_length": 25,
+    "bb_mult": 1.8,
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "squeeze_bars": 5,
+    "direction": "both",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 2.5
+  },
+  "stage2_oos_sharpe": 0.6221,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.6220587075478351,
+      "num_trades": 38
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.8224152502311444,
+      "num_trades": 32
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.5328348499475039,
+      "num_trades": 19
+    },
+    "MON": {
+      "oos_sharpe": 0.6987903467948102,
+      "num_trades": 7
+    },
+    "TUE": {
+      "oos_sharpe": 1.2956378933825832,
+      "num_trades": 11
+    },
+    "WED": {
+      "oos_sharpe": -1.0177645844186975,
+      "num_trades": 10
+    },
+    "THU": {
+      "oos_sharpe": 0.6348130687113319,
+      "num_trades": 12
+    },
+    "FRI": {
+      "oos_sharpe": 1.0457199259287104,
+      "num_trades": 13
+    }
+  },
+  "winner_mask": "MON-FRI",
+  "winner_sharpe": 0.8224152502311444,
+  "winner_trades": 32,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

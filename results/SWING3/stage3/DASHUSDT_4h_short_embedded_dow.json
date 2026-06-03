@@ -1,0 +1,56 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "DASHUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 3.0,
+    "adx_threshold": 20,
+    "ema_filter": 100,
+    "direction": "short",
+    "atr_stop_mult": 2.5
+  },
+  "stage2_oos_sharpe": 0.0411,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.041065523687720235,
+      "num_trades": 5
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.041065523687720235,
+      "num_trades": 5
+    },
+    "SAT-SUN": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    },
+    "MON": {
+      "oos_sharpe": 0.5925476135642053,
+      "num_trades": 1
+    },
+    "TUE": {
+      "oos_sharpe": -0.006604015110453445,
+      "num_trades": 1
+    },
+    "WED": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    },
+    "THU": {
+      "oos_sharpe": -0.27978821780763513,
+      "num_trades": 3
+    },
+    "FRI": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.041065523687720235,
+  "winner_trades": 5,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

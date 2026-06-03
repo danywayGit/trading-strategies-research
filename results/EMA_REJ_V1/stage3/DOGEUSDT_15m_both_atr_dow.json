@@ -1,0 +1,59 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "DOGEUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 3,
+  "best_params": {
+    "ema200_length": 150,
+    "rejection_lookback": 5,
+    "rsi_period": 10,
+    "rsi_ema_period": 14,
+    "rsi_confirm_window": 5,
+    "htf_bars": 36,
+    "direction": "both",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 3.0
+  },
+  "stage2_oos_sharpe": 0.5736,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.5735996081711368,
+      "num_trades": 94
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.5770800391549594,
+      "num_trades": 76
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.6900448707242562,
+      "num_trades": 35
+    },
+    "MON": {
+      "oos_sharpe": -0.2533101385714912,
+      "num_trades": 25
+    },
+    "TUE": {
+      "oos_sharpe": -0.2881018819404816,
+      "num_trades": 15
+    },
+    "WED": {
+      "oos_sharpe": 0.6082987963027143,
+      "num_trades": 16
+    },
+    "THU": {
+      "oos_sharpe": 0.4147541707549778,
+      "num_trades": 26
+    },
+    "FRI": {
+      "oos_sharpe": 1.4042715212719235,
+      "num_trades": 20
+    }
+  },
+  "winner_mask": "FRI",
+  "winner_sharpe": 1.4042715212719235,
+  "winner_trades": 20,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

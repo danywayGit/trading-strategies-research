@@ -1,0 +1,57 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "DOTUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 8.0,
+    "adx_trend_confirm": 25,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "short",
+    "atr_stop_mult": 2.0
+  },
+  "stage2_oos_sharpe": 0.0759,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.07594568819204672,
+      "num_trades": 155
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.4639447150784572,
+      "num_trades": 131
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.4636188124583667,
+      "num_trades": 62
+    },
+    "MON": {
+      "oos_sharpe": 1.9681918202568691,
+      "num_trades": 41
+    },
+    "TUE": {
+      "oos_sharpe": 0.511333664711684,
+      "num_trades": 59
+    },
+    "WED": {
+      "oos_sharpe": 0.7006555275776245,
+      "num_trades": 50
+    },
+    "THU": {
+      "oos_sharpe": -0.40782030130627017,
+      "num_trades": 51
+    },
+    "FRI": {
+      "oos_sharpe": -1.5902986256460894,
+      "num_trades": 53
+    }
+  },
+  "winner_mask": "MON",
+  "winner_sharpe": 1.9681918202568691,
+  "winner_trades": 41,
+  "dow_improved": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

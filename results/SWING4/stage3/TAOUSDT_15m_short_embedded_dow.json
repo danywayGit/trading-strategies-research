@@ -1,0 +1,60 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "TAOUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "macd_signal_period": 7,
+    "rsi_period": 14,
+    "divergence_lookback": 5,
+    "rsi_long_max": 40,
+    "rsi_short_min": 60,
+    "direction": "short",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 2.5
+  },
+  "stage2_oos_sharpe": 1.8318,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.8317532297429384,
+      "num_trades": 62
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.0802036801086468,
+      "num_trades": 52
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.5082325516524001,
+      "num_trades": 21
+    },
+    "MON": {
+      "oos_sharpe": 1.376664080460774,
+      "num_trades": 18
+    },
+    "TUE": {
+      "oos_sharpe": 0.7015193638322527,
+      "num_trades": 11
+    },
+    "WED": {
+      "oos_sharpe": -0.09551815329976406,
+      "num_trades": 15
+    },
+    "THU": {
+      "oos_sharpe": 0.37500572804072635,
+      "num_trades": 9
+    },
+    "FRI": {
+      "oos_sharpe": 3.342971303209066,
+      "num_trades": 11
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.8317532297429384,
+  "winner_trades": 62,
+  "dow_improved": false,
+  "note": "v2/vectorbt ~9 months data"
+}

@@ -1,0 +1,59 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "SEIUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "donchian_length": 25,
+    "adx_threshold": 20,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 30,
+    "vol_mult": 0.8,
+    "direction": "long",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 3.0
+  },
+  "stage2_oos_sharpe": 1.0848,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.0847711110002796,
+      "num_trades": 67
+    },
+    "MON-FRI": {
+      "oos_sharpe": 2.089372436747512,
+      "num_trades": 45
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.8761474152532078,
+      "num_trades": 26
+    },
+    "MON": {
+      "oos_sharpe": -3.055931074574693,
+      "num_trades": 8
+    },
+    "TUE": {
+      "oos_sharpe": 1.062191108823667,
+      "num_trades": 10
+    },
+    "WED": {
+      "oos_sharpe": 3.3823911336065278,
+      "num_trades": 11
+    },
+    "THU": {
+      "oos_sharpe": 0.14127927648649952,
+      "num_trades": 10
+    },
+    "FRI": {
+      "oos_sharpe": 1.1835907405409185,
+      "num_trades": 12
+    }
+  },
+  "winner_mask": "MON-FRI",
+  "winner_sharpe": 2.089372436747512,
+  "winner_trades": 45,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

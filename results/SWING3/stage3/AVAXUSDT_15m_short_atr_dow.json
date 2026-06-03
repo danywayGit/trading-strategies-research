@@ -1,0 +1,57 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "AVAXUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 3,
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 3.0,
+    "adx_threshold": 25,
+    "ema_filter": 200,
+    "direction": "short",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 3.5
+  },
+  "stage2_oos_sharpe": 1.0722,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.0722029306314298,
+      "num_trades": 33
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.1031895962511131,
+      "num_trades": 29
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.038654257934515004,
+      "num_trades": 4
+    },
+    "MON": {
+      "oos_sharpe": 0.6586801191711675,
+      "num_trades": 5
+    },
+    "TUE": {
+      "oos_sharpe": 0.5979853871274483,
+      "num_trades": 5
+    },
+    "WED": {
+      "oos_sharpe": -0.7281230518419417,
+      "num_trades": 8
+    },
+    "THU": {
+      "oos_sharpe": 1.0619068592968857,
+      "num_trades": 7
+    },
+    "FRI": {
+      "oos_sharpe": 1.2971263692983817,
+      "num_trades": 6
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.0722029306314298,
+  "winner_trades": 33,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

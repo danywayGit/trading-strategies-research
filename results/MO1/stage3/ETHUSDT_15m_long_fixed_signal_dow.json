@@ -1,0 +1,58 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "ETHUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 10.0,
+    "adx_trend_confirm": 25,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 6.0
+  },
+  "stage2_oos_sharpe": 0.8679,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.8679317387001384,
+      "num_trades": 123
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.447867450672398,
+      "num_trades": 105
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.3475280168961223,
+      "num_trades": 52
+    },
+    "MON": {
+      "oos_sharpe": 0.8571474777043099,
+      "num_trades": 43
+    },
+    "TUE": {
+      "oos_sharpe": -0.8065083294907442,
+      "num_trades": 32
+    },
+    "WED": {
+      "oos_sharpe": 1.514425421242543,
+      "num_trades": 35
+    },
+    "THU": {
+      "oos_sharpe": 0.4749359436120498,
+      "num_trades": 33
+    },
+    "FRI": {
+      "oos_sharpe": 1.5864124280965208,
+      "num_trades": 36
+    }
+  },
+  "winner_mask": "FRI",
+  "winner_sharpe": 1.5864124280965208,
+  "winner_trades": 36,
+  "dow_improved": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

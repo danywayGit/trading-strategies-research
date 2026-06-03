@@ -1,0 +1,56 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "FLOWUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 4.0,
+    "adx_threshold": 25,
+    "ema_filter": 200,
+    "direction": "long",
+    "atr_stop_mult": 1.5
+  },
+  "stage2_oos_sharpe": 0.5528,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.5527800601446456,
+      "num_trades": 31
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.602739659679375,
+      "num_trades": 20
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.05670190239673736,
+      "num_trades": 11
+    },
+    "MON": {
+      "oos_sharpe": 0.42811810309083886,
+      "num_trades": 8
+    },
+    "TUE": {
+      "oos_sharpe": -0.4387230624691164,
+      "num_trades": 3
+    },
+    "WED": {
+      "oos_sharpe": 0.8127525712514483,
+      "num_trades": 3
+    },
+    "THU": {
+      "oos_sharpe": -2.0239604465905954,
+      "num_trades": 2
+    },
+    "FRI": {
+      "oos_sharpe": 0.9745089761077227,
+      "num_trades": 4
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.5527800601446456,
+  "winner_trades": 31,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

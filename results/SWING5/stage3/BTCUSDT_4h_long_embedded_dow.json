@@ -1,0 +1,57 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "BTCUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 1.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "long",
+    "rr_ratio": 4.0
+  },
+  "stage2_oos_sharpe": 0.8916,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.8916344404221977,
+      "num_trades": 23
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.5751516937678041,
+      "num_trades": 22
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.5080459211621456,
+      "num_trades": 16
+    },
+    "MON": {
+      "oos_sharpe": 0.815977623691136,
+      "num_trades": 18
+    },
+    "TUE": {
+      "oos_sharpe": -0.1830518794872235,
+      "num_trades": 15
+    },
+    "WED": {
+      "oos_sharpe": 1.6133676321765407,
+      "num_trades": 10
+    },
+    "THU": {
+      "oos_sharpe": 1.4593700613603182,
+      "num_trades": 11
+    },
+    "FRI": {
+      "oos_sharpe": 1.1338751031889454,
+      "num_trades": 10
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.8916344404221977,
+  "winner_trades": 23,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

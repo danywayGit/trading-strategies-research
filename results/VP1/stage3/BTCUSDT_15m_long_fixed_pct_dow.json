@@ -1,0 +1,58 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "BTCUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 80,
+    "volume_spike_mult": 1.5,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "long",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0
+  },
+  "stage2_oos_sharpe": 1.3406,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.3406032527470133,
+      "num_trades": 75
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.5815119233878827,
+      "num_trades": 70
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 1.0969967958937124,
+      "num_trades": 36
+    },
+    "MON": {
+      "oos_sharpe": 0.2166147903864765,
+      "num_trades": 35
+    },
+    "TUE": {
+      "oos_sharpe": -0.3775769977809968,
+      "num_trades": 24
+    },
+    "WED": {
+      "oos_sharpe": 1.1623481548556822,
+      "num_trades": 27
+    },
+    "THU": {
+      "oos_sharpe": -0.14472255904078404,
+      "num_trades": 26
+    },
+    "FRI": {
+      "oos_sharpe": 0.7876069411690753,
+      "num_trades": 25
+    }
+  },
+  "winner_mask": "MON-FRI",
+  "winner_sharpe": 1.5815119233878827,
+  "winner_trades": 70,
+  "dow_improved": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

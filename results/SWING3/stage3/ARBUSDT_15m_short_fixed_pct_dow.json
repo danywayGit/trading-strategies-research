@@ -1,0 +1,57 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "ARBUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 4.0,
+    "adx_threshold": 30,
+    "ema_filter": 50,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 9.0
+  },
+  "stage2_oos_sharpe": 1.2423,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.2423475544658542,
+      "num_trades": 10
+    },
+    "MON-FRI": {
+      "oos_sharpe": -1.0208857493838062,
+      "num_trades": 4
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 2.299287760516212,
+      "num_trades": 6
+    },
+    "MON": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    },
+    "TUE": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    },
+    "WED": {
+      "oos_sharpe": -0.9196728729310208,
+      "num_trades": 2
+    },
+    "THU": {
+      "oos_sharpe": -0.3034861465551801,
+      "num_trades": 1
+    },
+    "FRI": {
+      "oos_sharpe": -1.4115822185405626,
+      "num_trades": 1
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.2423475544658542,
+  "winner_trades": 10,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

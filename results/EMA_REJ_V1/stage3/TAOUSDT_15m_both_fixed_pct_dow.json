@@ -1,0 +1,59 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "TAOUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "ema200_length": 150,
+    "rejection_lookback": 10,
+    "rsi_period": 10,
+    "rsi_ema_period": 7,
+    "rsi_confirm_window": 2,
+    "htf_bars": 36,
+    "direction": "both",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 4.0
+  },
+  "stage2_oos_sharpe": 1.1225,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.1224852542692982,
+      "num_trades": 43
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.2378349717918053,
+      "num_trades": 34
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.2581037545402802,
+      "num_trades": 14
+    },
+    "MON": {
+      "oos_sharpe": -0.09734641463313928,
+      "num_trades": 8
+    },
+    "TUE": {
+      "oos_sharpe": 0.9201828843081835,
+      "num_trades": 5
+    },
+    "WED": {
+      "oos_sharpe": 3.5823930450987125,
+      "num_trades": 5
+    },
+    "THU": {
+      "oos_sharpe": 0.24878353838545458,
+      "num_trades": 10
+    },
+    "FRI": {
+      "oos_sharpe": -0.7414181318835454,
+      "num_trades": 6
+    }
+  },
+  "winner_mask": "MON-FRI",
+  "winner_sharpe": 1.2378349717918053,
+  "winner_trades": 34,
+  "dow_improved": true,
+  "note": "v2/vectorbt ~9 months data"
+}

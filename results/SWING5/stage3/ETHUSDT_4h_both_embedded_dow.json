@@ -1,0 +1,57 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "ETHUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "both",
+    "rr_ratio": 4.0
+  },
+  "stage2_oos_sharpe": 0.6557,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.6556739367756833,
+      "num_trades": 25
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.7785429216598483,
+      "num_trades": 26
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 2.250584848583462,
+      "num_trades": 7
+    },
+    "MON": {
+      "oos_sharpe": 0.23421897120094998,
+      "num_trades": 10
+    },
+    "TUE": {
+      "oos_sharpe": -1.0280428275285596,
+      "num_trades": 15
+    },
+    "WED": {
+      "oos_sharpe": -0.024210791674029095,
+      "num_trades": 14
+    },
+    "THU": {
+      "oos_sharpe": 1.3373277534591514,
+      "num_trades": 7
+    },
+    "FRI": {
+      "oos_sharpe": 1.5611441428203126,
+      "num_trades": 10
+    }
+  },
+  "winner_mask": "MON-FRI",
+  "winner_sharpe": 0.7785429216598483,
+  "winner_trades": 26,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

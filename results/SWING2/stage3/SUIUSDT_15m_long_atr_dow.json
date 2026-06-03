@@ -1,0 +1,58 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "SUIUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 3,
+  "best_params": {
+    "bb_length": 25,
+    "bb_mult": 2.2,
+    "macd_fast": 10,
+    "macd_slow": 26,
+    "squeeze_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 3.0
+  },
+  "stage2_oos_sharpe": 1.6493,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.6493296786292113,
+      "num_trades": 85
+    },
+    "MON-FRI": {
+      "oos_sharpe": 2.3835503326092575,
+      "num_trades": 64
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.8936486106396008,
+      "num_trades": 42
+    },
+    "MON": {
+      "oos_sharpe": -1.5129603150814983,
+      "num_trades": 26
+    },
+    "TUE": {
+      "oos_sharpe": 2.4623985268582333,
+      "num_trades": 21
+    },
+    "WED": {
+      "oos_sharpe": 1.0546027102229152,
+      "num_trades": 28
+    },
+    "THU": {
+      "oos_sharpe": -0.2955860474246867,
+      "num_trades": 24
+    },
+    "FRI": {
+      "oos_sharpe": 2.0205790789458735,
+      "num_trades": 30
+    }
+  },
+  "winner_mask": "TUE",
+  "winner_sharpe": 2.4623985268582333,
+  "winner_trades": 21,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

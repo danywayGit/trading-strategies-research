@@ -1,0 +1,57 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "BTCUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 8.0,
+    "adx_trend_confirm": 25,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "both",
+    "atr_stop_mult": 1.5
+  },
+  "stage2_oos_sharpe": 0.0657,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.0657306580851959,
+      "num_trades": 141
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.5302336763892691,
+      "num_trades": 117
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.18577934045871022,
+      "num_trades": 40
+    },
+    "MON": {
+      "oos_sharpe": -0.7428006100615081,
+      "num_trades": 41
+    },
+    "TUE": {
+      "oos_sharpe": -0.4541173848314997,
+      "num_trades": 35
+    },
+    "WED": {
+      "oos_sharpe": 0.3558123328521456,
+      "num_trades": 41
+    },
+    "THU": {
+      "oos_sharpe": -0.35920408491520744,
+      "num_trades": 36
+    },
+    "FRI": {
+      "oos_sharpe": 0.6239889536185276,
+      "num_trades": 31
+    }
+  },
+  "winner_mask": "FRI",
+  "winner_sharpe": 0.6239889536185276,
+  "winner_trades": 31,
+  "dow_improved": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

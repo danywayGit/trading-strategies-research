@@ -1,0 +1,58 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "ADAUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 60,
+    "volume_spike_mult": 2.0,
+    "adx_threshold": 25,
+    "cooldown_bars": 10,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 8.0
+  },
+  "stage2_oos_sharpe": 1.1641,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.164064593448884,
+      "num_trades": 139
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.8750681420349603,
+      "num_trades": 106
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.40328705306067286,
+      "num_trades": 41
+    },
+    "MON": {
+      "oos_sharpe": -1.209524518728427,
+      "num_trades": 30
+    },
+    "TUE": {
+      "oos_sharpe": -1.0577324002737354,
+      "num_trades": 16
+    },
+    "WED": {
+      "oos_sharpe": 0.779183473925142,
+      "num_trades": 24
+    },
+    "THU": {
+      "oos_sharpe": 0.04557857053533039,
+      "num_trades": 22
+    },
+    "FRI": {
+      "oos_sharpe": 1.4072840281782686,
+      "num_trades": 33
+    }
+  },
+  "winner_mask": "FRI",
+  "winner_sharpe": 1.4072840281782686,
+  "winner_trades": 33,
+  "dow_improved": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

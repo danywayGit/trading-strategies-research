@@ -1,0 +1,59 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "ICPUSDT",
+  "timeframe": "12h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "donchian_length": 20,
+    "adx_threshold": 20,
+    "adx_exit": 20,
+    "atr_period": 10,
+    "vol_avg_period": 30,
+    "vol_mult": 1.0,
+    "direction": "both",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 3.0
+  },
+  "stage2_oos_sharpe": 0.2989,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.29893230885722705,
+      "num_trades": 18
+    },
+    "MON-FRI": {
+      "oos_sharpe": -0.9721199206163982,
+      "num_trades": 17
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.45792600143125534,
+      "num_trades": 5
+    },
+    "MON": {
+      "oos_sharpe": -1.3288997584800317,
+      "num_trades": 6
+    },
+    "TUE": {
+      "oos_sharpe": -1.713241406413669,
+      "num_trades": 7
+    },
+    "WED": {
+      "oos_sharpe": -1.2609579639225994,
+      "num_trades": 5
+    },
+    "THU": {
+      "oos_sharpe": 0.4677617998826158,
+      "num_trades": 3
+    },
+    "FRI": {
+      "oos_sharpe": -0.305939927358099,
+      "num_trades": 10
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.29893230885722705,
+  "winner_trades": 18,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

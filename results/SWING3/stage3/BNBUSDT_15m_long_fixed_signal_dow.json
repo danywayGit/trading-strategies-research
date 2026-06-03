@@ -1,0 +1,57 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "BNBUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 4.0,
+    "adx_threshold": 30,
+    "ema_filter": 200,
+    "direction": "long",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0
+  },
+  "stage2_oos_sharpe": 1.0666,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.066613442628324,
+      "num_trades": 10
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.8851451252335083,
+      "num_trades": 8
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.5957426747944082,
+      "num_trades": 2
+    },
+    "MON": {
+      "oos_sharpe": 1.5948913135468215,
+      "num_trades": 4
+    },
+    "TUE": {
+      "oos_sharpe": -0.09951984438287453,
+      "num_trades": 2
+    },
+    "WED": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    },
+    "THU": {
+      "oos_sharpe": -0.284490454010199,
+      "num_trades": 2
+    },
+    "FRI": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.066613442628324,
+  "winner_trades": 10,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,58 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "BCHUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "kc_length": 20,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "stage2_oos_sharpe": 0.9808,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.9807720632346895,
+      "num_trades": 24
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.3927668583660308,
+      "num_trades": 20
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.6324113911909839,
+      "num_trades": 6
+    },
+    "MON": {
+      "oos_sharpe": -1.6125801002336082,
+      "num_trades": 4
+    },
+    "TUE": {
+      "oos_sharpe": 0.9165670653461048,
+      "num_trades": 7
+    },
+    "WED": {
+      "oos_sharpe": 0.21601506475946236,
+      "num_trades": 4
+    },
+    "THU": {
+      "oos_sharpe": 0.7328548175182936,
+      "num_trades": 2
+    },
+    "FRI": {
+      "oos_sharpe": 0.2851207693599505,
+      "num_trades": 4
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.9807720632346895,
+  "winner_trades": 24,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

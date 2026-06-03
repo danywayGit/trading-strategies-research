@@ -1,0 +1,59 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "GMXUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "donchian_length": 20,
+    "adx_threshold": 20,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 20,
+    "vol_mult": 1.2,
+    "direction": "both",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "stage2_oos_sharpe": 2.07,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 2.069984711809311,
+      "num_trades": 478
+    },
+    "MON-FRI": {
+      "oos_sharpe": 2.592862099926365,
+      "num_trades": 351
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.46416260883964117,
+      "num_trades": 143
+    },
+    "MON": {
+      "oos_sharpe": 0.21312485390132738,
+      "num_trades": 80
+    },
+    "TUE": {
+      "oos_sharpe": 1.2129552362780305,
+      "num_trades": 77
+    },
+    "WED": {
+      "oos_sharpe": 0.8923991547513542,
+      "num_trades": 78
+    },
+    "THU": {
+      "oos_sharpe": 2.2298927695113506,
+      "num_trades": 66
+    },
+    "FRI": {
+      "oos_sharpe": 2.1518616571214664,
+      "num_trades": 80
+    }
+  },
+  "winner_mask": "MON-FRI",
+  "winner_sharpe": 2.592862099926365,
+  "winner_trades": 351,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

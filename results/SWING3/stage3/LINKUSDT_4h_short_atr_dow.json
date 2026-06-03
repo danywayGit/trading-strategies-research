@@ -1,0 +1,57 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "LINKUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "atr",
+  "stage": 3,
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 3.0,
+    "adx_threshold": 20,
+    "ema_filter": 50,
+    "direction": "short",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 1.5
+  },
+  "stage2_oos_sharpe": 1.281,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.2809996738179772,
+      "num_trades": 10
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.1674405300235138,
+      "num_trades": 9
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.8770654702044045,
+      "num_trades": 1
+    },
+    "MON": {
+      "oos_sharpe": -0.33719491480873703,
+      "num_trades": 2
+    },
+    "TUE": {
+      "oos_sharpe": 1.4923128095552185,
+      "num_trades": 2
+    },
+    "WED": {
+      "oos_sharpe": 1.42591335374105,
+      "num_trades": 3
+    },
+    "THU": {
+      "oos_sharpe": 0.41682517292771704,
+      "num_trades": 2
+    },
+    "FRI": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.2809996738179772,
+  "winner_trades": 10,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

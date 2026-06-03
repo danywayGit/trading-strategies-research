@@ -1,0 +1,59 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "ALGOUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "donchian_length": 55,
+    "adx_threshold": 20,
+    "adx_exit": 15,
+    "atr_period": 14,
+    "vol_avg_period": 30,
+    "vol_mult": 1.2,
+    "direction": "both",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 3.0
+  },
+  "stage2_oos_sharpe": 1.4228,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.4227865630948557,
+      "num_trades": 100
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.8502009887291411,
+      "num_trades": 83
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.39085660193356303,
+      "num_trades": 30
+    },
+    "MON": {
+      "oos_sharpe": -0.3837001389193292,
+      "num_trades": 30
+    },
+    "TUE": {
+      "oos_sharpe": 0.19506931373811523,
+      "num_trades": 20
+    },
+    "WED": {
+      "oos_sharpe": 0.07846038155637193,
+      "num_trades": 17
+    },
+    "THU": {
+      "oos_sharpe": 0.697569214076039,
+      "num_trades": 18
+    },
+    "FRI": {
+      "oos_sharpe": 1.981699925762387,
+      "num_trades": 23
+    }
+  },
+  "winner_mask": "FRI",
+  "winner_sharpe": 1.981699925762387,
+  "winner_trades": 23,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

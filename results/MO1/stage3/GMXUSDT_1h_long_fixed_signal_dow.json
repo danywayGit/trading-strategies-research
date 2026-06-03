@@ -1,0 +1,58 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "GMXUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "rsi_period": 10,
+    "momentum_threshold": 8.0,
+    "adx_trend_confirm": 15,
+    "adx_exit_fade": 20,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "stage2_oos_sharpe": 0.683,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.6830202580621205,
+      "num_trades": 113
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.8743214364370835,
+      "num_trades": 85
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.9142905553779571,
+      "num_trades": 32
+    },
+    "MON": {
+      "oos_sharpe": 1.1326649925785903,
+      "num_trades": 19
+    },
+    "TUE": {
+      "oos_sharpe": -0.7365356637367243,
+      "num_trades": 14
+    },
+    "WED": {
+      "oos_sharpe": 0.31813913884164285,
+      "num_trades": 26
+    },
+    "THU": {
+      "oos_sharpe": -1.4997775530364652,
+      "num_trades": 19
+    },
+    "FRI": {
+      "oos_sharpe": 1.1465619969050487,
+      "num_trades": 19
+    }
+  },
+  "winner_mask": "SAT-SUN",
+  "winner_sharpe": 0.9142905553779571,
+  "winner_trades": 32,
+  "dow_improved": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

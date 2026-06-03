@@ -1,0 +1,57 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "ENAUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "kc_length": 15,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "long",
+    "rr_ratio": 3.0
+  },
+  "stage2_oos_sharpe": 3.4718,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 3.4717545382163033,
+      "num_trades": 43
+    },
+    "MON-FRI": {
+      "oos_sharpe": 3.610981990360803,
+      "num_trades": 33
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.7923429612418891,
+      "num_trades": 17
+    },
+    "MON": {
+      "oos_sharpe": -0.7675713270866064,
+      "num_trades": 9
+    },
+    "TUE": {
+      "oos_sharpe": -0.9024312422562445,
+      "num_trades": 4
+    },
+    "WED": {
+      "oos_sharpe": 3.8518209110666106,
+      "num_trades": 10
+    },
+    "THU": {
+      "oos_sharpe": 3.8916907459373826,
+      "num_trades": 8
+    },
+    "FRI": {
+      "oos_sharpe": 0.8175249797256585,
+      "num_trades": 7
+    }
+  },
+  "winner_mask": "MON-FRI",
+  "winner_sharpe": 3.610981990360803,
+  "winner_trades": 33,
+  "dow_improved": true,
+  "note": "v2/vectorbt ~9 months data"
+}

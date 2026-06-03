@@ -1,0 +1,58 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "ETHUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "bb_length": 25,
+    "bb_mult": 2.2,
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "squeeze_bars": 5,
+    "direction": "long",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 6.0
+  },
+  "stage2_oos_sharpe": 0.4176,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.41758582140078715,
+      "num_trades": 132
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.5109147828001988,
+      "num_trades": 112
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.26894075856546606,
+      "num_trades": 51
+    },
+    "MON": {
+      "oos_sharpe": 0.5151150308334438,
+      "num_trades": 46
+    },
+    "TUE": {
+      "oos_sharpe": -1.5631269392633615,
+      "num_trades": 34
+    },
+    "WED": {
+      "oos_sharpe": 0.8275214337484856,
+      "num_trades": 42
+    },
+    "THU": {
+      "oos_sharpe": 0.1434601587307147,
+      "num_trades": 41
+    },
+    "FRI": {
+      "oos_sharpe": 0.14025587993465788,
+      "num_trades": 42
+    }
+  },
+  "winner_mask": "WED",
+  "winner_sharpe": 0.8275214337484856,
+  "winner_trades": 42,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

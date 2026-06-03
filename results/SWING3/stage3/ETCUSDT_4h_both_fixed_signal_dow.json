@@ -1,0 +1,57 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "ETCUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 3.0,
+    "adx_threshold": 20,
+    "ema_filter": 50,
+    "direction": "both",
+    "stop_loss_pct": 3.5,
+    "take_profit_pct": 6.0
+  },
+  "stage2_oos_sharpe": 0.5765,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.5764656415160632,
+      "num_trades": 19
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.2636267128753188,
+      "num_trades": 15
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.5984367315695671,
+      "num_trades": 4
+    },
+    "MON": {
+      "oos_sharpe": 0.9447094561787248,
+      "num_trades": 4
+    },
+    "TUE": {
+      "oos_sharpe": -1.733548431389469,
+      "num_trades": 2
+    },
+    "WED": {
+      "oos_sharpe": 1.604493759651113,
+      "num_trades": 3
+    },
+    "THU": {
+      "oos_sharpe": 0.906870266408169,
+      "num_trades": 5
+    },
+    "FRI": {
+      "oos_sharpe": -1.034600370935889,
+      "num_trades": 2
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.5764656415160632,
+  "winner_trades": 19,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

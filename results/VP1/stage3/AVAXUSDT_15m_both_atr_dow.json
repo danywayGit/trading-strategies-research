@@ -1,0 +1,58 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "AVAXUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 3,
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 70,
+    "volume_spike_mult": 2.0,
+    "adx_threshold": 20,
+    "cooldown_bars": 10,
+    "direction": "both",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 2.5
+  },
+  "stage2_oos_sharpe": 0.072,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.07200916782553222,
+      "num_trades": 466
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.42546529304654485,
+      "num_trades": 340
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.8991391183520662,
+      "num_trades": 145
+    },
+    "MON": {
+      "oos_sharpe": 0.06650530896070492,
+      "num_trades": 80
+    },
+    "TUE": {
+      "oos_sharpe": -0.7774249491599668,
+      "num_trades": 82
+    },
+    "WED": {
+      "oos_sharpe": 0.4030751966403793,
+      "num_trades": 77
+    },
+    "THU": {
+      "oos_sharpe": 0.26944790326975576,
+      "num_trades": 73
+    },
+    "FRI": {
+      "oos_sharpe": 0.9928096761434373,
+      "num_trades": 80
+    }
+  },
+  "winner_mask": "FRI",
+  "winner_sharpe": 0.9928096761434373,
+  "winner_trades": 80,
+  "dow_improved": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

@@ -1,0 +1,58 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "TRXUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 80,
+    "volume_spike_mult": 2.0,
+    "adx_threshold": 25,
+    "cooldown_bars": 10,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 8.0
+  },
+  "stage2_oos_sharpe": 1.188,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.1879946533158883,
+      "num_trades": 124
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.1854514138643812,
+      "num_trades": 99
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.15374396139695404,
+      "num_trades": 30
+    },
+    "MON": {
+      "oos_sharpe": 1.5677932644094317,
+      "num_trades": 29
+    },
+    "TUE": {
+      "oos_sharpe": 0.7962881811480458,
+      "num_trades": 29
+    },
+    "WED": {
+      "oos_sharpe": 0.14291543185372912,
+      "num_trades": 14
+    },
+    "THU": {
+      "oos_sharpe": -1.0707682829344594,
+      "num_trades": 18
+    },
+    "FRI": {
+      "oos_sharpe": 0.3802935481089984,
+      "num_trades": 22
+    }
+  },
+  "winner_mask": "MON",
+  "winner_sharpe": 1.5677932644094317,
+  "winner_trades": 29,
+  "dow_improved": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

@@ -1,0 +1,58 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "DYDXUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "band_mult": 2.0,
+    "volume_exhaustion_threshold": 0.3,
+    "rsi_oversold_floor": 25,
+    "rsi_overbought_ceil": 65,
+    "min_band_width_pct": 0.8,
+    "direction": "short",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 3.0
+  },
+  "stage2_oos_sharpe": 0.8404,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.840416052590365,
+      "num_trades": 19
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.7476188797104558,
+      "num_trades": 10
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.4420987366551634,
+      "num_trades": 9
+    },
+    "MON": {
+      "oos_sharpe": 0.734631057226822,
+      "num_trades": 1
+    },
+    "TUE": {
+      "oos_sharpe": -1.3153804782460985,
+      "num_trades": 1
+    },
+    "WED": {
+      "oos_sharpe": -0.6285666918248866,
+      "num_trades": 3
+    },
+    "THU": {
+      "oos_sharpe": 1.216909061643499,
+      "num_trades": 2
+    },
+    "FRI": {
+      "oos_sharpe": 0.7441576984577529,
+      "num_trades": 3
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.840416052590365,
+  "winner_trades": 19,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

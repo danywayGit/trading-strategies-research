@@ -1,0 +1,60 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "ENAUSDT",
+  "timeframe": "12h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "macd_signal_period": 9,
+    "rsi_period": 10,
+    "divergence_lookback": 3,
+    "rsi_long_max": 50,
+    "rsi_short_min": 55,
+    "direction": "both",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 8.0
+  },
+  "stage2_oos_sharpe": 3.7967,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 3.7967171472396632,
+      "num_trades": 15
+    },
+    "MON-FRI": {
+      "oos_sharpe": 5.106620699201007,
+      "num_trades": 12
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -1.4649845324622883,
+      "num_trades": 4
+    },
+    "MON": {
+      "oos_sharpe": 5.133823058802599,
+      "num_trades": 4
+    },
+    "TUE": {
+      "oos_sharpe": 2.097812377708569,
+      "num_trades": 1
+    },
+    "WED": {
+      "oos_sharpe": -1.638003031841692,
+      "num_trades": 4
+    },
+    "THU": {
+      "oos_sharpe": 1.5032527196831649,
+      "num_trades": 2
+    },
+    "FRI": {
+      "oos_sharpe": 4.579673814379778,
+      "num_trades": 4
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 3.7967171472396632,
+  "winner_trades": 15,
+  "dow_improved": false,
+  "note": "v2/vectorbt ~9 months data"
+}

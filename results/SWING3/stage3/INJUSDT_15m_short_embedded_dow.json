@@ -1,0 +1,56 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "INJUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 4.0,
+    "adx_threshold": 30,
+    "ema_filter": 200,
+    "direction": "short",
+    "atr_stop_mult": 1.5
+  },
+  "stage2_oos_sharpe": 0.1918,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.19182119058508076,
+      "num_trades": 13
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.06590603951687803,
+      "num_trades": 8
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.2573985749312241,
+      "num_trades": 5
+    },
+    "MON": {
+      "oos_sharpe": -0.3676896350057372,
+      "num_trades": 4
+    },
+    "TUE": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    },
+    "WED": {
+      "oos_sharpe": -0.657547762915796,
+      "num_trades": 2
+    },
+    "THU": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    },
+    "FRI": {
+      "oos_sharpe": 1.2253678504167367,
+      "num_trades": 2
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.19182119058508076,
+  "winner_trades": 13,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,58 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "TRXUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "rsi_period": 10,
+    "momentum_threshold": 3.0,
+    "adx_trend_confirm": 15,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 3.0
+  },
+  "stage2_oos_sharpe": 2.2708,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 2.2707656104367855,
+      "num_trades": 174
+    },
+    "MON-FRI": {
+      "oos_sharpe": 2.3178473721569177,
+      "num_trades": 152
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.7199601667574081,
+      "num_trades": 73
+    },
+    "MON": {
+      "oos_sharpe": 0.6931647602153851,
+      "num_trades": 57
+    },
+    "TUE": {
+      "oos_sharpe": 2.5025261492040336,
+      "num_trades": 58
+    },
+    "WED": {
+      "oos_sharpe": 1.7487868323916949,
+      "num_trades": 57
+    },
+    "THU": {
+      "oos_sharpe": 1.0488619700587432,
+      "num_trades": 60
+    },
+    "FRI": {
+      "oos_sharpe": 2.799023034796127,
+      "num_trades": 54
+    }
+  },
+  "winner_mask": "FRI",
+  "winner_sharpe": 2.799023034796127,
+  "winner_trades": 54,
+  "dow_improved": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

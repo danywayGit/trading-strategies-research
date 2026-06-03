@@ -1,0 +1,59 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "FILUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 3,
+  "best_params": {
+    "ema200_length": 250,
+    "rejection_lookback": 5,
+    "rsi_period": 14,
+    "rsi_ema_period": 9,
+    "rsi_confirm_window": 2,
+    "htf_bars": 36,
+    "direction": "both",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 4.0
+  },
+  "stage2_oos_sharpe": 2.1002,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 2.1002369184508023,
+      "num_trades": 84
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.95205374903982,
+      "num_trades": 65
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.7538605121696775,
+      "num_trades": 27
+    },
+    "MON": {
+      "oos_sharpe": 0.3172029583011125,
+      "num_trades": 22
+    },
+    "TUE": {
+      "oos_sharpe": 1.4868183684290734,
+      "num_trades": 16
+    },
+    "WED": {
+      "oos_sharpe": 0.4242685347471466,
+      "num_trades": 16
+    },
+    "THU": {
+      "oos_sharpe": 2.08538250373313,
+      "num_trades": 14
+    },
+    "FRI": {
+      "oos_sharpe": 1.627190970833952,
+      "num_trades": 16
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 2.1002369184508023,
+  "winner_trades": 84,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

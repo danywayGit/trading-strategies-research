@@ -1,0 +1,59 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "DOGEUSDT",
+  "timeframe": "12h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 3,
+  "best_params": {
+    "donchian_length": 15,
+    "adx_threshold": 20,
+    "adx_exit": 15,
+    "atr_period": 10,
+    "vol_avg_period": 14,
+    "vol_mult": 0.8,
+    "direction": "long",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 2.0
+  },
+  "stage2_oos_sharpe": 0.3812,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.38115432812425915,
+      "num_trades": 22
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.2981263395239155,
+      "num_trades": 16
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.3838253111898391,
+      "num_trades": 8
+    },
+    "MON": {
+      "oos_sharpe": 0.2110123667868922,
+      "num_trades": 6
+    },
+    "TUE": {
+      "oos_sharpe": -0.15688216321099757,
+      "num_trades": 4
+    },
+    "WED": {
+      "oos_sharpe": 2.1358177689616267,
+      "num_trades": 5
+    },
+    "THU": {
+      "oos_sharpe": -0.8495715996696623,
+      "num_trades": 3
+    },
+    "FRI": {
+      "oos_sharpe": 0.42547949721576783,
+      "num_trades": 5
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.38115432812425915,
+  "winner_trades": 22,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,57 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "FETUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 2.0,
+    "cci_period": 28,
+    "cci_long_min": 0,
+    "cci_short_max": 0,
+    "direction": "both",
+    "rr_ratio": 2.0
+  },
+  "stage2_oos_sharpe": 2.5017,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 2.5017019749725127,
+      "num_trades": 37
+    },
+    "MON-FRI": {
+      "oos_sharpe": 2.2759819760020363,
+      "num_trades": 32
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 1.4182752205614448,
+      "num_trades": 17
+    },
+    "MON": {
+      "oos_sharpe": 0.8785444171883815,
+      "num_trades": 17
+    },
+    "TUE": {
+      "oos_sharpe": 1.5769771250731193,
+      "num_trades": 17
+    },
+    "WED": {
+      "oos_sharpe": 1.1776713758209958,
+      "num_trades": 18
+    },
+    "THU": {
+      "oos_sharpe": 1.3447858064358813,
+      "num_trades": 12
+    },
+    "FRI": {
+      "oos_sharpe": 2.2808006545994326,
+      "num_trades": 13
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 2.5017019749725127,
+  "winner_trades": 37,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

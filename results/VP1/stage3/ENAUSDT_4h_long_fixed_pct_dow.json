@@ -1,0 +1,58 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "ENAUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 3,
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 70,
+    "volume_spike_mult": 1.2,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 3.0
+  },
+  "stage2_oos_sharpe": 0.8342,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.8342358717575241,
+      "num_trades": 33
+    },
+    "MON-FRI": {
+      "oos_sharpe": 0.3067354477859142,
+      "num_trades": 26
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 1.2203712809065201,
+      "num_trades": 7
+    },
+    "MON": {
+      "oos_sharpe": -1.5418126709073894,
+      "num_trades": 9
+    },
+    "TUE": {
+      "oos_sharpe": -2.971936241006144,
+      "num_trades": 2
+    },
+    "WED": {
+      "oos_sharpe": 2.9665417465943307,
+      "num_trades": 5
+    },
+    "THU": {
+      "oos_sharpe": 1.4936049966670508,
+      "num_trades": 4
+    },
+    "FRI": {
+      "oos_sharpe": -0.3695952328173321,
+      "num_trades": 6
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.8342358717575241,
+  "winner_trades": 33,
+  "dow_improved": false,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands ~9 months data"
+}

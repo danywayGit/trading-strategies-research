@@ -1,8 +1,8 @@
 # MO1 — Stage 3 Summary (home TF: 4H)
 
 **Date:** 2026-06-03
-**Combos processed:** 0
-**DOW improvement rate:** 0 / 0 (0%) — combos where a DOW mask beat ALL by ≥ 0.10 Sharpe with ≥ 20 trades
+**Combos processed:** 335
+**DOW improvement rate:** 181 / 335 (54.0%) — combos where a DOW mask beat ALL by ≥ 0.10 Sharpe with ≥ 20 trades
 
 ---
 
@@ -10,19 +10,355 @@
 
 | Mask | Times Won | % of Combos |
 |---|---|---|
-| ALL | 0 | 0% |
-| MON-FRI | 0 | 0% |
-| SAT-SUN | 0 | 0% |
-| MON | 0 | 0% |
-| TUE | 0 | 0% |
-| WED | 0 | 0% |
-| THU | 0 | 0% |
-| FRI | 0 | 0% |
+| ALL | 154 | 46.0% |
+| MON-FRI | 48 | 14.3% |
+| SAT-SUN | 9 | 2.7% |
+| MON | 13 | 3.9% |
+| TUE | 18 | 5.4% |
+| WED | 29 | 8.7% |
+| THU | 7 | 2.1% |
+| FRI | 57 | 17.0% |
 
 ---
 
 ## Top Combos (ranked by Winner Sharpe)
 
-_No Stage 3 results yet._
+| Symbol | Off-TF | Direction | SL | Winner Mask | Winner Sharpe | Stage2 Sharpe | OOS Trades | DOW Improved |
+|---|---|---|---|---|---|---|---|---|
+| SUIUSDT | 15m | long | embedded | ALL | 3.895236346724308 | 3.8952 | 179 | ➖ |
+| SUIUSDT | 15m | long | atr | FRI | 3.754485732287855 | 0.0187 | 32 | ✅ |
+| SUIUSDT | 1h | long | embedded | MON-FRI | 3.5240514255087247 | 3.0644 | 30 | ✅ |
+| TRXUSDT | 15m | long | fixed_signal | MON-FRI | 3.4376577072414305 | 2.6862 | 144 | ✅ |
+| TRXUSDT | 1h | both | fixed_signal | TUE | 3.3148727580778066 | 1.8876 | 34 | ✅ |
+| ARBUSDT | 1h | long | fixed_signal | FRI | 3.2269332612072463 | 0.9416 | 24 | ✅ |
+| TRXUSDT | 15m | both | atr | MON | 3.1158952571896115 | 0.8587 | 121 | ✅ |
+| TRXUSDT | 15m | both | fixed_signal | TUE | 3.0583457190240453 | 2.3381 | 109 | ✅ |
+| ETHUSDT | 1h | long | embedded | WED | 3.0510665098532854 | 0.7543 | 32 | ✅ |
+| TRXUSDT | 15m | both | fixed_pct | TUE | 3.0092737579599795 | 2.2776 | 100 | ✅ |
+| TRXUSDT | 15m | both | embedded | ALL | 2.975642462175438 | 2.9756 | 626 | ➖ |
+| SUIUSDT | 1h | long | fixed_pct | MON-FRI | 2.956720926732084 | 2.5394 | 55 | ✅ |
+| MANAUSDT | 1h | long | fixed_pct | FRI | 2.9160495243274935 | 0.3409 | 25 | ✅ |
+| ALGOUSDT | 15m | long | atr | FRI | 2.8974903821863727 | 1.5754 | 55 | ✅ |
+| ATOMUSDT | 15m | both | fixed_signal | FRI | 2.869413139040506 | 0.9886 | 82 | ✅ |
+| AAVEUSDT | 1h | long | embedded | MON-FRI | 2.8615796605811705 | 2.3224 | 79 | ✅ |
+| ADAUSDT | 1h | long | embedded | WED | 2.813894579333458 | 1.2594 | 20 | ✅ |
+| FETUSDT | 1h | both | embedded | WED | 2.8136952613748543 | 1.1267 | 44 | ✅ |
+| TRXUSDT | 15m | long | fixed_pct | FRI | 2.799023034796127 | 2.2708 | 54 | ✅ |
+| BNBUSDT | 15m | long | fixed_pct | WED | 2.7828679467110353 | 0.1628 | 61 | ✅ |
+| TRXUSDT | 1h | long | atr | TUE | 2.697942389241355 | 2.2766 | 20 | ✅ |
+| BTCUSDT | 15m | long | fixed_pct | WED | 2.6756137870948926 | 1.1417 | 38 | ✅ |
+| TRXUSDT | 1h | both | embedded | MON-FRI | 2.6034889986392877 | 1.8548 | 202 | ✅ |
+| AVAXUSDT | 12h | both | fixed_pct | ALL | 2.5722089123669805 | 2.5722 | 50 | ➖ |
+| AVAXUSDT | 12h | both | fixed_signal | ALL | 2.5722089123669805 | 2.5722 | 50 | ➖ |
+| DOGEUSDT | 15m | long | atr | MON-FRI | 2.5492278812790876 | 2.0293 | 166 | ✅ |
+| UNIUSDT | 15m | long | atr | FRI | 2.5140658727447147 | 0.393 | 55 | ✅ |
+| GMXUSDT | 1h | both | fixed_signal | FRI | 2.445722599844103 | 1.1884 | 44 | ✅ |
+| BNBUSDT | 1h | long | atr | WED | 2.4176114580171775 | 1.2032 | 23 | ✅ |
+| ETHUSDT | 15m | long | embedded | WED | 2.4060622692312355 | 1.2733 | 47 | ✅ |
+| AAVEUSDT | 1h | both | atr | WED | 2.380428030425643 | 0.9148 | 44 | ✅ |
+| TRXUSDT | 1h | long | fixed_signal | SAT-SUN | 2.3746265677872067 | 2.1157 | 40 | ✅ |
+| SUIUSDT | 1h | both | embedded | MON-FRI | 2.327467952758215 | 1.0245 | 54 | ✅ |
+| DYDXUSDT | 15m | long | fixed_signal | FRI | 2.3204156704572667 | 0.5668 | 55 | ✅ |
+| BNBUSDT | 12h | long | embedded | ALL | 2.317996484672981 | 2.318 | 10 | ➖ |
+| MANAUSDT | 1h | both | atr | FRI | 2.303117004314472 | 0.4162 | 43 | ✅ |
+| CHZUSDT | 15m | long | embedded | FRI | 2.300371027199975 | 1.2296 | 54 | ✅ |
+| ALGOUSDT | 15m | long | embedded | FRI | 2.2760612839474685 | 1.7695 | 62 | ✅ |
+| SEIUSDT | 15m | long | embedded | MON-FRI | 2.268517491452499 | 1.862 | 67 | ✅ |
+| AAVEUSDT | 15m | long | atr | FRI | 2.2653168432469064 | 1.2389 | 49 | ✅ |
+| AAVEUSDT | 15m | long | embedded | WED | 2.262082054963311 | 1.9873 | 51 | ✅ |
+| FETUSDT | 15m | long | embedded | FRI | 2.2461760150434795 | 1.4446 | 41 | ✅ |
+| DOTUSDT | 1h | long | embedded | FRI | 2.2392445262652982 | 0.9749 | 28 | ✅ |
+| NEARUSDT | 15m | long | atr | WED | 2.235220696933277 | 1.766 | 39 | ✅ |
+| DOTUSDT | 15m | short | fixed_pct | WED | 2.2087731505250137 | 0.6038 | 60 | ✅ |
+| DOGEUSDT | 12h | long | embedded | ALL | 2.20238859011841 | 2.2024 | 10 | ➖ |
+| ICPUSDT | 15m | long | embedded | FRI | 2.1921970639933344 | 0.3078 | 38 | ✅ |
+| LINKUSDT | 12h | both | fixed_pct | MON-FRI | 2.185832121133665 | 1.7053 | 41 | ✅ |
+| AVAXUSDT | 1h | short | fixed_signal | TUE | 2.1736441897354433 | 1.0242 | 29 | ✅ |
+| AVAXUSDT | 12h | long | fixed_pct | ALL | 2.1610281562642686 | 2.161 | 26 | ➖ |
+| AVAXUSDT | 12h | long | fixed_signal | ALL | 2.1610281562642686 | 2.161 | 26 | ➖ |
+| BTCUSDT | 15m | long | atr | WED | 2.154793568986985 | 1.8428 | 44 | ✅ |
+| TRXUSDT | 15m | long | atr | TUE | 2.152982814745723 | 1.0348 | 77 | ✅ |
+| DOTUSDT | 15m | short | fixed_signal | WED | 2.1526925560379637 | 0.5106 | 60 | ✅ |
+| AAVEUSDT | 1h | both | fixed_signal | THU | 2.142768212846527 | 0.0443 | 43 | ✅ |
+| BCHUSDT | 12h | both | atr | ALL | 2.1291426096246306 | 2.1291 | 28 | ➖ |
+| MANAUSDT | 1h | long | embedded | FRI | 2.127948779977638 | 0.8448 | 27 | ✅ |
+| ALGOUSDT | 12h | long | embedded | ALL | 2.1113347828976825 | 2.1113 | 14 | ➖ |
+| SANDUSDT | 15m | long | embedded | FRI | 2.1108956521383697 | 1.4579 | 82 | ✅ |
+| CHZUSDT | 15m | long | fixed_signal | MON | 2.1025560611398015 | 0.6615 | 65 | ✅ |
+| SUIUSDT | 1h | both | atr | TUE | 2.0925076520776194 | 0.3106 | 22 | ✅ |
+| NEARUSDT | 1h | both | embedded | WED | 2.084335765314351 | 1.2718 | 36 | ✅ |
+| AAVEUSDT | 1h | both | fixed_pct | THU | 2.071710237467297 | 0.0699 | 43 | ✅ |
+| CHZUSDT | 1h | long | fixed_pct | WED | 2.0686035547950894 | 0.6297 | 23 | ✅ |
+| CHZUSDT | 1h | long | fixed_signal | WED | 2.0686035547950894 | 0.7392 | 23 | ✅ |
+| ICPUSDT | 12h | both | fixed_pct | ALL | 2.0667582385936347 | 2.0668 | 47 | ➖ |
+| ICPUSDT | 12h | both | fixed_signal | ALL | 2.0667582385936347 | 2.0668 | 47 | ➖ |
+| ATOMUSDT | 15m | short | fixed_pct | TUE | 2.0305279009334645 | 0.7063 | 60 | ✅ |
+| TRXUSDT | 1h | both | fixed_pct | MON-FRI | 2.0033812877132924 | 1.3297 | 198 | ✅ |
+| AVAXUSDT | 12h | short | fixed_signal | MON-FRI | 1.9787524743084224 | 1.7078 | 29 | ✅ |
+| DOTUSDT | 15m | short | embedded | MON | 1.9681918202568691 | 0.0759 | 41 | ✅ |
+| AXSUSDT | 1h | long | fixed_pct | FRI | 1.9670315049619262 | 0.07 | 28 | ✅ |
+| AVAXUSDT | 15m | long | embedded | FRI | 1.9581019601885437 | 0.9356 | 53 | ✅ |
+| GMXUSDT | 15m | long | atr | THU | 1.9564938525417412 | 0.011 | 30 | ✅ |
+| FLOWUSDT | 12h | long | fixed_signal | ALL | 1.9508446659520409 | 1.9508 | 15 | ➖ |
+| ARBUSDT | 15m | long | embedded | MON-FRI | 1.9466499198884841 | 1.6182 | 63 | ✅ |
+| FLOWUSDT | 12h | both | fixed_signal | ALL | 1.932034472367082 | 1.932 | 52 | ➖ |
+| ATOMUSDT | 1h | both | embedded | TUE | 1.9184109091098325 | 0.9984 | 38 | ✅ |
+| ICPUSDT | 1h | both | atr | FRI | 1.90724039432074 | 0.1089 | 55 | ✅ |
+| BTCUSDT | 15m | long | fixed_signal | WED | 1.901685722588002 | 1.372 | 39 | ✅ |
+| SUIUSDT | 12h | long | atr | ALL | 1.8885178540026923 | 1.8885 | 15 | ➖ |
+| LINKUSDT | 1h | short | fixed_pct | TUE | 1.8525219706099676 | 0.7549 | 38 | ✅ |
+| FLOWUSDT | 12h | both | fixed_pct | ALL | 1.8520629643284383 | 1.8521 | 43 | ➖ |
+| AVAXUSDT | 1h | both | fixed_signal | FRI | 1.8478514074194285 | 0.9919 | 38 | ✅ |
+| AAVEUSDT | 15m | long | fixed_pct | WED | 1.8458518652525644 | 0.611 | 47 | ✅ |
+| AXSUSDT | 12h | long | fixed_pct | ALL | 1.8392918860546892 | 1.8393 | 22 | ➖ |
+| AXSUSDT | 12h | long | fixed_signal | ALL | 1.8392918860546892 | 1.8393 | 22 | ➖ |
+| DOTUSDT | 12h | both | embedded | ALL | 1.8389193351924509 | 1.8389 | 17 | ➖ |
+| BTCUSDT | 12h | long | atr | ALL | 1.8341938167852705 | 1.8342 | 19 | ➖ |
+| AVAXUSDT | 15m | long | fixed_pct | FRI | 1.829178332220546 | 0.8435 | 44 | ✅ |
+| GMXUSDT | 15m | both | fixed_signal | FRI | 1.7992805166728785 | 0.4838 | 97 | ✅ |
+| BNBUSDT | 15m | long | embedded | WED | 1.7986766680240935 | 1.1129 | 51 | ✅ |
+| LTCUSDT | 15m | long | atr | WED | 1.7914579235492714 | 1.2496 | 35 | ✅ |
+| SUIUSDT | 12h | long | fixed_pct | ALL | 1.7772049459170831 | 1.7772 | 15 | ➖ |
+| UNIUSDT | 15m | long | embedded | FRI | 1.7759708841285577 | 0.9351 | 85 | ✅ |
+| LINKUSDT | 1h | long | embedded | THU | 1.7715333384669616 | 0.3022 | 20 | ✅ |
+| AXSUSDT | 12h | both | atr | ALL | 1.7702748638167276 | 1.7703 | 35 | ➖ |
+| ADAUSDT | 1h | long | atr | WED | 1.7599207618197779 | 1.1735 | 22 | ✅ |
+| AVAXUSDT | 1h | both | fixed_pct | FRI | 1.7595425270489569 | 1.0972 | 38 | ✅ |
+| FLOWUSDT | 15m | long | atr | FRI | 1.7503550341524512 | 0.0145 | 47 | ✅ |
+| FETUSDT | 12h | long | embedded | ALL | 1.7429959867900569 | 1.743 | 12 | ➖ |
+| BTCUSDT | 1h | long | fixed_pct | TUE | 1.7382730426658795 | 1.0203 | 24 | ✅ |
+| ETHUSDT | 1h | long | fixed_pct | ALL | 1.7365691661084202 | 1.7366 | 128 | ➖ |
+| AAVEUSDT | 12h | long | embedded | ALL | 1.7335159162189064 | 1.7335 | 14 | ➖ |
+| BNBUSDT | 15m | long | atr | MON-FRI | 1.7214548611416336 | 0.7246 | 183 | ✅ |
+| FLOWUSDT | 15m | both | fixed_pct | FRI | 1.6991548954895823 | 0.3199 | 102 | ✅ |
+| AVAXUSDT | 1h | both | embedded | TUE | 1.691476236813158 | 1.1772 | 37 | ✅ |
+| FETUSDT | 12h | both | embedded | ALL | 1.6867259483205737 | 1.6867 | 21 | ➖ |
+| DOGEUSDT | 15m | long | embedded | FRI | 1.678008334596226 | 1.0691 | 50 | ✅ |
+| BCHUSDT | 15m | long | embedded | ALL | 1.6734203255510258 | 1.6734 | 96 | ➖ |
+| ENAUSDT | 1h | long | fixed_signal | ALL | 1.668873552424451 | 1.6689 | 64 | ➖ |
+| ATOMUSDT | 1h | both | fixed_signal | TUE | 1.667327663446166 | 0.4223 | 43 | ✅ |
+| MANAUSDT | 1h | both | embedded | FRI | 1.66609828118038 | 0.259 | 42 | ✅ |
+| BCHUSDT | 15m | long | atr | ALL | 1.6578817632819867 | 1.6579 | 96 | ➖ |
+| ETHUSDT | 1h | long | fixed_signal | TUE | 1.6526040119819083 | 1.1053 | 20 | ✅ |
+| AAVEUSDT | 1h | both | embedded | MON-FRI | 1.6459263075798516 | 0.594 | 166 | ✅ |
+| FILUSDT | 15m | both | fixed_signal | FRI | 1.64590636928931 | 0.1151 | 92 | ✅ |
+| RUNEUSDT | 15m | both | embedded | FRI | 1.6344124421232693 | 0.0369 | 131 | ✅ |
+| NEARUSDT | 1h | long | atr | ALL | 1.6300487839140578 | 1.63 | 61 | ➖ |
+| FETUSDT | 1h | long | embedded | ALL | 1.6243663623513185 | 1.6244 | 34 | ➖ |
+| LINKUSDT | 15m | long | embedded | FRI | 1.6239844545735758 | 1.2753 | 36 | ✅ |
+| DOGEUSDT | 1h | long | embedded | ALL | 1.6175032235258278 | 1.6175 | 37 | ➖ |
+| LINKUSDT | 1h | short | fixed_signal | TUE | 1.6117693678295208 | 0.6315 | 23 | ✅ |
+| FILUSDT | 12h | both | fixed_pct | ALL | 1.6098963623821907 | 1.6099 | 39 | ➖ |
+| FILUSDT | 12h | both | fixed_signal | ALL | 1.6098963623821907 | 1.6099 | 39 | ➖ |
+| DOTUSDT | 1h | short | fixed_pct | MON | 1.597333808280302 | 0.5616 | 38 | ✅ |
+| ADAUSDT | 15m | long | embedded | FRI | 1.5942692389581952 | 0.5886 | 39 | ✅ |
+| ATOMUSDT | 15m | long | embedded | FRI | 1.5934312021130113 | 0.9835 | 35 | ✅ |
+| ETHUSDT | 15m | long | fixed_signal | FRI | 1.5864124280965208 | 0.8679 | 36 | ✅ |
+| AVAXUSDT | 15m | long | fixed_signal | FRI | 1.5842713603818672 | 0.6698 | 44 | ✅ |
+| AVAXUSDT | 15m | both | atr | ALL | 1.577151161053518 | 1.5772 | 391 | ➖ |
+| DOTUSDT | 12h | both | fixed_signal | MON-FRI | 1.5734175776599788 | 1.1658 | 23 | ✅ |
+| AAVEUSDT | 15m | long | fixed_signal | WED | 1.5700702294290687 | 0.9646 | 47 | ✅ |
+| SOLUSDT | 1h | long | atr | ALL | 1.5597783099050166 | 1.5598 | 77 | ➖ |
+| UNIUSDT | 1h | long | atr | FRI | 1.5532713043037782 | 0.8831 | 33 | ✅ |
+| ICPUSDT | 1h | both | fixed_signal | FRI | 1.5502750985191724 | 0.0272 | 75 | ✅ |
+| UNIUSDT | 12h | long | embedded | ALL | 1.5237467285873043 | 1.5237 | 10 | ➖ |
+| MANAUSDT | 12h | long | fixed_signal | ALL | 1.5229201038554316 | 1.5229 | 18 | ➖ |
+| FILUSDT | 1h | short | fixed_pct | MON | 1.5172523721559483 | 0.2122 | 35 | ✅ |
+| FILUSDT | 1h | short | fixed_signal | MON | 1.5172523721559483 | 0.2122 | 35 | ✅ |
+| MANAUSDT | 15m | long | embedded | FRI | 1.5046497034012154 | 0.4517 | 63 | ✅ |
+| BTCUSDT | 12h | both | fixed_pct | ALL | 1.4871129038106623 | 1.4871 | 45 | ➖ |
+| ALGOUSDT | 1h | long | embedded | ALL | 1.485878130814753 | 1.4859 | 83 | ➖ |
+| DYDXUSDT | 1h | short | fixed_signal | FRI | 1.4769765720779362 | 0.0636 | 22 | ✅ |
+| GMXUSDT | 1h | long | atr | THU | 1.4725012608544843 | 0.0811 | 22 | ✅ |
+| AXSUSDT | 15m | both | atr | SAT-SUN | 1.4685408089653986 | 0.3707 | 158 | ✅ |
+| TRXUSDT | 1h | long | fixed_pct | MON-FRI | 1.466036752119683 | 1.0682 | 38 | ✅ |
+| SANDUSDT | 12h | long | fixed_pct | ALL | 1.4630175297405976 | 1.463 | 29 | ➖ |
+| CHZUSDT | 15m | long | fixed_pct | MON | 1.437714013121982 | 0.7067 | 65 | ✅ |
+| ICPUSDT | 1h | both | fixed_pct | FRI | 1.4371716984585352 | 0.0234 | 75 | ✅ |
+| APTUSDT | 15m | long | embedded | MON | 1.41784626723692 | 0.4645 | 40 | ✅ |
+| CHZUSDT | 12h | long | embedded | ALL | 1.3921173293655096 | 1.3921 | 8 | ➖ |
+| SANDUSDT | 1h | both | embedded | TUE | 1.3819298591317841 | 0.6326 | 48 | ✅ |
+| ARBUSDT | 1h | long | embedded | FRI | 1.3808169654553881 | 0.7907 | 26 | ✅ |
+| ETCUSDT | 1h | long | fixed_pct | WED | 1.3803021303288796 | 0.3664 | 20 | ✅ |
+| BTCUSDT | 15m | both | fixed_pct | WED | 1.3627848289200026 | 0.5406 | 83 | ✅ |
+| DOTUSDT | 12h | short | atr | ALL | 1.3612116804147778 | 1.3612 | 19 | ➖ |
+| SANDUSDT | 12h | both | embedded | ALL | 1.3551643642324522 | 1.3552 | 17 | ➖ |
+| SHIBUSDT | 15m | long | embedded | WED | 1.3454960867541261 | 0.9253 | 58 | ✅ |
+| OPUSDT | 1h | short | embedded | MON-FRI | 1.3445226257087228 | 1.1988 | 38 | ✅ |
+| SHIBUSDT | 12h | short | atr | ALL | 1.3287201707524876 | 1.3287 | 11 | ➖ |
+| RUNEUSDT | 15m | long | embedded | FRI | 1.2977084285228393 | 1.146 | 47 | ✅ |
+| AXSUSDT | 1h | both | embedded | MON-FRI | 1.2938951146070075 | 0.0399 | 157 | ✅ |
+| APTUSDT | 12h | short | fixed_pct | ALL | 1.289387147359264 | 1.2894 | 17 | ➖ |
+| APTUSDT | 12h | short | fixed_signal | ALL | 1.289387147359264 | 1.2894 | 17 | ➖ |
+| FLOWUSDT | 12h | short | fixed_signal | MON-FRI | 1.2827201306493465 | 1.0815 | 24 | ✅ |
+| FILUSDT | 12h | short | atr | ALL | 1.2783747811241437 | 1.2784 | 16 | ➖ |
+| NEARUSDT | 12h | long | atr | ALL | 1.2763026918857274 | 1.2763 | 18 | ➖ |
+| MANAUSDT | 12h | both | embedded | ALL | 1.2615188220846014 | 1.2615 | 20 | ➖ |
+| DOTUSDT | 12h | short | fixed_pct | MON-FRI | 1.2614261951586885 | 0.2497 | 20 | ✅ |
+| DOTUSDT | 12h | short | fixed_signal | MON-FRI | 1.2614261951586885 | 0.2497 | 20 | ✅ |
+| NEARUSDT | 12h | long | embedded | ALL | 1.2586525379504763 | 1.2587 | 11 | ➖ |
+| BNBUSDT | 1h | long | embedded | WED | 1.240618910424893 | 0.0783 | 22 | ✅ |
+| TAOUSDT | 12h | both | fixed_pct | ALL | 1.2389706402682155 | 1.239 | 15 | ➖ |
+| TAOUSDT | 12h | both | fixed_signal | ALL | 1.2389706402682155 | 1.239 | 15 | ➖ |
+| ALGOUSDT | 12h | both | fixed_pct | MON-FRI | 1.2199069005704002 | 0.8651 | 28 | ✅ |
+| ALGOUSDT | 12h | both | fixed_signal | MON-FRI | 1.2199069005704002 | 0.8651 | 28 | ✅ |
+| BTCUSDT | 12h | long | fixed_pct | ALL | 1.206081664522048 | 1.2061 | 16 | ➖ |
+| BTCUSDT | 12h | long | fixed_signal | ALL | 1.206081664522048 | 1.2061 | 16 | ➖ |
+| BTCUSDT | 12h | both | fixed_signal | ALL | 1.2032908934709237 | 1.2033 | 46 | ➖ |
+| AVAXUSDT | 1h | long | embedded | WED | 1.194637079183455 | 0.7144 | 22 | ✅ |
+| SEIUSDT | 1h | long | embedded | ALL | 1.1907034940338996 | 1.1907 | 14 | ➖ |
+| SANDUSDT | 12h | both | atr | ALL | 1.190521495177214 | 1.1905 | 24 | ➖ |
+| AVAXUSDT | 12h | both | embedded | MON-FRI | 1.1872211162041393 | 0.9152 | 21 | ✅ |
+| SUIUSDT | 12h | both | atr | ALL | 1.1818498516449298 | 1.1818 | 18 | ➖ |
+| AAVEUSDT | 12h | long | atr | MON-FRI | 1.180979260333381 | 0.7452 | 23 | ✅ |
+| SANDUSDT | 12h | long | embedded | ALL | 1.1589733646885774 | 1.159 | 13 | ➖ |
+| FETUSDT | 1h | both | atr | MON-FRI | 1.1534037478936232 | 0.7473 | 180 | ✅ |
+| OPUSDT | 12h | short | fixed_pct | MON-FRI | 1.1479005414575518 | 0.0902 | 20 | ✅ |
+| OPUSDT | 12h | short | fixed_signal | MON-FRI | 1.1479005414575518 | 0.0902 | 20 | ✅ |
+| SHIBUSDT | 15m | short | fixed_signal | SAT-SUN | 1.146411238085204 | 0.0758 | 84 | ✅ |
+| CHZUSDT | 15m | long | atr | FRI | 1.144281693045097 | 0.142 | 47 | ✅ |
+| ARBUSDT | 15m | long | fixed_signal | WED | 1.1304035856673507 | 0.2065 | 22 | ✅ |
+| GMXUSDT | 12h | long | atr | ALL | 1.1279912708348143 | 1.128 | 22 | ➖ |
+| ENAUSDT | 1h | long | fixed_pct | ALL | 1.1190820851276395 | 1.1191 | 63 | ➖ |
+| ATOMUSDT | 12h | both | embedded | ALL | 1.1147695771300905 | 1.1148 | 17 | ➖ |
+| DYDXUSDT | 12h | both | fixed_pct | MON-FRI | 1.1107104312682081 | 0.3676 | 45 | ✅ |
+| DYDXUSDT | 12h | both | fixed_signal | MON-FRI | 1.1107104312682081 | 0.3676 | 45 | ✅ |
+| NEARUSDT | 12h | both | embedded | ALL | 1.1060003932280722 | 1.106 | 18 | ➖ |
+| MANAUSDT | 12h | both | fixed_pct | MON-FRI | 1.105854485718861 | 0.823 | 32 | ✅ |
+| MANAUSDT | 12h | both | fixed_signal | MON-FRI | 1.105854485718861 | 0.823 | 32 | ✅ |
+| AVAXUSDT | 1h | short | embedded | TUE | 1.0950796500058142 | 0.2552 | 28 | ✅ |
+| FETUSDT | 15m | both | atr | MON-FRI | 1.0910669796755599 | 0.9316 | 438 | ✅ |
+| SOLUSDT | 15m | long | atr | MON | 1.0857355076303399 | 0.6592 | 40 | ✅ |
+| TRXUSDT | 12h | long | fixed_pct | ALL | 1.0731532661938108 | 1.0732 | 17 | ➖ |
+| TRXUSDT | 12h | long | fixed_signal | ALL | 1.0731532661938108 | 1.0732 | 17 | ➖ |
+| BTCUSDT | 1h | long | atr | ALL | 1.0679618962329178 | 1.068 | 33 | ➖ |
+| TAOUSDT | 1h | both | fixed_signal | ALL | 1.0644820918686204 | 1.0645 | 75 | ➖ |
+| ATOMUSDT | 1h | short | fixed_pct | ALL | 1.060029227936429 | 1.06 | 109 | ➖ |
+| SHIBUSDT | 12h | short | fixed_pct | ALL | 1.053746134154352 | 1.0537 | 13 | ➖ |
+| SHIBUSDT | 12h | both | fixed_pct | ALL | 1.0455527515749035 | 1.0456 | 32 | ➖ |
+| DOGEUSDT | 12h | long | atr | ALL | 1.0438171965152059 | 1.0438 | 14 | ➖ |
+| BNBUSDT | 12h | long | fixed_signal | ALL | 1.0379331321973457 | 1.0379 | 12 | ➖ |
+| FILUSDT | 12h | long | fixed_pct | ALL | 1.0359504878474957 | 1.036 | 20 | ➖ |
+| FILUSDT | 12h | long | fixed_signal | ALL | 1.0359504878474957 | 1.036 | 20 | ➖ |
+| ICPUSDT | 15m | both | atr | FRI | 1.020947738629754 | 0.2821 | 80 | ✅ |
+| FLOWUSDT | 15m | long | fixed_signal | FRI | 1.018567699792232 | 0.5604 | 49 | ✅ |
+| FLOWUSDT | 12h | long | atr | ALL | 1.0172071661655213 | 1.0172 | 21 | ➖ |
+| ALGOUSDT | 12h | both | embedded | ALL | 1.012625555236006 | 1.0126 | 21 | ➖ |
+| BNBUSDT | 1h | long | fixed_pct | MON | 1.010255364603332 | 0.0344 | 23 | ✅ |
+| BCHUSDT | 12h | long | atr | ALL | 1.0010272336467994 | 1.001 | 21 | ➖ |
+| SHIBUSDT | 1h | long | embedded | ALL | 0.999134863627353 | 0.9991 | 37 | ➖ |
+| AVAXUSDT | 15m | both | fixed_pct | THU | 0.9735235374490075 | 0.2097 | 112 | ✅ |
+| LTCUSDT | 1h | long | atr | ALL | 0.9529886713439175 | 0.953 | 27 | ➖ |
+| SHIBUSDT | 15m | short | atr | FRI | 0.952915446417112 | 0.2653 | 42 | ✅ |
+| UNIUSDT | 1h | long | fixed_pct | MON-FRI | 0.9510203460926159 | 0.2325 | 93 | ✅ |
+| DOTUSDT | 1h | both | embedded | MON | 0.9367443603609619 | 0.3127 | 54 | ✅ |
+| ATOMUSDT | 1h | both | atr | FRI | 0.9355829671340125 | 0.2863 | 40 | ✅ |
+| AXSUSDT | 12h | both | embedded | ALL | 0.9313410516614216 | 0.9313 | 16 | ➖ |
+| FILUSDT | 1h | long | fixed_pct | SAT-SUN | 0.916794438693308 | 0.119 | 50 | ✅ |
+| FETUSDT | 1h | both | fixed_pct | TUE | 0.915752083068863 | 0.3745 | 49 | ✅ |
+| GMXUSDT | 1h | long | fixed_signal | SAT-SUN | 0.9142905553779571 | 0.683 | 32 | ✅ |
+| BCHUSDT | 15m | long | fixed_pct | FRI | 0.901907704957454 | 0.3159 | 40 | ✅ |
+| AAVEUSDT | 1h | long | atr | ALL | 0.8944448334326567 | 0.8944 | 96 | ➖ |
+| BCHUSDT | 12h | both | fixed_pct | ALL | 0.8926823343721292 | 0.8927 | 39 | ➖ |
+| TAOUSDT | 1h | both | fixed_pct | ALL | 0.8746105177105569 | 0.8746 | 75 | ➖ |
+| CHZUSDT | 12h | long | fixed_pct | ALL | 0.8689654209856716 | 0.869 | 30 | ➖ |
+| CHZUSDT | 12h | long | fixed_signal | ALL | 0.8689654209856716 | 0.869 | 30 | ➖ |
+| TRXUSDT | 1h | short | atr | WED | 0.8585583854766765 | 0.0421 | 28 | ✅ |
+| BCHUSDT | 1h | long | embedded | ALL | 0.8574893625503159 | 0.8575 | 64 | ➖ |
+| SEIUSDT | 1h | long | fixed_pct | MON-FRI | 0.8396343481865866 | 0.6588 | 47 | ✅ |
+| FLOWUSDT | 12h | short | atr | ALL | 0.8395427888494561 | 0.8395 | 16 | ➖ |
+| SANDUSDT | 1h | long | embedded | ALL | 0.827519857914231 | 0.8275 | 70 | ➖ |
+| DASHUSDT | 12h | both | embedded | ALL | 0.8157266255496967 | 0.8157 | 22 | ➖ |
+| MANAUSDT | 12h | long | embedded | ALL | 0.815539676867509 | 0.8155 | 14 | ➖ |
+| ETHUSDT | 1h | both | fixed_pct | ALL | 0.8109072447941184 | 0.8109 | 379 | ➖ |
+| FLOWUSDT | 1h | long | atr | SAT-SUN | 0.804707706101686 | 0.1904 | 29 | ✅ |
+| BCHUSDT | 12h | long | embedded | ALL | 0.7963422746184085 | 0.7963 | 15 | ➖ |
+| ATOMUSDT | 1h | long | embedded | MON-FRI | 0.7870423325642344 | 0.6371 | 30 | ✅ |
+| ICPUSDT | 12h | both | embedded | MON-FRI | 0.7748876500339031 | 0.3337 | 23 | ✅ |
+| DOGEUSDT | 1h | long | atr | THU | 0.7720478732444073 | 0.562 | 21 | ✅ |
+| TRXUSDT | 12h | both | embedded | ALL | 0.7664895183233277 | 0.7665 | 28 | ➖ |
+| ATOMUSDT | 15m | both | embedded | FRI | 0.7655599623859873 | 0.2472 | 79 | ✅ |
+| BTCUSDT | 1h | long | fixed_signal | SAT-SUN | 0.7654363098251201 | 0.0884 | 26 | ✅ |
+| LTCUSDT | 12h | long | atr | ALL | 0.7644571326720989 | 0.7645 | 22 | ➖ |
+| CHZUSDT | 12h | both | embedded | ALL | 0.7635849824335953 | 0.7636 | 20 | ➖ |
+| ALGOUSDT | 1h | short | atr | SAT-SUN | 0.7623587374988015 | 0.0508 | 47 | ✅ |
+| APTUSDT | 1h | long | embedded | MON-FRI | 0.7576364717682105 | 0.1846 | 21 | ✅ |
+| BCHUSDT | 12h | both | fixed_signal | ALL | 0.753633250862976 | 0.7536 | 39 | ➖ |
+| CHZUSDT | 1h | long | atr | ALL | 0.7295605460189748 | 0.7296 | 71 | ➖ |
+| ALGOUSDT | 12h | long | atr | ALL | 0.7267443807772476 | 0.7267 | 15 | ➖ |
+| UNIUSDT | 12h | long | atr | ALL | 0.7183402416498258 | 0.7183 | 11 | ➖ |
+| TRXUSDT | 12h | long | atr | ALL | 0.6912225891428697 | 0.6912 | 20 | ➖ |
+| ETCUSDT | 1h | long | embedded | FRI | 0.6881991406711673 | 0.5476 | 22 | ✅ |
+| FILUSDT | 1h | long | fixed_signal | SAT-SUN | 0.6756240803185863 | 0.0929 | 34 | ✅ |
+| AVAXUSDT | 12h | long | atr | ALL | 0.668836656419538 | 0.6688 | 18 | ➖ |
+| CHZUSDT | 12h | both | fixed_pct | MON-FRI | 0.6606428978225658 | 0.1163 | 37 | ✅ |
+| CHZUSDT | 12h | both | fixed_signal | MON-FRI | 0.6606428978225658 | 0.1163 | 37 | ✅ |
+| FLOWUSDT | 12h | long | fixed_pct | ALL | 0.6437121776061061 | 0.6437 | 16 | ➖ |
+| SEIUSDT | 1h | long | fixed_signal | MON-FRI | 0.6408787490807607 | 0.4757 | 47 | ✅ |
+| DOTUSDT | 12h | long | fixed_signal | ALL | 0.6281463591294796 | 0.6281 | 15 | ➖ |
+| BTCUSDT | 1h | both | embedded | FRI | 0.6239889536185276 | 0.0657 | 31 | ✅ |
+| DYDXUSDT | 1h | short | fixed_pct | MON | 0.622626080746807 | 0.4046 | 23 | ✅ |
+| BCHUSDT | 1h | long | atr | ALL | 0.6222773672174428 | 0.6223 | 44 | ➖ |
+| BTCUSDT | 12h | both | embedded | ALL | 0.6171363214414557 | 0.6171 | 43 | ➖ |
+| AVAXUSDT | 1h | long | atr | ALL | 0.6112214282260724 | 0.6112 | 63 | ➖ |
+| BNBUSDT | 12h | long | atr | ALL | 0.6001517106437634 | 0.6002 | 11 | ➖ |
+| DOTUSDT | 12h | long | fixed_pct | ALL | 0.5885502176455026 | 0.5886 | 15 | ➖ |
+| ADAUSDT | 12h | long | embedded | ALL | 0.5753383124802718 | 0.5753 | 12 | ➖ |
+| CHZUSDT | 12h | long | atr | ALL | 0.5511506431676616 | 0.5512 | 13 | ➖ |
+| TRXUSDT | 12h | both | atr | MON-FRI | 0.5142216722853411 | 0.2934 | 24 | ✅ |
+| MANAUSDT | 12h | long | fixed_pct | MON-FRI | 0.5138944788452793 | 0.3417 | 23 | ✅ |
+| SHIBUSDT | 1h | short | atr | ALL | 0.5092053515458699 | 0.5092 | 5 | ➖ |
+| RUNEUSDT | 1h | short | embedded | MON-FRI | 0.5067526322815092 | 0.2323 | 55 | ✅ |
+| AXSUSDT | 1h | long | embedded | FRI | 0.5016811886166967 | 0.2732 | 26 | ✅ |
+| AVAXUSDT | 15m | both | embedded | ALL | 0.4929856442909036 | 0.493 | 387 | ➖ |
+| BCHUSDT | 12h | long | fixed_pct | ALL | 0.49029561049381476 | 0.4903 | 30 | ➖ |
+| BCHUSDT | 12h | long | fixed_signal | ALL | 0.49029561049381476 | 0.4903 | 30 | ➖ |
+| FILUSDT | 12h | both | atr | ALL | 0.48669434688427177 | 0.4867 | 22 | ➖ |
+| DYDXUSDT | 15m | short | atr | MON | 0.4863930243798476 | 0.1313 | 60 | ✅ |
+| RUNEUSDT | 12h | long | atr | ALL | 0.47956950155054534 | 0.4796 | 15 | ➖ |
+| TRXUSDT | 12h | both | fixed_pct | ALL | 0.4755445930777957 | 0.4755 | 22 | ➖ |
+| TRXUSDT | 12h | both | fixed_signal | ALL | 0.4755445930777957 | 0.4755 | 22 | ➖ |
+| DOTUSDT | 12h | both | atr | MON-FRI | 0.4703532784998471 | 0.2224 | 25 | ✅ |
+| BCHUSDT | 12h | short | fixed_pct | ALL | 0.4634061546343143 | 0.4634 | 22 | ➖ |
+| BCHUSDT | 12h | short | fixed_signal | ALL | 0.4634061546343143 | 0.4634 | 22 | ➖ |
+| AXSUSDT | 12h | long | embedded | ALL | 0.4567352858285138 | 0.4567 | 14 | ➖ |
+| BCHUSDT | 1h | long | fixed_pct | FRI | 0.4440872695560838 | 0.181 | 20 | ✅ |
+| ALGOUSDT | 12h | short | fixed_pct | MON-FRI | 0.43700126572067366 | 0.2617 | 28 | ✅ |
+| FETUSDT | 12h | both | fixed_pct | ALL | 0.4325052281998768 | 0.4325 | 30 | ➖ |
+| FETUSDT | 12h | both | fixed_signal | ALL | 0.4325052281998768 | 0.4325 | 30 | ➖ |
+| ETCUSDT | 15m | long | embedded | FRI | 0.4206698165227171 | 0.1115 | 41 | ✅ |
+| LINKUSDT | 12h | long | embedded | ALL | 0.4201298178987701 | 0.4201 | 12 | ➖ |
+| ETCUSDT | 1h | long | atr | MON-FRI | 0.4129326221237536 | 0.2599 | 28 | ✅ |
+| FLOWUSDT | 15m | long | fixed_pct | FRI | 0.39148474640831954 | 0.0051 | 60 | ✅ |
+| LINKUSDT | 12h | both | embedded | ALL | 0.38832792152981704 | 0.3883 | 25 | ➖ |
+| GMXUSDT | 12h | both | fixed_signal | MON-FRI | 0.37362457913374075 | 0.0798 | 20 | ✅ |
+| ETHUSDT | 12h | long | fixed_pct | ALL | 0.36993223926125557 | 0.3699 | 19 | ➖ |
+| ETHUSDT | 12h | long | fixed_signal | ALL | 0.36993223926125557 | 0.3699 | 19 | ➖ |
+| ETCUSDT | 12h | long | embedded | ALL | 0.356343180312781 | 0.3563 | 13 | ➖ |
+| SANDUSDT | 12h | both | fixed_pct | ALL | 0.31942126193661513 | 0.3194 | 40 | ➖ |
+| SANDUSDT | 12h | both | fixed_signal | ALL | 0.31942126193661513 | 0.3194 | 40 | ➖ |
+| ADAUSDT | 12h | long | atr | ALL | 0.31241325903612194 | 0.3124 | 17 | ➖ |
+| ETHUSDT | 12h | long | embedded | ALL | 0.3120194456989041 | 0.312 | 13 | ➖ |
+| OPUSDT | 12h | short | atr | ALL | 0.3087221323063444 | 0.3087 | 17 | ➖ |
+| LINKUSDT | 12h | short | fixed_pct | ALL | 0.2822342656799513 | 0.2822 | 21 | ➖ |
+| LINKUSDT | 12h | short | fixed_signal | ALL | 0.2822342656799513 | 0.2822 | 21 | ➖ |
+| ETCUSDT | 12h | long | fixed_pct | ALL | 0.27539153984489734 | 0.2754 | 18 | ➖ |
+| SHIBUSDT | 12h | short | fixed_signal | ALL | 0.24388239137522008 | 0.2439 | 19 | ➖ |
+| ICPUSDT | 1h | long | embedded | ALL | 0.23711198990923896 | 0.2371 | 34 | ➖ |
+| ICPUSDT | 12h | long | fixed_pct | ALL | 0.234076369189466 | 0.2341 | 25 | ➖ |
+| ICPUSDT | 12h | long | fixed_signal | ALL | 0.234076369189466 | 0.2341 | 25 | ➖ |
+| MANAUSDT | 12h | both | atr | ALL | 0.22570002195030592 | 0.2257 | 24 | ➖ |
+| ATOMUSDT | 12h | both | fixed_signal | ALL | 0.19756311701896148 | 0.1976 | 31 | ➖ |
+| UNIUSDT | 12h | both | atr | ALL | 0.1942514625231211 | 0.1943 | 17 | ➖ |
+| ATOMUSDT | 12h | long | embedded | ALL | 0.1613013449828049 | 0.1613 | 13 | ➖ |
+| RUNEUSDT | 12h | long | embedded | ALL | 0.15897640819168798 | 0.159 | 14 | ➖ |
+| DYDXUSDT | 12h | short | atr | ALL | 0.10913800607293403 | 0.1091 | 21 | ➖ |
+| ATOMUSDT | 12h | short | fixed_pct | ALL | 0.1001648032339805 | 0.1002 | 20 | ➖ |
+| ATOMUSDT | 12h | both | atr | ALL | 0.0977398178592863 | 0.0977 | 24 | ➖ |
+| SOLUSDT | 12h | both | atr | ALL | 0.09288676607749126 | 0.0929 | 26 | ➖ |
+| BTCUSDT | 12h | short | atr | ALL | 0.08992266417867387 | 0.0899 | 13 | ➖ |
+| DYDXUSDT | 12h | short | embedded | ALL | 0.08586232564626431 | 0.0859 | 10 | ➖ |
+| ETCUSDT | 12h | long | fixed_signal | ALL | 0.022358468910975923 | 0.0224 | 20 | ➖ |
+| AVAXUSDT | 12h | long | embedded | ALL | 0.020462009445817973 | 0.0205 | 17 | ➖ |
 
-**Stage 3 DOW improvement rate: 0 / 0**
+**Stage 3 DOW improvement rate: 181 / 335**

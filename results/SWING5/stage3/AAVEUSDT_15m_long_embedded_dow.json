@@ -1,0 +1,57 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "AAVEUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "kc_length": 15,
+    "kc_mult": 1.5,
+    "cci_period": 28,
+    "cci_long_min": 0,
+    "cci_short_max": 0,
+    "direction": "long",
+    "rr_ratio": 4.0
+  },
+  "stage2_oos_sharpe": 1.2925,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.292524696606885,
+      "num_trades": 320
+    },
+    "MON-FRI": {
+      "oos_sharpe": 2.0666267197968238,
+      "num_trades": 258
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.6210903062957158,
+      "num_trades": 127
+    },
+    "MON": {
+      "oos_sharpe": 2.3620984393849698,
+      "num_trades": 75
+    },
+    "TUE": {
+      "oos_sharpe": -1.3289894057078633,
+      "num_trades": 69
+    },
+    "WED": {
+      "oos_sharpe": 2.120127031314096,
+      "num_trades": 81
+    },
+    "THU": {
+      "oos_sharpe": 0.5162709079749449,
+      "num_trades": 62
+    },
+    "FRI": {
+      "oos_sharpe": 1.1399986313255568,
+      "num_trades": 70
+    }
+  },
+  "winner_mask": "MON",
+  "winner_sharpe": 2.3620984393849698,
+  "winner_trades": 75,
+  "dow_improved": true,
+  "note": "v2/vectorbt"
+}

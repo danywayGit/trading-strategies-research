@@ -1,0 +1,56 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "NEARUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 2.0,
+    "adx_threshold": 20,
+    "ema_filter": 50,
+    "direction": "short",
+    "atr_stop_mult": 1.5
+  },
+  "stage2_oos_sharpe": 1.0323,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 1.032254582064302,
+      "num_trades": 15
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.047523458639435,
+      "num_trades": 9
+    },
+    "SAT-SUN": {
+      "oos_sharpe": 0.2724292745994943,
+      "num_trades": 6
+    },
+    "MON": {
+      "oos_sharpe": -0.05520872878288294,
+      "num_trades": 1
+    },
+    "TUE": {
+      "oos_sharpe": -0.3680410831965223,
+      "num_trades": 1
+    },
+    "WED": {
+      "oos_sharpe": 0.2057965450816649,
+      "num_trades": 3
+    },
+    "THU": {
+      "oos_sharpe": 1.7903465749421967,
+      "num_trades": 4
+    },
+    "FRI": {
+      "oos_sharpe": null,
+      "num_trades": 0
+    }
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.032254582064302,
+  "winner_trades": 15,
+  "dow_improved": false,
+  "note": "v2/vectorbt"
+}

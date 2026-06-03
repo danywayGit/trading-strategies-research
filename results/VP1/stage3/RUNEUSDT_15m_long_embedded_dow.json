@@ -1,0 +1,57 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "RUNEUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 3,
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 80,
+    "volume_spike_mult": 1.5,
+    "adx_threshold": 20,
+    "cooldown_bars": 10,
+    "direction": "long",
+    "tp2_mult": 2.5
+  },
+  "stage2_oos_sharpe": 0.8488,
+  "dow_results": {
+    "ALL": {
+      "oos_sharpe": 0.8488488715973171,
+      "num_trades": 218
+    },
+    "MON-FRI": {
+      "oos_sharpe": 1.116907445227791,
+      "num_trades": 166
+    },
+    "SAT-SUN": {
+      "oos_sharpe": -0.46778936280569317,
+      "num_trades": 61
+    },
+    "MON": {
+      "oos_sharpe": 0.4298905366693204,
+      "num_trades": 43
+    },
+    "TUE": {
+      "oos_sharpe": -2.077777620373194,
+      "num_trades": 40
+    },
+    "WED": {
+      "oos_sharpe": -0.2773135575747662,
+      "num_trades": 38
+    },
+    "THU": {
+      "oos_sharpe": 1.515332474481427,
+      "num_trades": 34
+    },
+    "FRI": {
+      "oos_sharpe": 2.440152729686463,
+      "num_trades": 29
+    }
+  },
+  "winner_mask": "FRI",
+  "winner_sharpe": 2.440152729686463,
+  "winner_trades": 29,
+  "dow_improved": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}
