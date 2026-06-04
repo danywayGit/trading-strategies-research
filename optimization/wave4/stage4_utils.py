@@ -131,7 +131,7 @@ def run_sensitivity_parallel(strategy_id: str, results_base: Path,
         if fpath.exists():
             try:
                 note = str(json.loads(fpath.read_text(encoding="utf-8")).get("note", ""))
-                if not any(e in note for e in ("WORKER CRASH", "SENSITIVITY ERROR", "DATA ERROR")):
+                if not any(e in note for e in ("WORKER CRASH", "SENSITIVITY ERROR", "DATA ERROR", "INDICATOR ERROR")):
                     done += 1; continue
             except Exception:
                 pass
@@ -157,12 +157,22 @@ def run_sensitivity_parallel(strategy_id: str, results_base: Path,
                     try:
                         result = future.result()
                     except Exception as e:
-                        result = {"symbol": task["sym"]+"USDT", "timeframe": task["tf"],
-                                  "direction": task["direction"], "sl_type": task["sl_type"],
-                                  "best_params": task["best_params"], "winner_mask": task["winner_mask"],
-                                  "winner_sharpe": task["winner_sharpe"], "winner_trades": task["winner_trades"],
-                                  "stage2_oos_sharpe": task["stage2_oos_sharpe"],
-                                  "sensitivity": {}, "robust": False, "note": f"WORKER CRASH: {e}"}
+                        result = {
+                            "symbol":            task["sym"] + "USDT",
+                            "timeframe":         task["tf"],
+                            "direction":         task["direction"],
+                            "sl_type":           task["sl_type"],
+                            "stage":             4,
+                            "strategy":          "unknown",
+                            "best_params":       task["best_params"],
+                            "winner_mask":       task["winner_mask"],
+                            "winner_sharpe":     task["winner_sharpe"],
+                            "winner_trades":     task["winner_trades"],
+                            "stage2_oos_sharpe": task["stage2_oos_sharpe"],
+                            "sensitivity":       {},
+                            "robust":            False,
+                            "note":              f"WORKER CRASH: {e}",
+                        }
                     sym_usdt = result.get("symbol","?"); tf_r = result.get("timeframe","?")
                     direction = result.get("direction","?"); sl_type = result.get("sl_type","?")
                     fname = f"{sym_usdt}_{tf_r}_{direction}_{sl_type}_sensitivity.json"

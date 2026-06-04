@@ -477,7 +477,9 @@ def _worker_v2(task):
             continue
         param_results = {}
         for label, factor in [("up", 1.1), ("down", 0.9)]:
-            nudged = nudge_params(best_params, factor)
+            # Nudge only this one param, keep all others at baseline
+            nudged_val = nudge_params({param_name: param_value}, factor)[param_name]
+            nudged = {**best_params, param_name: nudged_val}
             sharpe, trades = _eval_single_dow(
                 close_s_t, le_t, lx_t, se_t, sx_t, atr_t,
                 sl_type, nudged, dow_days=dow_days, freq=TF_FREQ_MAP[tf],
@@ -492,6 +494,7 @@ def _worker_v2(task):
         param_results["sensitive"] = sensitive
         sensitivity[param_name] = param_results
 
+    # If no params were testable, mark not robust (no evidence of robustness)
     robust = bool(sensitivity) and not any(v["sensitive"] for v in sensitivity.values())
     print(f"{log_prefix} robust={robust} params_tested={len(sensitivity)}", flush=True)
 
