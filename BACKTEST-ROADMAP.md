@@ -471,3 +471,24 @@ Strategies queued for Wave 2 (12 total):
 | 12 | SFP1 | Swing failure pattern — dual-TF 1H+5m, most complex |
 
 Wave 2 symbol universe and shortlisting will be revisited based on Wave 1 findings.
+
+---
+
+## Wave 1 — Optimization Results (Stages 1–4)
+
+**Generated:** 2026-06-04  
+**Strategies:** 10 · **Symbols:** 39 · **Test window:** 2022-01-01 → 2024-12-31
+
+| Strategy | Home TF | S1 Pass | S2 Pass | S3 DOW Improved | S4 Robust | Best Combo |
+|---|---|---|---|---|---|---|
+| SWING2 | 4h | / | / | / | 0/0 | — |
+| SWING3 | 1h | / | / | / | 0/0 | — |
+| SWING4 | 4h | / | / | / | 0/0 | — |
+| SWING5 | 1h | / | / | / | 0/0 | — |
+| EMA_REJ_V1 | 1h | / | / | / | 0/0 | — |
+| DC1 | 4h | / | / | / | 0/0 | — |
+| VR1 | 1h | / | / | / | 0/0 | — |
+| AGGR_PULLBACK | 4h | / | / | / | 0/0 | — |
+| MO1 | 4h | / | / | / | 0/0 | — |
+| VP1 | 1h | / | / | / | 0/0 | — |
+
