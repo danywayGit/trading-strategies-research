@@ -305,7 +305,7 @@ def _eval_single_dow(close_s, le_base, lx, se_base, sx, atr,
 def _worker_v2(task):
     """
     Stage 3 worker. One process per Stage 2 passing combo.
-    Runs _eval_single_dow for each of the 8 DOW masks, then selects winner.
+    Runs _eval_single_dow for each DOW mask in DOW_MASKS (all non-empty subsets of Mon–Sun + ALL), then selects winner.
     task = {"sym", "tf", "direction", "sl_type", "best_params", "stage2_oos_sharpe"}
     """
     sym               = task["sym"]
@@ -369,7 +369,7 @@ def _worker_v2(task):
 
     test_data = data.iloc[int(len(data) * 0.7):]
 
-    print(f"{log_prefix} running 8 DOW masks ({len(test_data)} OOS bars)...", flush=True)
+    print(f"{log_prefix} running {len(DOW_MASKS)} DOW masks ({len(test_data)} OOS bars)...", flush=True)
 
     # Compute indicators once — DOW masking only affects entry signals
     h_t, l_t, c_t = test_data.High.values, test_data.Low.values, test_data.Close.values

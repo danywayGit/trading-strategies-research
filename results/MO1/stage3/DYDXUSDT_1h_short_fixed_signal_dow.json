@@ -21,14 +21,6 @@
       "oos_sharpe": 0.06363025825842882,
       "num_trades": 125
     },
-    "MON-FRI": {
-      "oos_sharpe": -0.2426071535896324,
-      "num_trades": 97
-    },
-    "SAT-SUN": {
-      "oos_sharpe": 0.6770579753710743,
-      "num_trades": 34
-    },
     "MON": {
       "oos_sharpe": -0.7968595433799989,
       "num_trades": 24
@@ -48,11 +40,499 @@
     "FRI": {
       "oos_sharpe": 1.4769765720779362,
       "num_trades": 22
+    },
+    "SAT": {
+      "oos_sharpe": 1.113627187807601,
+      "num_trades": 12
+    },
+    "SUN": {
+      "oos_sharpe": 0.1716884949984351,
+      "num_trades": 23
+    },
+    "MON+TUE": {
+      "oos_sharpe": -0.8206074225314685,
+      "num_trades": 47
+    },
+    "MON+WED": {
+      "oos_sharpe": -1.147250356990567,
+      "num_trades": 43
+    },
+    "MON+THU": {
+      "oos_sharpe": 0.0030299584938367164,
+      "num_trades": 42
+    },
+    "MON+FRI": {
+      "oos_sharpe": 0.43838206239121297,
+      "num_trades": 46
+    },
+    "MON+SAT": {
+      "oos_sharpe": -0.2302321521741962,
+      "num_trades": 36
+    },
+    "MON+SUN": {
+      "oos_sharpe": -0.3913377994032799,
+      "num_trades": 43
+    },
+    "TUE+WED": {
+      "oos_sharpe": -0.8062357101477995,
+      "num_trades": 41
+    },
+    "TUE+THU": {
+      "oos_sharpe": 0.4015279573146484,
+      "num_trades": 42
+    },
+    "TUE+FRI": {
+      "oos_sharpe": 0.8080946827911406,
+      "num_trades": 46
+    },
+    "TUE+SAT": {
+      "oos_sharpe": 0.1832738857606533,
+      "num_trades": 36
+    },
+    "TUE+SUN": {
+      "oos_sharpe": -0.15895038437903475,
+      "num_trades": 47
+    },
+    "WED+THU": {
+      "oos_sharpe": -0.4695341208745786,
+      "num_trades": 33
+    },
+    "WED+FRI": {
+      "oos_sharpe": 0.33838714815104426,
+      "num_trades": 40
+    },
+    "WED+SAT": {
+      "oos_sharpe": -0.2012864265722249,
+      "num_trades": 31
+    },
+    "WED+SUN": {
+      "oos_sharpe": -0.46125953289826854,
+      "num_trades": 42
+    },
+    "THU+FRI": {
+      "oos_sharpe": 1.6025158546168465,
+      "num_trades": 37
+    },
+    "THU+SAT": {
+      "oos_sharpe": 1.6197157244141598,
+      "num_trades": 30
+    },
+    "THU+SUN": {
+      "oos_sharpe": 0.8461712834462841,
+      "num_trades": 41
+    },
+    "FRI+SAT": {
+      "oos_sharpe": 1.6418611089774002,
+      "num_trades": 32
+    },
+    "FRI+SUN": {
+      "oos_sharpe": 1.1858837648952918,
+      "num_trades": 44
+    },
+    "SAT+SUN": {
+      "oos_sharpe": 0.6770579753710743,
+      "num_trades": 34
+    },
+    "MON+TUE+WED": {
+      "oos_sharpe": -1.0884849870169462,
+      "num_trades": 64
+    },
+    "MON+TUE+THU": {
+      "oos_sharpe": -0.1949101121736972,
+      "num_trades": 65
+    },
+    "MON+TUE+FRI": {
+      "oos_sharpe": 0.1900986043449888,
+      "num_trades": 69
+    },
+    "MON+TUE+SAT": {
+      "oos_sharpe": -0.3885184275799444,
+      "num_trades": 59
+    },
+    "MON+TUE+SUN": {
+      "oos_sharpe": -0.5118496916173301,
+      "num_trades": 66
+    },
+    "MON+WED+THU": {
+      "oos_sharpe": -0.8847977734011052,
+      "num_trades": 57
+    },
+    "MON+WED+FRI": {
+      "oos_sharpe": -0.21690414520500836,
+      "num_trades": 64
+    },
+    "MON+WED+SAT": {
+      "oos_sharpe": -0.7009568232979726,
+      "num_trades": 55
+    },
+    "MON+WED+SUN": {
+      "oos_sharpe": -0.7923687631381973,
+      "num_trades": 62
+    },
+    "MON+THU+FRI": {
+      "oos_sharpe": 0.6806186807342375,
+      "num_trades": 61
+    },
+    "MON+THU+SAT": {
+      "oos_sharpe": 0.4193634752919235,
+      "num_trades": 54
+    },
+    "MON+THU+SUN": {
+      "oos_sharpe": 0.19562175664324097,
+      "num_trades": 61
+    },
+    "MON+FRI+SAT": {
+      "oos_sharpe": 0.640131512587776,
+      "num_trades": 56
+    },
+    "MON+FRI+SUN": {
+      "oos_sharpe": 0.5499759333146433,
+      "num_trades": 64
+    },
+    "MON+SAT+SUN": {
+      "oos_sharpe": 0.020664696410853077,
+      "num_trades": 54
+    },
+    "TUE+WED+THU": {
+      "oos_sharpe": -0.5534147765199083,
+      "num_trades": 55
+    },
+    "TUE+WED+FRI": {
+      "oos_sharpe": 0.11844862594218147,
+      "num_trades": 62
+    },
+    "TUE+WED+SAT": {
+      "oos_sharpe": -0.34590431273698974,
+      "num_trades": 53
+    },
+    "TUE+WED+SUN": {
+      "oos_sharpe": -0.5492265435797111,
+      "num_trades": 64
+    },
+    "TUE+THU+FRI": {
+      "oos_sharpe": 1.0229302753893663,
+      "num_trades": 61
+    },
+    "TUE+THU+SAT": {
+      "oos_sharpe": 0.8159716062727191,
+      "num_trades": 54
+    },
+    "TUE+THU+SUN": {
+      "oos_sharpe": 0.4190343906314028,
+      "num_trades": 65
+    },
+    "TUE+FRI+SAT": {
+      "oos_sharpe": 0.999694253997568,
+      "num_trades": 56
+    },
+    "TUE+FRI+SUN": {
+      "oos_sharpe": 0.760211735484464,
+      "num_trades": 68
+    },
+    "TUE+SAT+SUN": {
+      "oos_sharpe": 0.2516796987642604,
+      "num_trades": 58
+    },
+    "WED+THU+FRI": {
+      "oos_sharpe": 0.36267581237516555,
+      "num_trades": 52
+    },
+    "WED+THU+SAT": {
+      "oos_sharpe": 0.024690730348278976,
+      "num_trades": 45
+    },
+    "WED+THU+SUN": {
+      "oos_sharpe": -0.2502086014479906,
+      "num_trades": 56
+    },
+    "WED+FRI+SAT": {
+      "oos_sharpe": 0.5549550454603417,
+      "num_trades": 50
+    },
+    "WED+FRI+SUN": {
+      "oos_sharpe": 0.3762470084631787,
+      "num_trades": 62
+    },
+    "WED+SAT+SUN": {
+      "oos_sharpe": -0.035871527728860514,
+      "num_trades": 53
+    },
+    "THU+FRI+SAT": {
+      "oos_sharpe": 1.7540317657058442,
+      "num_trades": 47
+    },
+    "THU+FRI+SUN": {
+      "oos_sharpe": 1.3613412270496468,
+      "num_trades": 59
+    },
+    "THU+SAT+SUN": {
+      "oos_sharpe": 1.2184699851186584,
+      "num_trades": 52
+    },
+    "FRI+SAT+SUN": {
+      "oos_sharpe": 1.3547700246111753,
+      "num_trades": 54
+    },
+    "MON+TUE+WED+THU": {
+      "oos_sharpe": -0.8782890876022721,
+      "num_trades": 78
+    },
+    "MON+TUE+WED+FRI": {
+      "oos_sharpe": -0.2963108084100055,
+      "num_trades": 85
+    },
+    "MON+TUE+WED+SAT": {
+      "oos_sharpe": -0.7168789670241198,
+      "num_trades": 76
+    },
+    "MON+TUE+WED+SUN": {
+      "oos_sharpe": -0.804174106840347,
+      "num_trades": 83
+    },
+    "MON+TUE+THU+FRI": {
+      "oos_sharpe": 0.4218885759545175,
+      "num_trades": 84
+    },
+    "MON+TUE+THU+SAT": {
+      "oos_sharpe": 0.16006580532350037,
+      "num_trades": 77
+    },
+    "MON+TUE+THU+SUN": {
+      "oos_sharpe": -0.0034781644616238027,
+      "num_trades": 84
+    },
+    "MON+TUE+FRI+SAT": {
+      "oos_sharpe": 0.37463846949796026,
+      "num_trades": 79
+    },
+    "MON+TUE+FRI+SUN": {
+      "oos_sharpe": 0.32376444178974995,
+      "num_trades": 87
+    },
+    "MON+TUE+SAT+SUN": {
+      "oos_sharpe": -0.16079740397549933,
+      "num_trades": 77
+    },
+    "MON+WED+THU+FRI": {
+      "oos_sharpe": -0.1598397239349203,
+      "num_trades": 76
+    },
+    "MON+WED+THU+SAT": {
+      "oos_sharpe": -0.49305765696867443,
+      "num_trades": 69
+    },
+    "MON+WED+THU+SUN": {
+      "oos_sharpe": -0.601113846731184,
+      "num_trades": 76
+    },
+    "MON+WED+FRI+SAT": {
+      "oos_sharpe": -0.018638649499908157,
+      "num_trades": 74
+    },
+    "MON+WED+FRI+SUN": {
+      "oos_sharpe": -0.038637409170676575,
+      "num_trades": 82
+    },
+    "MON+WED+SAT+SUN": {
+      "oos_sharpe": -0.4321647039450275,
+      "num_trades": 73
+    },
+    "MON+THU+FRI+SAT": {
+      "oos_sharpe": 0.8570784925485243,
+      "num_trades": 71
+    },
+    "MON+THU+FRI+SUN": {
+      "oos_sharpe": 0.7587189163115425,
+      "num_trades": 79
+    },
+    "MON+THU+SAT+SUN": {
+      "oos_sharpe": 0.535411089681326,
+      "num_trades": 72
+    },
+    "MON+FRI+SAT+SUN": {
+      "oos_sharpe": 0.7228789666859601,
+      "num_trades": 74
+    },
+    "TUE+WED+THU+FRI": {
+      "oos_sharpe": 0.1573094238405976,
+      "num_trades": 74
+    },
+    "TUE+WED+THU+SAT": {
+      "oos_sharpe": -0.1541615722879113,
+      "num_trades": 67
+    },
+    "TUE+WED+THU+SUN": {
+      "oos_sharpe": -0.36843407014176527,
+      "num_trades": 78
+    },
+    "TUE+WED+FRI+SAT": {
+      "oos_sharpe": 0.31352613555117154,
+      "num_trades": 72
+    },
+    "TUE+WED+FRI+SUN": {
+      "oos_sharpe": 0.1892212027110696,
+      "num_trades": 84
+    },
+    "TUE+WED+SAT+SUN": {
+      "oos_sharpe": -0.18885104281620582,
+      "num_trades": 75
+    },
+    "TUE+THU+FRI+SAT": {
+      "oos_sharpe": 1.19085866619423,
+      "num_trades": 71
+    },
+    "TUE+THU+FRI+SUN": {
+      "oos_sharpe": 0.9571265824528075,
+      "num_trades": 83
+    },
+    "TUE+THU+SAT+SUN": {
+      "oos_sharpe": 0.7555226039254177,
+      "num_trades": 76
+    },
+    "TUE+FRI+SAT+SUN": {
+      "oos_sharpe": 0.9282767283156409,
+      "num_trades": 78
+    },
+    "WED+THU+FRI+SAT": {
+      "oos_sharpe": 0.5622414372648882,
+      "num_trades": 62
+    },
+    "WED+THU+FRI+SUN": {
+      "oos_sharpe": 0.39862290447755416,
+      "num_trades": 74
+    },
+    "WED+THU+SAT+SUN": {
+      "oos_sharpe": 0.12422927177520128,
+      "num_trades": 67
+    },
+    "WED+FRI+SAT+SUN": {
+      "oos_sharpe": 0.5583084905174174,
+      "num_trades": 72
+    },
+    "THU+FRI+SAT+SUN": {
+      "oos_sharpe": 1.5126511860796208,
+      "num_trades": 69
+    },
+    "MON+TUE+WED+THU+FRI": {
+      "oos_sharpe": -0.2426071535896324,
+      "num_trades": 97
+    },
+    "MON+TUE+WED+THU+SAT": {
+      "oos_sharpe": -0.5403634414221207,
+      "num_trades": 90
+    },
+    "MON+TUE+WED+THU+SUN": {
+      "oos_sharpe": -0.6380435723041507,
+      "num_trades": 97
+    },
+    "MON+TUE+WED+FRI+SAT": {
+      "oos_sharpe": -0.11769118888592948,
+      "num_trades": 95
+    },
+    "MON+TUE+WED+FRI+SUN": {
+      "oos_sharpe": -0.12968416431914276,
+      "num_trades": 103
+    },
+    "MON+TUE+WED+SAT+SUN": {
+      "oos_sharpe": -0.4871504303363741,
+      "num_trades": 94
+    },
+    "MON+TUE+THU+FRI+SAT": {
+      "oos_sharpe": 0.5877367745677873,
+      "num_trades": 94
+    },
+    "MON+TUE+THU+FRI+SUN": {
+      "oos_sharpe": 0.52645955013736,
+      "num_trades": 102
+    },
+    "MON+TUE+THU+SAT+SUN": {
+      "oos_sharpe": 0.300948553224201,
+      "num_trades": 95
+    },
+    "MON+TUE+FRI+SAT+SUN": {
+      "oos_sharpe": 0.4857255515375634,
+      "num_trades": 97
+    },
+    "MON+WED+THU+FRI+SAT": {
+      "oos_sharpe": 0.02535356930390017,
+      "num_trades": 86
+    },
+    "MON+WED+THU+FRI+SUN": {
+      "oos_sharpe": 0.003136878717185287,
+      "num_trades": 94
+    },
+    "MON+WED+THU+SAT+SUN": {
+      "oos_sharpe": -0.27252253442540836,
+      "num_trades": 87
+    },
+    "MON+WED+FRI+SAT+SUN": {
+      "oos_sharpe": 0.13311492951841664,
+      "num_trades": 92
+    },
+    "MON+THU+FRI+SAT+SUN": {
+      "oos_sharpe": 0.9149572794709577,
+      "num_trades": 89
+    },
+    "TUE+WED+THU+FRI+SAT": {
+      "oos_sharpe": 0.33967800012853894,
+      "num_trades": 84
+    },
+    "TUE+WED+THU+FRI+SUN": {
+      "oos_sharpe": 0.22072626940516585,
+      "num_trades": 96
+    },
+    "TUE+WED+THU+SAT+SUN": {
+      "oos_sharpe": -0.04032721978962263,
+      "num_trades": 89
+    },
+    "TUE+WED+FRI+SAT+SUN": {
+      "oos_sharpe": 0.3578663297068433,
+      "num_trades": 94
+    },
+    "TUE+THU+FRI+SAT+SUN": {
+      "oos_sharpe": 1.1091840159480906,
+      "num_trades": 93
+    },
+    "WED+THU+FRI+SAT+SUN": {
+      "oos_sharpe": 0.5702165873722356,
+      "num_trades": 84
+    },
+    "MON+TUE+WED+THU+FRI+SAT": {
+      "oos_sharpe": -0.07366854113093683,
+      "num_trades": 107
+    },
+    "MON+TUE+WED+THU+FRI+SUN": {
+      "oos_sharpe": -0.08805966378957557,
+      "num_trades": 115
+    },
+    "MON+TUE+WED+THU+SAT+SUN": {
+      "oos_sharpe": -0.34324191814432536,
+      "num_trades": 108
+    },
+    "MON+TUE+WED+FRI+SAT+SUN": {
+      "oos_sharpe": 0.028977136461067136,
+      "num_trades": 113
+    },
+    "MON+TUE+THU+FRI+SAT+SUN": {
+      "oos_sharpe": 0.6752048157510393,
+      "num_trades": 112
+    },
+    "MON+WED+THU+FRI+SAT+SUN": {
+      "oos_sharpe": 0.16609694275320036,
+      "num_trades": 104
+    },
+    "TUE+WED+THU+FRI+SAT+SUN": {
+      "oos_sharpe": 0.3809554475993169,
+      "num_trades": 106
+    },
+    "MON+TUE+WED+THU+FRI+SAT+SUN": {
+      "oos_sharpe": 0.06363025825842882,
+      "num_trades": 125
     }
   },
-  "winner_mask": "FRI",
-  "winner_sharpe": 1.4769765720779362,
-  "winner_trades": 22,
+  "winner_mask": "THU+FRI+SAT",
+  "winner_sharpe": 1.7540317657058442,
+  "winner_trades": 47,
   "dow_improved": true,
   "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
 }
