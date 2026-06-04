@@ -399,7 +399,7 @@ def _worker_v2(task):
                 sharpe, trades = _eval_single_dow(
                     close_s_t, le_t, lx_t, se_t, sx_t, atr_t,
                     sl_type, nudged, dow_days=dow_days, freq=TF_FREQ_MAP[tf],
-                    vwap=vwap_t, std_dev=std_dev_t, band_mult=band_mult,
+                    vwap=vwap_t, std_dev=std_dev_t, band_mult=nudged.get("band_mult", band_mult),
                 )
             else:
                 sharpe, trades = _eval_single_dow(
