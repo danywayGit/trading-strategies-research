@@ -40,7 +40,7 @@ def nudge_params(best_params: dict, factor: float) -> dict:
         elif isinstance(v, int):
             result[k] = max(1, round(v * factor))
         elif isinstance(v, float):
-            result[k] = round(v * factor, 4)
+            result[k] = max(1e-9, round(v * factor, 4))
         else:
             result[k] = v
     return result
@@ -90,7 +90,11 @@ def _predownload(strategy_id: str, results_base: Path, backtesting_mcp: Path) ->
     from src.core.backtesting_engine import engine
     from config.settings import TimeFrame
     for tf in tfs:
-        tf_enum = getattr(TimeFrame, TF_ENUM_NAME[tf])
+        enum_name = TF_ENUM_NAME.get(tf)
+        if enum_name is None:
+            print(f"Warning: unknown timeframe {tf!r} in Stage 3 results, skipping", file=sys.stderr)
+            continue
+        tf_enum = getattr(TimeFrame, enum_name)
         print(f"Pre-downloading {len(syms)} symbols ({tf})...")
         for sym in syms:
             symbol_usdt = sym + "USDT"
@@ -145,8 +149,8 @@ def run_sensitivity_parallel(strategy_id: str, results_base: Path,
     while remaining:
         try:
             with ProcessPoolExecutor(max_workers=workers) as executor:
-                futures = {executor.submit(worker_fn, task): task for task in remaining}
                 completed_tasks = []
+                futures = {executor.submit(worker_fn, task): task for task in remaining}
                 for future in as_completed(futures):
                     task = futures[future]
                     completed_tasks.append(task)

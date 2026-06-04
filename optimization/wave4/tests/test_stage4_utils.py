@@ -88,3 +88,21 @@ def test_load_stage3_passing_skips_none_winner_sharpe():
 
 def test_sensitivity_filter_default():
     assert SENSITIVITY_FILTER == 0.5
+
+def test_load_stage3_passing_rejects_non_usdt_symbol():
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        d = tmp / "SWING3" / "stage3"; d.mkdir(parents=True)
+        payload = {"symbol": "BTCETH", "timeframe": "4h", "direction": "both",
+                   "sl_type": "atr", "winner_sharpe": 0.8, "winner_mask": "ALL",
+                   "winner_trades": 30, "stage2_oos_sharpe": 0.5, "best_params": {}}
+        (d / "BTCETH_4h_both_atr_dow.json").write_text(json.dumps(payload))
+        assert load_stage3_passing("SWING3", tmp) == []
+
+def test_load_stage3_passing_skips_corrupt_json():
+    with tempfile.TemporaryDirectory() as tmp:
+        tmp = Path(tmp)
+        d = tmp / "SWING3" / "stage3"; d.mkdir(parents=True)
+        (d / "BTCUSDT_4h_both_atr_dow.json").write_text("{invalid json")
+        result = load_stage3_passing("SWING3", tmp)
+        assert result == []
