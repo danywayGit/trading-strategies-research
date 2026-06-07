@@ -1,0 +1,91 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "SHIBUSDT",
+  "timeframe": "12h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 60,
+    "volume_spike_mult": 1.2,
+    "adx_threshold": 20,
+    "cooldown_bars": 10,
+    "direction": "both",
+    "tp2_mult": 2.5
+  },
+  "winner_mask": "MON+TUE+WED+THU+FRI+SAT",
+  "winner_sharpe": 1.5176329773264745,
+  "winner_trades": 22,
+  "stage2_oos_sharpe": 1.3997,
+  "sensitivity": {
+    "profile_lookback": {
+      "up": {
+        "sharpe": 1.5176329773264745,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 1.5176329773264745,
+        "trades": 22
+      },
+      "sensitive": false
+    },
+    "value_area_pct": {
+      "up": {
+        "sharpe": 1.5176329773264745,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 1.5176329773264745,
+        "trades": 22
+      },
+      "sensitive": false
+    },
+    "volume_spike_mult": {
+      "up": {
+        "sharpe": 1.5176329773264745,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 1.5176329773264745,
+        "trades": 22
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 1.5176329773264745,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 1.5176329773264745,
+        "trades": 22
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 1.5176329773264745,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 1.5176329773264745,
+        "trades": 22
+      },
+      "sensitive": false
+    },
+    "tp2_mult": {
+      "up": {
+        "sharpe": 1.61729014470226,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 0.9282206791045681,
+        "trades": 24
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

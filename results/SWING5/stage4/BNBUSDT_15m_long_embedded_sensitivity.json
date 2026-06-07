@@ -1,0 +1,91 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "BNBUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "kc_length": 15,
+    "kc_mult": 1.5,
+    "cci_period": 28,
+    "cci_long_min": 0,
+    "cci_short_max": 0,
+    "direction": "long",
+    "rr_ratio": 4.0
+  },
+  "winner_mask": "MON+WED",
+  "winner_sharpe": 2.6872791074396494,
+  "winner_trades": 147,
+  "stage2_oos_sharpe": 0.5815,
+  "sensitivity": {
+    "kc_length": {
+      "up": {
+        "sharpe": 2.6872791074396494,
+        "trades": 147
+      },
+      "down": {
+        "sharpe": 2.6872791074396494,
+        "trades": 147
+      },
+      "sensitive": false
+    },
+    "kc_mult": {
+      "up": {
+        "sharpe": 2.6872791074396494,
+        "trades": 147
+      },
+      "down": {
+        "sharpe": 2.6872791074396494,
+        "trades": 147
+      },
+      "sensitive": false
+    },
+    "cci_period": {
+      "up": {
+        "sharpe": 2.6872791074396494,
+        "trades": 147
+      },
+      "down": {
+        "sharpe": 2.6872791074396494,
+        "trades": 147
+      },
+      "sensitive": false
+    },
+    "cci_long_min": {
+      "up": {
+        "sharpe": 2.6872791074396494,
+        "trades": 147
+      },
+      "down": {
+        "sharpe": 2.6872791074396494,
+        "trades": 147
+      },
+      "sensitive": false
+    },
+    "cci_short_max": {
+      "up": {
+        "sharpe": 2.6872791074396494,
+        "trades": 147
+      },
+      "down": {
+        "sharpe": 2.6872791074396494,
+        "trades": 147
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 3.0563391520895946,
+        "trades": 141
+      },
+      "down": {
+        "sharpe": 2.137965151414544,
+        "trades": 150
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

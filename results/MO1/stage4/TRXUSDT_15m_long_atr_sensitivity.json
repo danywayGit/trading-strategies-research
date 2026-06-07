@@ -1,0 +1,103 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "TRXUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "rsi_period": 10,
+    "momentum_threshold": 3.0,
+    "adx_trend_confirm": 25,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 2.0
+  },
+  "winner_mask": "MON+TUE+FRI",
+  "winner_sharpe": 3.102817331095886,
+  "winner_trades": 210,
+  "stage2_oos_sharpe": 1.0348,
+  "sensitivity": {
+    "rsi_period": {
+      "up": {
+        "sharpe": 3.102817331095886,
+        "trades": 210
+      },
+      "down": {
+        "sharpe": 3.102817331095886,
+        "trades": 210
+      },
+      "sensitive": false
+    },
+    "momentum_threshold": {
+      "up": {
+        "sharpe": 3.102817331095886,
+        "trades": 210
+      },
+      "down": {
+        "sharpe": 3.102817331095886,
+        "trades": 210
+      },
+      "sensitive": false
+    },
+    "adx_trend_confirm": {
+      "up": {
+        "sharpe": 3.102817331095886,
+        "trades": 210
+      },
+      "down": {
+        "sharpe": 3.102817331095886,
+        "trades": 210
+      },
+      "sensitive": false
+    },
+    "adx_exit_fade": {
+      "up": {
+        "sharpe": 3.102817331095886,
+        "trades": 210
+      },
+      "down": {
+        "sharpe": 3.102817331095886,
+        "trades": 210
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 3.102817331095886,
+        "trades": 210
+      },
+      "down": {
+        "sharpe": 3.102817331095886,
+        "trades": 210
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 2.3325241323226087,
+        "trades": 204
+      },
+      "down": {
+        "sharpe": 2.6623002155779445,
+        "trades": 226
+      },
+      "sensitive": true
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 2.9329908422485977,
+        "trades": 206
+      },
+      "down": {
+        "sharpe": 2.739147871580461,
+        "trades": 221
+      },
+      "sensitive": false
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

@@ -1,0 +1,91 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "AVAXUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 0,
+    "swing_lookback": 5,
+    "massive_candle_mult": 1.5,
+    "direction": "both",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 2.5
+  },
+  "winner_mask": "TUE+WED+THU+FRI+SAT",
+  "winner_sharpe": 0.8628385887695464,
+  "winner_trades": 97,
+  "stage2_oos_sharpe": 0.3625,
+  "sensitivity": {
+    "ema_length": {
+      "up": {
+        "sharpe": 0.8628385887695464,
+        "trades": 97
+      },
+      "down": {
+        "sharpe": 0.8628385887695464,
+        "trades": 97
+      },
+      "sensitive": false
+    },
+    "pullback_tolerance": {
+      "up": {
+        "sharpe": 0.8628385887695464,
+        "trades": 97
+      },
+      "down": {
+        "sharpe": 0.8628385887695464,
+        "trades": 97
+      },
+      "sensitive": false
+    },
+    "swing_lookback": {
+      "up": {
+        "sharpe": 0.8628385887695464,
+        "trades": 97
+      },
+      "down": {
+        "sharpe": 0.8628385887695464,
+        "trades": 97
+      },
+      "sensitive": false
+    },
+    "massive_candle_mult": {
+      "up": {
+        "sharpe": 0.8628385887695464,
+        "trades": 97
+      },
+      "down": {
+        "sharpe": 0.8628385887695464,
+        "trades": 97
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 0.4444523892501273,
+        "trades": 97
+      },
+      "down": {
+        "sharpe": 1.033576854452246,
+        "trades": 98
+      },
+      "sensitive": true
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 0.7014569426545967,
+        "trades": 97
+      },
+      "down": {
+        "sharpe": 0.9775080030338722,
+        "trades": 99
+      },
+      "sensitive": false
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,91 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "ETHUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "rsi_period": 10,
+    "momentum_threshold": 3.0,
+    "adx_trend_confirm": 20,
+    "adx_exit_fade": 20,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 1.5
+  },
+  "winner_mask": "WED",
+  "winner_sharpe": 3.0510665098532854,
+  "winner_trades": 32,
+  "stage2_oos_sharpe": 0.7543,
+  "sensitivity": {
+    "rsi_period": {
+      "up": {
+        "sharpe": 3.0510665098532854,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 3.0510665098532854,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "momentum_threshold": {
+      "up": {
+        "sharpe": 3.0510665098532854,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 3.0510665098532854,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "adx_trend_confirm": {
+      "up": {
+        "sharpe": 3.0510665098532854,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 3.0510665098532854,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "adx_exit_fade": {
+      "up": {
+        "sharpe": 3.0510665098532854,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 3.0510665098532854,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 3.0510665098532854,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 3.0510665098532854,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 3.003713764325298,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 3.112485250247948,
+        "trades": 33
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

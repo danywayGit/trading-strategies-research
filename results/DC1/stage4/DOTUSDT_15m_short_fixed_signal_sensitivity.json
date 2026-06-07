@@ -1,0 +1,115 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "DOTUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "donchian_length": 55,
+    "adx_threshold": 30,
+    "adx_exit": 15,
+    "atr_period": 21,
+    "vol_avg_period": 14,
+    "vol_mult": 1.2,
+    "direction": "short",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "MON+SAT",
+  "winner_sharpe": 1.8906986513996358,
+  "winner_trades": 26,
+  "stage2_oos_sharpe": 0.2567,
+  "sensitivity": {
+    "donchian_length": {
+      "up": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "adx_exit": {
+      "up": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "atr_period": {
+      "up": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "vol_avg_period": {
+      "up": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "vol_mult": {
+      "up": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 1.8906986513996358,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 1.8088647112577898,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 2.001933543456378,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.0979066847085344,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 1.8194700005376132,
+        "trades": 26
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

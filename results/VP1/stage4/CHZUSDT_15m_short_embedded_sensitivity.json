@@ -1,0 +1,91 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "CHZUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 80,
+    "volume_spike_mult": 1.2,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "short",
+    "tp2_mult": 2.0
+  },
+  "winner_mask": "MON+SAT+SUN",
+  "winner_sharpe": 1.124214340981079,
+  "winner_trades": 192,
+  "stage2_oos_sharpe": 0.1459,
+  "sensitivity": {
+    "profile_lookback": {
+      "up": {
+        "sharpe": 1.124214340981079,
+        "trades": 192
+      },
+      "down": {
+        "sharpe": 1.124214340981079,
+        "trades": 192
+      },
+      "sensitive": false
+    },
+    "value_area_pct": {
+      "up": {
+        "sharpe": 1.124214340981079,
+        "trades": 192
+      },
+      "down": {
+        "sharpe": 1.124214340981079,
+        "trades": 192
+      },
+      "sensitive": false
+    },
+    "volume_spike_mult": {
+      "up": {
+        "sharpe": 1.124214340981079,
+        "trades": 192
+      },
+      "down": {
+        "sharpe": 1.124214340981079,
+        "trades": 192
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 1.124214340981079,
+        "trades": 192
+      },
+      "down": {
+        "sharpe": 1.124214340981079,
+        "trades": 192
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 1.124214340981079,
+        "trades": 192
+      },
+      "down": {
+        "sharpe": 1.124214340981079,
+        "trades": 192
+      },
+      "sensitive": false
+    },
+    "tp2_mult": {
+      "up": {
+        "sharpe": 1.2291780708473314,
+        "trades": 192
+      },
+      "down": {
+        "sharpe": 1.3170798494795406,
+        "trades": 195
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

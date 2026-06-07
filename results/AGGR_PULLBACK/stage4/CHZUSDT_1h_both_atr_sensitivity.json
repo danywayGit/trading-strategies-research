@@ -1,0 +1,91 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "CHZUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 1,
+    "swing_lookback": 5,
+    "massive_candle_mult": 3.0,
+    "direction": "both",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 2.5
+  },
+  "winner_mask": "MON+WED+FRI+SAT",
+  "winner_sharpe": 3.8114512405572256,
+  "winner_trades": 28,
+  "stage2_oos_sharpe": 2.8854,
+  "sensitivity": {
+    "ema_length": {
+      "up": {
+        "sharpe": 3.8114512405572256,
+        "trades": 28
+      },
+      "down": {
+        "sharpe": 3.8114512405572256,
+        "trades": 28
+      },
+      "sensitive": false
+    },
+    "pullback_tolerance": {
+      "up": {
+        "sharpe": 3.8114512405572256,
+        "trades": 28
+      },
+      "down": {
+        "sharpe": 3.8114512405572256,
+        "trades": 28
+      },
+      "sensitive": false
+    },
+    "swing_lookback": {
+      "up": {
+        "sharpe": 3.8114512405572256,
+        "trades": 28
+      },
+      "down": {
+        "sharpe": 3.8114512405572256,
+        "trades": 28
+      },
+      "sensitive": false
+    },
+    "massive_candle_mult": {
+      "up": {
+        "sharpe": 3.8114512405572256,
+        "trades": 28
+      },
+      "down": {
+        "sharpe": 3.8114512405572256,
+        "trades": 28
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 3.3496089524761397,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 3.5000032416805484,
+        "trades": 28
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 2.933573734972355,
+        "trades": 27
+      },
+      "down": {
+        "sharpe": 3.405507271688009,
+        "trades": 28
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,115 @@
+{
+  "strategy": "ema_rejection_v1",
+  "symbol": "DOTUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "ema200_length": 250,
+    "rejection_lookback": 5,
+    "rsi_period": 10,
+    "rsi_ema_period": 7,
+    "rsi_confirm_window": 5,
+    "htf_bars": 36,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 3.0
+  },
+  "winner_mask": "MON+WED+SAT+SUN",
+  "winner_sharpe": 2.1151475301194402,
+  "winner_trades": 25,
+  "stage2_oos_sharpe": 0.9894,
+  "sensitivity": {
+    "ema200_length": {
+      "up": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "rejection_lookback": {
+      "up": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "rsi_period": {
+      "up": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "rsi_ema_period": {
+      "up": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "rsi_confirm_window": {
+      "up": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "htf_bars": {
+      "up": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.1151475301194402,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 2.2926977225842626,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 2.069933525250366,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.4074607478169905,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 1.8989806683721357,
+        "trades": 25
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

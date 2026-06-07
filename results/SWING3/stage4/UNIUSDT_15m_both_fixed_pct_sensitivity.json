@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "UNIUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 4,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 3.0,
+    "adx_threshold": 25,
+    "ema_filter": 100,
+    "direction": "both",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "MON+WED+FRI+SUN",
+  "winner_sharpe": 1.5395827105732942,
+  "winner_trades": 53,
+  "stage2_oos_sharpe": 0.4042,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 1.5395827105732942,
+        "trades": 53
+      },
+      "down": {
+        "sharpe": 1.5395827105732942,
+        "trades": 53
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 1.5395827105732942,
+        "trades": 53
+      },
+      "down": {
+        "sharpe": 1.5395827105732942,
+        "trades": 53
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 1.5395827105732942,
+        "trades": 53
+      },
+      "down": {
+        "sharpe": 1.5395827105732942,
+        "trades": 53
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 1.5395827105732942,
+        "trades": 53
+      },
+      "down": {
+        "sharpe": 1.5395827105732942,
+        "trades": 53
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 1.4235551009666816,
+        "trades": 53
+      },
+      "down": {
+        "sharpe": 1.1078729049692393,
+        "trades": 54
+      },
+      "sensitive": true
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 1.4674990209277798,
+        "trades": 53
+      },
+      "down": {
+        "sharpe": 1.2849445057141726,
+        "trades": 53
+      },
+      "sensitive": false
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

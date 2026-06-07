@@ -1,0 +1,103 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "BTCUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "bb_length": 25,
+    "bb_mult": 2.2,
+    "macd_fast": 12,
+    "macd_slow": 24,
+    "squeeze_bars": 5,
+    "direction": "both",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 2.5
+  },
+  "winner_mask": "SAT",
+  "winner_sharpe": 1.925329112624808,
+  "winner_trades": 20,
+  "stage2_oos_sharpe": 0.4553,
+  "sensitivity": {
+    "bb_length": {
+      "up": {
+        "sharpe": 1.925329112624808,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.925329112624808,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "bb_mult": {
+      "up": {
+        "sharpe": 1.925329112624808,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.925329112624808,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "macd_fast": {
+      "up": {
+        "sharpe": 1.925329112624808,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.925329112624808,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "macd_slow": {
+      "up": {
+        "sharpe": 1.925329112624808,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.925329112624808,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "squeeze_bars": {
+      "up": {
+        "sharpe": 1.925329112624808,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.925329112624808,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 1.249669249590047,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.3610864659440955,
+        "trades": 20
+      },
+      "sensitive": true
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 0.7408142737112733,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.5299450453774586,
+        "trades": 20
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

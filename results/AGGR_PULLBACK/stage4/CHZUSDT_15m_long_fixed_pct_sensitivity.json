@@ -1,0 +1,91 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "CHZUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "fixed_pct",
+  "stage": 4,
+  "best_params": {
+    "ema_length": 25,
+    "pullback_tolerance": 1,
+    "swing_lookback": 7,
+    "massive_candle_mult": 2.0,
+    "direction": "long",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "MON+WED+FRI+SUN",
+  "winner_sharpe": 1.812785250183037,
+  "winner_trades": 36,
+  "stage2_oos_sharpe": 0.2671,
+  "sensitivity": {
+    "ema_length": {
+      "up": {
+        "sharpe": 1.812785250183037,
+        "trades": 36
+      },
+      "down": {
+        "sharpe": 1.812785250183037,
+        "trades": 36
+      },
+      "sensitive": false
+    },
+    "pullback_tolerance": {
+      "up": {
+        "sharpe": 1.812785250183037,
+        "trades": 36
+      },
+      "down": {
+        "sharpe": 1.812785250183037,
+        "trades": 36
+      },
+      "sensitive": false
+    },
+    "swing_lookback": {
+      "up": {
+        "sharpe": 1.812785250183037,
+        "trades": 36
+      },
+      "down": {
+        "sharpe": 1.812785250183037,
+        "trades": 36
+      },
+      "sensitive": false
+    },
+    "massive_candle_mult": {
+      "up": {
+        "sharpe": 1.812785250183037,
+        "trades": 36
+      },
+      "down": {
+        "sharpe": 1.812785250183037,
+        "trades": 36
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 2.475947708853869,
+        "trades": 36
+      },
+      "down": {
+        "sharpe": 1.940428687728241,
+        "trades": 36
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.0865525620120517,
+        "trades": 36
+      },
+      "down": {
+        "sharpe": 1.3585205259844668,
+        "trades": 37
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

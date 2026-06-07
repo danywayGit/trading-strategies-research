@@ -1,0 +1,91 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "TRXUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "ema_length": 20,
+    "pullback_tolerance": 0,
+    "swing_lookback": 5,
+    "massive_candle_mult": 2.0,
+    "direction": "both",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 8.0
+  },
+  "winner_mask": "TUE+THU+FRI",
+  "winner_sharpe": 3.2653630235264983,
+  "winner_trades": 20,
+  "stage2_oos_sharpe": 2.1049,
+  "sensitivity": {
+    "ema_length": {
+      "up": {
+        "sharpe": 3.2653630235264983,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 3.2653630235264983,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "pullback_tolerance": {
+      "up": {
+        "sharpe": 3.2653630235264983,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 3.2653630235264983,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "swing_lookback": {
+      "up": {
+        "sharpe": 3.2653630235264983,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 3.2653630235264983,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "massive_candle_mult": {
+      "up": {
+        "sharpe": 3.2653630235264983,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 3.2653630235264983,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 3.1296280884872587,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 3.418843924967651,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.7375655670537293,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 3.451732974690495,
+        "trades": 21
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

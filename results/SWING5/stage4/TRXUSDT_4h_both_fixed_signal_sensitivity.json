@@ -1,0 +1,103 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "TRXUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "both",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "THU+SAT+SUN",
+  "winner_sharpe": 2.85738622805679,
+  "winner_trades": 24,
+  "stage2_oos_sharpe": 1.2286,
+  "sensitivity": {
+    "kc_length": {
+      "up": {
+        "sharpe": 2.85738622805679,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.85738622805679,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "kc_mult": {
+      "up": {
+        "sharpe": 2.85738622805679,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.85738622805679,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "cci_period": {
+      "up": {
+        "sharpe": 2.85738622805679,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.85738622805679,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "cci_long_min": {
+      "up": {
+        "sharpe": 2.85738622805679,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.85738622805679,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "cci_short_max": {
+      "up": {
+        "sharpe": 2.85738622805679,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.85738622805679,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 2.832227138571273,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.8287531601686964,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.800375279933493,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 3.1724305039815563,
+        "trades": 28
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

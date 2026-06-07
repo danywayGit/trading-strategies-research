@@ -1,0 +1,79 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "ETHUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 4.0,
+    "adx_threshold": 30,
+    "ema_filter": 50,
+    "direction": "both",
+    "atr_stop_mult": 2.5
+  },
+  "winner_mask": "MON+THU+FRI+SUN",
+  "winner_sharpe": 1.3649045562065347,
+  "winner_trades": 33,
+  "stage2_oos_sharpe": 0.7035,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 1.3649045562065347,
+        "trades": 33
+      },
+      "down": {
+        "sharpe": 1.3649045562065347,
+        "trades": 33
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 1.3649045562065347,
+        "trades": 33
+      },
+      "down": {
+        "sharpe": 1.3649045562065347,
+        "trades": 33
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 1.3649045562065347,
+        "trades": 33
+      },
+      "down": {
+        "sharpe": 1.3649045562065347,
+        "trades": 33
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 1.3649045562065347,
+        "trades": 33
+      },
+      "down": {
+        "sharpe": 1.3649045562065347,
+        "trades": 33
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 1.0679172732508737,
+        "trades": 33
+      },
+      "down": {
+        "sharpe": 1.2596701832375992,
+        "trades": 33
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

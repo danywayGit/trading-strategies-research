@@ -1,0 +1,91 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "UNIUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "both",
+    "rr_ratio": 2.0
+  },
+  "winner_mask": "TUE+WED+THU+SAT",
+  "winner_sharpe": 1.2534840238975544,
+  "winner_trades": 21,
+  "stage2_oos_sharpe": 0.4004,
+  "sensitivity": {
+    "kc_length": {
+      "up": {
+        "sharpe": 1.2534840238975544,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 1.2534840238975544,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "kc_mult": {
+      "up": {
+        "sharpe": 1.2534840238975544,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 1.2534840238975544,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "cci_period": {
+      "up": {
+        "sharpe": 1.2534840238975544,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 1.2534840238975544,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "cci_long_min": {
+      "up": {
+        "sharpe": 1.2534840238975544,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 1.2534840238975544,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "cci_short_max": {
+      "up": {
+        "sharpe": 1.2534840238975544,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 1.2534840238975544,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 1.2534840238975544,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 1.1493125825160877,
+        "trades": 22
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

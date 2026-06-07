@@ -1,0 +1,103 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "TAOUSDT",
+  "timeframe": "12h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "bb_length": 25,
+    "bb_mult": 1.8,
+    "macd_fast": 12,
+    "macd_slow": 24,
+    "squeeze_bars": 5,
+    "direction": "both",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.2578789509295727,
+  "winner_trades": 11,
+  "stage2_oos_sharpe": 1.2579,
+  "sensitivity": {
+    "bb_length": {
+      "up": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "down": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "sensitive": false
+    },
+    "bb_mult": {
+      "up": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "down": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "sensitive": false
+    },
+    "macd_fast": {
+      "up": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "down": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "sensitive": false
+    },
+    "macd_slow": {
+      "up": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "down": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "sensitive": false
+    },
+    "squeeze_bars": {
+      "up": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "down": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "down": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 1.787907320565302,
+        "trades": 11
+      },
+      "down": {
+        "sharpe": 1.2578789509295727,
+        "trades": 11
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt ~9 months data"
+}

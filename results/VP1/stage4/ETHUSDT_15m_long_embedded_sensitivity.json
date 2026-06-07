@@ -1,0 +1,91 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "ETHUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 60,
+    "volume_spike_mult": 2.0,
+    "adx_threshold": 25,
+    "cooldown_bars": 10,
+    "direction": "long",
+    "tp2_mult": 2.5
+  },
+  "winner_mask": "WED+SAT+SUN",
+  "winner_sharpe": 1.6644500550420775,
+  "winner_trades": 70,
+  "stage2_oos_sharpe": 0.0043,
+  "sensitivity": {
+    "profile_lookback": {
+      "up": {
+        "sharpe": 1.6644500550420775,
+        "trades": 70
+      },
+      "down": {
+        "sharpe": 1.6644500550420775,
+        "trades": 70
+      },
+      "sensitive": false
+    },
+    "value_area_pct": {
+      "up": {
+        "sharpe": 1.6644500550420775,
+        "trades": 70
+      },
+      "down": {
+        "sharpe": 1.6644500550420775,
+        "trades": 70
+      },
+      "sensitive": false
+    },
+    "volume_spike_mult": {
+      "up": {
+        "sharpe": 1.6644500550420775,
+        "trades": 70
+      },
+      "down": {
+        "sharpe": 1.6644500550420775,
+        "trades": 70
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 1.6644500550420775,
+        "trades": 70
+      },
+      "down": {
+        "sharpe": 1.6644500550420775,
+        "trades": 70
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 1.6644500550420775,
+        "trades": 70
+      },
+      "down": {
+        "sharpe": 1.6644500550420775,
+        "trades": 70
+      },
+      "sensitive": false
+    },
+    "tp2_mult": {
+      "up": {
+        "sharpe": 1.7950957704474706,
+        "trades": 70
+      },
+      "down": {
+        "sharpe": 1.355756569496422,
+        "trades": 71
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

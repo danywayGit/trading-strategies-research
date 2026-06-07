@@ -1,0 +1,103 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "ALGOUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "bb_length": 25,
+    "bb_mult": 2.2,
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "squeeze_bars": 5,
+    "direction": "short",
+    "atr_stop_mult": 3.0,
+    "rr_ratio": 2.0
+  },
+  "winner_mask": "FRI",
+  "winner_sharpe": 1.2709779262814456,
+  "winner_trades": 55,
+  "stage2_oos_sharpe": 0.0923,
+  "sensitivity": {
+    "bb_length": {
+      "up": {
+        "sharpe": 1.2709779262814456,
+        "trades": 55
+      },
+      "down": {
+        "sharpe": 1.2709779262814456,
+        "trades": 55
+      },
+      "sensitive": false
+    },
+    "bb_mult": {
+      "up": {
+        "sharpe": 1.2709779262814456,
+        "trades": 55
+      },
+      "down": {
+        "sharpe": 1.2709779262814456,
+        "trades": 55
+      },
+      "sensitive": false
+    },
+    "macd_fast": {
+      "up": {
+        "sharpe": 1.2709779262814456,
+        "trades": 55
+      },
+      "down": {
+        "sharpe": 1.2709779262814456,
+        "trades": 55
+      },
+      "sensitive": false
+    },
+    "macd_slow": {
+      "up": {
+        "sharpe": 1.2709779262814456,
+        "trades": 55
+      },
+      "down": {
+        "sharpe": 1.2709779262814456,
+        "trades": 55
+      },
+      "sensitive": false
+    },
+    "squeeze_bars": {
+      "up": {
+        "sharpe": 1.2709779262814456,
+        "trades": 55
+      },
+      "down": {
+        "sharpe": 1.2709779262814456,
+        "trades": 55
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 0.42300322678504526,
+        "trades": 51
+      },
+      "down": {
+        "sharpe": 0.7224049120623645,
+        "trades": 60
+      },
+      "sensitive": true
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 0.34096129367694755,
+        "trades": 52
+      },
+      "down": {
+        "sharpe": 0.26703095168816643,
+        "trades": 59
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

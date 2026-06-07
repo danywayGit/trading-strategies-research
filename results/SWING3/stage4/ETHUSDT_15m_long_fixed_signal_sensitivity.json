@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "ETHUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 4.0,
+    "adx_threshold": 25,
+    "ema_filter": 100,
+    "direction": "long",
+    "stop_loss_pct": 3.5,
+    "take_profit_pct": 9.0
+  },
+  "winner_mask": "WED+THU+FRI+SAT",
+  "winner_sharpe": 1.9302727522632726,
+  "winner_trades": 22,
+  "stage2_oos_sharpe": 0.5236,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 1.9302727522632726,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 1.9302727522632726,
+        "trades": 22
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 1.9302727522632726,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 1.9302727522632726,
+        "trades": 22
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 1.9302727522632726,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 1.9302727522632726,
+        "trades": 22
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 1.9302727522632726,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 1.9302727522632726,
+        "trades": 22
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 1.9302727522632726,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 1.9302727522632726,
+        "trades": 22
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.0018010992969604,
+        "trades": 22
+      },
+      "down": {
+        "sharpe": 1.688452349519134,
+        "trades": 22
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

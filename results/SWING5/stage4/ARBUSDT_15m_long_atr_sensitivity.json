@@ -1,0 +1,103 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "ARBUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "kc_length": 15,
+    "kc_mult": 2.5,
+    "cci_period": 28,
+    "cci_long_min": 0,
+    "cci_short_max": 0,
+    "direction": "long",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 4.0
+  },
+  "winner_mask": "MON+THU",
+  "winner_sharpe": 2.5291885257084203,
+  "winner_trades": 31,
+  "stage2_oos_sharpe": 0.801,
+  "sensitivity": {
+    "kc_length": {
+      "up": {
+        "sharpe": 2.5291885257084203,
+        "trades": 31
+      },
+      "down": {
+        "sharpe": 2.5291885257084203,
+        "trades": 31
+      },
+      "sensitive": false
+    },
+    "kc_mult": {
+      "up": {
+        "sharpe": 2.5291885257084203,
+        "trades": 31
+      },
+      "down": {
+        "sharpe": 2.5291885257084203,
+        "trades": 31
+      },
+      "sensitive": false
+    },
+    "cci_period": {
+      "up": {
+        "sharpe": 2.5291885257084203,
+        "trades": 31
+      },
+      "down": {
+        "sharpe": 2.5291885257084203,
+        "trades": 31
+      },
+      "sensitive": false
+    },
+    "cci_long_min": {
+      "up": {
+        "sharpe": 2.5291885257084203,
+        "trades": 31
+      },
+      "down": {
+        "sharpe": 2.5291885257084203,
+        "trades": 31
+      },
+      "sensitive": false
+    },
+    "cci_short_max": {
+      "up": {
+        "sharpe": 2.5291885257084203,
+        "trades": 31
+      },
+      "down": {
+        "sharpe": 2.5291885257084203,
+        "trades": 31
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 1.761548725243886,
+        "trades": 31
+      },
+      "down": {
+        "sharpe": 1.2062631724615893,
+        "trades": 33
+      },
+      "sensitive": true
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 2.0158088376977807,
+        "trades": 31
+      },
+      "down": {
+        "sharpe": 0.9721713711185267,
+        "trades": 33
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

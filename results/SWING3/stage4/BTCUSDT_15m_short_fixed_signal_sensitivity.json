@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "BTCUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 3.0,
+    "adx_threshold": 30,
+    "ema_filter": 50,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 9.0
+  },
+  "winner_mask": "MON+TUE+THU",
+  "winner_sharpe": 2.088817474845683,
+  "winner_trades": 20,
+  "stage2_oos_sharpe": 1.1978,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 2.088817474845683,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 2.088817474845683,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 2.088817474845683,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 2.088817474845683,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 2.088817474845683,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 2.088817474845683,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 2.088817474845683,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 2.088817474845683,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 2.088817474845683,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 2.088817474845683,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.088817474845683,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 2.1083283022322497,
+        "trades": 20
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

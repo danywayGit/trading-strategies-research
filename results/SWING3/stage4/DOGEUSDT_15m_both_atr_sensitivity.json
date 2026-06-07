@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "DOGEUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 4.0,
+    "adx_threshold": 25,
+    "ema_filter": 200,
+    "direction": "both",
+    "atr_stop_mult": 3.5,
+    "rr_ratio": 3.5
+  },
+  "winner_mask": "MON+WED+SUN",
+  "winner_sharpe": 2.3854251358921648,
+  "winner_trades": 25,
+  "stage2_oos_sharpe": 1.0914,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 2.3854251358921648,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.3854251358921648,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 2.3854251358921648,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.3854251358921648,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 2.3854251358921648,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.3854251358921648,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 2.3854251358921648,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.3854251358921648,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 2.163002298475221,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.1320082521576214,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 2.282160987084019,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 2.12558412622747,
+        "trades": 25
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "ICPUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_pct",
+  "stage": 4,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 4.0,
+    "adx_threshold": 25,
+    "ema_filter": 200,
+    "direction": "short",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "TUE+WED+THU+FRI+SUN",
+  "winner_sharpe": 0.862504599612924,
+  "winner_trades": 21,
+  "stage2_oos_sharpe": 0.3287,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 0.862504599612924,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 0.862504599612924,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 0.862504599612924,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 0.862504599612924,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 0.862504599612924,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 0.862504599612924,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 0.862504599612924,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 0.862504599612924,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 0.7060852081768321,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 1.031545129289238,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 0.5340807141775822,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 0.6905893193495551,
+        "trades": 21
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

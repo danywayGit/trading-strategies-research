@@ -1,0 +1,91 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "CHZUSDT",
+  "timeframe": "12h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "rsi_period": 10,
+    "momentum_threshold": 3.0,
+    "adx_trend_confirm": 20,
+    "adx_exit_fade": 20,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 1.5
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 1.3921173293655096,
+  "winner_trades": 8,
+  "stage2_oos_sharpe": 1.3921,
+  "sensitivity": {
+    "rsi_period": {
+      "up": {
+        "sharpe": 1.3921173293655096,
+        "trades": 8
+      },
+      "down": {
+        "sharpe": 1.3921173293655096,
+        "trades": 8
+      },
+      "sensitive": false
+    },
+    "momentum_threshold": {
+      "up": {
+        "sharpe": 1.3921173293655096,
+        "trades": 8
+      },
+      "down": {
+        "sharpe": 1.3921173293655096,
+        "trades": 8
+      },
+      "sensitive": false
+    },
+    "adx_trend_confirm": {
+      "up": {
+        "sharpe": 1.3921173293655096,
+        "trades": 8
+      },
+      "down": {
+        "sharpe": 1.3921173293655096,
+        "trades": 8
+      },
+      "sensitive": false
+    },
+    "adx_exit_fade": {
+      "up": {
+        "sharpe": 1.3921173293655096,
+        "trades": 8
+      },
+      "down": {
+        "sharpe": 1.3921173293655096,
+        "trades": 8
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 1.3921173293655096,
+        "trades": 8
+      },
+      "down": {
+        "sharpe": 1.3921173293655096,
+        "trades": 8
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 1.3921173293655096,
+        "trades": 8
+      },
+      "down": {
+        "sharpe": 1.4456416983418663,
+        "trades": 8
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

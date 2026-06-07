@@ -1,0 +1,103 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "ICPUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 4,
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 60,
+    "volume_spike_mult": 1.5,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "both",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 8.0
+  },
+  "winner_mask": "MON+WED+THU+SAT",
+  "winner_sharpe": 0.9442040575567349,
+  "winner_trades": 43,
+  "stage2_oos_sharpe": 0.1432,
+  "sensitivity": {
+    "profile_lookback": {
+      "up": {
+        "sharpe": 0.9442040575567349,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 0.9442040575567349,
+        "trades": 43
+      },
+      "sensitive": false
+    },
+    "value_area_pct": {
+      "up": {
+        "sharpe": 0.9442040575567349,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 0.9442040575567349,
+        "trades": 43
+      },
+      "sensitive": false
+    },
+    "volume_spike_mult": {
+      "up": {
+        "sharpe": 0.9442040575567349,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 0.9442040575567349,
+        "trades": 43
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 0.9442040575567349,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 0.9442040575567349,
+        "trades": 43
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 0.9442040575567349,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 0.9442040575567349,
+        "trades": 43
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 1.4307538823296606,
+        "trades": 40
+      },
+      "down": {
+        "sharpe": 0.6679557905049368,
+        "trades": 44
+      },
+      "sensitive": true
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 1.2727655946097274,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 0.7618282429611704,
+        "trades": 43
+      },
+      "sensitive": false
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

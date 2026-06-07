@@ -1,0 +1,103 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "CHZUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 2.0,
+    "cci_period": 28,
+    "cci_long_min": 0,
+    "cci_short_max": 0,
+    "direction": "both",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 3.0
+  },
+  "winner_mask": "THU+SAT",
+  "winner_sharpe": 2.9032578548667,
+  "winner_trades": 30,
+  "stage2_oos_sharpe": 1.1045,
+  "sensitivity": {
+    "kc_length": {
+      "up": {
+        "sharpe": 2.9032578548667,
+        "trades": 30
+      },
+      "down": {
+        "sharpe": 2.9032578548667,
+        "trades": 30
+      },
+      "sensitive": false
+    },
+    "kc_mult": {
+      "up": {
+        "sharpe": 2.9032578548667,
+        "trades": 30
+      },
+      "down": {
+        "sharpe": 2.9032578548667,
+        "trades": 30
+      },
+      "sensitive": false
+    },
+    "cci_period": {
+      "up": {
+        "sharpe": 2.9032578548667,
+        "trades": 30
+      },
+      "down": {
+        "sharpe": 2.9032578548667,
+        "trades": 30
+      },
+      "sensitive": false
+    },
+    "cci_long_min": {
+      "up": {
+        "sharpe": 2.9032578548667,
+        "trades": 30
+      },
+      "down": {
+        "sharpe": 2.9032578548667,
+        "trades": 30
+      },
+      "sensitive": false
+    },
+    "cci_short_max": {
+      "up": {
+        "sharpe": 2.9032578548667,
+        "trades": 30
+      },
+      "down": {
+        "sharpe": 2.9032578548667,
+        "trades": 30
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 3.350271194923196,
+        "trades": 29
+      },
+      "down": {
+        "sharpe": 2.57787353115208,
+        "trades": 30
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 3.4480579503826383,
+        "trades": 29
+      },
+      "down": {
+        "sharpe": 2.3666503573091617,
+        "trades": 30
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

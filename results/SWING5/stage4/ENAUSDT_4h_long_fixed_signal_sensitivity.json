@@ -1,0 +1,103 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "ENAUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "kc_length": 20,
+    "kc_mult": 1.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "long",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 8.0
+  },
+  "winner_mask": "TUE+WED+THU+FRI+SAT+SUN",
+  "winner_sharpe": 4.456481230473494,
+  "winner_trades": 21,
+  "stage2_oos_sharpe": 3.3554,
+  "sensitivity": {
+    "kc_length": {
+      "up": {
+        "sharpe": 4.456481230473494,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 4.456481230473494,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "kc_mult": {
+      "up": {
+        "sharpe": 4.456481230473494,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 4.456481230473494,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "cci_period": {
+      "up": {
+        "sharpe": 4.456481230473494,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 4.456481230473494,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "cci_long_min": {
+      "up": {
+        "sharpe": 4.456481230473494,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 4.456481230473494,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "cci_short_max": {
+      "up": {
+        "sharpe": 4.456481230473494,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 4.456481230473494,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 4.456481230473494,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 4.529997358919234,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 4.298353978249367,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 4.799062471996971,
+        "trades": 21
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt ~9 months data"
+}

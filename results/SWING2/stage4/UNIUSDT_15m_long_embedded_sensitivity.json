@@ -1,0 +1,103 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "UNIUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "bb_length": 15,
+    "bb_mult": 2.2,
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "squeeze_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 2.0,
+    "rr_ratio": 3.0
+  },
+  "winner_mask": "MON+WED+FRI",
+  "winner_sharpe": 2.5764189201642105,
+  "winner_trades": 190,
+  "stage2_oos_sharpe": 0.5468,
+  "sensitivity": {
+    "bb_length": {
+      "up": {
+        "sharpe": 2.5764189201642105,
+        "trades": 190
+      },
+      "down": {
+        "sharpe": 2.5764189201642105,
+        "trades": 190
+      },
+      "sensitive": false
+    },
+    "bb_mult": {
+      "up": {
+        "sharpe": 2.5764189201642105,
+        "trades": 190
+      },
+      "down": {
+        "sharpe": 2.5764189201642105,
+        "trades": 190
+      },
+      "sensitive": false
+    },
+    "macd_fast": {
+      "up": {
+        "sharpe": 2.5764189201642105,
+        "trades": 190
+      },
+      "down": {
+        "sharpe": 2.5764189201642105,
+        "trades": 190
+      },
+      "sensitive": false
+    },
+    "macd_slow": {
+      "up": {
+        "sharpe": 2.5764189201642105,
+        "trades": 190
+      },
+      "down": {
+        "sharpe": 2.5764189201642105,
+        "trades": 190
+      },
+      "sensitive": false
+    },
+    "squeeze_bars": {
+      "up": {
+        "sharpe": 2.5764189201642105,
+        "trades": 190
+      },
+      "down": {
+        "sharpe": 2.5764189201642105,
+        "trades": 190
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 2.504565983327428,
+        "trades": 181
+      },
+      "down": {
+        "sharpe": 3.2216625521436932,
+        "trades": 194
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 2.664137618549254,
+        "trades": 185
+      },
+      "down": {
+        "sharpe": 2.867440333297039,
+        "trades": 194
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

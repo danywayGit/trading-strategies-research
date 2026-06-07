@@ -1,0 +1,91 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "UNIUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "rsi_period": 10,
+    "momentum_threshold": 5.0,
+    "adx_trend_confirm": 15,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 2.0
+  },
+  "winner_mask": "MON+WED+FRI",
+  "winner_sharpe": 1.9517753430272398,
+  "winner_trades": 155,
+  "stage2_oos_sharpe": 0.9351,
+  "sensitivity": {
+    "rsi_period": {
+      "up": {
+        "sharpe": 1.9517753430272398,
+        "trades": 155
+      },
+      "down": {
+        "sharpe": 1.9517753430272398,
+        "trades": 155
+      },
+      "sensitive": false
+    },
+    "momentum_threshold": {
+      "up": {
+        "sharpe": 1.9517753430272398,
+        "trades": 155
+      },
+      "down": {
+        "sharpe": 1.9517753430272398,
+        "trades": 155
+      },
+      "sensitive": false
+    },
+    "adx_trend_confirm": {
+      "up": {
+        "sharpe": 1.9517753430272398,
+        "trades": 155
+      },
+      "down": {
+        "sharpe": 1.9517753430272398,
+        "trades": 155
+      },
+      "sensitive": false
+    },
+    "adx_exit_fade": {
+      "up": {
+        "sharpe": 1.9517753430272398,
+        "trades": 155
+      },
+      "down": {
+        "sharpe": 1.9517753430272398,
+        "trades": 155
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 1.9517753430272398,
+        "trades": 155
+      },
+      "down": {
+        "sharpe": 1.9517753430272398,
+        "trades": 155
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 1.9770899419228762,
+        "trades": 144
+      },
+      "down": {
+        "sharpe": 2.0191574410178186,
+        "trades": 163
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

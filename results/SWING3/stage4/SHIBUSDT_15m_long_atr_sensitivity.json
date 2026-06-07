@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "SHIBUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 4.0,
+    "adx_threshold": 25,
+    "ema_filter": 50,
+    "direction": "long",
+    "atr_stop_mult": 3.5,
+    "rr_ratio": 3.5
+  },
+  "winner_mask": "MON+TUE+SAT",
+  "winner_sharpe": 1.880170350519756,
+  "winner_trades": 27,
+  "stage2_oos_sharpe": 0.8783,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 1.880170350519756,
+        "trades": 27
+      },
+      "down": {
+        "sharpe": 1.880170350519756,
+        "trades": 27
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 1.880170350519756,
+        "trades": 27
+      },
+      "down": {
+        "sharpe": 1.880170350519756,
+        "trades": 27
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 1.880170350519756,
+        "trades": 27
+      },
+      "down": {
+        "sharpe": 1.880170350519756,
+        "trades": 27
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 1.880170350519756,
+        "trades": 27
+      },
+      "down": {
+        "sharpe": 1.880170350519756,
+        "trades": 27
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 1.5173106281512452,
+        "trades": 27
+      },
+      "down": {
+        "sharpe": 1.7545407706054108,
+        "trades": 27
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 1.6298516352450432,
+        "trades": 27
+      },
+      "down": {
+        "sharpe": 1.5923925786565687,
+        "trades": 27
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

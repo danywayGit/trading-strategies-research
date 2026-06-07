@@ -1,0 +1,79 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "LTCUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "band_mult": 2.0,
+    "volume_exhaustion_threshold": 0.5,
+    "rsi_oversold_floor": 35,
+    "rsi_overbought_ceil": 65,
+    "min_band_width_pct": 0.8,
+    "direction": "long"
+  },
+  "winner_mask": "TUE+WED+THU+FRI+SUN",
+  "winner_sharpe": 1.3920768436745539,
+  "winner_trades": 23,
+  "stage2_oos_sharpe": 0.7791,
+  "sensitivity": {
+    "band_mult": {
+      "up": {
+        "sharpe": 1.3845793202098131,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 1.0480581543552794,
+        "trades": 24
+      },
+      "sensitive": true
+    },
+    "volume_exhaustion_threshold": {
+      "up": {
+        "sharpe": 1.3920768436745539,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 1.3920768436745539,
+        "trades": 23
+      },
+      "sensitive": false
+    },
+    "rsi_oversold_floor": {
+      "up": {
+        "sharpe": 1.3920768436745539,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 1.3920768436745539,
+        "trades": 23
+      },
+      "sensitive": false
+    },
+    "rsi_overbought_ceil": {
+      "up": {
+        "sharpe": 1.3920768436745539,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 1.3920768436745539,
+        "trades": 23
+      },
+      "sensitive": false
+    },
+    "min_band_width_pct": {
+      "up": {
+        "sharpe": 1.3920768436745539,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 1.3920768436745539,
+        "trades": 23
+      },
+      "sensitive": false
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

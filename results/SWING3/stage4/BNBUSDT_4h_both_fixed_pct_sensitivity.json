@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "BNBUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 4,
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 4.0,
+    "adx_threshold": 20,
+    "ema_filter": 50,
+    "direction": "both",
+    "stop_loss_pct": 3.5,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.909039408985987,
+  "winner_trades": 18,
+  "stage2_oos_sharpe": 0.909,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 0.909039408985987,
+        "trades": 18
+      },
+      "down": {
+        "sharpe": 0.909039408985987,
+        "trades": 18
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 0.909039408985987,
+        "trades": 18
+      },
+      "down": {
+        "sharpe": 0.909039408985987,
+        "trades": 18
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 0.909039408985987,
+        "trades": 18
+      },
+      "down": {
+        "sharpe": 0.909039408985987,
+        "trades": 18
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 0.909039408985987,
+        "trades": 18
+      },
+      "down": {
+        "sharpe": 0.909039408985987,
+        "trades": 18
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 0.8314760258482674,
+        "trades": 17
+      },
+      "down": {
+        "sharpe": 0.48140669731647906,
+        "trades": 18
+      },
+      "sensitive": true
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 0.6190500768278818,
+        "trades": 18
+      },
+      "down": {
+        "sharpe": 0.7822734406153395,
+        "trades": 18
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

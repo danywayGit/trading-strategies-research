@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "ALGOUSDT",
+  "timeframe": "4h",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 2.0,
+    "adx_threshold": 20,
+    "ema_filter": 50,
+    "direction": "short",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 9.0
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.9057835497237398,
+  "winner_trades": 12,
+  "stage2_oos_sharpe": 0.9058,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 0.9057835497237398,
+        "trades": 12
+      },
+      "down": {
+        "sharpe": 0.9057835497237398,
+        "trades": 12
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 0.9057835497237398,
+        "trades": 12
+      },
+      "down": {
+        "sharpe": 0.9057835497237398,
+        "trades": 12
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 0.9057835497237398,
+        "trades": 12
+      },
+      "down": {
+        "sharpe": 0.9057835497237398,
+        "trades": 12
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 0.9057835497237398,
+        "trades": 12
+      },
+      "down": {
+        "sharpe": 0.9057835497237398,
+        "trades": 12
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 0.8263856953337798,
+        "trades": 12
+      },
+      "down": {
+        "sharpe": 0.9057835497237398,
+        "trades": 12
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 1.1560518830501223,
+        "trades": 12
+      },
+      "down": {
+        "sharpe": 1.047307992139935,
+        "trades": 12
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

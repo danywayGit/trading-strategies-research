@@ -1,0 +1,103 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "SHIBUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 80,
+    "volume_spike_mult": 2.0,
+    "adx_threshold": 25,
+    "cooldown_bars": 10,
+    "direction": "long",
+    "atr_stop_mult": 1.0,
+    "rr_ratio": 3.0
+  },
+  "winner_mask": "MON+TUE+SAT",
+  "winner_sharpe": 1.7686339516536118,
+  "winner_trades": 84,
+  "stage2_oos_sharpe": 0.7859,
+  "sensitivity": {
+    "profile_lookback": {
+      "up": {
+        "sharpe": 1.7686339516536118,
+        "trades": 84
+      },
+      "down": {
+        "sharpe": 1.7686339516536118,
+        "trades": 84
+      },
+      "sensitive": false
+    },
+    "value_area_pct": {
+      "up": {
+        "sharpe": 1.7686339516536118,
+        "trades": 84
+      },
+      "down": {
+        "sharpe": 1.7686339516536118,
+        "trades": 84
+      },
+      "sensitive": false
+    },
+    "volume_spike_mult": {
+      "up": {
+        "sharpe": 1.7686339516536118,
+        "trades": 84
+      },
+      "down": {
+        "sharpe": 1.7686339516536118,
+        "trades": 84
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 1.7686339516536118,
+        "trades": 84
+      },
+      "down": {
+        "sharpe": 1.7686339516536118,
+        "trades": 84
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 1.7686339516536118,
+        "trades": 84
+      },
+      "down": {
+        "sharpe": 1.7686339516536118,
+        "trades": 84
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 1.501002012382543,
+        "trades": 78
+      },
+      "down": {
+        "sharpe": 1.4613757610616074,
+        "trades": 91
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 1.523350339785947,
+        "trades": 83
+      },
+      "down": {
+        "sharpe": 1.6396717316897325,
+        "trades": 88
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

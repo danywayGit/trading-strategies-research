@@ -1,0 +1,103 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "INJUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "band_mult": 1.5,
+    "volume_exhaustion_threshold": 0.3,
+    "rsi_oversold_floor": 35,
+    "rsi_overbought_ceil": 65,
+    "min_band_width_pct": 0.5,
+    "direction": "long",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 4.0
+  },
+  "winner_mask": "MON+WED+FRI+SUN",
+  "winner_sharpe": 3.76366731025803,
+  "winner_trades": 25,
+  "stage2_oos_sharpe": 1.3457,
+  "sensitivity": {
+    "band_mult": {
+      "up": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "volume_exhaustion_threshold": {
+      "up": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "rsi_oversold_floor": {
+      "up": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "rsi_overbought_ceil": {
+      "up": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "min_band_width_pct": {
+      "up": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 3.76366731025803,
+        "trades": 25
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

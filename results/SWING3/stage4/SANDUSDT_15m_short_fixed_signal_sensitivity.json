@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "SANDUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 4.0,
+    "adx_threshold": 20,
+    "ema_filter": 200,
+    "direction": "short",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 3.0
+  },
+  "winner_mask": "MON+WED+THU+FRI",
+  "winner_sharpe": 2.329748346464896,
+  "winner_trades": 56,
+  "stage2_oos_sharpe": 1.5278,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 2.329748346464896,
+        "trades": 56
+      },
+      "down": {
+        "sharpe": 2.329748346464896,
+        "trades": 56
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 2.329748346464896,
+        "trades": 56
+      },
+      "down": {
+        "sharpe": 2.329748346464896,
+        "trades": 56
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 2.329748346464896,
+        "trades": 56
+      },
+      "down": {
+        "sharpe": 2.329748346464896,
+        "trades": 56
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 2.329748346464896,
+        "trades": 56
+      },
+      "down": {
+        "sharpe": 2.329748346464896,
+        "trades": 56
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 2.2137706499126124,
+        "trades": 56
+      },
+      "down": {
+        "sharpe": 2.1828975864152462,
+        "trades": 56
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 1.9085181719424915,
+        "trades": 56
+      },
+      "down": {
+        "sharpe": 2.5115017091559904,
+        "trades": 56
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

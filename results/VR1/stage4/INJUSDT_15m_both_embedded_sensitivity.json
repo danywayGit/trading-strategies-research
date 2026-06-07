@@ -1,0 +1,79 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "INJUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "band_mult": 1.5,
+    "volume_exhaustion_threshold": 0.3,
+    "rsi_oversold_floor": 35,
+    "rsi_overbought_ceil": 75,
+    "min_band_width_pct": 0.5,
+    "direction": "both"
+  },
+  "winner_mask": "MON+FRI+SUN",
+  "winner_sharpe": 3.119252849406982,
+  "winner_trades": 32,
+  "stage2_oos_sharpe": 0.9918,
+  "sensitivity": {
+    "band_mult": {
+      "up": {
+        "sharpe": 2.9738209170814374,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 3.135696578716422,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "volume_exhaustion_threshold": {
+      "up": {
+        "sharpe": 3.119252849406982,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 3.119252849406982,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "rsi_oversold_floor": {
+      "up": {
+        "sharpe": 3.119252849406982,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 3.119252849406982,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "rsi_overbought_ceil": {
+      "up": {
+        "sharpe": 3.119252849406982,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 3.119252849406982,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "min_band_width_pct": {
+      "up": {
+        "sharpe": 3.119252849406982,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 3.119252849406982,
+        "trades": 32
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

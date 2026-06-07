@@ -1,0 +1,91 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "SANDUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 60,
+    "volume_spike_mult": 1.5,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "both",
+    "tp2_mult": 1.5
+  },
+  "winner_mask": "MON+FRI+SAT",
+  "winner_sharpe": 1.5175692145376978,
+  "winner_trades": 338,
+  "stage2_oos_sharpe": 0.319,
+  "sensitivity": {
+    "profile_lookback": {
+      "up": {
+        "sharpe": 1.5175692145376978,
+        "trades": 338
+      },
+      "down": {
+        "sharpe": 1.5175692145376978,
+        "trades": 338
+      },
+      "sensitive": false
+    },
+    "value_area_pct": {
+      "up": {
+        "sharpe": 1.5175692145376978,
+        "trades": 338
+      },
+      "down": {
+        "sharpe": 1.5175692145376978,
+        "trades": 338
+      },
+      "sensitive": false
+    },
+    "volume_spike_mult": {
+      "up": {
+        "sharpe": 1.5175692145376978,
+        "trades": 338
+      },
+      "down": {
+        "sharpe": 1.5175692145376978,
+        "trades": 338
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 1.5175692145376978,
+        "trades": 338
+      },
+      "down": {
+        "sharpe": 1.5175692145376978,
+        "trades": 338
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 1.5175692145376978,
+        "trades": 338
+      },
+      "down": {
+        "sharpe": 1.5175692145376978,
+        "trades": 338
+      },
+      "sensitive": false
+    },
+    "tp2_mult": {
+      "up": {
+        "sharpe": 1.1569801161670028,
+        "trades": 327
+      },
+      "down": {
+        "sharpe": 1.127973246476004,
+        "trades": 341
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

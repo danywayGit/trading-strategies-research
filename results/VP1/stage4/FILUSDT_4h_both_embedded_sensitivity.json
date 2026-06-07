@@ -1,0 +1,91 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "FILUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 80,
+    "volume_spike_mult": 1.2,
+    "adx_threshold": 25,
+    "cooldown_bars": 10,
+    "direction": "both",
+    "tp2_mult": 2.0
+  },
+  "winner_mask": "THU+FRI",
+  "winner_sharpe": 2.1212585850226398,
+  "winner_trades": 21,
+  "stage2_oos_sharpe": 0.8033,
+  "sensitivity": {
+    "profile_lookback": {
+      "up": {
+        "sharpe": 2.1212585850226398,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 2.1212585850226398,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "value_area_pct": {
+      "up": {
+        "sharpe": 2.1212585850226398,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 2.1212585850226398,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "volume_spike_mult": {
+      "up": {
+        "sharpe": 2.1212585850226398,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 2.1212585850226398,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 2.1212585850226398,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 2.1212585850226398,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 2.1212585850226398,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 2.1212585850226398,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "tp2_mult": {
+      "up": {
+        "sharpe": 1.8221494955191264,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 2.3212923967078845,
+        "trades": 21
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

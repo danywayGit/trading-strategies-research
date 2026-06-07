@@ -1,0 +1,91 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "SEIUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "rsi_period": 10,
+    "momentum_threshold": 8.0,
+    "adx_trend_confirm": 25,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 2.0
+  },
+  "winner_mask": "MON+TUE",
+  "winner_sharpe": 2.992719863270572,
+  "winner_trades": 32,
+  "stage2_oos_sharpe": 1.862,
+  "sensitivity": {
+    "rsi_period": {
+      "up": {
+        "sharpe": 2.992719863270572,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 2.992719863270572,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "momentum_threshold": {
+      "up": {
+        "sharpe": 2.992719863270572,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 2.992719863270572,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "adx_trend_confirm": {
+      "up": {
+        "sharpe": 2.992719863270572,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 2.992719863270572,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "adx_exit_fade": {
+      "up": {
+        "sharpe": 2.992719863270572,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 2.992719863270572,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 2.992719863270572,
+        "trades": 32
+      },
+      "down": {
+        "sharpe": 2.992719863270572,
+        "trades": 32
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 3.029451284859017,
+        "trades": 31
+      },
+      "down": {
+        "sharpe": 2.0856054829495005,
+        "trades": 33
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

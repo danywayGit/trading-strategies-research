@@ -1,0 +1,91 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "BTCUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "long",
+    "rr_ratio": 2.0
+  },
+  "winner_mask": "WED+SUN",
+  "winner_sharpe": 2.887812498781377,
+  "winner_trades": 90,
+  "stage2_oos_sharpe": 0.9605,
+  "sensitivity": {
+    "kc_length": {
+      "up": {
+        "sharpe": 2.887812498781377,
+        "trades": 90
+      },
+      "down": {
+        "sharpe": 2.887812498781377,
+        "trades": 90
+      },
+      "sensitive": false
+    },
+    "kc_mult": {
+      "up": {
+        "sharpe": 2.887812498781377,
+        "trades": 90
+      },
+      "down": {
+        "sharpe": 2.887812498781377,
+        "trades": 90
+      },
+      "sensitive": false
+    },
+    "cci_period": {
+      "up": {
+        "sharpe": 2.887812498781377,
+        "trades": 90
+      },
+      "down": {
+        "sharpe": 2.887812498781377,
+        "trades": 90
+      },
+      "sensitive": false
+    },
+    "cci_long_min": {
+      "up": {
+        "sharpe": 2.887812498781377,
+        "trades": 90
+      },
+      "down": {
+        "sharpe": 2.887812498781377,
+        "trades": 90
+      },
+      "sensitive": false
+    },
+    "cci_short_max": {
+      "up": {
+        "sharpe": 2.887812498781377,
+        "trades": 90
+      },
+      "down": {
+        "sharpe": 2.887812498781377,
+        "trades": 90
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 2.8439257120049968,
+        "trades": 88
+      },
+      "down": {
+        "sharpe": 2.6311274364218846,
+        "trades": 94
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

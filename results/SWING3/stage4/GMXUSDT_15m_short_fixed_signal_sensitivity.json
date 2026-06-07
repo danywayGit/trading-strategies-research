@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "GMXUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "st_period": 14,
+    "st_factor": 4.0,
+    "adx_threshold": 20,
+    "ema_filter": 100,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 3.0
+  },
+  "winner_mask": "TUE+WED+FRI+SAT",
+  "winner_sharpe": 2.7728555697561257,
+  "winner_trades": 43,
+  "stage2_oos_sharpe": 2.0952,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 2.7728555697561257,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 2.7728555697561257,
+        "trades": 43
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 2.7728555697561257,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 2.7728555697561257,
+        "trades": 43
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 2.7728555697561257,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 2.7728555697561257,
+        "trades": 43
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 2.7728555697561257,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 2.7728555697561257,
+        "trades": 43
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 2.7255538436481044,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 2.8391447856100074,
+        "trades": 43
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.8588383562750592,
+        "trades": 43
+      },
+      "down": {
+        "sharpe": 2.527698652172033,
+        "trades": 43
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

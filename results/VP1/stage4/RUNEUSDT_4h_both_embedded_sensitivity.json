@@ -1,0 +1,91 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "RUNEUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "profile_lookback": 100,
+    "value_area_pct": 80,
+    "volume_spike_mult": 2.0,
+    "adx_threshold": 15,
+    "cooldown_bars": 10,
+    "direction": "both",
+    "tp2_mult": 1.5
+  },
+  "winner_mask": "TUE+WED+THU+FRI",
+  "winner_sharpe": 2.168515345857381,
+  "winner_trades": 23,
+  "stage2_oos_sharpe": 1.4503,
+  "sensitivity": {
+    "profile_lookback": {
+      "up": {
+        "sharpe": 2.168515345857381,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 2.168515345857381,
+        "trades": 23
+      },
+      "sensitive": false
+    },
+    "value_area_pct": {
+      "up": {
+        "sharpe": 2.168515345857381,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 2.168515345857381,
+        "trades": 23
+      },
+      "sensitive": false
+    },
+    "volume_spike_mult": {
+      "up": {
+        "sharpe": 2.168515345857381,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 2.168515345857381,
+        "trades": 23
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 2.168515345857381,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 2.168515345857381,
+        "trades": 23
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 2.168515345857381,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 2.168515345857381,
+        "trades": 23
+      },
+      "sensitive": false
+    },
+    "tp2_mult": {
+      "up": {
+        "sharpe": 2.214719747161121,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 2.168515345857381,
+        "trades": 23
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

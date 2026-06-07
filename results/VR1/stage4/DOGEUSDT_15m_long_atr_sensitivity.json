@@ -1,0 +1,103 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "DOGEUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "band_mult": 1.5,
+    "volume_exhaustion_threshold": 0.3,
+    "rsi_oversold_floor": 35,
+    "rsi_overbought_ceil": 65,
+    "min_band_width_pct": 0.5,
+    "direction": "long",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 2.5
+  },
+  "winner_mask": "TUE+THU+FRI+SAT",
+  "winner_sharpe": 0.6795716100892544,
+  "winner_trades": 21,
+  "stage2_oos_sharpe": 0.0663,
+  "sensitivity": {
+    "band_mult": {
+      "up": {
+        "sharpe": 0.6795716100892544,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 0.6795716100892544,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "volume_exhaustion_threshold": {
+      "up": {
+        "sharpe": 0.6795716100892544,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 0.6795716100892544,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "rsi_oversold_floor": {
+      "up": {
+        "sharpe": 0.6795716100892544,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 0.6795716100892544,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "rsi_overbought_ceil": {
+      "up": {
+        "sharpe": 0.6795716100892544,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 0.6795716100892544,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "min_band_width_pct": {
+      "up": {
+        "sharpe": 0.6795716100892544,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 0.6795716100892544,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 0.2659716656057459,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 0.4792329959919561,
+        "trades": 21
+      },
+      "sensitive": true
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 0.4394491458627348,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 0.4359097777362285,
+        "trades": 21
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

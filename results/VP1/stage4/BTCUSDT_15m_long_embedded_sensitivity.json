@@ -1,0 +1,91 @@
+{
+  "strategy": "vp1_volume_profile_breakout",
+  "symbol": "BTCUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "profile_lookback": 200,
+    "value_area_pct": 60,
+    "volume_spike_mult": 2.0,
+    "adx_threshold": 25,
+    "cooldown_bars": 10,
+    "direction": "long",
+    "tp2_mult": 2.5
+  },
+  "winner_mask": "MON+WED+FRI+SAT",
+  "winner_sharpe": 1.6468034877103594,
+  "winner_trades": 95,
+  "stage2_oos_sharpe": 0.4421,
+  "sensitivity": {
+    "profile_lookback": {
+      "up": {
+        "sharpe": 1.6468034877103594,
+        "trades": 95
+      },
+      "down": {
+        "sharpe": 1.6468034877103594,
+        "trades": 95
+      },
+      "sensitive": false
+    },
+    "value_area_pct": {
+      "up": {
+        "sharpe": 1.6468034877103594,
+        "trades": 95
+      },
+      "down": {
+        "sharpe": 1.6468034877103594,
+        "trades": 95
+      },
+      "sensitive": false
+    },
+    "volume_spike_mult": {
+      "up": {
+        "sharpe": 1.6468034877103594,
+        "trades": 95
+      },
+      "down": {
+        "sharpe": 1.6468034877103594,
+        "trades": 95
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 1.6468034877103594,
+        "trades": 95
+      },
+      "down": {
+        "sharpe": 1.6468034877103594,
+        "trades": 95
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 1.6468034877103594,
+        "trades": 95
+      },
+      "down": {
+        "sharpe": 1.6468034877103594,
+        "trades": 95
+      },
+      "sensitive": false
+    },
+    "tp2_mult": {
+      "up": {
+        "sharpe": 1.5415294047397876,
+        "trades": 95
+      },
+      "down": {
+        "sharpe": 1.5031208974676011,
+        "trades": 96
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: rolling VWAP as POC, normal-dist VA bands"
+}

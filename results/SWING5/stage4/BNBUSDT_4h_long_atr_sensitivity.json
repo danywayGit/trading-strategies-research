@@ -1,0 +1,103 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "BNBUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "kc_length": 15,
+    "kc_mult": 2.5,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "long",
+    "atr_stop_mult": 1.5,
+    "rr_ratio": 2.0
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.5399177096339897,
+  "winner_trades": 17,
+  "stage2_oos_sharpe": 0.5399,
+  "sensitivity": {
+    "kc_length": {
+      "up": {
+        "sharpe": 0.5399177096339897,
+        "trades": 17
+      },
+      "down": {
+        "sharpe": 0.5399177096339897,
+        "trades": 17
+      },
+      "sensitive": false
+    },
+    "kc_mult": {
+      "up": {
+        "sharpe": 0.5399177096339897,
+        "trades": 17
+      },
+      "down": {
+        "sharpe": 0.5399177096339897,
+        "trades": 17
+      },
+      "sensitive": false
+    },
+    "cci_period": {
+      "up": {
+        "sharpe": 0.5399177096339897,
+        "trades": 17
+      },
+      "down": {
+        "sharpe": 0.5399177096339897,
+        "trades": 17
+      },
+      "sensitive": false
+    },
+    "cci_long_min": {
+      "up": {
+        "sharpe": 0.5399177096339897,
+        "trades": 17
+      },
+      "down": {
+        "sharpe": 0.5399177096339897,
+        "trades": 17
+      },
+      "sensitive": false
+    },
+    "cci_short_max": {
+      "up": {
+        "sharpe": 0.5399177096339897,
+        "trades": 17
+      },
+      "down": {
+        "sharpe": 0.5399177096339897,
+        "trades": 17
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 0.7094389614243847,
+        "trades": 16
+      },
+      "down": {
+        "sharpe": 0.47618920829732364,
+        "trades": 17
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 0.782569514174298,
+        "trades": 16
+      },
+      "down": {
+        "sharpe": 0.4746817348412052,
+        "trades": 17
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

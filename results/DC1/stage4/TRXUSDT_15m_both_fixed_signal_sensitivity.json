@@ -1,0 +1,115 @@
+{
+  "strategy": "dc1_donchian_channel",
+  "symbol": "TRXUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "donchian_length": 15,
+    "adx_threshold": 30,
+    "adx_exit": 15,
+    "atr_period": 21,
+    "vol_avg_period": 14,
+    "vol_mult": 0.8,
+    "direction": "both",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "TUE+SAT+SUN",
+  "winner_sharpe": 3.1625278873460267,
+  "winner_trades": 136,
+  "stage2_oos_sharpe": 0.7213,
+  "sensitivity": {
+    "donchian_length": {
+      "up": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "down": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "down": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "sensitive": false
+    },
+    "adx_exit": {
+      "up": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "down": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "sensitive": false
+    },
+    "atr_period": {
+      "up": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "down": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "sensitive": false
+    },
+    "vol_avg_period": {
+      "up": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "down": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "sensitive": false
+    },
+    "vol_mult": {
+      "up": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "down": {
+        "sharpe": 3.1625278873460267,
+        "trades": 136
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 3.345267866860693,
+        "trades": 134
+      },
+      "down": {
+        "sharpe": 3.1759339067891403,
+        "trades": 137
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.9146254759570245,
+        "trades": 135
+      },
+      "down": {
+        "sharpe": 3.0457741149101722,
+        "trades": 137
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

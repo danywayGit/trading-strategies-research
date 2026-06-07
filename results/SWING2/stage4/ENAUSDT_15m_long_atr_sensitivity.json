@@ -1,0 +1,103 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "ENAUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "bb_length": 15,
+    "bb_mult": 2.0,
+    "macd_fast": 12,
+    "macd_slow": 24,
+    "squeeze_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 3.0
+  },
+  "winner_mask": "WED",
+  "winner_sharpe": 4.443186958683091,
+  "winner_trades": 21,
+  "stage2_oos_sharpe": 0.4218,
+  "sensitivity": {
+    "bb_length": {
+      "up": {
+        "sharpe": 4.443186958683091,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 4.443186958683091,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "bb_mult": {
+      "up": {
+        "sharpe": 4.443186958683091,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 4.443186958683091,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "macd_fast": {
+      "up": {
+        "sharpe": 4.443186958683091,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 4.443186958683091,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "macd_slow": {
+      "up": {
+        "sharpe": 4.443186958683091,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 4.443186958683091,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "squeeze_bars": {
+      "up": {
+        "sharpe": 4.443186958683091,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 4.443186958683091,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 3.6236941411329138,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 3.40627176414524,
+        "trades": 23
+      },
+      "sensitive": true
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 3.7607317998670937,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 3.6616591598401382,
+        "trades": 21
+      },
+      "sensitive": false
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt ~9 months data"
+}

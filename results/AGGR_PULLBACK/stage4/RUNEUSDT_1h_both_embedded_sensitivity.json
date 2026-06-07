@@ -1,0 +1,91 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "RUNEUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 0,
+    "swing_lookback": 5,
+    "massive_candle_mult": 1.5,
+    "direction": "both",
+    "stop_mult": 2.0,
+    "rr_ratio": 2.0
+  },
+  "winner_mask": "TUE+THU+SAT+SUN",
+  "winner_sharpe": 1.6236979108516776,
+  "winner_trades": 25,
+  "stage2_oos_sharpe": 0.2437,
+  "sensitivity": {
+    "ema_length": {
+      "up": {
+        "sharpe": 1.6236979108516776,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 1.6236979108516776,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "pullback_tolerance": {
+      "up": {
+        "sharpe": 1.6236979108516776,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 1.6236979108516776,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "swing_lookback": {
+      "up": {
+        "sharpe": 1.6236979108516776,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 1.6236979108516776,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "massive_candle_mult": {
+      "up": {
+        "sharpe": 1.6236979108516776,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 1.6236979108516776,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "stop_mult": {
+      "up": {
+        "sharpe": 1.7112411401111733,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 1.7282624138672293,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 1.8232154609842497,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 1.4537311715335033,
+        "trades": 25
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

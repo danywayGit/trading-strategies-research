@@ -1,0 +1,91 @@
+{
+  "strategy": "swing5_keltner_breakout",
+  "symbol": "DOTUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "kc_length": 25,
+    "kc_mult": 2.0,
+    "cci_period": 14,
+    "cci_long_min": -100,
+    "cci_short_max": 0,
+    "direction": "both",
+    "rr_ratio": 4.0
+  },
+  "winner_mask": "TUE+WED+THU+FRI+SAT+SUN",
+  "winner_sharpe": 1.2286093263170377,
+  "winner_trades": 26,
+  "stage2_oos_sharpe": 1.0709,
+  "sensitivity": {
+    "kc_length": {
+      "up": {
+        "sharpe": 1.2286093263170377,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 1.2286093263170377,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "kc_mult": {
+      "up": {
+        "sharpe": 1.2286093263170377,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 1.2286093263170377,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "cci_period": {
+      "up": {
+        "sharpe": 1.2286093263170377,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 1.2286093263170377,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "cci_long_min": {
+      "up": {
+        "sharpe": 1.2286093263170377,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 1.2286093263170377,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "cci_short_max": {
+      "up": {
+        "sharpe": 1.2286093263170377,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 1.2286093263170377,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 1.2652982828254153,
+        "trades": 25
+      },
+      "down": {
+        "sharpe": 1.5341792561563505,
+        "trades": 28
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

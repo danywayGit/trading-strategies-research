@@ -1,0 +1,91 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "AVAXUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 10.0,
+    "adx_trend_confirm": 25,
+    "adx_exit_fade": 20,
+    "cooldown_bars": 5,
+    "direction": "both",
+    "atr_stop_mult": 1.5
+  },
+  "winner_mask": "TUE+WED+FRI+SAT",
+  "winner_sharpe": 1.9299248087881682,
+  "winner_trades": 103,
+  "stage2_oos_sharpe": 1.1772,
+  "sensitivity": {
+    "rsi_period": {
+      "up": {
+        "sharpe": 1.9299248087881682,
+        "trades": 103
+      },
+      "down": {
+        "sharpe": 1.9299248087881682,
+        "trades": 103
+      },
+      "sensitive": false
+    },
+    "momentum_threshold": {
+      "up": {
+        "sharpe": 1.9299248087881682,
+        "trades": 103
+      },
+      "down": {
+        "sharpe": 1.9299248087881682,
+        "trades": 103
+      },
+      "sensitive": false
+    },
+    "adx_trend_confirm": {
+      "up": {
+        "sharpe": 1.9299248087881682,
+        "trades": 103
+      },
+      "down": {
+        "sharpe": 1.9299248087881682,
+        "trades": 103
+      },
+      "sensitive": false
+    },
+    "adx_exit_fade": {
+      "up": {
+        "sharpe": 1.9299248087881682,
+        "trades": 103
+      },
+      "down": {
+        "sharpe": 1.9299248087881682,
+        "trades": 103
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 1.9299248087881682,
+        "trades": 103
+      },
+      "down": {
+        "sharpe": 1.9299248087881682,
+        "trades": 103
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 1.8516086130549916,
+        "trades": 101
+      },
+      "down": {
+        "sharpe": 1.6840711736857372,
+        "trades": 107
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

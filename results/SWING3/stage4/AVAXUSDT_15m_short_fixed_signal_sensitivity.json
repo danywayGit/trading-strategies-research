@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "AVAXUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 4.0,
+    "adx_threshold": 20,
+    "ema_filter": 50,
+    "direction": "short",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "MON+TUE+FRI+SAT",
+  "winner_sharpe": 2.9789014637446907,
+  "winner_trades": 79,
+  "stage2_oos_sharpe": 1.9093,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 2.9789014637446907,
+        "trades": 79
+      },
+      "down": {
+        "sharpe": 2.9789014637446907,
+        "trades": 79
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 2.9789014637446907,
+        "trades": 79
+      },
+      "down": {
+        "sharpe": 2.9789014637446907,
+        "trades": 79
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 2.9789014637446907,
+        "trades": 79
+      },
+      "down": {
+        "sharpe": 2.9789014637446907,
+        "trades": 79
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 2.9789014637446907,
+        "trades": 79
+      },
+      "down": {
+        "sharpe": 2.9789014637446907,
+        "trades": 79
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 2.9665010782555,
+        "trades": 79
+      },
+      "down": {
+        "sharpe": 3.049637236676194,
+        "trades": 79
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.9702481361555204,
+        "trades": 79
+      },
+      "down": {
+        "sharpe": 2.7002058197027528,
+        "trades": 79
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

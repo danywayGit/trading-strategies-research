@@ -1,0 +1,91 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "ATOMUSDT",
+  "timeframe": "15m",
+  "direction": "short",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "ema_length": 20,
+    "pullback_tolerance": 0,
+    "swing_lookback": 5,
+    "massive_candle_mult": 1.5,
+    "direction": "short",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "MON+FRI",
+  "winner_sharpe": 3.3278209551411044,
+  "winner_trades": 28,
+  "stage2_oos_sharpe": 2.0279,
+  "sensitivity": {
+    "ema_length": {
+      "up": {
+        "sharpe": 3.3278209551411044,
+        "trades": 28
+      },
+      "down": {
+        "sharpe": 3.3278209551411044,
+        "trades": 28
+      },
+      "sensitive": false
+    },
+    "pullback_tolerance": {
+      "up": {
+        "sharpe": 3.3278209551411044,
+        "trades": 28
+      },
+      "down": {
+        "sharpe": 3.3278209551411044,
+        "trades": 28
+      },
+      "sensitive": false
+    },
+    "swing_lookback": {
+      "up": {
+        "sharpe": 3.3278209551411044,
+        "trades": 28
+      },
+      "down": {
+        "sharpe": 3.3278209551411044,
+        "trades": 28
+      },
+      "sensitive": false
+    },
+    "massive_candle_mult": {
+      "up": {
+        "sharpe": 3.3278209551411044,
+        "trades": 28
+      },
+      "down": {
+        "sharpe": 3.3278209551411044,
+        "trades": 28
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 3.110719953974517,
+        "trades": 28
+      },
+      "down": {
+        "sharpe": 3.3930144288374855,
+        "trades": 28
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 3.193608383739563,
+        "trades": 27
+      },
+      "down": {
+        "sharpe": 2.9006564589851256,
+        "trades": 30
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

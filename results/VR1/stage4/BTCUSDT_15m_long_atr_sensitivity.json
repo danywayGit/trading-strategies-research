@@ -1,0 +1,103 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "BTCUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "atr",
+  "stage": 4,
+  "best_params": {
+    "band_mult": 1.5,
+    "volume_exhaustion_threshold": 0.5,
+    "rsi_oversold_floor": 25,
+    "rsi_overbought_ceil": 65,
+    "min_band_width_pct": 0.8,
+    "direction": "long",
+    "atr_stop_mult": 4.0,
+    "rr_ratio": 3.0
+  },
+  "winner_mask": "THU+FRI+SAT",
+  "winner_sharpe": 1.568075945135163,
+  "winner_trades": 20,
+  "stage2_oos_sharpe": 0.3983,
+  "sensitivity": {
+    "band_mult": {
+      "up": {
+        "sharpe": 1.568075945135163,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.568075945135163,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "volume_exhaustion_threshold": {
+      "up": {
+        "sharpe": 1.568075945135163,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.568075945135163,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "rsi_oversold_floor": {
+      "up": {
+        "sharpe": 1.568075945135163,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.568075945135163,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "rsi_overbought_ceil": {
+      "up": {
+        "sharpe": 1.568075945135163,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.568075945135163,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "min_band_width_pct": {
+      "up": {
+        "sharpe": 1.568075945135163,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.568075945135163,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 1.7935320834627213,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.3735652002326262,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 1.84080754737528,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.2936540704444683,
+        "trades": 20
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

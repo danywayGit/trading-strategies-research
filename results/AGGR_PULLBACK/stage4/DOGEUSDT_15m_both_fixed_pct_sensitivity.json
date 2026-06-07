@@ -1,0 +1,91 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "DOGEUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 4,
+  "best_params": {
+    "ema_length": 25,
+    "pullback_tolerance": 2,
+    "swing_lookback": 10,
+    "massive_candle_mult": 2.0,
+    "direction": "both",
+    "stop_loss_pct": 1.5,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "TUE+SUN",
+  "winner_sharpe": 1.4865636700922886,
+  "winner_trades": 45,
+  "stage2_oos_sharpe": 0.2977,
+  "sensitivity": {
+    "ema_length": {
+      "up": {
+        "sharpe": 1.4865636700922886,
+        "trades": 45
+      },
+      "down": {
+        "sharpe": 1.4865636700922886,
+        "trades": 45
+      },
+      "sensitive": false
+    },
+    "pullback_tolerance": {
+      "up": {
+        "sharpe": 1.4865636700922886,
+        "trades": 45
+      },
+      "down": {
+        "sharpe": 1.4865636700922886,
+        "trades": 45
+      },
+      "sensitive": false
+    },
+    "swing_lookback": {
+      "up": {
+        "sharpe": 1.4865636700922886,
+        "trades": 45
+      },
+      "down": {
+        "sharpe": 1.4865636700922886,
+        "trades": 45
+      },
+      "sensitive": false
+    },
+    "massive_candle_mult": {
+      "up": {
+        "sharpe": 1.4865636700922886,
+        "trades": 45
+      },
+      "down": {
+        "sharpe": 1.4865636700922886,
+        "trades": 45
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 1.4009768557558315,
+        "trades": 45
+      },
+      "down": {
+        "sharpe": 1.4543649648182884,
+        "trades": 45
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 1.3873587159831795,
+        "trades": 44
+      },
+      "down": {
+        "sharpe": 1.0813666790259535,
+        "trades": 45
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

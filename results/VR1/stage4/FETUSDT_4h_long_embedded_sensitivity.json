@@ -1,0 +1,79 @@
+{
+  "strategy": "vr1_vwap_mean_reversion",
+  "symbol": "FETUSDT",
+  "timeframe": "4h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "band_mult": 1.5,
+    "volume_exhaustion_threshold": 0.5,
+    "rsi_oversold_floor": 25,
+    "rsi_overbought_ceil": 65,
+    "min_band_width_pct": 0.3,
+    "direction": "long"
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 0.7998732094693988,
+  "winner_trades": 5,
+  "stage2_oos_sharpe": 0.7999,
+  "sensitivity": {
+    "band_mult": {
+      "up": {
+        "sharpe": 0.7998732094693988,
+        "trades": 5
+      },
+      "down": {
+        "sharpe": 0.7998732094693988,
+        "trades": 5
+      },
+      "sensitive": false
+    },
+    "volume_exhaustion_threshold": {
+      "up": {
+        "sharpe": 0.7998732094693988,
+        "trades": 5
+      },
+      "down": {
+        "sharpe": 0.7998732094693988,
+        "trades": 5
+      },
+      "sensitive": false
+    },
+    "rsi_oversold_floor": {
+      "up": {
+        "sharpe": 0.7998732094693988,
+        "trades": 5
+      },
+      "down": {
+        "sharpe": 0.7998732094693988,
+        "trades": 5
+      },
+      "sensitive": false
+    },
+    "rsi_overbought_ceil": {
+      "up": {
+        "sharpe": 0.7998732094693988,
+        "trades": 5
+      },
+      "down": {
+        "sharpe": 0.7998732094693988,
+        "trades": 5
+      },
+      "sensitive": false
+    },
+    "min_band_width_pct": {
+      "up": {
+        "sharpe": 0.7998732094693988,
+        "trades": 5
+      },
+      "down": {
+        "sharpe": 0.7998732094693988,
+        "trades": 5
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

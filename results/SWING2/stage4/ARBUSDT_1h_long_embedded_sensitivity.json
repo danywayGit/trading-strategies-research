@@ -1,0 +1,103 @@
+{
+  "strategy": "swing2_bb_squeeze",
+  "symbol": "ARBUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "bb_length": 20,
+    "bb_mult": 2.2,
+    "macd_fast": 10,
+    "macd_slow": 24,
+    "squeeze_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 2.5,
+    "rr_ratio": 2.5
+  },
+  "winner_mask": "WED+THU+SAT",
+  "winner_sharpe": 2.052258174817025,
+  "winner_trades": 24,
+  "stage2_oos_sharpe": 0.1044,
+  "sensitivity": {
+    "bb_length": {
+      "up": {
+        "sharpe": 2.052258174817025,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.052258174817025,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "bb_mult": {
+      "up": {
+        "sharpe": 2.052258174817025,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.052258174817025,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "macd_fast": {
+      "up": {
+        "sharpe": 2.052258174817025,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.052258174817025,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "macd_slow": {
+      "up": {
+        "sharpe": 2.052258174817025,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.052258174817025,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "squeeze_bars": {
+      "up": {
+        "sharpe": 2.052258174817025,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.052258174817025,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 2.093238231332443,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 1.883640917249944,
+        "trades": 25
+      },
+      "sensitive": false
+    },
+    "rr_ratio": {
+      "up": {
+        "sharpe": 2.2373414756139103,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 1.7042845096334434,
+        "trades": 25
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

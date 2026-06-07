@@ -1,0 +1,79 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "SUIUSDT",
+  "timeframe": "4h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "st_period": 7,
+    "st_factor": 3.0,
+    "adx_threshold": 20,
+    "ema_filter": 50,
+    "direction": "both",
+    "atr_stop_mult": 1.5
+  },
+  "winner_mask": "ALL",
+  "winner_sharpe": 2.3543992099874274,
+  "winner_trades": 10,
+  "stage2_oos_sharpe": 2.3544,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 2.3543992099874274,
+        "trades": 10
+      },
+      "down": {
+        "sharpe": 2.3543992099874274,
+        "trades": 10
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 2.3543992099874274,
+        "trades": 10
+      },
+      "down": {
+        "sharpe": 2.3543992099874274,
+        "trades": 10
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 2.3543992099874274,
+        "trades": 10
+      },
+      "down": {
+        "sharpe": 2.3543992099874274,
+        "trades": 10
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 2.3543992099874274,
+        "trades": 10
+      },
+      "down": {
+        "sharpe": 2.3543992099874274,
+        "trades": 10
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 2.506853750062716,
+        "trades": 10
+      },
+      "down": {
+        "sharpe": 2.3543992099874274,
+        "trades": 10
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

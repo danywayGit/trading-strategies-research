@@ -1,0 +1,91 @@
+{
+  "strategy": "swing3_supertrend_adx",
+  "symbol": "AXSUSDT",
+  "timeframe": "15m",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 4,
+  "best_params": {
+    "st_period": 10,
+    "st_factor": 4.0,
+    "adx_threshold": 25,
+    "ema_filter": 200,
+    "direction": "both",
+    "stop_loss_pct": 2.5,
+    "take_profit_pct": 9.0
+  },
+  "winner_mask": "WED+THU+FRI",
+  "winner_sharpe": 2.028467653817857,
+  "winner_trades": 21,
+  "stage2_oos_sharpe": 1.1034,
+  "sensitivity": {
+    "st_period": {
+      "up": {
+        "sharpe": 2.028467653817857,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 2.028467653817857,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "st_factor": {
+      "up": {
+        "sharpe": 2.028467653817857,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 2.028467653817857,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "adx_threshold": {
+      "up": {
+        "sharpe": 2.028467653817857,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 2.028467653817857,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "ema_filter": {
+      "up": {
+        "sharpe": 2.028467653817857,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 2.028467653817857,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 2.3972611439637603,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 2.143886149295969,
+        "trades": 21
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.1399874885482952,
+        "trades": 21
+      },
+      "down": {
+        "sharpe": 1.8421334435496541,
+        "trades": 21
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt"
+}

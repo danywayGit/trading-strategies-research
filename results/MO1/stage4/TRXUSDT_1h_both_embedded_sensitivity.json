@@ -1,0 +1,91 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "TRXUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "rsi_period": 10,
+    "momentum_threshold": 3.0,
+    "adx_trend_confirm": 25,
+    "adx_exit_fade": 15,
+    "cooldown_bars": 5,
+    "direction": "both",
+    "atr_stop_mult": 2.0
+  },
+  "winner_mask": "MON+WED+THU",
+  "winner_sharpe": 3.119949572128455,
+  "winner_trades": 144,
+  "stage2_oos_sharpe": 1.8548,
+  "sensitivity": {
+    "rsi_period": {
+      "up": {
+        "sharpe": 3.119949572128455,
+        "trades": 144
+      },
+      "down": {
+        "sharpe": 3.119949572128455,
+        "trades": 144
+      },
+      "sensitive": false
+    },
+    "momentum_threshold": {
+      "up": {
+        "sharpe": 3.119949572128455,
+        "trades": 144
+      },
+      "down": {
+        "sharpe": 3.119949572128455,
+        "trades": 144
+      },
+      "sensitive": false
+    },
+    "adx_trend_confirm": {
+      "up": {
+        "sharpe": 3.119949572128455,
+        "trades": 144
+      },
+      "down": {
+        "sharpe": 3.119949572128455,
+        "trades": 144
+      },
+      "sensitive": false
+    },
+    "adx_exit_fade": {
+      "up": {
+        "sharpe": 3.119949572128455,
+        "trades": 144
+      },
+      "down": {
+        "sharpe": 3.119949572128455,
+        "trades": 144
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 3.119949572128455,
+        "trades": 144
+      },
+      "down": {
+        "sharpe": 3.119949572128455,
+        "trades": 144
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 2.97440392678491,
+        "trades": 142
+      },
+      "down": {
+        "sharpe": 3.3236294569474105,
+        "trades": 143
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

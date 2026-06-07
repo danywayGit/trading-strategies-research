@@ -1,0 +1,91 @@
+{
+  "strategy": "aggr_pullback",
+  "symbol": "DYDXUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "fixed_signal",
+  "stage": 4,
+  "best_params": {
+    "ema_length": 15,
+    "pullback_tolerance": 0,
+    "swing_lookback": 7,
+    "massive_candle_mult": 2.0,
+    "direction": "both",
+    "stop_loss_pct": 2.0,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "MON+TUE+WED+THU+SAT",
+  "winner_sharpe": 2.2075645419744476,
+  "winner_trades": 20,
+  "stage2_oos_sharpe": 1.8613,
+  "sensitivity": {
+    "ema_length": {
+      "up": {
+        "sharpe": 2.2075645419744476,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 2.2075645419744476,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "pullback_tolerance": {
+      "up": {
+        "sharpe": 2.2075645419744476,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 2.2075645419744476,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "swing_lookback": {
+      "up": {
+        "sharpe": 2.2075645419744476,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 2.2075645419744476,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "massive_candle_mult": {
+      "up": {
+        "sharpe": 2.2075645419744476,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 2.2075645419744476,
+        "trades": 20
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 2.0800402468118806,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.617650725347292,
+        "trades": 20
+      },
+      "sensitive": true
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 2.470344896237336,
+        "trades": 20
+      },
+      "down": {
+        "sharpe": 1.8516871528706569,
+        "trades": 20
+      },
+      "sensitive": false
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt"
+}

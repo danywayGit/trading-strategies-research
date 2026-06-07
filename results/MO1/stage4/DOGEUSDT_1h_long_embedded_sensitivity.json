@@ -1,0 +1,91 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "DOGEUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 10.0,
+    "adx_trend_confirm": 20,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 2.0
+  },
+  "winner_mask": "MON+THU+SAT",
+  "winner_sharpe": 2.130948341367074,
+  "winner_trades": 26,
+  "stage2_oos_sharpe": 1.6175,
+  "sensitivity": {
+    "rsi_period": {
+      "up": {
+        "sharpe": 2.130948341367074,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 2.130948341367074,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "momentum_threshold": {
+      "up": {
+        "sharpe": 2.130948341367074,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 2.130948341367074,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "adx_trend_confirm": {
+      "up": {
+        "sharpe": 2.130948341367074,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 2.130948341367074,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "adx_exit_fade": {
+      "up": {
+        "sharpe": 2.130948341367074,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 2.130948341367074,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 2.130948341367074,
+        "trades": 26
+      },
+      "down": {
+        "sharpe": 2.130948341367074,
+        "trades": 26
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 2.196409020498938,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 2.1877614031190538,
+        "trades": 26
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

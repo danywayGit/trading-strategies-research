@@ -1,0 +1,91 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "SHIBUSDT",
+  "timeframe": "1h",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "rsi_period": 14,
+    "momentum_threshold": 10.0,
+    "adx_trend_confirm": 25,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 2.0
+  },
+  "winner_mask": "MON+FRI+SUN",
+  "winner_sharpe": 1.516602367942412,
+  "winner_trades": 24,
+  "stage2_oos_sharpe": 0.9991,
+  "sensitivity": {
+    "rsi_period": {
+      "up": {
+        "sharpe": 1.516602367942412,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 1.516602367942412,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "momentum_threshold": {
+      "up": {
+        "sharpe": 1.516602367942412,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 1.516602367942412,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "adx_trend_confirm": {
+      "up": {
+        "sharpe": 1.516602367942412,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 1.516602367942412,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "adx_exit_fade": {
+      "up": {
+        "sharpe": 1.516602367942412,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 1.516602367942412,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 1.516602367942412,
+        "trades": 24
+      },
+      "down": {
+        "sharpe": 1.516602367942412,
+        "trades": 24
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 1.531409029417756,
+        "trades": 23
+      },
+      "down": {
+        "sharpe": 1.4292104833303045,
+        "trades": 25
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

@@ -1,0 +1,91 @@
+{
+  "strategy": "mo1_momentum_rotation",
+  "symbol": "ALGOUSDT",
+  "timeframe": "15m",
+  "direction": "long",
+  "sl_type": "embedded",
+  "stage": 4,
+  "best_params": {
+    "rsi_period": 10,
+    "momentum_threshold": 8.0,
+    "adx_trend_confirm": 25,
+    "adx_exit_fade": 10,
+    "cooldown_bars": 5,
+    "direction": "long",
+    "atr_stop_mult": 1.5
+  },
+  "winner_mask": "WED+FRI+SAT",
+  "winner_sharpe": 2.8651705764911433,
+  "winner_trades": 118,
+  "stage2_oos_sharpe": 1.7695,
+  "sensitivity": {
+    "rsi_period": {
+      "up": {
+        "sharpe": 2.8651705764911433,
+        "trades": 118
+      },
+      "down": {
+        "sharpe": 2.8651705764911433,
+        "trades": 118
+      },
+      "sensitive": false
+    },
+    "momentum_threshold": {
+      "up": {
+        "sharpe": 2.8651705764911433,
+        "trades": 118
+      },
+      "down": {
+        "sharpe": 2.8651705764911433,
+        "trades": 118
+      },
+      "sensitive": false
+    },
+    "adx_trend_confirm": {
+      "up": {
+        "sharpe": 2.8651705764911433,
+        "trades": 118
+      },
+      "down": {
+        "sharpe": 2.8651705764911433,
+        "trades": 118
+      },
+      "sensitive": false
+    },
+    "adx_exit_fade": {
+      "up": {
+        "sharpe": 2.8651705764911433,
+        "trades": 118
+      },
+      "down": {
+        "sharpe": 2.8651705764911433,
+        "trades": 118
+      },
+      "sensitive": false
+    },
+    "cooldown_bars": {
+      "up": {
+        "sharpe": 2.8651705764911433,
+        "trades": 118
+      },
+      "down": {
+        "sharpe": 2.8651705764911433,
+        "trades": 118
+      },
+      "sensitive": false
+    },
+    "atr_stop_mult": {
+      "up": {
+        "sharpe": 2.8010723977741425,
+        "trades": 117
+      },
+      "down": {
+        "sharpe": 2.8537443260580866,
+        "trades": 125
+      },
+      "sensitive": false
+    }
+  },
+  "robust": true,
+  "note": "v2/vectorbt approx: per-asset RSI vs 50\u00b1threshold"
+}

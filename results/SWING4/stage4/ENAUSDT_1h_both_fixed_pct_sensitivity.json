@@ -1,0 +1,127 @@
+{
+  "strategy": "swing4_macd_divergence",
+  "symbol": "ENAUSDT",
+  "timeframe": "1h",
+  "direction": "both",
+  "sl_type": "fixed_pct",
+  "stage": 4,
+  "best_params": {
+    "macd_fast": 12,
+    "macd_slow": 26,
+    "macd_signal_period": 9,
+    "rsi_period": 14,
+    "divergence_lookback": 3,
+    "rsi_long_max": 50,
+    "rsi_short_min": 60,
+    "direction": "both",
+    "stop_loss_pct": 3.0,
+    "take_profit_pct": 6.0
+  },
+  "winner_mask": "MON+TUE+FRI+SAT+SUN",
+  "winner_sharpe": 4.004514128052518,
+  "winner_trades": 57,
+  "stage2_oos_sharpe": 3.1885,
+  "sensitivity": {
+    "macd_fast": {
+      "up": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "down": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "sensitive": false
+    },
+    "macd_slow": {
+      "up": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "down": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "sensitive": false
+    },
+    "macd_signal_period": {
+      "up": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "down": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "sensitive": false
+    },
+    "rsi_period": {
+      "up": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "down": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "sensitive": false
+    },
+    "divergence_lookback": {
+      "up": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "down": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "sensitive": false
+    },
+    "rsi_long_max": {
+      "up": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "down": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "sensitive": false
+    },
+    "rsi_short_min": {
+      "up": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "down": {
+        "sharpe": 4.004514128052518,
+        "trades": 57
+      },
+      "sensitive": false
+    },
+    "stop_loss_pct": {
+      "up": {
+        "sharpe": 3.358419885591844,
+        "trades": 56
+      },
+      "down": {
+        "sharpe": 3.2175174423310997,
+        "trades": 57
+      },
+      "sensitive": false
+    },
+    "take_profit_pct": {
+      "up": {
+        "sharpe": 3.1885913971586892,
+        "trades": 55
+      },
+      "down": {
+        "sharpe": 4.204912848049709,
+        "trades": 58
+      },
+      "sensitive": true
+    }
+  },
+  "robust": false,
+  "note": "v2/vectorbt ~9 months data"
+}
